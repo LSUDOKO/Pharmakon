@@ -124,14 +124,6 @@ def build_kg() -> None:
     _show(run())
 
 
-@app.command("sample")
-def sample() -> None:
-    """Copy processed tables + reports into data/sample/ so the app runs from a fresh clone."""
-    from pharmakon.app_data import make_sample
-
-    _show(make_sample())
-
-
 @app.command("report")
 def report() -> None:
     """Regenerate eval markdown reports from stage JSON."""

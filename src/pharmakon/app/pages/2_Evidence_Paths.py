@@ -32,7 +32,9 @@ top = sub.head(40)
 for r in top.itertuples():
     a, b, c, d = node(sp), node(r.inchikey[:14]), node(r.target_chembl_id), node(r.disease_name)
     for s, t in ((a, b), (b, c), (c, d)):
-        src.append(s); dst.append(t); val.append(max(r.weighted_strength, 0.01))
+        src.append(s)
+        dst.append(t)
+        val.append(max(r.weighted_strength, 0.01))
 fig = go.Figure(go.Sankey(node=dict(label=labels, pad=12), link=dict(source=src, target=dst, value=val)))
 fig.update_layout(height=520, margin=dict(l=5, r=5, t=5, b=5))
 st.plotly_chart(fig, use_container_width=True)
