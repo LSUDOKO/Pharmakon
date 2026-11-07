@@ -27,6 +27,7 @@
       <a href="#time">Through time</a>
       <a href="#results">Results</a>
       <a href="#leads">Leads</a>
+      <a href="#use">Use it</a>
       <a href="#data">Data</a>
     </nav>
     <a class="btn glass small" href="https://github.com/LSUDOKO/Pharmakon" target="_blank" rel="noopener">GitHub</a>
@@ -194,6 +195,39 @@
       </div>
       <div class="lead-grid" id="lead-grid"></div>
       <div class="lead-more"><button class="btn glass ghost small" id="more">Show more leads</button></div>
+    </section>
+
+    <!-- USE IT -------------------------------------------------------------------------------- -->
+    <section class="use section" id="use" aria-labelledby="use-h">
+      <div class="section-head">
+        <h2 id="use-h" class="reveal">Use it from your own tools</h2>
+        <p class="reveal">The same data behind this page is open to AI assistants, scripts and notebooks. Everything is read-only and every reply carries the research-only notice and toxicity flags.</p>
+      </div>
+      <div class="use-grid">
+        <article class="use-card glass reveal">
+          <h3>Ask an AI assistant</h3>
+          <p>Connect the Pharmakon MCP server to Claude, Cursor or any MCP client, then ask things like “which ancient plants were used for burns?”.</p>
+          <pre><code>claude mcp add --transport http pharmakon https://pharmakon.adoranto737.workers.dev/mcp</code></pre>
+          <p class="fine">Tools: search_ancient_names, get_ancient_name, list_leads, get_lead, list_conditions, get_results.</p>
+        </article>
+        <article class="use-card glass reveal">
+          <h3>Call the JSON API</h3>
+          <p>Plain HTTPS, no key, CORS open.</p>
+          <pre><code>curl "https://pharmakon.adoranto737.workers.dev/api/leads?condition=burn&amp;limit=5"</code></pre>
+          <ul class="fine">
+            <li><a href="/api/names?q=apsinthion">/api/names?q=</a> and /api/names/{id}</li>
+            <li><a href="/api/leads?limit=5">/api/leads</a> and /api/leads/{rank}</li>
+            <li><a href="/api/conditions">/api/conditions</a> and <a href="/api/results">/api/results?section=</a></li>
+          </ul>
+        </article>
+        <article class="use-card glass reveal">
+          <h3>Run the pipeline</h3>
+          <p>Every number on this page is rebuilt from open sources by one command. The research dashboard runs offline on the committed tables.</p>
+          <pre><code>git clone https://github.com/LSUDOKO/Pharmakon
+cd Pharmakon &amp;&amp; make setup test app</code></pre>
+          <a class="btn glass small" href="https://github.com/LSUDOKO/Pharmakon" target="_blank" rel="noopener">Open the repository</a>
+        </article>
+      </div>
     </section>
 
     <!-- DATA ------------------------------------------------------------------------------- -->

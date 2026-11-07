@@ -472,3 +472,15 @@ dialog.paths code { display: block; white-space: pre-wrap; font: 400 0.78rem/1.5
 @media (max-width: 900px) { .tour { grid-template-columns: 1fr; } }
 .tour-frame { transform-style: preserve-3d; }
 .tour { perspective: 1400px; }
+
+/* use it */
+.use-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.use-card { padding: 26px; border-radius: 22px; display: flex; flex-direction: column; gap: 12px; }
+.use-card h3 { margin: 0; }
+.use-card p { margin: 0; }
+.use-card pre { margin: 0; overflow-x: auto; background: rgba(0,0,0,.45); border: 1px solid rgba(184,230,204,.14); border-radius: 12px; padding: 12px 14px; }
+.use-card code { font: 400 0.78rem/1.55 var(--f-dim); color: var(--lichen); white-space: pre-wrap; overflow-wrap: anywhere; }
+.use-card ul { margin: 0; padding-left: 18px; }
+.use-card a:not(.btn) { color: var(--verdigris-hi); }
+.use-card .btn { align-self: flex-start; margin-top: auto; }
+@media (max-width: 900px) { .use-grid { grid-template-columns: 1fr; } }

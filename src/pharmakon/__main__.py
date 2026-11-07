@@ -132,5 +132,13 @@ def report() -> None:
     _show(write_all())
 
 
+@app.command("readme")
+def readme() -> None:
+    """Regenerate README.md charts (docs/media/chart-*.svg) and tables from stage JSON."""
+    from pharmakon.readme import build
+
+    _show(build())
+
+
 if __name__ == "__main__":
     app()

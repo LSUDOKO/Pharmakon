@@ -1,7 +1,7 @@
 PY ?= .venv/bin/python
 PK = $(PY) -m pharmakon
 
-.PHONY: setup data verify pilot forecast leads app test lint report reproduce
+.PHONY: setup data verify pilot forecast leads app test lint report readme reproduce
 
 setup:            ## create the venv and install (uv, fallback pip)
 	uv venv --python 3.12 .venv || python3 -m venv .venv
@@ -43,5 +43,8 @@ lint:
 
 report:           ## regenerate reports/*.md, figures, docs/data_dictionary.md
 	$(PK) report
+
+readme:           ## regenerate README.md charts and tables from reports/stages + web/public/data
+	$(PK) readme
 
 reproduce: data pilot forecast leads report   ## everything from cached raw data (HTTP cache in data/cache)
