@@ -1,0 +1,22 @@
+dmm_wellmann:
+  url: https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/master/data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml
+  commits_api: https://api.github.com/repos/OpenGreekAndLatin/First1KGreek/commits?path=data/tlg0656/tlg001/tlg0656.tlg001.1st1K-grc1.xml&per_page=1
+  cts_urn: urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1
+  licence: CC BY-SA 4.0
+jc_lardos:
+  figshare_api: https://api.figshare.com/v2/articles/23736189
+  doi: 10.17637/rh.23736189.v1
+  licence: CC BY 4.0
+gbif:
+  match: https://api.gbif.org/v1/species/match
+  occurrence: https://api.gbif.org/v1/occurrence/search
+wikidata:
+  sparql: https://query.wikidata.org/sparql
+mesh:
+  lookup: https://id.nlm.nih.gov/mesh/lookup/descriptor
+pubmed:
+  eutils: https://eutils.ncbi.nlm.nih.gov/entrez/eutils
+chembl:
+  api: https://www.ebi.ac.uk/chembl/api/data
+opentargets:
+  graphql: https://api.platform.opentargets.org/api/v4/graphql

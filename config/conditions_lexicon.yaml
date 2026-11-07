@@ -1,0 +1,211 @@
+# Greek condition vocabulary for rule-based extraction (rule_extract_v1) and condition mapping
+# (lexicon_map_v1). Keys are accent-stripped lowercase stems matched at the START of a word.
+# `mesh` lists candidate MeSH descriptor labels; they are only kept if the NLM MeSH lookup API
+# confirms an exact label match (generate-then-verify). Glosses follow LSJ senses and stay
+# deliberately cautious; `mesh: []` means "no defensible modern equivalent".
+# `pilot: true` marks the skin/wound prefilter vocabulary (spec/05 Stage 2).
+conditions:
+  # ---- S: skin, wounds -------------------------------------------------------------------
+  - {stem: ελκ, en: ulcers / sores, icpc2: S, mesh: [Skin Ulcer], pilot: true, exclude: [ελκυ, ελκουσ, ελκοντ, ελκομ, ελκεται]}
+  - {stem: ηλκωμεν, en: ulcerated parts, icpc2: S, mesh: [Skin Ulcer], pilot: true}
+  - {stem: τραυμ, en: wounds, icpc2: S, mesh: [Wounds and Injuries], pilot: true}
+  - {stem: λειχην, en: lichen (spreading skin eruption), icpc2: S, mesh: [Skin Diseases], pilot: true}
+  - {stem: λεπρ, en: lepra (scaly skin condition; not Hansen's disease), icpc2: S, mesh: [], pilot: true}
+  - {stem: ψωρ, en: psora (itchy scaly skin), icpc2: S, mesh: [Pruritus], pilot: true}
+  - {stem: ψωριασ, en: psoriasis (itch, ancient sense), icpc2: S, mesh: [], pilot: true}
+  - {stem: κνησμ, en: itching, icpc2: S, mesh: [Pruritus], pilot: true}
+  - {stem: κνησμων, en: itching, icpc2: S, mesh: [Pruritus], pilot: true}
+  - {stem: ερυσιπελ, en: erysipelas (spreading inflammation of the skin), icpc2: S, mesh: [Erysipelas], pilot: true}
+  - {stem: επινυκτιδ, en: night pustules, icpc2: S, mesh: [Skin Diseases], pilot: true}
+  - {stem: ακροχορδον, en: warts (pendulous), icpc2: S, mesh: [Warts], pilot: true}
+  - {stem: μυρμηκι, en: warts (myrmecia), icpc2: S, mesh: [Warts], pilot: true}
+  - {stem: θυμ, en: warty excrescences (thymoi), icpc2: S, mesh: [Warts], pilot: true, exact: [θυμους, θυμοι, θυμων]}
+  - {stem: αλφ, en: alphos (dull-white skin patches), icpc2: S, mesh: [], pilot: true, exact: [αλφους, αλφοι, αλφων, αλφος]}
+  - {stem: λευκ, en: white skin patches (leukai), icpc2: S, mesh: [], pilot: true, exact: [λευκας, λευκαι]}
+  - {stem: πυρικαυ, en: burns, icpc2: S, mesh: [Burns], pilot: true}
+  - {stem: πυρικαυστ, en: burns, icpc2: S, mesh: [Burns], pilot: true}
+  - {stem: χιμετλ, en: chilblains, icpc2: S, mesh: [Chilblains], pilot: true}
+  - {stem: φυματ, en: phymata (inflamed swellings, growths), icpc2: S, mesh: [], pilot: true}
+  - {stem: αποστημ, en: abscesses, icpc2: S, mesh: [Abscess], pilot: true}
+  - {stem: αποστασ, en: abscesses (apostaseis), icpc2: S, mesh: [Abscess], pilot: true}
+  - {stem: δοθιην, en: boils, icpc2: S, mesh: [Furunculosis], pilot: true}
+  - {stem: ανθρακ, en: carbuncles, icpc2: S, mesh: [Carbuncle], pilot: true}
+  - {stem: γαγγραιν, en: gangrene, icpc2: S, mesh: [Gangrene], pilot: true}
+  - {stem: φαγεδαιν, en: phagedaena (eating ulcers), icpc2: S, mesh: [Skin Ulcer], pilot: true}
+  - {stem: νομ, en: spreading ulcers (nomai), icpc2: S, mesh: [Skin Ulcer], pilot: true, exact: [νομας, νομαι, νομων, νομαις]}
+  - {stem: σηπεδον, en: putrefying sores, icpc2: S, mesh: [], pilot: true}
+  - {stem: ερπη, en: herpes (creeping sores; ancient sense), icpc2: S, mesh: [], pilot: true}
+  - {stem: ερπητ, en: herpes (creeping sores; ancient sense), icpc2: S, mesh: [], pilot: true}
+  - {stem: καρκινωμ, en: carcinomas (ulcerating tumours), icpc2: S, mesh: [], pilot: true}
+  - {stem: αλωπεκι, en: alopecia (patchy hair loss), icpc2: S, mesh: [Alopecia], pilot: true}
+  - {stem: ουλ, en: scars, icpc2: S, mesh: [Cicatrix], pilot: true, exact: [ουλας, ουλαι, ουλων, ουλη]}
+  - {stem: ουλωτικ, en: cicatrising (scar-forming), icpc2: S, mesh: [Cicatrix], pilot: true}
+  - {stem: εξανθημ, en: eruptions, icpc2: S, mesh: [Exanthema], pilot: true}
+  - {stem: ιονθ, en: pimples (ionthoi), icpc2: S, mesh: [Acne Vulgaris], pilot: true}
+  - {stem: εφηλ, en: freckles / sun spots, icpc2: S, mesh: [Melanosis], pilot: true}
+  - {stem: παρωνυχ, en: whitlows, icpc2: S, mesh: [Paronychia], pilot: true}
+  - {stem: ραγαδ, en: fissures (rhagades), icpc2: S, mesh: [], pilot: true}
+  - {stem: τυλ, en: calluses, icpc2: S, mesh: [Callosities], pilot: true, exact: [τυλους, τυλοι, τυλων]}
+  - {stem: κηλιδ, en: spots / blemishes, icpc2: S, mesh: [], pilot: true}
+  - {stem: μωλωπ, en: weals / bruises, icpc2: S, mesh: [Contusions], pilot: true}
+  - {stem: υπωπι, en: bruises below the eye, icpc2: S, mesh: [Contusions], pilot: true}
+  - {stem: πτερυγι, en: hangnails / pterygia, icpc2: S, mesh: [], pilot: true}
+  - {stem: δηγμ, en: bites, icpc2: S, mesh: [Bites and Stings], pilot: true}
+  - {stem: θηριοδηκτ, en: bites of venomous animals, icpc2: S, mesh: [Bites and Stings], pilot: true}
+  - {stem: πληγ, en: stings / blows, icpc2: S, mesh: [Bites and Stings], pilot: true, exact: [πληγας, πληγαις]}
+  - {stem: χοιραδ, en: choirades (scrofulous swellings of the neck), icpc2: B, mesh: [], pilot: true}
+  - {stem: φλεγμον, en: inflammations, icpc2: S, mesh: [Inflammation], pilot: true}
+  - {stem: οιδημ, en: swellings, icpc2: S, mesh: [Edema], pilot: true}
+  - {stem: κολλητικ, en: wound-closing (agglutinating), icpc2: S, mesh: [Wounds and Injuries], pilot: true}
+  - {stem: κολλησ, en: closing of wounds, icpc2: S, mesh: [Wounds and Injuries], pilot: true}
+  - {stem: εναιμ, en: fresh (bleeding) wounds, icpc2: S, mesh: [Wounds and Injuries], pilot: true}
+  - {stem: ακαθαρτ, en: unclean (foul) sores, icpc2: S, mesh: [Skin Ulcer], pilot: true}
+  - {stem: σαρκωτικ, en: flesh-forming (granulating), icpc2: S, mesh: [], pilot: true}
+  - {stem: απαλοπ, en: hairless patches, icpc2: S, mesh: [Alopecia], pilot: true}
+  # ---- D: digestive ----------------------------------------------------------------------
+  - {stem: στομαχ, en: stomach complaints, icpc2: D, mesh: [Stomach Diseases]}
+  - {stem: δυσεντερ, en: dysentery, icpc2: D, mesh: [Dysentery]}
+  - {stem: ελμινθ, en: intestinal worms, icpc2: D, mesh: [Helminthiasis]}
+  - {stem: ασκαριδ, en: intestinal worms (ascarides), icpc2: D, mesh: [Helminthiasis]}
+  - {stem: ικτερ, en: jaundice, icpc2: D, mesh: [Jaundice]}
+  - {stem: ηπατ, en: liver complaints, icpc2: D, mesh: [Liver Diseases]}
+  - {stem: εμετ, en: vomiting, icpc2: D, mesh: [Vomiting]}
+  - {stem: διαρροι, en: diarrhoea, icpc2: D, mesh: [Diarrhea]}
+  - {stem: κοιλιακ, en: coeliac flux (chronic diarrhoea), icpc2: D, mesh: [Diarrhea]}
+  - {stem: στροφ, en: colic (gripings), icpc2: D, mesh: [Colic]}
+  - {stem: κολικ, en: colic, icpc2: D, mesh: [Colic]}
+  - {stem: οδονταλγ, en: toothache, icpc2: D, mesh: [Toothache]}
+  - {stem: οδοντ, en: teeth complaints, icpc2: D, mesh: [Tooth Diseases]}
+  - {stem: ουλων, en: gums, icpc2: D, mesh: [Gingival Diseases], exact: [ουλα]}
+  - {stem: αφθ, en: aphthae (mouth ulcers), icpc2: D, mesh: ["Stomatitis, Aphthous"]}
+  - {stem: εδρ, en: anal complaints, icpc2: D, mesh: [Anus Diseases], exact: [εδρας, εδρα, εδραις]}
+  - {stem: αιμορροιδ, en: haemorrhoids, icpc2: D, mesh: [Hemorrhoids]}
+  - {stem: ανορεξ, en: loss of appetite, icpc2: D, mesh: [Anorexia]}
+  # ---- R: respiratory --------------------------------------------------------------------
+  - {stem: βηχ, en: cough, icpc2: R, mesh: [Cough]}
+  - {stem: ασθμ, en: asthma (difficult breathing), icpc2: R, mesh: [Asthma]}
+  - {stem: ορθοπνοι, en: orthopnoea, icpc2: R, mesh: [Dyspnea]}
+  - {stem: δυσπνοι, en: difficult breathing, icpc2: R, mesh: [Dyspnea]}
+  - {stem: πλευριτ, en: pleurisy, icpc2: R, mesh: [Pleurisy]}
+  - {stem: περιπνευμον, en: peripneumonia, icpc2: R, mesh: [Pneumonia]}
+  - {stem: συναγχ, en: synanche (sore throat), icpc2: R, mesh: [Pharyngitis]}
+  - {stem: κυναγχ, en: kynanche (severe sore throat), icpc2: R, mesh: [Pharyngitis]}
+  - {stem: παρισθμι, en: tonsil inflammation, icpc2: R, mesh: [Tonsillitis]}
+  - {stem: φθισ, en: phthisis (wasting), icpc2: R, mesh: []}
+  - {stem: αιμοπτυ, en: spitting of blood, icpc2: R, mesh: [Hemoptysis]}
+  - {stem: κατασταγμ, en: catarrh, icpc2: R, mesh: []}
+  # ---- U: urinary ------------------------------------------------------------------------
+  - {stem: ουρητικ, en: diuretic, icpc2: U, mesh: []}
+  - {stem: δυσουρ, en: painful urination, icpc2: U, mesh: [Dysuria]}
+  - {stem: στραγγουρ, en: strangury, icpc2: U, mesh: [Dysuria]}
+  - {stem: λιθιων, en: stone sufferers, icpc2: U, mesh: [Urinary Calculi]}
+  - {stem: κυστ, en: bladder complaints, icpc2: U, mesh: [Urinary Bladder Diseases]}
+  - {stem: νεφρ, en: kidney complaints, icpc2: U, mesh: [Kidney Diseases]}
+  # ---- X / W: female genital, pregnancy --------------------------------------------------
+  - {stem: εμμην, en: menses (promotes / regulates), icpc2: X, mesh: [Menstruation Disturbances]}
+  - {stem: καταμην, en: menses, icpc2: X, mesh: [Menstruation Disturbances]}
+  - {stem: υστερ, en: womb complaints, icpc2: X, mesh: [Uterine Diseases]}
+  - {stem: μητρ, en: womb complaints, icpc2: X, mesh: [Uterine Diseases]}
+  - {stem: εμβρυ, en: expelling the embryo, icpc2: W, mesh: []}
+  - {stem: δευτερ, en: afterbirth, icpc2: W, mesh: ["Placenta, Retained"], exact: [δευτερα, δευτερας]}
+  - {stem: ατοκ, en: contraceptive / sterility, icpc2: W, mesh: []}
+  # ---- F / H: eye, ear -------------------------------------------------------------------
+  - {stem: οφθαλμ, en: eye complaints, icpc2: F, mesh: [Eye Diseases]}
+  - {stem: αμβλυωπ, en: dimness of sight, icpc2: F, mesh: [Vision Disorders]}
+  - {stem: λευκωμ, en: corneal opacities, icpc2: F, mesh: [Corneal Opacity]}
+  - {stem: αργεμ, en: argema (white ulcer on the eye), icpc2: F, mesh: [Corneal Ulcer]}
+  - {stem: γλαυκωμ, en: glaukoma (ancient sense, opaque lens), icpc2: F, mesh: []}
+  - {stem: ωταλγ, en: earache, icpc2: H, mesh: [Earache]}
+  - {stem: ωτ, en: ear complaints, icpc2: H, mesh: [Ear Diseases], exact: [ωτα, ωτων, ωτος, ωσι, ωσιν]}
+  # ---- N / L / T: nervous, musculoskeletal, metabolic ------------------------------------
+  - {stem: κεφαλαλγ, en: headache, icpc2: N, mesh: [Headache]}
+  - {stem: ημικρανι, en: migraine (hemicrania), icpc2: N, mesh: [Migraine Disorders]}
+  - {stem: επιληπτ, en: epilepsy, icpc2: N, mesh: [Epilepsy]}
+  - {stem: παραλυ, en: paralysis, icpc2: N, mesh: [Paralysis]}
+  - {stem: ληθαργ, en: lethargy, icpc2: N, mesh: [Lethargy]}
+  - {stem: σπασμ, en: spasms / convulsions, icpc2: N, mesh: [Spasm]}
+  - {stem: ισχιαδ, en: sciatica, icpc2: L, mesh: [Sciatica]}
+  - {stem: αρθριτ, en: arthritis (joint pain), icpc2: L, mesh: [Arthritis]}
+  - {stem: ρηγματ, en: ruptures / sprains, icpc2: L, mesh: [Sprains and Strains]}
+  - {stem: καταγματ, en: fractures, icpc2: L, mesh: ["Fractures, Bone"]}
+  - {stem: ποδαγρ, en: gout (podagra), icpc2: T, mesh: [Gout]}
+  - {stem: υδρωπ, en: dropsy, icpc2: K, mesh: [Edema]}
+  - {stem: σπλην, en: spleen complaints, icpc2: B, mesh: [Splenic Diseases]}
+  # ---- A: general ------------------------------------------------------------------------
+  - {stem: πυρετ, en: fevers, icpc2: A, mesh: [Fever]}
+  - {stem: ριγ, en: shivering fits, icpc2: A, mesh: [Shivering], exact: [ριγη, ριγος, ριγων, ριγεσι]}
+  - {stem: θανασιμ, en: deadly poisons, icpc2: A, mesh: [Poisoning]}
+  - {stem: δηλητηρ, en: poisons, icpc2: A, mesh: [Poisoning]}
+  - {stem: αλεξιφαρμακ, en: antidote, icpc2: A, mesh: [Poisoning]}
+plant_parts:
+  - {stem: ριζ, part: root}
+  - {stem: φυλλ, part: leaf}
+  - {stem: σπερμ, part: seed}
+  - {stem: καρπ, part: fruit}
+  - {stem: ανθ, part: flower, exact: [ανθος, ανθη, ανθους, ανθεσι, ανθεσιν, ανθων]}
+  - {stem: φλοι, part: bark}
+  - {stem: χυλ, part: juice/sap}
+  - {stem: οπ, part: juice/sap, exact: [οπος, οπον, οπου, οπω]}
+  - {stem: δακρυ, part: resin/gum}
+  - {stem: ρητιν, part: resin/gum}
+  - {stem: κομμ, part: resin/gum}
+  - {stem: κομ, part: leaf, exact: [κομη, κομης]}
+  - {stem: ελαι, part: oil, exact: [ελαιον, ελαιου, ελαιω]}
+  - {stem: καυλ, part: other}
+  - {stem: ποα, part: whole, exact: [ποα, ποας, ποαν]}
+  - {stem: βοταν, part: whole}
+preparations:
+  - {stem: αφεψημ, en: decoction}
+  - {stem: αφεψ, en: decoction}
+  - {stem: εψηθ, en: boiled}
+  - {stem: καταπλασ, en: plaster / poultice}
+  - {stem: κατακλασ, en: plaster / poultice}
+  - {stem: κηρωτ, en: cerate}
+  - {stem: οιν, en: with wine, exact: [οινω, οινου, οινον]}
+  - {stem: μελιτ, en: with honey}
+  - {stem: μελικρατ, en: with honey-water}
+  - {stem: οξ, en: with vinegar, exact: [οξει, οξους, οξος]}
+  - {stem: οξυκρατ, en: with vinegar-water}
+  - {stem: λει, en: pounded smooth, exact: [λεια, λειον, λειος, λειωθεν, λειωθεισα, λειωθεντα]}
+  - {stem: τριφθ, en: rubbed / ground}
+  - {stem: κοπ, en: pounded, exact: [κοπεισα, κοπεν, κοπεντα, κοπεισαι]}
+  - {stem: ξηρ, en: dried, exact: [ξηρα, ξηρον, ξηρου, ξηρανθεν, ξηρανθεισα]}
+  - {stem: χλωρ, en: fresh, exact: [χλωρα, χλωρον, χλωρου]}
+  - {stem: καυθ, en: burnt}
+  - {stem: χυλισμ, en: juice extract}
+routes:
+  - {stem: καταπλασσ, route: topical}
+  - {stem: καταπλασ, route: topical}
+  - {stem: επιτιθ, route: topical}
+  - {stem: επιτεθ, route: topical}
+  - {stem: αλειφ, route: topical}
+  - {stem: χρι, route: topical}
+  - {stem: χρισ, route: topical}
+  - {stem: διαχρισ, route: topical}
+  - {stem: επιπασσ, route: topical}
+  - {stem: επιπαττ, route: topical}
+  - {stem: καταχρι, route: topical}
+  - {stem: επιχρι, route: topical}
+  - {stem: προσαπτ, route: topical}
+  - {stem: περιαπτ, route: topical}
+  - {stem: σμηχ, route: topical}
+  - {stem: πιν, route: oral}
+  - {stem: ποθ, route: oral}
+  - {stem: ποσ, route: oral, exact: [ποσει, ποσις, ποσεως]}
+  - {stem: ποτιζ, route: oral}
+  - {stem: προπιν, route: oral}
+  - {stem: εσθι, route: oral}
+  - {stem: εσθιομ, route: oral}
+  - {stem: βρωθ, route: oral}
+  - {stem: εκλειγμ, route: oral}
+  - {stem: διακλυζ, route: oral}
+  - {stem: αναγαργαρ, route: oral}
+  - {stem: υποκαπνι, route: inhaled}
+  - {stem: θυμια, route: inhaled}
+  - {stem: οσφραιν, route: inhaled}
+  - {stem: προστιθ, route: rectal/vaginal}
+  - {stem: προστεθ, route: rectal/vaginal}
+  - {stem: πεσσ, route: rectal/vaginal}
+  - {stem: ενιεμ, route: rectal/vaginal}
+  - {stem: κλυσ, route: rectal/vaginal}
+  - {stem: εγκαθισμ, route: rectal/vaginal}

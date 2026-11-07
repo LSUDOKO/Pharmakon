@@ -1,0 +1,12 @@
+pilot_domain: skin_wounds
+icpc2_focus: S
+texts_in_scope: [dmm, jc, modern]
+dmm_books_plants: [1, 2, 3, 4]
+cutoffs: [2000, 2005, 2010, 2015]
+t_end: 2025
+id_min_p_for_backtest: 0.2
+pubmed_max_pairs: 400
+lotus_max_taxa: 120
+chembl_max_compounds_per_taxon: 15
+seed: 13
+bootstrap_n: 1000

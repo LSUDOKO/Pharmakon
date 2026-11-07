@@ -1,0 +1,9 @@
+{
+  "stage": "cluster-names",
+  "generated_at": "2026-11-07T10:10:05+00:00",
+  "clusters": 653,
+  "clusters_with_jc_crosswalk": 204,
+  "clusters_linked_to_gold": 52,
+  "gold_names_covered": 61,
+  "synonym_variants": 2005
+}

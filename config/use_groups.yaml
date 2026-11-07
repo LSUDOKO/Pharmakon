@@ -1,0 +1,53 @@
+# Crosswalk between ICPC-2 chapters (used for Dioscorides claims) and the 21 medicinal use groups
+# of Lardos et al. 2024 (JC + modern data, Data file 4 sheet "Med use groups").
+# The persistence analysis runs on the Lardos use groups, which both sides can be mapped to.
+use_groups:
+  AN: {label: Andrology, icpc2: [Y]}
+  BS: {label: "Blood, spleen", icpc2: [B]}
+  CV: {label: Cardiovascular disorders, icpc2: [K]}
+  DE: {label: Dermatology, icpc2: [S]}
+  FV: {label: Fever, icpc2: [A]}
+  GI: {label: Gastrointestinal tract, icpc2: [D]}
+  GY: {label: Gynaecology, icpc2: [X]}
+  IF: {label: Infectious diseases, icpc2: []}
+  LG: {label: Liver and gall bladder, icpc2: []}
+  MA: {label: Maternity, icpc2: [W]}
+  MC: {label: Mental conditions, icpc2: [P]}
+  MS: {label: Musculoskeletal, icpc2: [L, T]}
+  MN: {label: "Metabolic, nutritional disorders", icpc2: []}
+  NC: {label: Neurological conditions, icpc2: [N]}
+  OP: {label: Ophthalmology, icpc2: [F]}
+  OC: {label: Oral cavity, icpc2: []}
+  OT: {label: Otology, icpc2: [H]}
+  RE: {label: Respiratory tract, icpc2: [R]}
+  RL: {label: Rhino-Laryngology, icpc2: []}
+  UR: {label: Urology, icpc2: [U]}
+  XY: {label: Residual category, icpc2: []}
+# Lexicon entries whose meaning is narrower than their ICPC-2 chapter are routed explicitly
+# (matched on the lexicon `stem`).
+stem_overrides:
+  ηπατ: LG
+  ικτερ: LG
+  οδονταλγ: OC
+  οδοντ: OC
+  ουλων: OC
+  αφθ: OC
+  συναγχ: RL
+  κυναγχ: RL
+  παρισθμι: RL
+  φθισ: IF
+  ποδαγρ: MS
+  σπασμ: MS
+  παραλυ: MS
+  ανορεξ: MN
+  θανασιμ: XY
+  δηλητηρ: XY
+  αλεξιφαρμακ: XY
+  χοιραδ: XY
+  δηγμ: DE
+  θηριοδηκτ: DE
+  πληγ: DE
+  εμβρυ: MA
+  δευτερ: MA
+  ατοκ: GY
+  αιμορροιδ: CV
