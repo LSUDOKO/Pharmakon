@@ -293,17 +293,29 @@ def table_backtest(fc: dict) -> str:
 
 
 def table_leads(leads: list[dict], n: int = 20) -> str:
-    out = ["| | # | species | condition (MeSH) | P(species) | lead score | toxicity | IUCN | used in modern Greece | rank if certainty ignored |",
-           "|---|---|---|---|---|---|---|---|---|---|"]
+    out = ["| # | species | condition (MeSH) | P(species) | lead score | toxicity | IUCN | used in modern Greece | rank if certainty ignored |",
+           "|---|---|---|---|---|---|---|---|---|"]
     for ld in leads[:n]:
-        img = ""
-        if ld.get("image"):
-            src = re.sub(r"width=\d+", "width=160", ld["image"]["thumb"])
-            img = f'<img src="{esc(src)}" width="72" height="54" alt="{esc(ld["species"])}">'
         tox = f'⚠ known toxic constituent ([PubChem]({ld["tox_url"]}))' if ld.get("toxic") else ""
-        out.append(f"| {img} | {ld['rank']} | *{ld['species']}* | {ld['condition']} | {ld['p']:.2f} | {ld['score']:.3f} | {tox} | "
+        out.append(f"| {ld['rank']} | *{ld['species']}* | {ld['condition']} | {ld['p']:.2f} | {ld['score']:.3f} | {tox} | "
                    f"{ld.get('iucn') or ''} | {'yes' if ld.get('modern') else ''} | {ld['rank_top1']} |")
     return "\n".join(out)
+
+
+def gallery_leads(leads: list[dict], n: int = 12, per_row: int = 4) -> str:
+    """HTML photo grid of the top leads that have a Wikimedia photo (markdown table cells collapse images)."""
+    pics = [ld for ld in leads if ld.get("image")][:n]
+    rows = []
+    for i in range(0, len(pics), per_row):
+        cells = []
+        for ld in pics[i:i + per_row]:
+            src = re.sub(r"width=\d+", "width=400", ld["image"]["thumb"])
+            flag = " ⚠" if ld.get("toxic") else ""
+            cells.append(f'<td width="{100 // per_row}%" align="center"><a href="{esc(ld["image"]["page"])}">'
+                         f'<img src="{esc(src)}" width="100%" alt="{esc(ld["species"])}"></a><br>'
+                         f'<sub><b>#{ld["rank"]}</b> <i>{esc(ld["species"])}</i>{flag}<br>{esc(ld["condition"])} · P = {ld["p"]:.2f}</sub></td>')
+        rows.append("<tr>" + "".join(cells) + "</tr>")
+    return "<table>\n" + "\n".join(rows) + "\n</table>"
 
 
 def table_conditions(leads: list[dict]) -> str:
@@ -421,6 +433,7 @@ def build() -> dict:
         "TABLE_PERSISTENCE": table_persistence(S["persistence"]),
         "TABLE_BACKTEST": table_backtest(S["forecast"]),
         "TABLE_LEADS": table_leads(leads),
+        "GALLERY_LEADS": gallery_leads(leads),
         "TABLE_CONDITIONS": table_conditions(leads),
         "TABLE_SOURCES": table_sources(),
         "TABLE_MCP": table_mcp(),

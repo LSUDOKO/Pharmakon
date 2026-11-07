@@ -11,7 +11,7 @@
 An uncertainty-aware map from Dioscorides' 1st-century Greek to modern species, chemistry and untested research leads.</p>
 
 <p align="center">
-  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-pharmakon.workers.dev-17744f?style=flat-square"></a>
+  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-open-17744f?style=flat-square"></a>
   <a href="https://pharmakon.adoranto737.workers.dev/mcp"><img alt="MCP server" src="https://img.shields.io/badge/MCP-6%20tools-3dbb82?style=flat-square"></a>
   <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-b8e6cc?style=flat-square">
   <img alt="Tests" src="https://img.shields.io/badge/tests-24%20passing-17744f?style=flat-square">
@@ -111,9 +111,11 @@ Plant–condition pairs used historically, with **no matching PubMed pharmacolog
 > [!WARNING]
 > Hypotheses to test, never advice to use. Rows marked ⚠ contain a compound with a PubChem GHS hazard record.
 
-{{TABLE_LEADS}}
+{{GALLERY_LEADS}}
 
-<sub>Plant photographs: Wikimedia Commons via Wikidata (P18), each under its own licence.</sub>
+<sub>Photos of the top leads with a Wikimedia Commons image (Wikidata P18; each file under its own licence, click for the file page). ⚠ = known toxic constituent.</sub>
+
+{{TABLE_LEADS}}
 
 - **{{LOWP}}** of the top 20 rest on a plant identification below 0.5.
 - **{{TOX20}}** of the top 20 carry a known-toxicity flag.

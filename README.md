@@ -11,7 +11,7 @@
 An uncertainty-aware map from Dioscorides' 1st-century Greek to modern species, chemistry and untested research leads.</p>
 
 <p align="center">
-  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-pharmakon.workers.dev-17744f?style=flat-square"></a>
+  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-open-17744f?style=flat-square"></a>
   <a href="https://pharmakon.adoranto737.workers.dev/mcp"><img alt="MCP server" src="https://img.shields.io/badge/MCP-6%20tools-3dbb82?style=flat-square"></a>
   <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-b8e6cc?style=flat-square">
   <img alt="Tests" src="https://img.shields.io/badge/tests-24%20passing-17744f?style=flat-square">
@@ -186,30 +186,36 @@ Plant–condition pairs used historically, with **no matching PubMed pharmacolog
 > [!WARNING]
 > Hypotheses to test, never advice to use. Rows marked ⚠ contain a compound with a PubChem GHS hazard record.
 
-| | # | species | condition (MeSH) | P(species) | lead score | toxicity | IUCN | used in modern Greece | rank if certainty ignored |
-|---|---|---|---|---|---|---|---|---|---|
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Heliotropium%20europaeum3.jpg?width=160" width="72" height="54" alt="Heliotropium europaeum"> | 1 | *Heliotropium europaeum* | Skin Diseases | 0.80 | 0.380 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/5281735)) |  |  | 6 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Frouzet%20fg02.jpg?width=160" width="72" height="54" alt="Quercus ilex"> | 2 | *Quercus ilex* | Inflammation | 0.59 | 0.362 |  | least concern | yes | 2 |
-|  | 3 | *Prunus domestica* | Skin Diseases | 0.44 | 0.362 |  |  | yes | 1 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sorghum%20halepense-Sorgho%20d%27Alep-20150622.jpg?width=160" width="72" height="54" alt="Sorghum halepense"> | 4 | *Sorghum halepense* | Inflammation | 0.57 | 0.307 |  |  |  | 4 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Glycyrrhiza%20echinata%20MHNT.BOT2004.0.97.jpg?width=160" width="72" height="54" alt="Glycyrrhiza echinata"> | 5 | *Glycyrrhiza echinata* | Wounds and Injuries | 0.55 | 0.275 |  |  | yes | 5 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/%28MHNT%29%20Raphanus%20raphanistrum%20-%20flowers.jpg?width=160" width="72" height="54" alt="Raphanus raphanistrum"> | 6 | *Raphanus raphanistrum* | Wounds and Injuries | 0.44 | 0.267 |  |  |  | 3 |
-|  | 7 | *Teucrium scordium* | Wounds and Injuries | 0.65 | 0.221 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/159529)) |  | yes | 7 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cynodon%20dactylon%20RF.jpg?width=160" width="72" height="54" alt="Cynodon dactylon"> | 8 | *Cynodon dactylon* | Wounds and Injuries | 0.27 | 0.214 |  |  |  | 247 |
-|  | 9 | *Juniperus sabina* | Inflammation | 0.50 | 0.201 |  |  | yes | 247 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Vicia%20faba1.jpg?width=160" width="72" height="54" alt="Vicia faba"> | 10 | *Vicia faba* | Cicatrix | 0.67 | 0.197 |  |  |  | 12 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rumex%20patientia%20kz01.jpg?width=160" width="72" height="54" alt="Rumex patientia"> | 11 | *Rumex patientia* | Skin Diseases | 0.37 | 0.183 |  |  | yes | 247 |
-|  | 12 | *Arctium lappa* | Skin Ulcer | 0.59 | 0.177 |  |  |  | 11 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Groundsel%20%28Senecio%20vulgaris%29%20%2810171293746%29.jpg?width=160" width="72" height="54" alt="Senecio vulgaris"> | 13 | *Senecio vulgaris* | Inflammation | 0.62 | 0.167 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/5281743)) |  |  | 16 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Radish%203371103037%204ab07db0bf%20o.jpg?width=160" width="72" height="54" alt="Raphanus sativus"> | 14 | *Raphanus sativus* | Skin Ulcer | 0.41 | 0.163 |  |  |  | 247 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia%20arborescens%2012052004%20Var.jpg?width=160" width="72" height="54" alt="Artemisia arborescens"> | 15 | *Artemisia arborescens* | Inflammation | 0.65 | 0.162 |  |  | yes | 17 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ruta%20graveolens%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-259.jpg?width=160" width="72" height="54" alt="Ruta graveolens"> | 16 | *Ruta graveolens* | Skin Ulcer | 0.52 | 0.161 |  |  | yes | 9 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dettaglio%20-%20Anacardiaceae%20Pistacia%20lentiscus%20Lin.%20Erbario%20Frizzi%20Perugia%20n.%203752.jpg?width=160" width="72" height="54" alt="Pistacia lentiscus"> | 17 | *Pistacia lentiscus* | Cicatrix | 0.72 | 0.160 |  | least concern | yes | 21 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Achillea%20millefolium%20vallee-de-grace-amiens%2080%2022062007%201.jpg?width=160" width="72" height="54" alt="Achillea millefolium"> | 18 | *Achillea millefolium* | Skin Ulcer | 0.55 | 0.155 |  | least concern |  | 13 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Snowdrops%20in%20Lothersdale%20Churchyard.jpg?width=160" width="72" height="54" alt="Galanthus nivalis"> | 19 | *Galanthus nivalis* | Inflammation | 0.34 | 0.155 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/121587)) | near threatened |  | 247 |
-| <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20fleur%20lupin86.JPG?width=160" width="72" height="54" alt="Lupinus albus"> | 20 | *Lupinus albus* | Pruritus | 0.54 | 0.150 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/72325)) | least concern |  | 14 |
+<table>
+<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Heliotropium%20europaeum3.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Heliotropium%20europaeum3.jpg?width=400" width="100%" alt="Heliotropium europaeum"></a><br><sub><b>#1</b> <i>Heliotropium europaeum</i> ⚠<br>Skin Diseases · P = 0.80</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Frouzet%20fg02.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Frouzet%20fg02.jpg?width=400" width="100%" alt="Quercus ilex"></a><br><sub><b>#2</b> <i>Quercus ilex</i><br>Inflammation · P = 0.59</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Sorghum%20halepense-Sorgho%20d%27Alep-20150622.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sorghum%20halepense-Sorgho%20d%27Alep-20150622.jpg?width=400" width="100%" alt="Sorghum halepense"></a><br><sub><b>#4</b> <i>Sorghum halepense</i><br>Inflammation · P = 0.57</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Glycyrrhiza%20echinata%20MHNT.BOT2004.0.97.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Glycyrrhiza%20echinata%20MHNT.BOT2004.0.97.jpg?width=400" width="100%" alt="Glycyrrhiza echinata"></a><br><sub><b>#5</b> <i>Glycyrrhiza echinata</i><br>Wounds and Injuries · P = 0.55</sub></td></tr>
+<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:%28MHNT%29%20Raphanus%20raphanistrum%20-%20flowers.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%28MHNT%29%20Raphanus%20raphanistrum%20-%20flowers.jpg?width=400" width="100%" alt="Raphanus raphanistrum"></a><br><sub><b>#6</b> <i>Raphanus raphanistrum</i><br>Wounds and Injuries · P = 0.44</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Cynodon%20dactylon%20RF.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cynodon%20dactylon%20RF.jpg?width=400" width="100%" alt="Cynodon dactylon"></a><br><sub><b>#8</b> <i>Cynodon dactylon</i><br>Wounds and Injuries · P = 0.27</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Illustration%20Vicia%20faba1.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Vicia%20faba1.jpg?width=400" width="100%" alt="Vicia faba"></a><br><sub><b>#10</b> <i>Vicia faba</i><br>Cicatrix · P = 0.67</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Rumex%20patientia%20kz01.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rumex%20patientia%20kz01.jpg?width=400" width="100%" alt="Rumex patientia"></a><br><sub><b>#11</b> <i>Rumex patientia</i><br>Skin Diseases · P = 0.37</sub></td></tr>
+<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Groundsel%20%28Senecio%20vulgaris%29%20%2810171293746%29.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Groundsel%20%28Senecio%20vulgaris%29%20%2810171293746%29.jpg?width=400" width="100%" alt="Senecio vulgaris"></a><br><sub><b>#13</b> <i>Senecio vulgaris</i> ⚠<br>Inflammation · P = 0.62</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Radish%203371103037%204ab07db0bf%20o.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Radish%203371103037%204ab07db0bf%20o.jpg?width=400" width="100%" alt="Raphanus sativus"></a><br><sub><b>#14</b> <i>Raphanus sativus</i><br>Skin Ulcer · P = 0.41</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Artemisia%20arborescens%2012052004%20Var.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia%20arborescens%2012052004%20Var.jpg?width=400" width="100%" alt="Artemisia arborescens"></a><br><sub><b>#15</b> <i>Artemisia arborescens</i><br>Inflammation · P = 0.65</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Ruta%20graveolens%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-259.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ruta%20graveolens%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-259.jpg?width=400" width="100%" alt="Ruta graveolens"></a><br><sub><b>#16</b> <i>Ruta graveolens</i><br>Skin Ulcer · P = 0.52</sub></td></tr>
+</table>
 
-<sub>Plant photographs: Wikimedia Commons via Wikidata (P18), each under its own licence.</sub>
+<sub>Photos of the top leads with a Wikimedia Commons image (Wikidata P18; each file under its own licence, click for the file page). ⚠ = known toxic constituent.</sub>
+
+| # | species | condition (MeSH) | P(species) | lead score | toxicity | IUCN | used in modern Greece | rank if certainty ignored |
+|---|---|---|---|---|---|---|---|---|
+| 1 | *Heliotropium europaeum* | Skin Diseases | 0.80 | 0.380 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/5281735)) |  |  | 6 |
+| 2 | *Quercus ilex* | Inflammation | 0.59 | 0.362 |  | least concern | yes | 2 |
+| 3 | *Prunus domestica* | Skin Diseases | 0.44 | 0.362 |  |  | yes | 1 |
+| 4 | *Sorghum halepense* | Inflammation | 0.57 | 0.307 |  |  |  | 4 |
+| 5 | *Glycyrrhiza echinata* | Wounds and Injuries | 0.55 | 0.275 |  |  | yes | 5 |
+| 6 | *Raphanus raphanistrum* | Wounds and Injuries | 0.44 | 0.267 |  |  |  | 3 |
+| 7 | *Teucrium scordium* | Wounds and Injuries | 0.65 | 0.221 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/159529)) |  | yes | 7 |
+| 8 | *Cynodon dactylon* | Wounds and Injuries | 0.27 | 0.214 |  |  |  | 247 |
+| 9 | *Juniperus sabina* | Inflammation | 0.50 | 0.201 |  |  | yes | 247 |
+| 10 | *Vicia faba* | Cicatrix | 0.67 | 0.197 |  |  |  | 12 |
+| 11 | *Rumex patientia* | Skin Diseases | 0.37 | 0.183 |  |  | yes | 247 |
+| 12 | *Arctium lappa* | Skin Ulcer | 0.59 | 0.177 |  |  |  | 11 |
+| 13 | *Senecio vulgaris* | Inflammation | 0.62 | 0.167 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/5281743)) |  |  | 16 |
+| 14 | *Raphanus sativus* | Skin Ulcer | 0.41 | 0.163 |  |  |  | 247 |
+| 15 | *Artemisia arborescens* | Inflammation | 0.65 | 0.162 |  |  | yes | 17 |
+| 16 | *Ruta graveolens* | Skin Ulcer | 0.52 | 0.161 |  |  | yes | 9 |
+| 17 | *Pistacia lentiscus* | Cicatrix | 0.72 | 0.160 |  | least concern | yes | 21 |
+| 18 | *Achillea millefolium* | Skin Ulcer | 0.55 | 0.155 |  | least concern |  | 13 |
+| 19 | *Galanthus nivalis* | Inflammation | 0.34 | 0.155 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/121587)) | near threatened |  | 247 |
+| 20 | *Lupinus albus* | Pruritus | 0.54 | 0.150 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/72325)) | least concern |  | 14 |
 
 - **7** of the top 20 rest on a plant identification below 0.5.
 - **5** of the top 20 carry a known-toxicity flag.
