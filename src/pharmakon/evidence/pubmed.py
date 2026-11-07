@@ -77,7 +77,7 @@ def build_pairs(max_pairs: int) -> pd.DataFrame:
     cand = pd.read_parquet(PROCESSED / "id_candidates.parquet")[["taxon_key", "taxon_rank"]].drop_duplicates("taxon_key")
     post = post.merge(cand, on="taxon_key")
     post = post[post["taxon_rank"] == "SPECIES"]
-    pairs = post.merge(cm, left_on="unit_id", right_on="cluster_id")
+    pairs = post.drop(columns=["cluster_id"]).merge(cm, left_on="unit_id", right_on="cluster_id")
     pairs = pairs.rename(columns={"mesh_ids": "mesh_id"})
     agg = pairs.groupby(["taxon_key", "mesh_id"]).agg(
         accepted_name=("accepted_name", "first"), p_species=("p", "max"), clusters=("cluster_id", lambda s: sorted(set(s))),

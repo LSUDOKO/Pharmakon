@@ -163,7 +163,7 @@ def extract(passages: pd.DataFrame, use_llm: bool = False) -> tuple[pd.DataFrame
                 "uncertain_fields": c.get("uncertain_fields", []),
                 "therapeutic_cue": bool(cue),
                 "extractor_version": version,
-                "source_id": "dmm_wellmann" if p["work"] == "dmm" else p["work"],
+                "source_id": {"dmm": "dmm_wellmann", "galen": "galen_simpl"}.get(p["work"], p["work"]),
                 "retrieved_at": ts,
                 "method": version,
             })

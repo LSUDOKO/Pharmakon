@@ -48,7 +48,29 @@ def lotus_compounds(qids: list[str], batch: int = 8) -> pd.DataFrame:
         reference_qids=("reference_qid", lambda s: sorted({x for x in s if isinstance(x, str)})),
         reference_year=("reference_year", "min"),
     )
-    out["source_id"], out["retrieved_at"], out["method"] = "lotus", now_iso(), "wikidata_sparql_P703_P248_P577"
+    # Since the 2025 WDQS graph split, scholarly-article items (the LOTUS references) live on a separate
+    # endpoint, so their publication dates (P577) are fetched from query-scholarly.wikidata.org.
+    refs = sorted({q for qs in out["reference_qids"] for q in qs})
+    years = reference_years(refs)
+    out["reference_year"] = out["reference_qids"].map(lambda qs: min((years[q] for q in qs if q in years), default=None)).astype("Int64")
+    out["source_id"], out["retrieved_at"], out["method"] = "lotus", now_iso(), "wikidata_sparql_P703_P248+scholarly_P577"
+    return out
+
+
+def reference_years(qids: list[str], batch: int = 200) -> dict[str, int]:
+    out: dict[str, int] = {}
+    for i in range(0, len(qids), batch):
+        vals = " ".join(f"wd:{q}" for q in qids[i : i + batch])
+        try:
+            res = http.sparql(f"SELECT ?r ?date WHERE {{ VALUES ?r {{ {vals} }} ?r wdt:P577 ?date }}",
+                              endpoint="https://query-scholarly.wikidata.org/sparql")
+        except Exception:  # noqa: BLE001
+            continue
+        for b in res:
+            if b.get("date"):
+                q = b["r"].rsplit("/", 1)[-1]
+                y = int(b["date"][:4])
+                out[q] = min(out.get(q, y), y)
     return out
 
 

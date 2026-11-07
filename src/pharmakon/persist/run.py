@@ -80,7 +80,32 @@ def _expected(post_n: pd.DataFrame, modern_sp: set, modern_gen: set, g: str | No
     return e_any, e_sp
 
 
-def persistence_table(claims: pd.DataFrame, post: pd.DataFrame, jc: pd.DataFrame, modern: pd.DataFrame) -> pd.DataFrame:
+def galen_records() -> dict[tuple[str, str], float]:
+    """(cluster, use group) attested in Galen books 6–8 → weight (0.5 if the entry copies Dioscorides, else 1)."""
+    gp = PROCESSED / "claims_galen.parquet"
+    if not gp.exists():
+        return {}
+    gc = pd.read_parquet(gp)
+    gc = gc[gc["status"] == "ok"]
+    xw = pd.read_parquet(PROCESSED / "galen_crosswalk.parquet")
+    clusters = pd.read_parquet(PROCESSED / "name_clusters.parquet")
+    ch2cl = dict(zip(clusters["chapter_id"], clusters["cluster_id"], strict=True))
+    m = gc.merge(xw, left_on="chapter_id", right_on="entry_id")
+    m["cluster_id"] = m["dmm_chapter_id"].map(ch2cl)
+    out: dict[tuple[str, str], float] = {}
+    for r in m.dropna(subset=["cluster_id"]).itertuples():
+        w = 0.5 if r.copy_containment > COPY_THRESHOLD else 1.0
+        out[(r.cluster_id, r.use_group)] = max(out.get((r.cluster_id, r.use_group), 0.0), w)
+    return out
+
+
+COPY_THRESHOLD = 0.15
+
+
+def persistence_table(claims: pd.DataFrame, post: pd.DataFrame, jc: pd.DataFrame, modern: pd.DataFrame,
+                      galen: dict[tuple[str, str], float] | None = None) -> pd.DataFrame:
+    galen = galen or {}
+    galen_clusters = {c for c, _ in galen}
     modern_sp = set(zip(modern["taxon_key"], modern["use_group"], strict=True)) | {(t, None) for t in modern["taxon_key"]}
     modern_gen = set(zip(modern["genus"], modern["use_group"], strict=True)) | {(gname, None) for gname in modern["genus"]}
     jc_set = set(zip(jc["cluster_id"], jc["use_group"], strict=True))
@@ -102,23 +127,25 @@ def persistence_table(claims: pd.DataFrame, post: pd.DataFrame, jc: pd.DataFrame
             in_dmm = g in dm.index
             e_mod, e_mod_sp = _expected(pn, modern_sp, modern_gen, g)
             in_jc = (cl, g) in jc_set if cl in jc_linked else None
+            in_galen = (cl, g) in galen if cl in galen_clusters else None
             if not in_dmm and e_mod < 0.5:
                 continue
-            later = [e_mod] + ([float(in_jc)] if in_jc is not None else [])
+            later = [e_mod] + ([float(in_jc)] if in_jc is not None else []) + ([galen.get((cl, g), 0.0)] if in_galen is not None else [])
             if in_dmm and e_mod >= 0.5:
                 pat = "persisted"
             elif in_dmm and e_plant_modern >= 0.5:
                 pat = "modified"
             elif in_dmm:
-                pat = "lost" if not in_jc else "persisted_to_byzantine_only"
+                pat = "persisted_to_byzantine_only" if in_jc else ("persisted_to_galen_only" if in_galen else "lost")
             else:
                 pat = "novel"
             rows.append({
-                "cluster_id": cl, "use_group": g, "present_dmm": in_dmm, "present_jc": in_jc, "jc_linked": cl in jc_linked,
+                "cluster_id": cl, "use_group": g, "present_dmm": in_dmm, "present_galen": in_galen, "galen_linked": cl in galen_clusters,
+                "galen_weight": galen.get((cl, g)), "present_jc": in_jc, "jc_linked": cl in jc_linked,
                 "expected_modern": round(e_mod, 4), "expected_modern_species_only": round(e_mod_sp, 4),
                 "p_identified": round(p_id, 4), "expected_plant_in_modern": round(e_plant_modern, 4),
                 "persistence_score": round(float(np.mean(later)), 4) if in_dmm else None,
-                "n_texts_attesting": int(in_dmm) + int(bool(in_jc)) + int(e_mod >= 0.5),
+                "n_texts_attesting": int(in_dmm) + int(bool(in_galen)) + int(bool(in_jc)) + int(e_mod >= 0.5),
                 "pattern": pat,
                 "n_dmm_claims": int(dm.loc[g, "n_claims"]) if in_dmm else 0,
                 "example_span_grc": dm.loc[g, "example_span"] if in_dmm else None,
@@ -126,7 +153,8 @@ def persistence_table(claims: pd.DataFrame, post: pd.DataFrame, jc: pd.DataFrame
                 "plant_parts": list(dm.loc[g, "plant_parts"]) if in_dmm else [],
             })
     out = pd.DataFrame(rows)
-    out["first_attested_century"] = np.where(out["present_dmm"], 1, np.where(out["present_jc"].fillna(False).astype(bool), 13, 20))
+    out["first_attested_century"] = np.where(out["present_dmm"], 1, np.where(out["present_galen"].fillna(False).astype(bool), 2,
+                                             np.where(out["present_jc"].fillna(False).astype(bool), 13, 20)))
     return out
 
 
@@ -174,14 +202,16 @@ def run() -> dict:
     modern = modern_records()
     write_table(modern, PROCESSED / "modern_attestations.parquet")
     jc = jc_records()
-    tab = persistence_table(claims, post, jc, modern)
+    galen = galen_records()
+    tab = persistence_table(claims, post, jc, modern, galen)
+    tab_no_galen = persistence_table(claims, post, jc, modern, {})
     tab["source_id"], tab["retrieved_at"], tab["method"] = "pharmakon_persistence", now_iso(), "expected_attestation_v1"
     write_table(tab, PROCESSED / "persistence.parquet")
     perm = permutation_null(tab, post, modern, n=1000, seed=cfg["seed"])
     d = tab[tab["present_dmm"]]
     by_group = d.groupby("use_group")["pattern"].value_counts().unstack(fill_value=0)
     ex = tab[(tab["pattern"] == "persisted") & (tab["use_group"] == "DE")].sort_values(["persistence_score", "n_dmm_claims"], ascending=False).head(5)
-    examples = ex[["cluster_id", "use_group", "persistence_score", "expected_modern", "present_jc", "example_passage_id", "example_span_grc"]].to_dict("records")
+    examples = ex[["cluster_id", "use_group", "persistence_score", "expected_modern", "present_galen", "present_jc", "example_passage_id", "example_span_grc"]].to_dict("records")
     summary = {
         "clusters_with_identified_taxa": int(tab["cluster_id"].nunique()),
         "rows": int(len(tab)),
@@ -189,12 +219,17 @@ def run() -> dict:
         "pattern_counts_dermatology": tab[tab["use_group"] == "DE"]["pattern"].value_counts().to_dict(),
         "by_use_group": {g: {k: int(v) for k, v in r.items()} for g, r in by_group.iterrows()},
         "jc_linked_clusters": int(tab.loc[tab["jc_linked"], "cluster_id"].nunique()),
+        "galen_linked_clusters": int(tab.loc[tab["galen_linked"], "cluster_id"].nunique()),
+        "galen_agreement_rate": round(float(d.loc[d["galen_linked"], "present_galen"].astype(bool).mean()), 4) if d["galen_linked"].any() else None,
+        "mean_persistence_score_with_galen": round(float(d["persistence_score"].mean()), 4),
+        "mean_persistence_score_without_galen": round(float(tab_no_galen.loc[tab_no_galen["present_dmm"], "persistence_score"].mean()), 4),
+        "galen_copy_threshold_4gram_containment": COPY_THRESHOLD,
         "jc_agreement_rate": round(float(d.loc[d["jc_linked"], "present_jc"].astype(bool).mean()), 4) if d["jc_linked"].any() else None,
         "modern_records": int(len(modern)),
         "modern_sources": modern["source"].str.split(":").str[0].value_counts().to_dict(),
         "permutation_test": perm,
         "worked_examples": examples,
-        "copy_detection": "not applicable: Galen and Paul of Aegina are not ingested in this pilot (docs/decisions.md)",
+        "copy_detection": "Galen entries down-weighted to 0.5 when word-4-gram containment in the matched Dioscorides chapter > 0.15; Paul of Aegina not ingested",
     }
     log.info(json.dumps({k: summary[k] for k in ("rows", "pattern_counts", "permutation_test")}, ensure_ascii=False))
     write_stage_report("persistence", summary)

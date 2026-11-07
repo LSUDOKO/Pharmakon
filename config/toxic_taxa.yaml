@@ -1,0 +1,26 @@
+# Genera with well-known serious toxicity that occur in Dioscorides (spec/10 §1).
+# Each genus names a characteristic toxic constituent (or a list of name forms / salts to try in order). The CITATION for every entry is resolved at
+# run time from PubChem (CID + GHS hazard statements via PUG-View) and written to
+# data/processed/toxic_taxa.parquet — nothing here is a hand-typed identifier.
+genera:
+  Aconitum: aconitine
+  Conium: [coniine, coniine hydrochloride]
+  Hyoscyamus: [hyoscyamine, hyoscyamine sulfate, atropine sulfate]
+  Mandragora: [scopolamine, scopolamine hydrobromide, atropine sulfate]
+  Atropa: [atropine, atropine sulfate]
+  Datura: [scopolamine, scopolamine hydrobromide, atropine sulfate]
+  Colchicum: colchicine
+  Veratrum: veratridine
+  Helleborus: hellebrin
+  Euphorbia: ingenol mebutate
+  Nerium: oleandrin
+  Digitalis: digitoxin
+  Ricinus: ricinine
+  Aristolochia: aristolochic acid I
+  Papaver: morphine
+  Delphinium: [delphinine, aconitine]
+  Ecballium: [cucurbitacin E, cucurbitacin B]
+  Bryonia: cucurbitacin B
+  Citrullus: [cucurbitacin E, cucurbitacin B]
+  Daphne: [mezerein, daphnetoxin]
+  Thapsia: [thapsigargin]

@@ -23,6 +23,7 @@ USER_AGENT = (
 _RATE = {
     "eutils.ncbi.nlm.nih.gov": 0.11 if env("NCBI_API_KEY") else 0.35,
     "query.wikidata.org": 1.0,
+    "query-scholarly.wikidata.org": 1.0,
     "api.gbif.org": 0.1,
     "www.ebi.ac.uk": 0.2,
     "id.nlm.nih.gov": 0.2,

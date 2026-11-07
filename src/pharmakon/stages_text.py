@@ -213,3 +213,44 @@ def cluster_names() -> dict:
     log.info(json.dumps(summary, ensure_ascii=False))
     write_stage_report("cluster-names", summary)
     return summary
+
+
+def assign_use_groups(claims: pd.DataFrame) -> pd.DataFrame:
+    cmap = pd.read_parquet(PROCESSED / "condition_map.parquet").set_index("condition_stem")
+    claims = claims.copy()
+    claims["mesh_ids"] = claims["condition_stem"].map(lambda s: list(cmap.loc[s, "mesh_ids"]) if s in cmap.index else [])
+    ug = load_yaml("use_groups.yaml")
+    icpc_to_ug = {ic: g for g, v in ug["use_groups"].items() for ic in v["icpc2"]}
+    claims["use_group"] = [ug["stem_overrides"].get(s, icpc_to_ug.get(c, "XY")) for s, c in zip(claims["condition_stem"], claims["icpc2_chapter"], strict=False)]
+    return claims
+
+
+def ingest_galen() -> dict:
+    """Galen De simpl. med. books 6–8: passages, rule-based claims, crosswalk to Dioscorides, copy detection."""
+    from pharmakon.corpus import galen
+
+    log = get_logger("ingest-galen")
+    passages, entries = galen.load()
+    passages = add_provenance(passages, "galen_simpl", "first1k_tei_parse_v1")
+    write_table(passages, PROCESSED / "passages_galen.parquet")
+    claims, stats = extract(passages)
+    claims["source_id"] = "galen_simpl"
+    claims = assign_use_groups(claims[claims["status"] != "span_mismatch"])
+    write_table(claims, PROCESSED / "claims_galen.parquet")
+    xw = galen.crosswalk(entries, pd.read_parquet(PROCESSED / "dmm_chapters.parquet"))
+    xw = add_provenance(xw, "galen_simpl", "genitive_stem_match_v1+ngram4_containment")
+    write_table(xw, PROCESSED / "galen_crosswalk.parquet")
+    summary = {
+        "galen_passages_books_6_8": int(len(passages)), "drug_entries": int(len(entries)),
+        "entries_with_parsed_heading": int(entries["names_key"].map(len).gt(0).sum()),
+        "entries_mapped_to_dmm": int(xw["entry_id"].nunique()), "dmm_chapters_matched": int(xw["dmm_chapter_id"].nunique()),
+        "claims_kept": int(len(claims)), "claims_ok": int((claims["status"] == "ok").sum()),
+        "exact_span_verified_rate": round(float(claims["span_verified"].mean()), 4),
+        "use_group_counts": claims["use_group"].value_counts().to_dict(),
+        "copy_containment_mean": round(float(xw["copy_containment"].mean()), 4),
+        "copy_containment_p95": round(float(xw["copy_containment"].quantile(0.95)), 4),
+        "pairs_flagged_as_copies_(>0.15)": int((xw["copy_containment"] > 0.15).sum()),
+    }
+    log.info(json.dumps(summary, ensure_ascii=False))
+    write_stage_report("ingest-galen", summary)
+    return summary

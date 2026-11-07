@@ -39,6 +39,14 @@ def ingest_texts() -> None:
     _show(f())
 
 
+@app.command("ingest-galen")
+def ingest_galen() -> None:
+    """Galen De simpl. med. books 6–8 through Stages 1–3 (+ crosswalk and copy detection)."""
+    from pharmakon.stages_text import ingest_galen as f
+
+    _show(f())
+
+
 @app.command("extract-claims")
 def extract_claims(llm: bool = typer.Option(False, help="Use Claude (needs ANTHROPIC_API_KEY)")) -> None:
     from pharmakon.stages_text import extract_claims as f
