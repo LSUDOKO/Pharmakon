@@ -1,4 +1,0 @@
-[     854ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8599/Ancient_Name_Explorer/_stcore/health:0
-[     856ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8599/Ancient_Name_Explorer/_stcore/host-config:0
-[    6071ms] [ERROR] Failed to fetch metrics config: TimeoutError: signal timed out @ http://localhost:8599/static/js/index.DormvYxC.js:38
-[    6078ms] [ERROR] Undefined metrics config - deactivating metrics tracking. @ http://localhost:8599/static/js/index.DormvYxC.js:38

@@ -1,2 +1,0 @@
-[     379ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8599/Time_Machine/_stcore/health:0
-[     379ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8599/Time_Machine/_stcore/host-config:0

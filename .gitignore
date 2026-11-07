@@ -11,3 +11,4 @@ data/interim/
 data/pharmakon.duckdb
 logs/
 *.egg-info/
+.playwright-mcp/
