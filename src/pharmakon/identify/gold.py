@@ -167,7 +167,7 @@ def gold_chapter_map(gold_df: pd.DataFrame, link: pd.DataFrame) -> pd.DataFrame:
             hit = cand[cand["k"].str.split().str[0] == base]
             if hit["dmm_chapter_id"].nunique() > 1 and len(toks) > 1:
                 q = [t for t in toks[1:] if len(t) > 3]
-                better = hit[hit["k"].map(lambda k: any(t[:4] in k for t in q))]
+                better = hit[hit["k"].map(lambda k, q=q: any(t[:4] in k for t in q))]
                 hit = better if not better.empty else hit
         if hit.empty:
             hit = cand

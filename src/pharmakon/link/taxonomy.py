@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from functools import lru_cache
+from functools import cache
 
 import pandas as pd
 
@@ -33,7 +33,7 @@ def clean_name(name: str) -> str:
     return " ".join(keep)
 
 
-@lru_cache(maxsize=None)
+@cache
 def gbif_match(name: str) -> dict:
     js = http.get_json(f"{GBIF}/species/match", params={"name": name, "kingdom": "Plantae", "verbose": "false"}) or {}
     return js
@@ -77,7 +77,7 @@ def verify_many(names: list[str]) -> pd.DataFrame:
     return df
 
 
-@lru_cache(maxsize=None)
+@cache
 def occurrence_counts(taxon_key: int) -> dict[str, int]:
     """Occurrence counts per East-Mediterranean country (aggregated counts only; see licences)."""
     js = http.get_json(

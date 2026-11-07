@@ -1,0 +1,1111 @@
+{
+  "stage": "identify",
+  "generated_at": "2026-11-07T10:35:52+00:00",
+  "model_version": "clogit_v1",
+  "features": {
+    "f2_geo_log_occ": "log(1 + GBIF occurrences in GR+CY+TR)",
+    "f2_present_gr": "≥1 GBIF occurrence in Greece",
+    "f3_vernacular_sim": "max similarity of ancient name to modern Greek vernacular names (Wikidata P1843@el)",
+    "f3_epithet_sim": "max similarity of Latinised ancient name to genus / epithet",
+    "f4_lit_dmm": "log(1 + # botanical-history references proposing the taxon) [Lardos file 5]",
+    "f4_lit_ethno": "log(1 + # ethnobotanical references linking the name to the taxon) [Lardos file 5]",
+    "f4_lsj": "LSJ gives the binomial (1 asserted, 0.5 hedged)",
+    "f6_genus_consensus": "share of the unit's candidates in the same genus"
+  },
+  "weights": {
+    "f2_geo_log_occ": 0.2048,
+    "f2_present_gr": 0.6771,
+    "f3_vernacular_sim": 0.0277,
+    "f3_epithet_sim": 0.0739,
+    "f4_lit_dmm": 0.4715,
+    "f4_lit_ethno": 0.37,
+    "f4_lsj": -0.2835,
+    "f6_genus_consensus": 0.1742
+  },
+  "none_utility_b": -0.4116,
+  "temperature": 1.1688,
+  "transfer_model": {
+    "features": [
+      "f2_geo_log_occ",
+      "f2_present_gr",
+      "f3_vernacular_sim",
+      "f3_epithet_sim",
+      "f4_lsj",
+      "f6_genus_consensus"
+    ],
+    "weights": {
+      "f2_geo_log_occ": 0.3742,
+      "f2_present_gr": 0.6753,
+      "f3_vernacular_sim": 0.0303,
+      "f3_epithet_sim": 0.222,
+      "f4_lsj": -0.3116,
+      "f6_genus_consensus": 0.1601
+    },
+    "none_utility_b": -0.7453,
+    "temperature": 1.1844
+  },
+  "gold_names_evaluated": 61,
+  "gold_names_dropped": {
+    "all_expert_top_failed_gbif": []
+  },
+  "candidates_total": 839,
+  "gbif_verification": {
+    "inputs": 683,
+    "verified": 537,
+    "fail_reasons": {
+      "match=HIGHERRANK:99": 116,
+      "match=HIGHERRANK:94": 5,
+      "kingdom=Fungi": 5,
+      "kingdom=Chromista": 5,
+      "match=HIGHERRANK:96": 5,
+      "match=FUZZY:86": 3,
+      "match=FUZZY:89": 3,
+      "match=HIGHERRANK:95": 1,
+      "match=FUZZY:80": 1,
+      "match=FUZZY:87": 1
+    }
+  },
+  "results": {
+    "model_calibrated": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.623,
+        "ci95": [
+          0.5082,
+          0.7541
+        ]
+      },
+      "top3": {
+        "mean": 0.918,
+        "ci95": [
+          0.8361,
+          0.9836
+        ]
+      },
+      "rr": {
+        "mean": 0.7784,
+        "ci95": [
+          0.7081,
+          0.8544
+        ]
+      },
+      "logloss": {
+        "mean": 0.9845,
+        "ci95": [
+          0.7961,
+          1.1636
+        ]
+      },
+      "brier": {
+        "mean": 0.5004,
+        "ci95": [
+          0.3946,
+          0.6012
+        ]
+      },
+      "ece": 0.2097,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 2,
+          "mean_conf": 0.19168824219813424,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 4,
+          "mean_conf": 0.2510739652510109,
+          "accuracy": 0.0
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 16,
+          "mean_conf": 0.3473773213903229,
+          "accuracy": 0.625
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 4,
+          "mean_conf": 0.4560207128956506,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 11,
+          "mean_conf": 0.5398320114781463,
+          "accuracy": 0.45454545454545453
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 8,
+          "mean_conf": 0.6517624332122931,
+          "accuracy": 0.875
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 8,
+          "mean_conf": 0.745336196830013,
+          "accuracy": 1.0
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 7,
+          "mean_conf": 0.840574491328675,
+          "accuracy": 0.7142857142857143
+        },
+        {
+          "bin_lo": 0.9,
+          "bin_hi": 1.0,
+          "n": 1,
+          "mean_conf": 0.9051986201533293,
+          "accuracy": 0.0
+        }
+      ]
+    },
+    "model_uncalibrated": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.623,
+        "ci95": [
+          0.5082,
+          0.7541
+        ]
+      },
+      "top3": {
+        "mean": 0.918,
+        "ci95": [
+          0.8361,
+          0.9836
+        ]
+      },
+      "rr": {
+        "mean": 0.7784,
+        "ci95": [
+          0.7081,
+          0.8544
+        ]
+      },
+      "logloss": {
+        "mean": 0.9812,
+        "ci95": [
+          0.7699,
+          1.1811
+        ]
+      },
+      "brier": {
+        "mean": 0.4956,
+        "ci95": [
+          0.3787,
+          0.6059
+        ]
+      },
+      "ece": 0.1366,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 1,
+          "mean_conf": 0.1970151652301308,
+          "accuracy": 0.0
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 5,
+          "mean_conf": 0.25839655684999646,
+          "accuracy": 0.2
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 13,
+          "mean_conf": 0.3609728184890865,
+          "accuracy": 0.6153846153846154
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 6,
+          "mean_conf": 0.44489482054123597,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 11,
+          "mean_conf": 0.5616220719332741,
+          "accuracy": 0.5454545454545454
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 5,
+          "mean_conf": 0.6599559715112309,
+          "accuracy": 0.8
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 9,
+          "mean_conf": 0.7510846038401993,
+          "accuracy": 0.8888888888888888
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 9,
+          "mean_conf": 0.8617331358310613,
+          "accuracy": 0.8888888888888888
+        },
+        {
+          "bin_lo": 0.9,
+          "bin_hi": 1.0,
+          "n": 2,
+          "mean_conf": 0.9217997999717793,
+          "accuracy": 0.0
+        }
+      ]
+    },
+    "baseline_lsj": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.3115,
+        "ci95": [
+          0.1967,
+          0.4426
+        ]
+      },
+      "top3": {
+        "mean": 0.8033,
+        "ci95": [
+          0.6885,
+          0.9016
+        ]
+      },
+      "rr": {
+        "mean": 0.5746,
+        "ci95": [
+          0.4986,
+          0.6536
+        ]
+      },
+      "logloss": {
+        "mean": 9.4441,
+        "ci95": [
+          7.632,
+          11.0182
+        ]
+      },
+      "brier": {
+        "mean": 1.3443,
+        "ci95": [
+          1.0902,
+          1.5656
+        ]
+      },
+      "ece": 0.6885,
+      "reliability": [
+        {
+          "bin_lo": 0.9,
+          "bin_hi": 1.0,
+          "n": 61,
+          "mean_conf": 0.999996967226082,
+          "accuracy": 0.3114754098360656
+        }
+      ]
+    },
+    "baseline_genus_prior": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.377,
+        "ci95": [
+          0.2623,
+          0.5082
+        ]
+      },
+      "top3": {
+        "mean": 0.8689,
+        "ci95": [
+          0.7705,
+          0.9508
+        ]
+      },
+      "rr": {
+        "mean": 0.6169,
+        "ci95": [
+          0.5409,
+          0.6997
+        ]
+      },
+      "logloss": {
+        "mean": 1.1572,
+        "ci95": [
+          0.993,
+          1.3057
+        ]
+      },
+      "brier": {
+        "mean": 0.5923,
+        "ci95": [
+          0.4926,
+          0.6846
+        ]
+      },
+      "ece": 0.0935,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 10,
+          "mean_conf": 0.16723163841807911,
+          "accuracy": 0.0
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 22,
+          "mean_conf": 0.2568621845068367,
+          "accuracy": 0.22727272727272727
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 1,
+          "mean_conf": 0.36428571428571427,
+          "accuracy": 0.0
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 12,
+          "mean_conf": 0.4167644814598351,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 1,
+          "mean_conf": 0.5555555555555556,
+          "accuracy": 1.0
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 15,
+          "mean_conf": 0.8379784401584519,
+          "accuracy": 0.7333333333333333
+        }
+      ]
+    },
+    "baseline_uniform": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.3934,
+        "ci95": [
+          0.2787,
+          0.5246
+        ]
+      },
+      "top3": {
+        "mean": 0.8689,
+        "ci95": [
+          0.7869,
+          0.9508
+        ]
+      },
+      "rr": {
+        "mean": 0.632,
+        "ci95": [
+          0.5562,
+          0.7123
+        ]
+      },
+      "logloss": {
+        "mean": 1.2005,
+        "ci95": [
+          1.101,
+          1.299
+        ]
+      },
+      "brier": {
+        "mean": 0.632,
+        "ci95": [
+          0.587,
+          0.6773
+        ]
+      },
+      "ece": 0.1221,
+      "reliability": [
+        {
+          "bin_lo": 0.0,
+          "bin_hi": 0.1,
+          "n": 1,
+          "mean_conf": 0.09090909090909091,
+          "accuracy": 0.0
+        },
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 17,
+          "mean_conf": 0.16804388422035482,
+          "accuracy": 0.11764705882352941
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 16,
+          "mean_conf": 0.25,
+          "accuracy": 0.3125
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 12,
+          "mean_conf": 0.3333333333333333,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 15,
+          "mean_conf": 0.5,
+          "accuracy": 0.7333333333333333
+        }
+      ]
+    },
+    "baseline_llm_judge": {
+      "status": "not_run",
+      "reason": "ANTHROPIC_API_KEY not set (spec/06 Option C is comparison-only)"
+    },
+    "ablation_without_f2": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.6557,
+        "ci95": [
+          0.541,
+          0.7869
+        ]
+      },
+      "top3": {
+        "mean": 0.918,
+        "ci95": [
+          0.8525,
+          0.9836
+        ]
+      },
+      "rr": {
+        "mean": 0.7929,
+        "ci95": [
+          0.7199,
+          0.8667
+        ]
+      },
+      "logloss": {
+        "mean": 1.0355,
+        "ci95": [
+          0.8648,
+          1.1922
+        ]
+      },
+      "brier": {
+        "mean": 0.5388,
+        "ci95": [
+          0.4411,
+          0.6306
+        ]
+      },
+      "ece": 0.2367,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 3,
+          "mean_conf": 0.17179107427145432,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 5,
+          "mean_conf": 0.2686070460285343,
+          "accuracy": 0.2
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 14,
+          "mean_conf": 0.337360084500132,
+          "accuracy": 0.7142857142857143
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 8,
+          "mean_conf": 0.45795626317482363,
+          "accuracy": 0.375
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 10,
+          "mean_conf": 0.5176519154291536,
+          "accuracy": 0.8
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 8,
+          "mean_conf": 0.6462258745917113,
+          "accuracy": 0.75
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 10,
+          "mean_conf": 0.7542373510184749,
+          "accuracy": 0.9
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 3,
+          "mean_conf": 0.8522682315864807,
+          "accuracy": 0.3333333333333333
+        }
+      ]
+    },
+    "ablation_without_f3": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.623,
+        "ci95": [
+          0.5082,
+          0.7541
+        ]
+      },
+      "top3": {
+        "mean": 0.918,
+        "ci95": [
+          0.8361,
+          0.9836
+        ]
+      },
+      "rr": {
+        "mean": 0.7811,
+        "ci95": [
+          0.7109,
+          0.8571
+        ]
+      },
+      "logloss": {
+        "mean": 0.967,
+        "ci95": [
+          0.7787,
+          1.1503
+        ]
+      },
+      "brier": {
+        "mean": 0.491,
+        "ci95": [
+          0.3828,
+          0.5944
+        ]
+      },
+      "ece": 0.1842,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 1,
+          "mean_conf": 0.18908267459806835,
+          "accuracy": 0.0
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 6,
+          "mean_conf": 0.25735562678135,
+          "accuracy": 0.16666666666666666
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 13,
+          "mean_conf": 0.34558305129845457,
+          "accuracy": 0.6153846153846154
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 6,
+          "mean_conf": 0.43984646844569397,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 11,
+          "mean_conf": 0.5463803406077997,
+          "accuracy": 0.45454545454545453
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 6,
+          "mean_conf": 0.651405431899102,
+          "accuracy": 0.8333333333333334
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 8,
+          "mean_conf": 0.7497175047976222,
+          "accuracy": 1.0
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 9,
+          "mean_conf": 0.8462436024877956,
+          "accuracy": 0.7777777777777778
+        },
+        {
+          "bin_lo": 0.9,
+          "bin_hi": 1.0,
+          "n": 1,
+          "mean_conf": 0.9123019530635952,
+          "accuracy": 0.0
+        }
+      ]
+    },
+    "ablation_without_f4": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.541,
+        "ci95": [
+          0.4098,
+          0.6721
+        ]
+      },
+      "top3": {
+        "mean": 0.9016,
+        "ci95": [
+          0.8197,
+          0.9672
+        ]
+      },
+      "rr": {
+        "mean": 0.7219,
+        "ci95": [
+          0.6445,
+          0.8033
+        ]
+      },
+      "logloss": {
+        "mean": 1.08,
+        "ci95": [
+          0.9179,
+          1.2361
+        ]
+      },
+      "brier": {
+        "mean": 0.5536,
+        "ci95": [
+          0.4703,
+          0.6341
+        ]
+      },
+      "ece": 0.1403,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 4,
+          "mean_conf": 0.17131985084397328,
+          "accuracy": 0.75
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 10,
+          "mean_conf": 0.24323976432793937,
+          "accuracy": 0.1
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 10,
+          "mean_conf": 0.3568313404601765,
+          "accuracy": 0.4
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 17,
+          "mean_conf": 0.4515748567219524,
+          "accuracy": 0.47058823529411764
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 7,
+          "mean_conf": 0.5420239856171337,
+          "accuracy": 0.8571428571428571
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 4,
+          "mean_conf": 0.6441560289975661,
+          "accuracy": 1.0
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 7,
+          "mean_conf": 0.7372995042703543,
+          "accuracy": 0.7142857142857143
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 2,
+          "mean_conf": 0.8673679033538181,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "ablation_without_f6": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.6557,
+        "ci95": [
+          0.541,
+          0.7869
+        ]
+      },
+      "top3": {
+        "mean": 0.918,
+        "ci95": [
+          0.8361,
+          0.9836
+        ]
+      },
+      "rr": {
+        "mean": 0.7967,
+        "ci95": [
+          0.7254,
+          0.8694
+        ]
+      },
+      "logloss": {
+        "mean": 0.9711,
+        "ci95": [
+          0.7773,
+          1.1531
+        ]
+      },
+      "brier": {
+        "mean": 0.4919,
+        "ci95": [
+          0.3825,
+          0.5977
+        ]
+      },
+      "ece": 0.1979,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 2,
+          "mean_conf": 0.18736801638648715,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 5,
+          "mean_conf": 0.2564648241081111,
+          "accuracy": 0.4
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 15,
+          "mean_conf": 0.34923434337893,
+          "accuracy": 0.6
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 6,
+          "mean_conf": 0.46941705352000157,
+          "accuracy": 0.3333333333333333
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 7,
+          "mean_conf": 0.5450541775696073,
+          "accuracy": 0.5714285714285714
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 7,
+          "mean_conf": 0.6411329004456423,
+          "accuracy": 0.8571428571428571
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 10,
+          "mean_conf": 0.7407590197363597,
+          "accuracy": 1.0
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 7,
+          "mean_conf": 0.8519389405311426,
+          "accuracy": 0.8571428571428571
+        },
+        {
+          "bin_lo": 0.9,
+          "bin_hi": 1.0,
+          "n": 2,
+          "mean_conf": 0.9138309431271288,
+          "accuracy": 0.0
+        }
+      ]
+    },
+    "transfer_model_calibrated": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.5574,
+        "ci95": [
+          0.4262,
+          0.6885
+        ]
+      },
+      "top3": {
+        "mean": 0.918,
+        "ci95": [
+          0.8525,
+          0.9836
+        ]
+      },
+      "rr": {
+        "mean": 0.7388,
+        "ci95": [
+          0.6609,
+          0.8208
+        ]
+      },
+      "logloss": {
+        "mean": 1.067,
+        "ci95": [
+          0.8929,
+          1.23
+        ]
+      },
+      "brier": {
+        "mean": 0.5481,
+        "ci95": [
+          0.4611,
+          0.6335
+        ]
+      },
+      "ece": 0.1471,
+      "reliability": [
+        {
+          "bin_lo": 0.1,
+          "bin_hi": 0.2,
+          "n": 4,
+          "mean_conf": 0.17365329563846083,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.2,
+          "bin_hi": 0.3,
+          "n": 7,
+          "mean_conf": 0.2533295752388467,
+          "accuracy": 0.42857142857142855
+        },
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 15,
+          "mean_conf": 0.34686755569898386,
+          "accuracy": 0.26666666666666666
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 12,
+          "mean_conf": 0.467455166064259,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 9,
+          "mean_conf": 0.5388871291233719,
+          "accuracy": 0.7777777777777778
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 6,
+          "mean_conf": 0.6376880403234584,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 4,
+          "mean_conf": 0.761901230433019,
+          "accuracy": 1.0
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 3,
+          "mean_conf": 0.8317184811592684,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "bin_lo": 0.9,
+          "bin_hi": 1.0,
+          "n": 1,
+          "mean_conf": 0.9216643695918669,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "ablation_plus_ORACLE_expert_traits": {
+      "n_names": 61,
+      "top1": {
+        "mean": 0.8361,
+        "ci95": [
+          0.7377,
+          0.918
+        ]
+      },
+      "top3": {
+        "mean": 0.9836,
+        "ci95": [
+          0.9508,
+          1.0
+        ]
+      },
+      "rr": {
+        "mean": 0.9112,
+        "ci95": [
+          0.8579,
+          0.959
+        ]
+      },
+      "logloss": {
+        "mean": 0.3705,
+        "ci95": [
+          0.245,
+          0.4887
+        ]
+      },
+      "brier": {
+        "mean": 0.2216,
+        "ci95": [
+          0.142,
+          0.3031
+        ]
+      },
+      "ece": 0.093,
+      "reliability": [
+        {
+          "bin_lo": 0.3,
+          "bin_hi": 0.4,
+          "n": 3,
+          "mean_conf": 0.3687676575617711,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "bin_lo": 0.4,
+          "bin_hi": 0.5,
+          "n": 9,
+          "mean_conf": 0.44849215452484514,
+          "accuracy": 0.5555555555555556
+        },
+        {
+          "bin_lo": 0.5,
+          "bin_hi": 0.6,
+          "n": 2,
+          "mean_conf": 0.5362988503682823,
+          "accuracy": 0.5
+        },
+        {
+          "bin_lo": 0.6,
+          "bin_hi": 0.7,
+          "n": 4,
+          "mean_conf": 0.6427862576160605,
+          "accuracy": 0.75
+        },
+        {
+          "bin_lo": 0.7,
+          "bin_hi": 0.8,
+          "n": 9,
+          "mean_conf": 0.7522271110864985,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "bin_lo": 0.8,
+          "bin_hi": 0.9,
+          "n": 10,
+          "mean_conf": 0.8440899217572653,
+          "accuracy": 1.0
+        },
+        {
+          "bin_lo": 0.9,
+          "bin_hi": 1.0,
+          "n": 24,
+          "mean_conf": 0.9589963526392099,
+          "accuracy": 1.0
+        }
+      ]
+    }
+  },
+  "accuracy_by_expert_confidence": [
+    {
+      "expert_confidence": "MODERATE",
+      "mean": 0.731,
+      "count": 26
+    },
+    {
+      "expert_confidence": "NOT_FOUND",
+      "mean": 0.5,
+      "count": 2
+    },
+    {
+      "expert_confidence": "STRONG",
+      "mean": 0.68,
+      "count": 25
+    },
+    {
+      "expert_confidence": "WEAK",
+      "mean": 0.125,
+      "count": 8
+    }
+  ],
+  "clusters_scored": 653,
+  "clusters_top1_is_taxon": 293,
+  "mean_top1_probability_clusters": 0.762,
+  "clusters_low_candidate_coverage": 516
+}

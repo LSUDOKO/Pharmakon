@@ -7,13 +7,25 @@ import json
 import pandas as pd
 
 from pharmakon import llm
-from pharmakon.common import GOLD, INTERIM, PROCESSED, RAW, add_provenance, get_logger, load_yaml, now_iso, pilot, write_stage_report, write_table
+from pharmakon.common import (
+    GOLD,
+    INTERIM,
+    PROCESSED,
+    RAW,
+    add_provenance,
+    get_logger,
+    load_yaml,
+    now_iso,
+    pilot,
+    write_stage_report,
+    write_table,
+)
 from pharmakon.corpus.first1k import chapters_to_frames, parse_tei
 from pharmakon.extract.claims import extract, prefilter_pilot
 from pharmakon.extract.lexicon import pilot_stems
 from pharmakon.identify import gold
 from pharmakon.link.disease import build_condition_map, mesh_details
-from pharmakon.names.normalize import match_key, strip_accents
+from pharmakon.names.normalize import match_key
 
 DMM_CTS = "urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1"
 
