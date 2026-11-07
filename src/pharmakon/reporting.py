@@ -102,6 +102,10 @@ def identification() -> str:
               "The **transfer model** (no Lardos literature counts, so it can score all Dioscorides names) is the one applied to clusters:",
               "```json", json.dumps(s.get("transfer_model"), indent=1), "```",
               f"Accuracy by expert confidence: {s.get('accuracy_by_expert_confidence')}", "",
+              "**Circularity check.** The expert tie-break (uses score) draws on modern ethnobotanical records, which `f4_lit_ethno` also counts. "
+              f"Without that feature top-1 is {r.get('ablation_without_f4_lit_ethno', {}).get('top1', {}).get('mean')} "
+              f"(Brier {r.get('ablation_without_f4_lit_ethno', {}).get('brier', {}).get('mean')}), i.e. the headline does not rest on it. "
+              "The transfer model, which uses no Lardos-derived counts at all, is the cleanest number.", "",
               f"GBIF verification of candidates: {s.get('gbif_verification')}", "",
               f"Applied to {s.get('clusters_scored')} Dioscorides names: {s.get('clusters_top1_is_taxon')} have a taxon as top-1; "
               f"{s.get('clusters_low_candidate_coverage')} have fewer than two verified candidates (`low_candidate_coverage`).",
@@ -206,7 +210,15 @@ def forecast() -> str:
     lines += [f"* {c}" for c in s.get("leakage_controls", [])]
     lines += ["", "## Interpretation", "",
               "Read the ΔAUPRC column: if its 95% CI excludes 0, persistence/history adds information beyond research popularity at that cutoff; "
-              "otherwise the pilot finds no added signal at that cutoff. All cutoffs are reported; none were selected after the fact."]
+              "otherwise the pilot finds no added signal at that cutoff. All cutoffs are reported; none were selected after the fact.", "",
+              "**Result: null.** At every cutoff the ΔAUPRC CI includes 0; popularity (papers on the species before T) dominates.", "",
+              "**Diagnosis.** History-only AUPRC falls to or below the base rate at 2010/2015, and the history coefficients are mostly negative "
+              "(more Dioscorides claims, JC or modern attestation → lower score). The likely mechanism is *selection*: eligibility is "
+              "\"no PubMed support up to T\", so the best-attested traditional remedies were studied early and leave the eligible pool; what remains "
+              "at later cutoffs is enriched for well-attested-but-unstudied pairs that stay unstudied. Small positive counts (20–46) and the "
+              "unaudited co-mention label add noise. A survival model over all years (R9) is the natural next step.", "",
+              "Full-model logistic coefficients per cutoff:", "", "```json",
+              json.dumps({T: res[T].get("full_logistic_coefficients") for T in xs}, indent=1), "```"]
     return _w("eval_forecast.md", lines)
 
 
@@ -219,8 +231,19 @@ def uncertainty() -> str:
         f"* Top-20 leads that change when only the top-1 identity is used: **{s.get('top20_changed_when_using_top1_identity')}**.",
         f"* Top-20 leads resting on P(species) < 0.5: {s.get('top20_resting_on_p_species_below_0.5')}.",
         f"* Top-20 with a known-toxicity flag: {s.get('top20_with_toxicity_flag')}; with a closed compound→target→disease path: {s.get('top20_with_closed_evidence_path')}.",
-        "", "Full table: `leads_top50.md`.",
+        "", "Closed compound→target→disease paths: " + _path_overlap(), "", "Full table: `leads_top50.md`.",
     ])
+
+
+def _path_overlap() -> str:
+    leads = pd.read_parquet(PROCESSED / "leads.parquet")
+    paths = pd.read_parquet(PROCESSED / "evidence_paths.parquet")
+    lab = pd.read_parquet(PROCESSED / "evidence_labels.parquet")
+    pp = set(zip(paths["taxon_key"], paths["mesh_id"], strict=True))
+    lp = set(zip(lab["taxon_key"], lab["mesh_id"], strict=True))
+    return (f"{len(pp)} taxon–condition pairs have a path (120-taxon linking cap, all use groups); {len(pp & lp)} of them fall in the "
+            f"400-pair skin pilot; {int((leads['path_strength'] > 0).sum())} of {len(leads)} leads carry one. Path strength is shown "
+            "with each lead but is not a ranking input (only dated compound counts enter the model), so path-bearing leads need not rank high.")
 
 
 def data_versions() -> str:

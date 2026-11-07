@@ -197,6 +197,10 @@ def run() -> dict:
         cols = [c for c in MAIN if c not in F.GROUPS[g]]
         u2 = _units(feats, ys, cols)
         results[f"ablation_without_{g}"] = summarise(lono(u2, groups), u2, seed, n_boot)
+    # Circularity check: the gold tie-break (uses score) draws on modern ethnobotanical records, which
+    # f4_lit_ethno also counts. Report the model without it.
+    u_ne = _units(feats, ys, [c for c in MAIN if c != "f4_lit_ethno"])
+    results["ablation_without_f4_lit_ethno"] = summarise(lono(u_ne, groups), u_ne, seed, n_boot)
     u_tr = _units(feats, ys, TRANSFER)
     results["transfer_model_calibrated"] = summarise(lono(u_tr, groups), u_tr, seed, n_boot)
     u_or = _units(feats, ys, MAIN + ["oracle_bot"])

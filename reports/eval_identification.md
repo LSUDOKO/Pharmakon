@@ -16,6 +16,7 @@ Leave-one-name-out over 61 gold names (grouped by the 50 JC lemmas); 95% bootstr
 | ablation_without_f3 | 0.623 | [0.5082, 0.7541] | 0.918 | 0.7811 | 0.967 | 0.491 | 0.1842 |
 | ablation_without_f4 | 0.541 | [0.4098, 0.6721] | 0.9016 | 0.7219 | 1.08 | 0.5536 | 0.1403 |
 | ablation_without_f6 | 0.6557 | [0.541, 0.7869] | 0.918 | 0.7967 | 0.9711 | 0.4919 | 0.1979 |
+| ablation_without_f4_lit_ethno | 0.623 | [0.5082, 0.7377] | 0.9016 | 0.7735 | 1.0039 | 0.512 | 0.1803 |
 | transfer_model_calibrated | 0.5574 | [0.4262, 0.6885] | 0.918 | 0.7388 | 1.067 | 0.5481 | 0.1471 |
 | ablation_plus_ORACLE_expert_traits | 0.8361 | [0.7377, 0.918] | 0.9836 | 0.9112 | 0.3705 | 0.2216 | 0.093 |
 
@@ -64,6 +65,8 @@ The **transfer model** (no Lardos literature counts, so it can score all Dioscor
 }
 ```
 Accuracy by expert confidence: [{'expert_confidence': 'MODERATE', 'mean': 0.731, 'count': 26}, {'expert_confidence': 'NOT_FOUND', 'mean': 0.5, 'count': 2}, {'expert_confidence': 'STRONG', 'mean': 0.68, 'count': 25}, {'expert_confidence': 'WEAK', 'mean': 0.125, 'count': 8}]
+
+**Circularity check.** The expert tie-break (uses score) draws on modern ethnobotanical records, which `f4_lit_ethno` also counts. Without that feature top-1 is 0.623 (Brier 0.512), i.e. the headline does not rest on it. The transfer model, which uses no Lardos-derived counts at all, is the cleanest number.
 
 GBIF verification of candidates: {'inputs': 683, 'verified': 537, 'fail_reasons': {'match=HIGHERRANK:99': 116, 'match=HIGHERRANK:94': 5, 'kingdom=Fungi': 5, 'kingdom=Chromista': 5, 'match=HIGHERRANK:96': 5, 'match=FUZZY:86': 3, 'match=FUZZY:89': 3, 'match=HIGHERRANK:95': 1, 'match=FUZZY:80': 1, 'match=FUZZY:87': 1}}
 

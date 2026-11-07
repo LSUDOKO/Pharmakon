@@ -38,7 +38,15 @@ def fetch() -> dict:
         (d / "LICENSE.txt").write_text(f"{lic}\nDOI: {meta['doi']}\n", encoding="utf-8")
         out[sid] = {"licence": lic[:120]}
     d = RAW / "eth_naegean"
+    committed = RAW.parent / "external" / "eth_naegean_Table_1.html"  # LibreOffice conversion, committed (CC BY)
+    if not (d / "Table_1.html").exists() and committed.exists():
+        (d / "Table_1.html").write_bytes(committed.read_bytes())
     if not (d / "Table_1.html").exists():
+        import shutil
+
+        if not shutil.which("soffice"):
+            raise SystemExit("North Aegean Suppl. Table 1 is a .doc file: install LibreOffice (soffice) or restore "
+                             "data/external/eth_naegean_Table_1.html")
         import io
         import zipfile
 

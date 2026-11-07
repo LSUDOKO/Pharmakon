@@ -87,6 +87,7 @@ Leave-one-name-out over 61 expert-identified names, with 95% bootstrap CIs ([rep
 | *oracle: + expert-coded traits (ablation only)* | *0.84* | *0.22* | *0.09* |
 
 - The model beats the dictionary baseline on both top-1 and Brier.
+- Removing the ethnobotanical-reference count, the one feature that overlaps the experts' use-based tie-break, leaves top-1 unchanged at 0.62, so the headline does not rest on that overlap. The transfer model uses no Lardos-derived counts at all and is the cleanest number.
 - Calibration misses the ECE ≤ 0.10 target. The oracle ablation shows the missing morphology stream (which needs an LLM) is the main gap.
 
 ### Persistence
@@ -102,6 +103,7 @@ The backtest finds an honest null ([report](reports/eval_forecast.md)). Cutoffs 
 - Historical features alone score only slightly above random (AUROC ≈ 0.53–0.59).
 - They add **no signal beyond research popularity**: the 95% CI for ΔAUPRC(history + popularity − popularity) includes 0 at every cutoff.
 - Popularity (papers on the species before T) is the strongest predictor.
+- Diagnosis: the history coefficients are mostly negative. The likely cause is selection. Rows are eligible only if unsupported at T, so well-attested remedies that were studied early drop out of the pool. Details are in the report.
 
 The labels are a PubMed co-mention proxy whose precision is still awaiting a human audit.
 
@@ -130,10 +132,17 @@ The app reads the committed `data/processed/`, so it needs no pipeline run. It h
 
 ```bash
 make setup                      # uv venv + install (Python 3.12)
-make data verify                # raw sources + live source checks
-make reproduce                  # pilot → forecast → leads → reports (HTTP calls cached in data/cache/)
 make test                       # 24 tests: parser, extraction, model, metrics, provenance guard, app pages
+make app                        # explorer on the committed outputs (no network needed)
+make data verify                # raw sources + live source checks
+make reproduce                  # full pipeline from scratch
 ```
+
+Reproducing from scratch re-queries the live APIs. On this machine's cache the full run is minutes. From a fresh clone it takes much longer:
+- PubMed alone is about 1 hour without an NCBI key.
+- LSJ is streamed: about 270 MB is transient while it is parsed, then deleted.
+
+The committed `data/processed/`, `data/gold/` and `reports/stages/` are enough for the app, the reports and the tests. The converted North Aegean table is committed in `data/external/`, so LibreOffice is only needed if that file is deleted.
 
 Optional keys go in `.env` (see `.env.example`):
 - `ANTHROPIC_API_KEY` enables the LLM extractor (`python -m pharmakon extract-claims --llm`).
