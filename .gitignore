@@ -12,3 +12,4 @@ data/pharmakon.duckdb
 logs/
 *.egg-info/
 .playwright-mcp/
+.wrangler/

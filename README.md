@@ -2,6 +2,10 @@
 
 > **Research hypotheses only — not medical advice.** Pharmakon generates research hypotheses from historical texts and open databases. Nothing here is medical advice, a recommendation to use any plant, or evidence of safety or efficacy.
 
+**Live site: https://pharmakon.adoranto737.workers.dev**
+
+![Pharmakon hero: torn verdigris sheets printed with the Vienna Dioscorides](docs/media/hero.gif)
+
 An uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology. Built for EthnoHack 2026, Track 1 (Traditional knowledge). The full specification is in [`spec/`](spec/README.md).
 
 ## What it does
@@ -116,6 +120,24 @@ The labels are a PubMed co-mention proxy whose precision is still awaiting a hum
 
 ## Demo
 
+**Website:** https://pharmakon.adoranto737.workers.dev. It is a static Vite + D3 + Motion site on Cloudflare, built from the pipeline's own outputs.
+
+![Explorer and results](docs/media/explorer.gif)
+
+What the site offers:
+- **Explorer:** search all Dioscorides names, read the Greek with highlighted evidence spans, see candidate plants with Wikimedia photos, probability bars with intervals, and a four-era survival table.
+- **Through time:** an alluvial chart of Dioscorides → Galen → John the Physician → modern Greece, plus the permutation null.
+- **Results:** identification against experts, and the time machine with cutoff toggles and CIs.
+- **Leads:** a filterable gallery with toxicity badges, evidence paths, the exact PubMed query behind each lead, and CSV export.
+
+To rebuild and redeploy the site (from `web/`):
+```bash
+npm install
+npm run data     # export processed tables → web/public/data
+npm run deploy   # vite build + wrangler deploy (Cloudflare)
+```
+
+The research dashboard (Streamlit) is still available:
 ```bash
 make app        # streamlit run src/pharmakon/app/Home.py
 ```

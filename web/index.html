@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pharmakon — 2,000 years of Greek plant medicine, measured</title>
+  <meta name="description" content="Pharmakon reads Dioscorides and Galen, works out which modern plant each ancient name means with a calibrated probability, and traces every remedy to modern Greek folk medicine. Research hypotheses only." />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Pharmakon" />
+  <meta property="og:description" content="An uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology." />
+  <meta property="og:image" content="/media/hero-poster.jpg" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=GFS+Didot&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <a class="skip" href="#explorer">Skip to the explorer</a>
+
+  <header class="nav glass-bar" id="nav">
+    <a class="brand" href="#top" aria-label="Pharmakon home">
+      <img src="/media/mark.svg" alt="" width="28" height="28" /><span>pharmakon</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#explorer">Explorer</a>
+      <a href="#time">Through time</a>
+      <a href="#results">Results</a>
+      <a href="#leads">Leads</a>
+      <a href="#data">Data</a>
+    </nav>
+    <a class="btn glass small" href="https://github.com/LSUDOKO/Pharmakon" target="_blank" rel="noopener">GitHub</a>
+  </header>
+
+  <main id="top">
+    <!-- HERO ------------------------------------------------------------------------------ -->
+    <section class="hero" aria-label="Introduction">
+      <div class="sheet sheet-a" aria-hidden="true">
+        <div class="fringe"></div>
+        <div class="paper"><video autoplay muted loop playsinline poster="/media/hero-poster.jpg">
+          <source src="/media/hero-loop.webm" type="video/webm" /><source src="/media/hero-loop.mp4" type="video/mp4" /></video></div>
+      </div>
+      <div class="sheet sheet-b" aria-hidden="true">
+        <div class="fringe"></div>
+        <div class="paper"><img src="/media/folio-apsinthion.webp" alt="" /></div>
+      </div>
+
+      <div class="band">
+        <div class="dim dim-h" aria-hidden="true"><span data-stat="passages">—</span> passages read</div>
+        <div class="dim dim-v" aria-hidden="true"><span data-stat="gold">—</span> expert names</div>
+        <h1 class="wordmark"><img src="/media/mark.svg" alt="" class="wm-mark" /><span class="chrome">pharmakon</span></h1>
+      </div>
+
+      <div class="hero-copy">
+        <p class="lede">Dioscorides described about 600 medicinal plants in the first century. Which plants did he actually mean — and did later science agree with him?</p>
+        <div class="cta-row">
+          <a class="btn glass" href="#explorer" data-magnetic>Explore an ancient name</a>
+          <a class="btn glass ghost" href="#results" data-magnetic>See what we found</a>
+        </div>
+      </div>
+      <p class="hero-note">Research hypotheses only — not medical advice.</p>
+      <a class="scroll-cue" href="#word" aria-label="Scroll to the story"><span></span></a>
+    </section>
+
+    <!-- ONE WORD --------------------------------------------------------------------------- -->
+    <section class="word section" id="word">
+      <figure class="word-folio reveal">
+        <img src="/media/folio-apsinthion.webp" alt="ἀψίνθιον as drawn in the Vienna Dioscorides, folio 22v, printed in verdigris" loading="lazy" />
+        <figcaption>ἀψίνθιον in the Vienna Dioscorides, folio 22v (6th c.). Public domain, Wikimedia Commons.</figcaption>
+      </figure>
+      <div class="word-body">
+        <h2 class="reveal">One word, more than one plant.</h2>
+        <p class="greek-quote reveal" lang="grc">ἀψίνθιον· γνώριμος ἡ πόα.</p>
+        <p class="reveal">“Wormwood: a well-known herb,” says Dioscorides — and moves on. Dictionaries give one answer. The evidence gives several. Pharmakon keeps all of them, each with a probability and an interval, and carries that doubt into every result downstream.</p>
+        <div class="prob-card reveal" id="word-probs" aria-live="polite"></div>
+        <a class="btn glass small" href="#explorer" data-open="dmm-3-23">Open ἀψίνθιον in the explorer</a>
+      </div>
+    </section>
+
+    <!-- PIPELINE --------------------------------------------------------------------------- -->
+    <section class="pipeline section" id="how" aria-labelledby="how-h">
+      <div class="section-head">
+        <h2 id="how-h" class="reveal">From a Greek sentence to a lab shortlist</h2>
+        <p class="reveal">Seven steps. Every number below is read from the pipeline's own reports.</p>
+      </div>
+      <ol class="steps" id="steps">
+        <svg class="steps-line" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 100 2"><line x1="0" y1="1" x2="100" y2="1" /></svg>
+      </ol>
+    </section>
+
+    <!-- TOUR --------------------------------------------------------------------------------- -->
+    <section class="tour section" aria-labelledby="tour-h">
+      <div class="tour-frame reveal">
+        <video id="tour" muted loop playsinline preload="none" poster="/media/demo-poster.jpg" aria-describedby="tour-h">
+          <source src="/media/demo.mp4" type="video/mp4" /></video>
+      </div>
+      <div class="tour-copy">
+        <h2 id="tour-h" class="reveal">Forty seconds through the whole record</h2>
+        <p class="reveal">A recording of this page: search a Greek name, read the passage, see the plant it most likely means, follow its uses for two thousand years, then test it against the future.</p>
+        <button class="btn glass small" id="tour-play" aria-controls="tour">Pause tour</button>
+      </div>
+    </section>
+
+    <!-- EXPLORER --------------------------------------------------------------------------- -->
+    <section class="explorer section" id="explorer" aria-labelledby="ex-h">
+      <div class="section-head">
+        <h2 id="ex-h" class="reveal">Ancient name explorer</h2>
+        <p class="reveal">Search any of the 653 drug names in Dioscorides by Greek (accents optional), transliteration, or modern species.</p>
+      </div>
+      <div class="ex-grid">
+        <aside class="ex-side">
+          <label class="search glass-field">
+            <span class="sr-only">Search names</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <input id="q" type="search" placeholder="ἀψίνθιον, apsinthion, Artemisia…" autocomplete="off" />
+          </label>
+          <div class="filters" role="group" aria-label="Filter names">
+            <button class="chip on" data-filter="all">All</button>
+            <button class="chip" data-filter="identified">Identified</button>
+            <button class="chip" data-filter="gold">Expert gold</button>
+            <button class="chip" data-filter="claims">With uses</button>
+          </div>
+          <ul class="name-list" id="name-list" role="listbox" aria-label="Ancient names"></ul>
+          <p class="list-count" id="list-count"></p>
+        </aside>
+        <article class="ex-detail" id="detail" aria-live="polite">
+          <p class="empty">Choose a name to see its Greek text, its candidate plants and its 2,000-year record.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- THROUGH TIME ----------------------------------------------------------------------- -->
+    <section class="time section" id="time" aria-labelledby="time-h">
+      <div class="section-head">
+        <h2 id="time-h" class="reveal">Two thousand years, one use at a time</h2>
+        <p class="reveal">Every use Dioscorides records, followed through Galen (2nd c.), John the Physician (13th c.) and modern Greek village medicine.</p>
+      </div>
+      <div class="time-grid">
+        <div class="alluvial-wrap reveal">
+          <div class="filters" role="group" aria-label="Use group">
+            <button class="chip on" data-ug="ALL">All uses</button>
+            <button class="chip" data-ug="DE">Skin &amp; wounds</button>
+            <button class="chip" data-ug="GI">Digestive</button>
+            <button class="chip" data-ug="GY">Gynaecology</button>
+            <button class="chip" data-ug="UR">Urinary</button>
+          </div>
+          <svg id="alluvial" role="img" aria-label="Flow of uses from Dioscorides to modern Greek medicine"></svg>
+        </div>
+        <div class="null-card reveal">
+          <h3>Is the survival real?</h3>
+          <p>Among uses whose plant still appears in modern Greek records, how often does the <em>same</em> use survive — versus the same records with their uses shuffled?</p>
+          <div id="nullbars"></div>
+          <p class="fine" id="null-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS ---------------------------------------------------------------------------- -->
+    <section class="results section" id="results" aria-labelledby="res-h">
+      <div class="section-head">
+        <h2 id="res-h" class="reveal">What the evidence says</h2>
+        <p class="reveal">Two tests, reported the same way whether they worked or not.</p>
+      </div>
+      <div class="res-grid">
+        <div class="res-card reveal">
+          <h3>Identification against experts</h3>
+          <p>Agreement with the expert identifications of Lardos et al. (2024) for 61 Byzantine plant names, each name held out in turn. Bars show 95% bootstrap intervals.</p>
+          <div id="idchart"></div>
+          <p class="fine" id="id-note"></p>
+        </div>
+        <div class="res-card reveal">
+          <h3>The time machine</h3>
+          <p>Stand in a past year, forget everything after it, and rank plant–condition pairs nobody had studied yet. Did history pick the ones science studied next?</p>
+          <div class="filters" role="group" aria-label="Cutoff year" id="cutoffs"></div>
+          <div id="fcchart"></div>
+          <p class="verdict" id="fc-verdict"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADS ------------------------------------------------------------------------------ -->
+    <section class="leads section" id="leads" aria-labelledby="leads-h">
+      <div class="section-head">
+        <h2 id="leads-h" class="reveal">Leads for the lab</h2>
+        <p class="reveal">Plant–condition pairs with no published pharmacology yet, ranked by forecast score × how sure we are of the plant. Hypotheses to test, never advice to use.</p>
+      </div>
+      <div class="leads-tools">
+        <label class="glass-field small"><span class="sr-only">Filter by condition</span>
+          <select id="lead-cond"><option value="">All conditions</option></select></label>
+        <label class="range">Plant certainty ≥ <output id="pmin-out">0.20</output>
+          <input id="pmin" type="range" min="0" max="0.9" step="0.05" value="0.2" /></label>
+        <label class="toggle"><input type="checkbox" id="hide-tox" /> Hide plants with known toxicity</label>
+        <button class="btn glass small" id="csv">Download CSV</button>
+      </div>
+      <div class="lead-grid" id="lead-grid"></div>
+      <div class="lead-more"><button class="btn glass ghost small" id="more">Show more leads</button></div>
+    </section>
+
+    <!-- DATA ------------------------------------------------------------------------------- -->
+    <section class="data section" id="data" aria-labelledby="data-h">
+      <div class="section-head">
+        <h2 id="data-h" class="reveal">Open data, checked at the source</h2>
+        <p class="reveal">Each source was queried live and its licence recorded. Every claim keeps the exact Greek words it came from.</p>
+      </div>
+      <div class="data-grid">
+        <ul class="sources reveal" id="sources"></ul>
+        <div class="limits reveal">
+          <h3>Read before you cite</h3>
+          <ul>
+            <li>The gold standard is expert judgement, not ground truth.</li>
+            <li>“Support” means PubMed co-mention; the human label audit is still pending.</li>
+            <li>Claim extraction is rule-based; the language-model path was not run.</li>
+            <li>Paul of Aegina is not yet included; the pilot domain is skin and wounds.</li>
+          </ul>
+          <a class="btn glass small" href="https://github.com/LSUDOKO/Pharmakon/blob/main/docs/limitations.md" target="_blank" rel="noopener">All limitations</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-band">
+      <img src="/media/mark.svg" alt="" width="40" height="40" /><span class="chrome">pharmakon</span>
+    </div>
+    <p>Pharmakon generates research hypotheses from historical texts and open databases. Nothing here is medical advice, a recommendation to use any plant, or evidence of safety or efficacy.</p>
+    <p class="fine">Manuscript folios: Vienna Dioscorides (Codex Vindobonensis med. gr. 1), public domain via Wikimedia Commons. Plant photographs: Wikimedia Commons via Wikidata, each linked to its file page and licence. Built for EthnoHack 2026, Track 1.</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
