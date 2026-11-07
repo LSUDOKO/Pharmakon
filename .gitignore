@@ -13,3 +13,4 @@ logs/
 *.egg-info/
 .playwright-mcp/
 .wrangler/
+docs/slides/preview/

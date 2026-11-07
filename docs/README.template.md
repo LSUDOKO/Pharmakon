@@ -49,7 +49,8 @@ Use it three ways: the **[website](https://pharmakon.adoranto737.workers.dev)**,
 | Human audits of extraction, conditions, merges, labels | **pending**: blinded sheets generated in `data/gold/audits/` |
 | LLM claim extraction, LLM lexicon extension, plant-morphology feature, LLM-judge baseline | done (Claude session + Groq), every span re-verified; kept out of the backtest |
 | All body systems (beyond the skin/wound pilot) | done: PubMed labels and chemistry re-run for every use group |
-| Pitch video, slides, Devpost page | team tasks |
+| Slide deck (10 slides, PDF) | done: `docs/slides/Pharmakon_EthnoHack2026_slides.pdf`, built from the pipeline outputs by `docs/slides/build_slides.py` |
+| Pitch video, Devpost page, team names | team tasks |
 
 <img src="docs/media/chart-pipeline.svg" alt="Pipeline counts" width="100%">
 

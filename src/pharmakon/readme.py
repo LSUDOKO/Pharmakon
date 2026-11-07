@@ -76,13 +76,16 @@ def chart_identification(ident: dict) -> str:
     r = ident["results"]
     rows = [
         ("Pharmakon (calibrated)", r["model_calibrated"], HI, False),
+        *([("+ plant-description match (f1)", r["model_plus_f1_morphology"], HI, False)] if "top1" in r.get("model_plus_f1_morphology", {}) else []),
         ("Transfer model, used for all names", r["transfer_model_calibrated"], HI, False),
+        *([("Transfer + description match", r["transfer_plus_f1_morphology"], HI, False)] if "top1" in r.get("transfer_plus_f1_morphology", {}) else []),
+        *([("LLM judge (comparison only)", r["baseline_llm_judge"], LICHEN, False)] if "top1" in r.get("baseline_llm_judge", {}) else []),
         ("Uniform guess", r["baseline_uniform"], DIM, False),
         ("Genus-frequency prior", r["baseline_genus_prior"], DIM, False),
         ("LSJ dictionary", r["baseline_lsj"], DIM, False),
         ("Oracle: + expert-coded traits", r["ablation_plus_ORACLE_expert_traits"], LICHEN, True),
     ]
-    w, x0, x1, y0, step = 1200, 360, 1110, 130, 52
+    w, x0, x1, y0, step = 1200, 380, 1110, 130, 46
     body = []
     for i in range(6):
         v = i / 5
@@ -101,7 +104,7 @@ def chart_identification(ident: dict) -> str:
     body.append(axis(x0, x1, y0 + step * len(rows) - 14, 0, 1, [0, 0.2, 0.4, 0.6, 0.8, 1.0]))
     body.append(t(x0, y0 + step * len(rows) + 30, "top-1 agreement with expert identifications, 61 names, leave-one-name-out, 95% bootstrap CI", 12, DIM))
     return svg(w, y0 + step * len(rows) + 60, "Which plant is it? Agreement with experts",
-               "Lardos et al. (2024) gold set. The oracle uses expert-coded traits and is an ablation only.", "".join(body))
+               "Lardos et al. (2024) gold set. The LLM judge may have memorised identifications; the oracle is an ablation only.", "".join(body))
 
 
 def chart_reliability(ident: dict) -> str:

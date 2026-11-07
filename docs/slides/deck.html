@@ -1,0 +1,311 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Pharmakon — EthnoHack 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=GFS+Didot&family=JetBrains+Mono:wght@400;600&display=block" rel="stylesheet">
+<style>:root {
+  --ink: #000; --card: #0b120e; --rule: #1f2c25; --verdigris: #17744f; --hi: #3dbb82; --lichen: #b8e6cc;
+  --paper: #eceee7; --dim: #9aa39e; --warn: #ff5a5f;
+  --f: "Outfit", "Helvetica Neue", Arial, sans-serif; --g: "GFS Didot", Georgia, serif; --m: "JetBrains Mono", Menlo, monospace;
+}
+@page { size: 1920px 1080px; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #000; }
+body { font-family: var(--f); color: var(--paper); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; background: var(--ink); padding: 92px 120px 120px; page-break-after: always; break-after: page; }
+.slide::after { content: ""; position: absolute; right: -160px; top: -160px; width: 420px; height: 420px; background: radial-gradient(circle, rgba(23,116,79,.32), transparent 70%); pointer-events: none; }
+h2 { font-weight: 600; font-size: 60px; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 54px; max-width: 1560px; }
+h3 { font-weight: 600; font-size: 30px; letter-spacing: -0.01em; margin: 0 0 14px; color: var(--paper); }
+p, li { font-size: 25px; line-height: 1.5; color: #d6dbd7; margin: 0 0 14px; }
+.dim { color: var(--dim); }
+.mono { font-family: var(--m); }
+.fine { font-size: 19px; line-height: 1.5; color: var(--dim); }
+b { color: var(--paper); font-weight: 600; }
+i { font-style: italic; }
+.greek { font-family: var(--g); font-size: 92px; line-height: 1; margin: 0 0 12px; color: var(--paper); }
+
+footer { position: absolute; left: 120px; right: 120px; bottom: 42px; display: flex; justify-content: space-between; align-items: center;
+  font: 400 17px/1 var(--m); color: #6f7873; border-top: 1px solid var(--rule); padding-top: 18px; }
+footer .brand { display: flex; align-items: center; gap: 10px; font: 500 21px/1 var(--f); color: var(--paper); letter-spacing: -0.01em; }
+footer .brand img { width: 24px; height: 24px; }
+
+.card { background: var(--card); border: 1px solid var(--rule); border-radius: 26px; padding: 38px 40px; }
+.card ul { margin: 0; padding-left: 26px; }
+.card li { font-size: 22px; margin-bottom: 10px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+.two.wide-left { grid-template-columns: 1.45fr 1fr; gap: 60px; }
+.two.even { grid-template-columns: 1fr 1fr; gap: 40px; }
+svg.chart { width: 100%; height: auto; display: block; }
+
+/* title */
+.slide.title { padding: 0; display: grid; place-items: center; }
+.sheet { position: absolute; inset: 0; }
+.sheet .fringe, .sheet .paper { position: absolute; inset: 0; mask-size: 100% 100%; -webkit-mask-size: 100% 100%; mask-repeat: no-repeat; -webkit-mask-repeat: no-repeat; }
+.sheet .fringe { background: var(--paper); filter: drop-shadow(0 18px 30px rgba(0,0,0,.7)); }
+.sheet .paper { background: var(--verdigris); }
+.sheet .paper img { width: 100%; height: 100%; object-fit: cover; }
+.sheet-a .fringe { mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.03%200.05%22%20numOctaves%3D%225%22%20seed%3D%223%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2248%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22380%2C-80%201520%2C-80%201520%2C660%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.03%200.05%22%20numOctaves%3D%225%22%20seed%3D%223%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2248%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22380%2C-80%201520%2C-80%201520%2C660%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); }
+.sheet-a .paper { mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.035%200.06%22%20numOctaves%3D%225%22%20seed%3D%223%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2226%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22430%2C-80%201520%2C-80%201520%2C600%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.035%200.06%22%20numOctaves%3D%225%22%20seed%3D%223%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2226%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22430%2C-80%201520%2C-80%201520%2C600%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); }
+.sheet-b .fringe { mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.03%200.05%22%20numOctaves%3D%225%22%20seed%3D%229%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2248%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22-80%2C270%20-80%2C980%201070%2C980%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.03%200.05%22%20numOctaves%3D%225%22%20seed%3D%229%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2248%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22-80%2C270%20-80%2C980%201070%2C980%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); }
+.sheet-b .paper { mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.035%200.06%22%20numOctaves%3D%225%22%20seed%3D%229%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2226%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22-80%2C330%20-80%2C980%201010%2C980%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); -webkit-mask-image: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20900%22%20preserveAspectRatio%3D%22none%22%3E%0A%3Cdefs%3E%3Cfilter%20id%3D%22t%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.035%200.06%22%20numOctaves%3D%225%22%20seed%3D%229%22%20result%3D%22n%22/%3E%0A%3CfeDisplacementMap%20in%3D%22SourceGraphic%22%20in2%3D%22n%22%20scale%3D%2226%22%20xChannelSelector%3D%22R%22%20yChannelSelector%3D%22G%22/%3E%3C/filter%3E%3C/defs%3E%0A%3Cpolygon%20points%3D%22-80%2C330%20-80%2C980%201010%2C980%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23t%29%22/%3E%3C/svg%3E"); }
+.title-band { position: relative; z-index: 2; text-align: center; max-width: 1240px; padding: 60px 70px; background: rgba(0,0,0,.82);
+  border-top: 1px dashed #2c3a33; border-bottom: 1px dashed #2c3a33; box-shadow: 0 0 120px 60px rgba(0,0,0,.85); }
+.wordmark { display: flex; align-items: center; justify-content: center; gap: 30px; margin: 22px 0 18px; font: 500 168px/1 var(--f); letter-spacing: -0.045em;
+  background: linear-gradient(180deg, #fff 0%, #dfe3e0 45%, #8b938f 62%, #f3f5f4 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.wordmark img { width: 132px; height: 132px; }
+.tag { font-size: 40px; font-weight: 500; color: var(--paper); margin-bottom: 14px; }
+.sub { font-size: 26px; color: #c8cec9; max-width: 1000px; margin: 0 auto 30px; }
+.meta { font-size: 22px; color: var(--lichen); }
+.meta .mono { font-size: 19px; color: var(--dim); }
+
+/* problem */
+.example { margin-top: 44px; display: grid; grid-template-columns: 420px 1fr; gap: 50px; align-items: center; padding: 34px 44px; border-radius: 26px;
+  background: linear-gradient(90deg, rgba(23,116,79,.22), rgba(23,116,79,.04)); border: 1px solid #1d4a37; }
+.pbar { display: grid; grid-template-columns: 330px 1fr 90px; align-items: center; gap: 22px; margin-bottom: 14px; font-size: 25px; }
+.pbar .track { position: relative; height: 16px; border-radius: 99px; background: #13201a; }
+.pbar .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 99px; background: linear-gradient(90deg, var(--verdigris), var(--hi)); }
+.pbar .whisk { position: absolute; top: -7px; height: 30px; border-left: 2px solid var(--paper); border-right: 2px solid var(--paper); }
+.pbar .whisk::before { content: ""; position: absolute; left: 0; right: 0; top: 14px; border-top: 2px solid var(--paper); }
+.pbar b { text-align: right; font-size: 26px; }
+
+/* data */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-bottom: 44px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 0; right: 0; top: 24px; border-top: 2px solid var(--verdigris); }
+.era { padding: 0 28px 0 0; position: relative; }
+.era .yr { display: inline-block; background: var(--ink); padding-right: 14px; position: relative; color: var(--hi); font-size: 24px; margin-bottom: 18px; }
+.era .yr::before { content: ""; display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: var(--hi); margin-right: 12px; box-shadow: 0 0 0 6px rgba(61,187,130,.18); }
+.era p { font-size: 22px; }
+.dbgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 26px; }
+.dbgrid div { background: var(--card); border: 1px solid var(--rule); border-radius: 18px; padding: 20px 24px; }
+.dbgrid b { display: block; font-size: 24px; margin-bottom: 4px; color: var(--lichen); }
+.dbgrid span { font-size: 19px; color: var(--dim); }
+
+/* method */
+.steps { padding-left: 30px; margin: 0 0 30px; }
+.steps li { font-size: 23px; margin-bottom: 12px; }
+.big { font-size: 64px; font-weight: 600; color: var(--hi); margin: 0 0 6px; letter-spacing: -0.02em; line-height: 1.05; }
+.feat { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+.feat span { font-size: 22px; padding: 12px 20px; border-radius: 14px; background: var(--card); border: 1px solid var(--rule); }
+.feat span.new { border-color: var(--hi); color: var(--lichen); background: rgba(23,116,79,.18); }
+.flow { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin: 6px 0 26px; }
+.flow span { font-size: 21px; padding: 12px 20px; border-radius: 99px; border: 1px solid var(--hi); color: var(--lichen); }
+.flow i { color: var(--hi); font-style: normal; font-size: 26px; }
+.checks { list-style: none; padding: 0; margin: 10px 0 0; }
+.checks li { font-size: 22px; padding-left: 40px; position: relative; margin-bottom: 12px; }
+.checks li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--hi); font-weight: 700; }
+
+/* prototype */
+.proto { display: grid; grid-template-columns: 1.1fr 1fr; gap: 34px; height: 760px; }
+.shot { border-radius: 22px; overflow: hidden; border: 1px solid #2a3a32; box-shadow: 0 30px 80px rgba(0,0,0,.6); background: #050806; }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.shot.tall { height: 760px; }
+.side { display: grid; grid-template-rows: 330px 1fr; gap: 26px; }
+.card.code { padding: 30px 34px; }
+.card.code p { font-size: 21px; }
+pre { font: 400 19px/1.5 var(--m); color: var(--lichen); background: #000; border: 1px solid #1d4a37; border-radius: 14px; padding: 16px 20px; margin: 4px 0 14px; white-space: pre-wrap; }
+
+/* results */
+.stats > div { border-left: 3px solid var(--verdigris); padding-left: 26px; margin-bottom: 28px; }
+.stats > div p:not(.big) { font-size: 22px; }
+.callout { font-size: 22px; margin-top: 18px; padding: 20px 26px; border-radius: 18px; background: var(--card); border: 1px solid var(--rule); }
+
+/* leads */
+.leadgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.lead { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; overflow: hidden; }
+.lead img { width: 100%; height: 230px; object-fit: cover; display: block; }
+.lead p { font-size: 20px; margin: 12px 18px 0; }
+.lead p.dim { font-size: 17px; margin: 4px 18px 16px; color: var(--dim); }
+
+/* closing */
+.closing { position: absolute; left: 120px; right: 120px; bottom: 120px; display: flex; align-items: center; gap: 22px; }
+.closing img { width: 56px; height: 56px; }
+.closing .wm { font: 500 64px/1 var(--f); letter-spacing: -0.04em; background: linear-gradient(180deg, #fff, #8b938f 62%, #f3f5f4); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.closing .mono { margin-left: auto; font-size: 20px; color: var(--dim); }
+
+.folios { position: absolute; left: 120px; right: 120px; bottom: 120px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.folios img { width: 100%; height: 160px; object-fit: cover; border-radius: 16px; border: 1px solid #1d4a37; filter: saturate(1.05); }
+.folios p { grid-column: 1 / -1; margin: 0; }
+.worked { margin-top: 30px; display: grid; grid-template-columns: 1fr 60px 520px; align-items: center; gap: 20px; padding: 26px 34px; border-radius: 22px; background: linear-gradient(90deg, rgba(23,116,79,.2), rgba(23,116,79,.04)); border: 1px solid #1d4a37; }
+.worked .greek-s { font-family: var(--g); font-size: 30px; line-height: 1.45; margin: 0; color: #dfe4e0; }
+.worked mark { background: rgba(61,187,130,.28); color: var(--paper); border-bottom: 2px solid var(--hi); padding: 0 4px; border-radius: 4px; }
+.worked > i { color: var(--hi); font-size: 44px; font-style: normal; text-align: center; }
+.worked b { display: block; font-size: 30px; margin-bottom: 8px; color: var(--lichen); }
+.worked span { font-size: 19px; }
+.cutoffs { position: absolute; left: 120px; right: 120px; bottom: 130px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.cutoffs > div { background: var(--card); border: 1px solid var(--rule); border-radius: 20px; padding: 24px 28px; }
+.cutoffs .yr { color: var(--hi); font-size: 34px; margin-bottom: 10px; }
+.cutoffs p { font-size: 22px; margin-bottom: 4px; }
+.cutoffs > p { grid-column: 1 / -1; margin: 0; }
+.card.viz { padding: 40px 44px; }
+.card.viz > p.dim { font-size: 20px; margin-bottom: 28px; }
+.hb { display: grid; grid-template-columns: 300px 1fr 110px; align-items: center; gap: 18px; margin-bottom: 22px; font-size: 23px; }
+.htrack { height: 22px; border-radius: 99px; background: #13201a; overflow: hidden; }
+.hfill { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--verdigris), var(--hi)); }
+.hfill.null { background: repeating-linear-gradient(135deg, #4b5550 0 6px, #2c332f 6px 12px); }
+.hb b { text-align: right; font-size: 26px; }
+.axis { display: grid; grid-template-columns: 90px 1fr 210px; font: 400 17px var(--m); color: var(--dim); margin-bottom: 8px; position: relative; }
+.axis span:nth-child(1) { grid-column: 2; justify-self: start; }
+.axis span:nth-child(2) { grid-column: 2; justify-self: start; position: absolute; left: calc(90px + (100% - 300px) * 0.6667 - 6px); }
+.axis span:nth-child(3) { grid-column: 2; justify-self: end; }
+.drow { display: grid; grid-template-columns: 90px 1fr 210px; align-items: center; gap: 0; height: 64px; font-size: 24px; }
+.drow > span:last-child { text-align: right; font-size: 20px; }
+.dtrack { position: relative; height: 40px; border-bottom: 1px solid var(--rule); }
+.dtrack .zero { position: absolute; top: -10px; bottom: -10px; border-left: 2px dashed var(--paper); opacity: .6; }
+.dtrack .ci { position: absolute; top: 16px; height: 8px; border-radius: 99px; background: var(--lichen); }
+.dtrack .pt { position: absolute; top: 8px; width: 24px; height: 24px; margin-left: -12px; border-radius: 50%; background: var(--hi); }
+.dtrack .ci.bad { background: #ff9da0; }
+.dtrack .pt.bad { background: var(--warn); }
+
+.drow.axisrow { height: 30px; }
+.dtrack.noline { border: 0; height: 30px; }
+.dtrack .lab { position: absolute; top: 4px; transform: translateX(-50%); font: 400 17px var(--m); color: var(--dim); }
+</style></head><body>
+<section class="slide title">
+  <div class="sheet sheet-a"><div class="fringe"></div><div class="paper"><img src="../../web/public/media/folio-apsinthion.webp" alt=""></div></div>
+  <div class="sheet sheet-b"><div class="fringe"></div><div class="paper"><img src="../../web/public/media/folio-glukurizon.webp" alt=""></div></div>
+  <div class="title-band">
+    <p class="dim mono">1,500 Greek passages · 61 expert-identified names · 1,781 untested leads</p>
+    <h1 class="wordmark"><img src="../../web/public/media/mark.svg" alt="">pharmakon</h1>
+    <p class="tag">2,000 years of Greek plant medicine, measured.</p>
+    <p class="sub">An uncertainty-aware map from Dioscorides' 1st-century Greek to modern species, chemistry and testable research leads.</p>
+    <p class="meta">EthnoHack 2026 · Track 1 — Traditional knowledge<br>
+      <span class="mono">pharmakon.adoranto737.workers.dev · github.com/LSUDOKO/Pharmakon</span></p>
+  </div></section><section class="slide ">
+  <h2>Dioscorides described about 600 medicinal plants.<br><span class="dim">Which ones did he mean — and was he right?</span></h2>
+  <div class="grid3">
+    <div class="card"><h3>Names don't map to species</h3><p>An ancient name can point at several modern plants, and translations hide that doubt. One wrong identification breaks every lead built on it.</p></div>
+    <div class="card"><h3>Survival is studied by hand</h3><p>Whether a remedy persisted from Dioscorides through Byzantium to today's villages has only been traced plant by plant.</p></div>
+    <div class="card"><h3>Predictions are rarely tested</h3><p>Herb–disease models are almost never checked with a time split, so "history predicts science" is assumed, not measured.</p></div>
+  </div>
+  <div class="example">
+    <div><p class="greek">ἀψίνθιον</p><p class="dim mono">De materia medica 3.23</p></div>
+    <div class="bars"><div class="pbar"><span class="pl"><i>Artemisia absinthium</i></span><span class="track"><span class="fill" style="width:74.6%"></span><span class="whisk" style="left:62.0%;width:26.0%"></span></span><b class="mono">0.75</b></div><div class="pbar"><span class="pl"><i>unidentified</i></span><span class="track"><span class="fill" style="width:23.1%"></span><span class="whisk" style="left:9.9%;width:25.9%"></span></span><b class="mono">0.23</b></div><div class="pbar"><span class="pl"><i>Artemisia monosperma</i></span><span class="track"><span class="fill" style="width:2.4%"></span><span class="whisk" style="left:1.1%;width:3.8%"></span></span><b class="mono">0.02</b></div><p class="fine">Pharmakon's answer for wormwood, with 90% bootstrap intervals — doubt kept, not hidden.</p></div>
+  </div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">02 / 10</span></footer></section><section class="slide ">
+  <h2>Data: one text chain, eight open databases</h2>
+  <div class="timeline">
+    <div class="era"><p class="yr mono">1st c.</p><h3>Dioscorides</h3><p><b>1,500</b> passages, <b>835</b> chapters<br>Wellmann ed., First1KGreek TEI</p></div>
+    <div class="era"><p class="yr mono">2nd c.</p><h3>Galen</h3><p><b>476</b> drug entries, books 6–8<br>Kühn ed., First1KGreek TEI</p></div>
+    <div class="era"><p class="yr mono">13th c.</p><h3>John the Physician</h3><p><b>61</b> expert-identified names<br>Lardos et al. 2024 (CC BY)</p></div>
+    <div class="era"><p class="yr mono">today</p><h3>Greek villages</h3><p><b>1,226</b> modern use records<br>Pelion 2023 · N. Aegean 2018</p></div>
+  </div>
+  <div class="dbgrid">
+    <div><b>GBIF</b><span>taxonomy, Greek occurrences</span></div>
+    <div><b>Wikidata · LOTUS</b><span>10,252 plant compounds</span></div>
+    <div><b>ChEMBL 37</b><span>455 human targets</span></div>
+    <div><b>Open Targets</b><span>target → disease</span></div>
+    <div><b>NLM MeSH</b><span>90 verified conditions</span></div>
+    <div><b>PubMed</b><span>1,999 plant–condition pairs labelled</span></div>
+    <div><b>PubChem</b><span>toxicity citations (GHS)</span></div>
+    <div><b>LSJ · Wikipedia</b><span>lexicon, species descriptions</span></div>
+  </div>
+  <p class="fine">All open licences (CC0, CC BY, CC BY-SA, public domain). Every source checked live before use; every row carries source, retrieval time and method.</p>
+  <div class="folios"><img src="../../web/public/media/folio-apsinthion.webp" alt=""><img src="../../web/public/media/folio-iris.webp" alt=""><img src="../../web/public/media/folio-glukurizon.webp" alt=""><img src="../../web/public/media/folio-adianton.webp" alt=""><img src="../../web/public/media/folio-drakontaia.webp" alt="">
+    <p class="fine">Vienna Dioscorides (Codex Vindobonensis med. gr. 1, 6th c.), public domain — the tradition this project measures.</p></div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">03 / 10</span></footer></section><section class="slide ">
+  <h2>Method I — read the Greek, identify the plant</h2>
+  <div class="two">
+    <div>
+      <h3>Every use keeps its Greek words</h3>
+      <ol class="steps">
+        <li><b>Rule lexicon</b> — Greek condition stems, clause by clause, exact spans.</li>
+        <li><b>LLM reading</b> — 1,158 passages, 5,075 claims; finds 95% of rule uses.</li>
+        <li><b>Verify</b> — every span must be a substring of the source: <b>100%</b> pass. MeSH only via NLM lookup.</li>
+      </ol>
+      <p class="big mono">2,561 → 3,550</p><p class="fine">usable claims after the verified LLM layer; the backtest keeps the original 2,561</p>
+    </div>
+    <div>
+      <h3>P(species | name), with an "unidentified" option</h3>
+      <div class="feat">
+        <span>geography — GBIF records in Greece, Cyprus, Turkey</span>
+        <span>name continuity — modern Greek names, Latinised epithets</span>
+        <span>scholarly agreement — LSJ, botanical historians</span>
+        <span>genus consensus</span>
+        <span class="new">plant-description match — 324 Greek chapters vs 350 species</span>
+      </div>
+      <p>Conditional logit → temperature scaling → bootstrap intervals. No pharmacology inside: identity is decided before any drug evidence is seen.</p>
+    </div>
+  </div>
+  <div class="worked"><p class="greek-s">“δύναμιν δὲ ἔχει στυπτικήν, θερμαντικήν, ἀποκαθαρτικὴν τῶν ἐνηρεικότων <mark>στομάχῳ</mark> καὶ κοιλίᾳ χολωδῶν.”</p><i>→</i><div><b>stomach complaints</b><span class="dim">use group GI · part whole · verified span, CTS 3.23.1</span></div></div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">04 / 10</span></footer></section><section class="slide ">
+  <h2>Method II — trace each use, then test with a time machine</h2>
+  <div class="two">
+    <div>
+      <h3>Survival across 2,000 years</h3>
+      <div class="flow"><span>Dioscorides</span><i>→</i><span>Galen</span><i>→</i><span>John the Physician</span><i>→</i><span>modern Greece</span></div>
+      <p>For each name × body system: is the use attested in each era? Compared with a <b>label-shuffle null</b> (1,000 permutations), so chance overlap is not mistaken for tradition. Galen is checked for copying (word 4-gram containment).</p>
+    </div>
+    <div>
+      <h3>Rolling-origin backtest</h3>
+      <p>Stand at 2000, 2005, 2010, 2015. Rank plant–condition pairs nobody had studied, using only what was known then. Check PubMed up to 2025.</p>
+      <ul class="checks">
+        <li>features dated ≤ cutoff (compound, ChEMBL and study years)</li>
+        <li>research-popularity baseline to beat</li>
+        <li>no LLM output, no LLM-derived claims, frozen non-LLM identification</li>
+        <li>cluster-bootstrap 95% intervals at every cutoff</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cutoffs"><div><p class="yr mono">2000</p><p><b class="mono">1,404</b> untested pairs</p><p><b class="mono">122</b> studied by 2025</p></div><div><p class="yr mono">2005</p><p><b class="mono">1,384</b> untested pairs</p><p><b class="mono">102</b> studied by 2025</p></div><div><p class="yr mono">2010</p><p><b class="mono">1,361</b> untested pairs</p><p><b class="mono">79</b> studied by 2025</p></div><div><p class="yr mono">2015</p><p><b class="mono">1,332</b> untested pairs</p><p><b class="mono">50</b> studied by 2025</p></div>
+    <p class="fine">All body systems. The skin/wound pilot is kept for comparison.</p></div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">05 / 10</span></footer></section><section class="slide ">
+  <h2>Prototype — live, open, usable from code and AI assistants</h2>
+  <div class="proto">
+    <div class="shot tall"><img src="../media/shot-explorer.jpg" alt="Ancient name explorer"></div>
+    <div class="side">
+      <div class="shot"><img src="../media/shot-leads.jpg" alt="Leads gallery"></div>
+      <div class="card code">
+        <h3>Website · JSON API · MCP server</h3>
+        <p>Explorer with highlighted Greek, candidate photos, probability bars, description matches and a four-era survival table. Leads with toxicity flags, evidence paths and the exact PubMed query.</p>
+        <pre>claude mcp add --transport http pharmakon \
+  https://pharmakon.adoranto737.workers.dev/mcp</pre>
+        <p class="fine">6 read-only tools · CSV export · Streamlit research dashboard · 27 tests · one-command reproduction</p>
+      </div>
+    </div>
+  </div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">06 / 10</span></footer></section><section class="slide ">
+  <h2>Result I — identification beats the dictionary</h2>
+  <div class="two wide-left">
+    <div><svg class="chart" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1200 604" role="img" aria-label="Which plant is it? Agreement with experts"><rect width="1200" height="604" rx="22" fill="#000000"/><rect x="1" y="1" width="1198" height="602" rx="21" fill="none" stroke="#22302a"/><path d="M1050 0 L1200 0 L1200 150 Z" fill="#17744f" opacity=".18"/><text x="36" y="52" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="600" fill="#eceee7">Which plant is it? Agreement with experts</text><text x="36" y="80" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" fill="#8b938f">Lardos et al. (2024) gold set. The LLM judge may have memorised identifications; the oracle is an ablation only.</text><line x1="380.0" y1="108.0" x2="380.0" y2="524.0" stroke="#111a15" stroke-width="1"/><line x1="526.0" y1="108.0" x2="526.0" y2="524.0" stroke="#111a15" stroke-width="1"/><line x1="672.0" y1="108.0" x2="672.0" y2="524.0" stroke="#111a15" stroke-width="1"/><line x1="818.0" y1="108.0" x2="818.0" y2="524.0" stroke="#111a15" stroke-width="1"/><line x1="964.0" y1="108.0" x2="964.0" y2="524.0" stroke="#111a15" stroke-width="1"/><line x1="1110.0" y1="108.0" x2="1110.0" y2="524.0" stroke="#111a15" stroke-width="1"/><text x="356.0" y="135.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">Pharmakon (calibrated)</text><line x1="751.0" y1="130.0" x2="930.5" y2="130.0" stroke="#3dbb82" stroke-width="3"/><circle cx="834.8" cy="130" r="8" fill="#3dbb82" stroke="#3dbb82" stroke-width="2.5"/><text x="944.5" y="135.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#3dbb82" text-anchor="start">62%</text><text x="356.0" y="181.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">+ plant-description match (f1)</text><line x1="751.0" y1="176.0" x2="918.5" y2="176.0" stroke="#3dbb82" stroke-width="3"/><circle cx="834.8" cy="176" r="8" fill="#3dbb82" stroke="#3dbb82" stroke-width="2.5"/><text x="932.5" y="181.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#3dbb82" text-anchor="start">62%</text><text x="356.0" y="227.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">Transfer model, used for all names</text><line x1="691.1" y1="222.0" x2="882.6" y2="222.0" stroke="#3dbb82" stroke-width="3"/><circle cx="786.9" cy="222" r="8" fill="#3dbb82" stroke="#3dbb82" stroke-width="2.5"/><text x="896.6" y="227.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#3dbb82" text-anchor="start">56%</text><text x="356.0" y="273.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">Transfer + description match</text><line x1="727.0" y1="268.0" x2="906.5" y2="268.0" stroke="#3dbb82" stroke-width="3"/><circle cx="810.8" cy="268" r="8" fill="#3dbb82" stroke="#3dbb82" stroke-width="2.5"/><text x="920.5" y="273.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#3dbb82" text-anchor="start">59%</text><text x="356.0" y="319.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">LLM judge (comparison only)</text><line x1="715.1" y1="314.0" x2="894.9" y2="314.0" stroke="#b8e6cc" stroke-width="3"/><circle cx="810.8" cy="314" r="8" fill="#b8e6cc" stroke="#b8e6cc" stroke-width="2.5"/><text x="908.9" y="319.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#b8e6cc" text-anchor="start">59%</text><text x="356.0" y="365.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">Uniform guess</text><line x1="583.5" y1="360.0" x2="763.0" y2="360.0" stroke="#8b938f" stroke-width="3"/><circle cx="667.2" cy="360" r="8" fill="#8b938f" stroke="#8b938f" stroke-width="2.5"/><text x="777.0" y="365.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#8b938f" text-anchor="start">39%</text><text x="356.0" y="411.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">Genus-frequency prior</text><line x1="571.5" y1="406.0" x2="751.0" y2="406.0" stroke="#8b938f" stroke-width="3"/><circle cx="655.2" cy="406" r="8" fill="#8b938f" stroke="#8b938f" stroke-width="2.5"/><text x="765.0" y="411.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#8b938f" text-anchor="start">38%</text><text x="356.0" y="457.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#eceee7" text-anchor="end">LSJ dictionary</text><line x1="523.6" y1="452.0" x2="703.1" y2="452.0" stroke="#8b938f" stroke-width="3"/><circle cx="607.4" cy="452" r="8" fill="#8b938f" stroke="#8b938f" stroke-width="2.5"/><text x="717.1" y="457.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#8b938f" text-anchor="start">31%</text><text x="356.0" y="503.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#8b938f" text-anchor="end">Oracle: + expert-coded traits</text><line x1="918.5" y1="498.0" x2="1050.1" y2="498.0" stroke="#b8e6cc" stroke-width="3"/><circle cx="990.4" cy="498" r="8" fill="#000000" stroke="#b8e6cc" stroke-width="2.5"/><text x="1064.1" y="503.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="13" font-weight="400" fill="#b8e6cc" text-anchor="start">84%</text><line x1="380.0" y1="530.0" x2="1110.0" y2="530.0" stroke="#22302a" stroke-width="1"/><line x1="380.0" y1="530.0" x2="380.0" y2="535.0" stroke="#22302a" stroke-width="1"/><text x="380.0" y="550.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#8b938f" text-anchor="middle">0%</text><line x1="526.0" y1="530.0" x2="526.0" y2="535.0" stroke="#22302a" stroke-width="1"/><text x="526.0" y="550.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#8b938f" text-anchor="middle">20%</text><line x1="672.0" y1="530.0" x2="672.0" y2="535.0" stroke="#22302a" stroke-width="1"/><text x="672.0" y="550.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#8b938f" text-anchor="middle">40%</text><line x1="818.0" y1="530.0" x2="818.0" y2="535.0" stroke="#22302a" stroke-width="1"/><text x="818.0" y="550.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#8b938f" text-anchor="middle">60%</text><line x1="964.0" y1="530.0" x2="964.0" y2="535.0" stroke="#22302a" stroke-width="1"/><text x="964.0" y="550.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#8b938f" text-anchor="middle">80%</text><line x1="1110.0" y1="530.0" x2="1110.0" y2="535.0" stroke="#22302a" stroke-width="1"/><text x="1110.0" y="550.0" font-family="'JetBrains Mono', Menlo, Consolas, monospace" font-size="11" font-weight="400" fill="#8b938f" text-anchor="middle">100%</text><text x="380.0" y="574.0" font-family="Outfit, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#8b938f" text-anchor="start">top-1 agreement with expert identifications, 61 names, leave-one-name-out, 95% bootstrap CI</text></svg></div>
+    <div class="stats">
+      <div><p class="big mono">62%</p><p>agreement with expert identifications, vs <b>31%</b> for the LSJ dictionary</p></div>
+      <div><p class="big mono">0.50</p><p>Brier score, vs 1.34 for the dictionary (lower is better)</p></div>
+      <div><p class="big mono">0.21 → 0.14</p><p>calibration error once Dioscorides' plant descriptions are compared with modern ones. Target ≤ 0.10: <b>not yet met</b>.</p></div>
+      <p class="fine">Leave-one-name-out over 61 names, 95% bootstrap CIs. The LLM judge (59%) is a comparison only — it may have memorised published identifications. Expert judgement is not ground truth.</p>
+    </div>
+  </div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">07 / 10</span></footer></section><section class="slide ">
+  <h2>Result II — the uses survived; history did not predict science</h2>
+  <div class="two even">
+    <div class="card viz"><h3>Did the uses survive 2,000 years?</h3>
+      <p class="dim">Dioscorides uses whose plant appears in the modern Greek record (508 name × use rows)</p><div class="hb"><span>Observed</span><span class="htrack"><span class="hfill " style="width:81.0%"></span></span><b class="mono">48.6%</b></div><div class="hb"><span>Shuffled labels, average</span><span class="htrack"><span class="hfill null" style="width:68.0%"></span></span><b class="mono">40.8%</b></div><div class="hb"><span>Shuffled labels, 95th percentile</span><span class="htrack"><span class="hfill null" style="width:72.2%"></span></span><b class="mono">43.3%</b></div>
+      <p class="callout"><b>p = 0.001</b> over 1,000 label shuffles. Galen re-attests <b>37%</b> of the uses, John the Physician <b>34%</b>. Caveat: one modern study covers skin uses only.</p></div>
+    <div class="card viz"><h3>Did history predict what science studied next?</h3>
+      <p class="dim">Δ AUPRC = (history + popularity) − popularity, 95% CI; left of zero = history hurts</p>
+      <div class="drow axisrow"><span></span><span class="dtrack noline"><span class="lab" style="left:0%">−0.20</span><span class="lab" style="left:66.7%">0</span><span class="lab" style="left:100%">+0.10</span></span><span></span></div><div class="drow"><span class="mono">2000</span><span class="dtrack"><span class="zero" style="left:66.7%"></span><span class="ci" style="left:40.6%;width:36.1%"></span><span class="pt" style="left:59.7%"></span></span><span class="mono dim">-0.08 … +0.03</span></div><div class="drow"><span class="mono">2005</span><span class="dtrack"><span class="zero" style="left:66.7%"></span><span class="ci bad" style="left:21.3%;width:39.8%"></span><span class="pt bad" style="left:43.1%"></span></span><span class="mono dim">-0.14 … -0.02</span></div><div class="drow"><span class="mono">2010</span><span class="dtrack"><span class="zero" style="left:66.7%"></span><span class="ci" style="left:41.3%;width:43.9%"></span><span class="pt" style="left:61.6%"></span></span><span class="mono dim">-0.08 … +0.06</span></div><div class="drow"><span class="mono">2015</span><span class="dtrack"><span class="zero" style="left:66.7%"></span><span class="ci" style="left:48.4%;width:38.3%"></span><span class="pt" style="left:68.9%"></span></span><span class="mono dim">-0.05 … +0.06</span></div>
+      <p class="callout"><b>An honest null.</b> Research popularity predicts which pairs get studied; 2,000 years of history never adds to it, and at 2005 it hurts. Going from the skin pilot to all body systems (132 → 353 positives) made the null sharper, not weaker.</p></div>
+  </div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">08 / 10</span></footer></section><section class="slide ">
+  <h2>Impact — 1,781 uncertainty-weighted leads for the lab</h2>
+  <div class="two wide-left">
+    <div class="leadgrid"><div class="lead"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Vicia%20faba1.jpg?width=500" alt=""><p><b>#1</b> <i>Vicia faba</i></p><p class="dim">Eye Diseases · P = 0.66 · path ✓</p></div><div class="lead"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fennel%20%28Foeniculum%20vulgare%29%20-%20Parc%20Natural%20de%20s%27Albufera%2C%20Spain%202022-04-18%20%2802%29.jpg?width=500" alt=""><p><b>#3</b> <i>Foeniculum vulgare</i></p><p class="dim">Kidney Diseases · P = 0.58</p></div><div class="lead"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia%20absinthium%20P1210748.jpg?width=500" alt=""><p><b>#4</b> <i>Artemisia absinthium</i></p><p class="dim">Eye Diseases · P = 0.75 · path ✓</p></div><div class="lead"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cypr%C3%A8s.jpg?width=500" alt=""><p><b>#5</b> <i>Cupressus sempervirens</i></p><p class="dim">Wounds and Injuries · P = 0.66 · path ✓</p></div><div class="lead"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ruta%20graveolens%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-259.jpg?width=500" alt=""><p><b>#7</b> <i>Ruta graveolens</i></p><p class="dim">Eye Diseases · P = 0.52 · path ✓</p></div><div class="lead"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Punica%20granatum%20004.JPG?width=500" alt=""><p><b>#8</b> <i>Punica granatum</i></p><p class="dim">Hernia · P = 0.73 · path ✓</p></div></div>
+    <div class="stats">
+      <div><p class="big mono">16/20</p><p>top leads with a closed compound → human target → disease path (LOTUS · ChEMBL · Open Targets)</p></div>
+      <div><p class="big mono">5/20</p><p>top leads that change if plant uncertainty is ignored (Kendall τ 0.50)</p></div>
+      <div><p class="big mono">2/20</p><p>carry a PubChem-cited toxicity flag — shown, never hidden</p></div>
+      <p class="fine">Who uses it: pharmacognosy labs choosing what to screen next · historians reading Dioscorides with evidence · conservation (IUCN status per species). Every lead keeps its exact PubMed query.</p>
+    </div>
+  </div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">09 / 10</span></footer></section><section class="slide ">
+  <h2>Limits, ethics and what comes next</h2>
+  <div class="grid3">
+    <div class="card"><h3>What we don't claim</h3><ul>
+      <li>Expert gold is judgement, not ground truth (61 names, wide intervals).</li>
+      <li>"Supported" = PubMed co-mention proxy; human audits generated, not yet filled.</li>
+      <li>Calibration 0.14 still misses ≤ 0.10.</li>
+      <li>LLM outputs are verified word-for-word but not yet expert-audited.</li></ul></div>
+    <div class="card"><h3>Responsible research</h3><ul>
+      <li>Research hypotheses only — no dosing, no medical advice.</li>
+      <li>Toxic genera flagged with PubChem citations.</li>
+      <li>No LLM output ever feeds the backtest (tested).</li>
+      <li>Nagoya Protocol: benefit-sharing for any commercial follow-up.</li></ul></div>
+    <div class="card"><h3>Next</h3><ul>
+      <li>Expert audit of claims, conditions and labels.</li>
+      <li>Richer floras (Flora of Greece, POWO with permission).</li>
+      <li>Paul of Aegina, Oribasius; Arabic and Latin transmission.</li>
+      <li>Screening partnership for top non-toxic leads; Zenodo DOI.</li></ul></div>
+  </div>
+  <div class="closing"><img src="../../web/public/media/mark.svg" alt=""><span class="wm">pharmakon</span>
+    <span class="mono">pharmakon.adoranto737.workers.dev · github.com/LSUDOKO/Pharmakon · /mcp</span></div><footer><span class="brand"><img src="../../web/public/media/mark.svg" alt="">pharmakon</span><span>Research hypotheses only — not medical advice</span><span class="num">10 / 10</span></footer></section>
+</body></html>
