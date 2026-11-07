@@ -1,0 +1,35 @@
+{
+  "stage": "evidence-labels",
+  "generated_at": "2026-11-07T12:08:28+00:00",
+  "pairs": 400,
+  "pairs_skin": 397,
+  "taxa": 172,
+  "mesh_terms": 23,
+  "pairs_with_any_support_to_t_end": 54,
+  "positive_rate": 0.135,
+  "first_support_year_quantiles": {
+    "0.1": 1984.0,
+    "0.5": 2010.0,
+    "0.9": 2023.0
+  },
+  "eligible_and_positive_by_cutoff": {
+    "2000": {
+      "eligible": 392,
+      "positive": 46
+    },
+    "2005": {
+      "eligible": 385,
+      "positive": 39
+    },
+    "2010": {
+      "eligible": 373,
+      "positive": 27
+    },
+    "2015": {
+      "eligible": 366,
+      "positive": 20
+    }
+  },
+  "label_audit": "pending human audit (data/gold/audits/label_audit_*.csv)",
+  "t_end": 2025
+}

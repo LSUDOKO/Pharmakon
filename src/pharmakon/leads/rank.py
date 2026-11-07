@@ -85,10 +85,11 @@ def run() -> dict:
 def write_md(out: pd.DataFrame) -> None:
     lines = ["# Top 50 research leads (hypotheses, NOT medical advice)", "",
              "Pairs with **no PubMed support to date** (co-mention proxy), ranked by forecast score × P(species).",
-             "P(species) bars show the 90% bootstrap interval from `id_posterior`. ⚠ = known toxicity (PubChem GHS link).", "",
+             "P(species) is the identification probability (90% bootstrap intervals in `id_posterior`). ⚠ = known toxic constituent (PubChem GHS link).",
+             "Evidence path: weakest-link tier of a closed taxon→compound→target→disease path (— = none found within the pilot caps).", "",
              "| # | Species | Condition (MeSH) | P(species) | score×P | evidence path | IUCN | toxicity |", "|---|---|---|---|---|---|---|---|"]
     for r in out.head(50).itertuples():
         tox = f"⚠ [PubChem]({r.toxicity_citation})" if r.toxicity_flag else ""
         lines.append(f"| {r.rank_weighted} | *{r.accepted_name}* | {r.mesh_label} | {r.p_species:.2f} | {r.score_weighted:.3f} | "
-                     f"{'tier ' + format(r.path_strength, '.2f') if r.path_strength > 0 else '—'} | {r.conservation_status or '—'} | {tox} |")
+                     f"{'tier ' + format(r.path_strength, '.2f') if r.path_strength > 0 else '—'} | {r.conservation_status if isinstance(r.conservation_status, str) else '—'} | {tox} |")
     (REPORTS / "leads_top50.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

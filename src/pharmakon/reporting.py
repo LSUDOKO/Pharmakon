@@ -238,7 +238,7 @@ def data_versions() -> str:
 
 def write_all() -> dict:
     out = []
-    for f in (ingest, extraction, conditions, identification, cards, persistence, labels, forecast, uncertainty, data_versions, data_dictionary):
+    for f in (ingest, extraction, conditions, identification, cards, persistence, labels, forecast, uncertainty, data_versions, data_dictionary, phase_reports):
         try:
             out.append(f())
         except Exception as exc:  # noqa: BLE001 - report which report could not be built and why
@@ -263,3 +263,44 @@ def data_dictionary() -> str:
             lines.append("")
     (ROOT / "docs" / "data_dictionary.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return "docs/data_dictionary.md"
+
+
+def phase_reports() -> str:
+    """reports/phase_N.md — acceptance-check summaries per build phase (spec/09), from stage JSON."""
+    st = {k: read_stage_report(k) for k in ("ingest-texts", "extract-claims", "map-conditions", "gold", "cluster-names", "identify",
+                                             "link-chemistry", "ingest-galen", "persistence", "evidence-labels", "forecast", "leads", "build-kg")}
+    idn, fc = st["identify"], st["forecast"].get("results", {})
+    mc = idn.get("results", {}).get("model_calibrated", {})
+    phases = {
+        0: ("Setup and source verification", [
+            "Repo, `pyproject.toml`, Makefile, config, cached HTTP client (`http.py`), optional LLM wrapper (`llm.py`).",
+            "Live checks of 13 sources pass: see `docs/source_verification.md`.",
+            f"Dioscorides TEI commit `{st['ingest-texts'].get('source_commit')}`; Lardos figshare CC BY 4.0; Galen found in First1KGreek (tlg0057.tlg075); Paul → fallback R2.",
+            "Open: no ANTHROPIC/NCBI/IUCN keys in the build environment (documented fallbacks)."]),
+        1: ("Corpus ingestion", [f"{st['ingest-texts'].get('passages')} passages, all 5 books, residual-apparatus flag rate {st['ingest-texts'].get('residual_apparatus_flag_rate')}.",
+                                 "Unit tests on 3 real fixture chapters pass. 20-passage Perseids comparison: pending human check."]),
+        2: ("Claims and conditions", [f"{st['extract-claims'].get('claims_kept')} claims, exact span verification {st['extract-claims'].get('exact_span_verified_rate_kept')} (≥0.98 required: met).",
+                                      f"{st['map-conditions'].get('claims_with_verified_mesh_rate')} of claims with verified MeSH.",
+                                      "Audit precision ≥0.85: NOT yet assessed — audit sheets generated, human audit pending."]),
+        3: ("Gold set and identification", [f"{st['gold'].get('gold_names')} gold names / {st['gold'].get('candidates')} candidates parsed; LONO top-1 {mc.get('top1')}, Brier {mc.get('brier', {}).get('mean')}, ECE {mc.get('ece')}.",
+                                           "Success criterion: beats LSJ on top-1 and Brier — met; ECE ≤ 0.10 — NOT met (diagnosis in eval_identification.md).",
+                                           f"10 identification cards: `identification_cards.md`. {st['cluster-names'].get('clusters')} name clusters; merge-precision audit pending."]),
+        4: ("Chemistry, targets, diseases", [f"Coverage: {st['link-chemistry'].get('share_taxa_with_compound')} of selected taxa have ≥1 compound; "
+                                            f"{st['link-chemistry'].get('share_queried_compounds_with_human_target')} of queried compounds have a human target; "
+                                            f"{st['link-chemistry'].get('taxon_disease_pairs_with_path')} taxon–disease pairs close the loop.",
+                                            "Provenance columns are enforced on every write (`write_table`, unit test)."]),
+        5: ("Later texts, modern studies, persistence", [f"Galen: {st['ingest-galen'].get('drug_entries')} entries, {st['ingest-galen'].get('entries_mapped_to_dmm')} mapped to Dioscorides; copy containment mean {st['ingest-galen'].get('copy_containment_mean')}.",
+                                                         f"Persistence permutation test: {st['persistence'].get('permutation_test')}.",
+                                                         "Worked examples with Greek spans: eval_persistence.md. Modern-table 10% human check: pending."]),
+        6: ("Labels and temporal backtest", [f"{st['evidence-labels'].get('pairs')} pairs, {st['evidence-labels'].get('pairs_with_any_support_to_t_end')} with PubMed support.",
+                                            "AUPRC (pop / history+pop): " + "; ".join(f"T={T}: {v['test']['popularity'].get('auprc')} / {v['test']['history+popularity'].get('auprc')}" for T, v in fc.items()),
+                                            "Label audit (100+/50−): pending human audit."]),
+        7: ("Leads and uncertainty", [f"{st['leads'].get('unsupported_today')} leads; Kendall τ weighted vs top-1 = {st['leads'].get('kendall_tau_weighted_vs_top1')}; "
+                                     f"{st['leads'].get('top20_changed_when_using_top1_identity')} of top-20 change."]),
+        8: ("Explorer app", ["Six Streamlit pages; `make app` runs from the committed `data/processed`; AppTest smoke test for every page passes.",
+                             "Deployment URL: not deployed from this environment (needs the team's Streamlit Cloud / HF account)."]),
+        9: ("Documentation", ["README, docs/limitations.md, licences, decisions, data dictionary. Slides/video/Devpost: team tasks (spec/11)."]),
+    }
+    for n, (title, items) in phases.items():
+        _w(f"phase_{n}.md", [f"# Phase {n} — {title}", "", *[f"- {i}" for i in items]])
+    return "phase_0..9.md"

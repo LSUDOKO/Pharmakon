@@ -37,8 +37,8 @@ for r in top.itertuples():
         val.append(max(r.weighted_strength, 0.01))
 fig = go.Figure(go.Sankey(node=dict(label=labels, pad=12), link=dict(source=src, target=dst, value=val)))
 fig.update_layout(height=520, margin=dict(l=5, r=5, t=5, b=5))
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 st.dataframe(sub[["inchikey", "molecule_chembl_id", "target_chembl_id", "disease_name", "ct_tier", "pchembl", "td_tier", "ot_score",
-                  "compound_ref_year", "activity_doc_year", "path_strength", "weighted_strength"]], hide_index=True, use_container_width=True)
+                  "compound_ref_year", "activity_doc_year", "path_strength", "weighted_strength"]], hide_index=True, width="stretch")
 st.caption("Tiers: ChEMBL mechanism T1, pChEMBL≥7 T2, ≥6 T3, ≥5 T4; Open Targets ≥0.7 T1, ≥0.4 T2, ≥0.2 T3. "
            "Path strength = weakest link. Compounds via LOTUS (Wikidata P703) with reference year.")

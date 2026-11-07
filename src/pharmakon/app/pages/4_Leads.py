@@ -21,7 +21,7 @@ df = df.assign(toxicity=df["toxicity_flag"].map({True: "⚠ KNOWN TOXICITY", Fal
 st.dataframe(df[["rank_weighted", "toxicity", "accepted_name", "mesh_label", "p_species", "score_weighted", "rank_top1_only", "path_strength",
                  "conservation", "toxicity_citation"]],
              column_config={"toxicity_citation": st.column_config.LinkColumn("PubChem hazard"), "p_species": st.column_config.ProgressColumn("P(species)", min_value=0, max_value=1)},
-             hide_index=True, use_container_width=True)
+             hide_index=True, width="stretch")
 st.download_button("Export CSV", df.drop(columns=["clusters"]).to_csv(index=False).encode(), "pharmakon_leads.csv", "text/csv")
 sel = st.selectbox("Inspect a lead", df["accepted_name"] + " — " + df["mesh_label"])
 if sel:

@@ -24,3 +24,10 @@ genera:
   Citrullus: [cucurbitacin E, cucurbitacin B]
   Daphne: [mezerein, daphnetoxin]
   Thapsia: [thapsigargin]
+  # Added after inspecting the top-50 leads (pyrrolizidine / quinolizidine alkaloids, glycosides):
+  Heliotropium: [lasiocarpine, heliotrine]
+  Senecio: [retrorsine, senecionine]
+  Lupinus: [sparteine sulfate, sparteine, lupanine]
+  Galanthus: [galantamine hydrobromide, galantamine]
+  Xanthium: [atractyloside, carboxyatractyloside]
+  Teucrium: [teucrin A]

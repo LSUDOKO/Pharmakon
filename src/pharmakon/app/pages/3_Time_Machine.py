@@ -23,8 +23,8 @@ for m in ["random", "popularity_raw", "popularity", "chemistry", "history", "his
                     arrayminus=[t.loc[m, "auprc"] - lo] if lo else [0]), name=m)
 fig.add_hline(y=t.loc["random", "base_rate"], line_dash="dot", annotation_text="base rate")
 fig.update_layout(showlegend=False, yaxis_title="AUPRC (95% cluster-bootstrap CI)", height=420)
-st.plotly_chart(fig, use_container_width=True)
-st.dataframe(t[[c for c in ["n", "positives", "base_rate", "auroc", "auprc", "auprc_lift", "p_at_20", "p_at_50", "p_at_100"] if c in t.columns]], use_container_width=True)
+st.plotly_chart(fig, width="stretch")
+st.dataframe(t[[c for c in ["n", "positives", "base_rate", "auroc", "auprc", "auprc_lift", "p_at_20", "p_at_50", "p_at_100"] if c in t.columns]], width="stretch")
 if "delta_auprc_histpop_minus_pop" in ci:
     st.markdown(f"**Does history add signal beyond popularity?** ΔAUPRC 95% CI = {ci['delta_auprc_histpop_minus_pop']} "
                 f"(share of bootstrap samples with Δ ≤ 0: {ci.get('p_delta_auprc_le_0')}).")
@@ -35,8 +35,8 @@ h = hits[hits["cutoff"] == int(cut)]
 h = h.assign(pubmed=h["query_string"].map(lambda q: "https://pubmed.ncbi.nlm.nih.gov/?term=" + __import__("urllib.parse").parse.quote(q)))
 st.markdown("#### Hits (ranked highly at T, later gained support)")
 st.dataframe(h[h["label"] == 1][["accepted_name", "mesh_label", "score_histpop", "first_support_year", "pubmed"]],
-             column_config={"pubmed": st.column_config.LinkColumn("PubMed query")}, hide_index=True, use_container_width=True)
+             column_config={"pubmed": st.column_config.LinkColumn("PubMed query")}, hide_index=True, width="stretch")
 st.markdown("#### Misses — no support found (yet)")
 st.dataframe(h[h["label"] == 0][["accepted_name", "mesh_label", "score_histpop", "pubmed"]],
-             column_config={"pubmed": st.column_config.LinkColumn("PubMed query")}, hide_index=True, use_container_width=True)
+             column_config={"pubmed": st.column_config.LinkColumn("PubMed query")}, hide_index=True, width="stretch")
 st.caption(fc.get("label_note", ""))

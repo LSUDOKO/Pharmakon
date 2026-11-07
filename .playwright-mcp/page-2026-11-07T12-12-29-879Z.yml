@@ -1,0 +1,132 @@
+- generic [ref=f1e2]:
+  - link "Skip to main content" [ref=f1e3] [cursor=pointer]:
+    - /url: "#stMain"
+  - region "Sidebar" [ref=f1e7]:
+    - generic [ref=f1e8]:
+      - navigation "App pages" [ref=f1e10]:
+        - list [ref=f1e11]:
+          - listitem [ref=f1e12]:
+            - link [ref=f1e14] [cursor=pointer]:
+              - /url: http://localhost:8599/
+              - paragraph [ref=f1e17]: Home
+          - listitem [ref=f1e18]:
+            - link [ref=f1e20] [cursor=pointer]:
+              - /url: http://localhost:8599/Ancient_Name_Explorer
+              - paragraph [ref=f1e23]: Ancient Name Explorer
+          - listitem [ref=f1e24]:
+            - link [ref=f1e26] [cursor=pointer]:
+              - /url: http://localhost:8599/Evidence_Paths
+              - paragraph [ref=f1e29]: Evidence Paths
+          - listitem [ref=f1e30]:
+            - link [ref=f1e32] [cursor=pointer]:
+              - /url: http://localhost:8599/Time_Machine
+              - paragraph [ref=f1e35]: Time Machine
+          - listitem [ref=f1e36]:
+            - link [ref=f1e38] [cursor=pointer]:
+              - /url: http://localhost:8599/Leads
+              - paragraph [ref=f1e41]: Leads
+          - listitem [ref=f1e42]:
+            - link [ref=f1e44] [cursor=pointer]:
+              - /url: http://localhost:8599/Methods_Data_Limitations
+              - paragraph [ref=f1e47]: Methods Data Limitations
+      - generic [ref=f1e51]:
+        - heading "Pharmakon" [level=3] [ref=f1e56]
+        - paragraph [ref=f1e61]: "Pilot domain: skin conditions & wounds (ICPC-2 S / Lardos use group DE)"
+        - paragraph [ref=f1e66]:
+          - text: "Data version: First1KGreek commit"
+          - code [ref=f1e67]: da4b902db4
+          - text: · generated 2026-11-07
+        - paragraph [ref=f1e72]: "Data directory: processed"
+        - generic [ref=f1e74]:
+          - paragraph [ref=f1e78]: Cutoff year T
+          - group [ref=f1e80]:
+            - combobox "Cutoff year T" [ref=f1e81]: "2015"
+            - button "Open" [ref=f1e82] [cursor=pointer]
+  - generic [ref=f1e4]:
+    - banner [ref=f1e88]:
+      - generic [ref=f1e91]:
+        - button "Deploy" [ref=f1e93] [cursor=pointer]
+        - button "Main menu" [ref=f1e97] [cursor=pointer]
+    - main [ref=f1e5]:
+      - generic [ref=f1e101]:
+        - alert [ref=f1e104]:
+          - paragraph [ref=f1e108]:
+            - strong [ref=f1e109]: Research hypotheses only — not medical advice.
+            - text: Identifications are probabilistic. Nothing here is a recommendation to use any plant, or evidence of safety or efficacy.
+        - heading "Time Machine — temporal backtest" [level=1] [ref=f1e114]:
+          - text: Time Machine — temporal backtest
+          - generic [ref=f1e115]:
+            - link "Link to heading":
+              - /url: "#time-machine-temporal-backtest"
+        - paragraph [ref=f1e120]:
+          - text: Train on pairs unsupported at
+          - strong [ref=f1e121]: "2010"
+          - text: (labels in (2010, 2015]); test on pairs unsupported at
+          - strong [ref=f1e122]: "2015"
+          - text: "(label: first PubMed support in (2015, 2025]). Train rows 373 (7 positive)."
+        - generic [ref=f1e128]:
+          - img:
+            - generic:
+              - generic:
+                - generic:
+                  - generic: random
+                  - generic: popularity_raw
+                  - generic: popularity
+                  - generic: chemistry
+                  - generic: history
+                  - generic: history+popularity
+                  - generic: full
+                  - generic: full_gbm
+                  - generic: shuffled_history+popularity
+                - generic:
+                  - generic: "0"
+                  - generic: "0.2"
+                  - generic: "0.4"
+                  - generic: "0.6"
+          - img:
+            - generic:
+              - generic: AUPRC (95% cluster-bootstrap CI)
+              - generic: base rate
+          - toolbar [ref=f1e142]:
+            - button "Download plot as a PNG" [ref=f1e144] [cursor=pointer]
+            - generic [ref=f1e147]:
+              - button "Zoom" [ref=f1e148] [cursor=pointer]
+              - button "Pan" [ref=f1e151] [cursor=pointer]
+            - generic [ref=f1e154]:
+              - button "Zoom in" [ref=f1e155] [cursor=pointer]
+              - button "Zoom out" [ref=f1e158] [cursor=pointer]
+              - button "Autoscale" [ref=f1e161] [cursor=pointer]
+              - button "Reset axes" [ref=f1e164] [cursor=pointer]
+            - button "Fullscreen" [ref=f1e168] [cursor=pointer]
+        - generic [ref=f1e175]:
+          - button "Show/hide columns" [ref=f1e179] [cursor=pointer]
+          - button "Download as CSV" [ref=f1e185] [cursor=pointer]
+          - button "Search" [ref=f1e191] [cursor=pointer]
+          - button "Fullscreen" [ref=f1e197] [cursor=pointer]
+        - paragraph [ref=f1e213]:
+          - strong [ref=f1e214]: Does history add signal beyond popularity?
+          - text: "ΔAUPRC 95% CI = [-0.1261, 0.0488] (share of bootstrap samples with Δ ≤ 0: 0.762)."
+        - paragraph [ref=f1e219]:
+          - strong [ref=f1e220]: Leakage control
+          - text: "— shuffled history: AUPRC 0.3786 vs history+popularity 0.4617."
+        - heading "Hits (ranked highly at T, later gained support)" [level=4] [ref=f1e226]:
+          - text: Hits (ranked highly at T, later gained support)
+          - generic [ref=f1e227]:
+            - link "Link to heading":
+              - /url: "#hits-ranked-highly-at-t-later-gained-support"
+        - generic [ref=f1e232]:
+          - button "Show/hide columns" [ref=f1e236] [cursor=pointer]
+          - button "Download as CSV" [ref=f1e242] [cursor=pointer]
+          - button "Search" [ref=f1e248] [cursor=pointer]
+          - button "Fullscreen" [ref=f1e254] [cursor=pointer]
+        - heading "Misses — no support found (yet)" [level=4] [ref=f1e271]:
+          - text: Misses — no support found (yet)
+          - generic [ref=f1e272]:
+            - link "Link to heading":
+              - /url: "#misses-no-support-found-yet"
+        - generic [ref=f1e277]:
+          - button "Show/hide columns" [ref=f1e281] [cursor=pointer]
+          - button "Download as CSV" [ref=f1e287] [cursor=pointer]
+          - button "Search" [ref=f1e293] [cursor=pointer]
+          - button "Fullscreen" [ref=f1e299] [cursor=pointer]
+        - paragraph [ref=f1e315]: PubMed co-mention proxy; label precision pending human audit

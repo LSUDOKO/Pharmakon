@@ -1,0 +1,26 @@
+{
+  "stage": "build-kg",
+  "generated_at": "2026-11-07T11:45:24+00:00",
+  "nodes": 2259,
+  "edges": 6048,
+  "node_kinds": {
+    "Passage": 692,
+    "AncientName": 653,
+    "Taxon": 459,
+    "Disease": 202,
+    "Target": 149,
+    "Compound": 84,
+    "ConditionCategory": 19,
+    "Text": 1
+  },
+  "edge_kinds": {
+    "CLAIMS_USE_FOR": 2523,
+    "MENTIONS": 692,
+    "ATTESTED_IN": 692,
+    "IDENTIFIED_AS": 614,
+    "CONTAINS": 592,
+    "ASSOCIATED_WITH": 446,
+    "ACTS_ON": 415,
+    "MAPS_TO": 74
+  }
+}

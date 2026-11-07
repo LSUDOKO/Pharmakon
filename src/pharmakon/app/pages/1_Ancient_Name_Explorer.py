@@ -46,7 +46,7 @@ with left:
                     unsafe_allow_html=True)
     if len(cc):
         st.markdown("**Extracted claims**")
-        st.dataframe(cc[["condition_text_grc", "condition_en", "plant_part", "route", "use_group", "status"]], hide_index=True, use_container_width=True)
+        st.dataframe(cc[["condition_text_grc", "condition_en", "plant_part", "route", "use_group", "status"]], hide_index=True, width="stretch")
 
 with right:
     st.markdown("### Identification card")
@@ -57,7 +57,7 @@ with right:
                            text=[f"{v:.2f}" for v in pc["p"]], textposition="outside"))
     fig.update_layout(height=80 + 32 * len(pc), margin=dict(l=10, r=10, t=10, b=10), xaxis=dict(range=[0, 1], title="P(species | name), 90% bootstrap interval"),
                       yaxis=dict(autorange="reversed"))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     top = pc.iloc[0]
     if top["taxon_key"] != "__unidentified__":
         st.markdown(f"This name rests **{top['p']:.0%}** on *{top['accepted_name']}*; "
@@ -69,10 +69,10 @@ with right:
         wcols = [c for c in ex.columns if c.startswith("w_")]
         tab = ex.set_index(ex["taxon_key"].map(dict(zip(pc["taxon_key"], pc["name"], strict=False))))[wcols]
         tab.columns = [c[2:] for c in wcols]
-        st.dataframe(tab.round(3), use_container_width=True)
+        st.dataframe(tab.round(3), width="stretch")
         st.markdown("**Candidate sources**")
         st.dataframe(ex.assign(name=ex["taxon_key"].map(dict(zip(pc["taxon_key"], pc["name"], strict=False))))[["name", "candidate_sources", "input_names", "lit_ref_years"]],
-                     hide_index=True, use_container_width=True)
+                     hide_index=True, width="stretch")
     st.info("Trait-match table (f1 morphology): not computed — the Greek trait extractor needs an LLM key. "
             "Expert-coded traits (Lardos et al.) are used only as a labelled oracle ablation.", icon="ℹ️")
 
@@ -86,10 +86,10 @@ else:
     show = pd.DataFrame({"use group": pr["use_group"], "Dioscorides (1st c.)": pr["present_dmm"].map(dot),
                          "John the Physician (13th c.)": pr["present_jc"].map(lambda v: dot(v) if v is not None and not pd.isna(v) else "– (not linked)"),
                          "Modern Greek (E[attested])": pr["expected_modern"].map(lambda v: f"{dot(v)} {v:.2f}"), "pattern": pr["pattern"]})
-    st.dataframe(show, hide_index=True, use_container_width=True)
+    st.dataframe(show, hide_index=True, width="stretch")
     st.caption("● attested · ○ not attested · – no data. Modern = Σ P(s|n)·1[s or its genus attested with that use group].")
     tk = set(pc["taxon_key"])
     mm = modern[modern["taxon_key"].isin(tk)]
     if len(mm):
         st.markdown("**Modern field-study records for the candidates** (published tables)")
-        st.dataframe(mm[["study", "accepted_name", "local_name", "plant_part", "ailment_text"]], hide_index=True, use_container_width=True)
+        st.dataframe(mm[["study", "accepted_name", "local_name", "plant_part", "ailment_text"]], hide_index=True, width="stretch")
