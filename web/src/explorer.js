@@ -12,6 +12,7 @@ const FEAT = {
   f2_geo_log_occ: "grows in Greece/Cyprus/Turkey", f2_present_gr: "recorded in Greece", f3_vernacular_sim: "modern Greek name echoes it",
   f3_epithet_sim: "Latin name echoes the Greek", f4_lit_dmm: "botanical historians propose it", f4_lit_ethno: "ethnobotanists propose it",
   f4_lsj: "LSJ dictionary gives it", f6_genus_consensus: "sources agree on the genus",
+  f1_morph: "Dioscorides' description fits it",
 };
 
 let NAMES = [];
@@ -117,6 +118,10 @@ export async function openName(id, scroll = true) {
               <div class="fam">${esc(c.family || "")} · P = ${c.p.toFixed(2)}${c.iucn ? ` · IUCN: ${esc(c.iucn)}` : ""}</div>
               <div class="contrib">${Object.entries(c.contrib).filter(([, v]) => Math.abs(v) > 0.05).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 3)
                 .map(([k, v]) => `<span class="${v > 0 ? "pos" : "neg"}">${v > 0 ? "+" : "−"} ${FEAT[k] || k}</span>`).join("")}</div>
+              ${c.morph && c.morph.length ? `<div class="morph">${c.morph.map((m) => {
+                const ok = m.endsWith("✓");
+                return `<span class="${ok ? "pos" : "neg"}">${esc(m.replace(/ [✓✗]$/, "").replace(/_/g, " ").replace("↔", "· modern:"))}</span>`;
+              }).join("")}</div>` : ""}
               ${c.image ? `<div class="credit">Photo: Wikimedia Commons</div>` : ""}
             </div>
           </div>`).join("")}</div>

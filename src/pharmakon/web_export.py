@@ -71,6 +71,9 @@ def run() -> dict:
     gal_x = pd.read_parquet(PROCESSED / "galen_crosswalk.parquet")
     leads = pd.read_parquet(PROCESSED / "leads.parquet")
     paths = pd.read_parquet(PROCESSED / "evidence_paths.parquet")
+    morph_p = PROCESSED / "id_morphology.parquet"
+    morph = pd.read_parquet(morph_p) if morph_p.exists() else pd.DataFrame(columns=["unit_id", "taxon_key", "matches"])
+    mmap = {(r.unit_id, r.taxon_key): list(r.matches) for r in morph.itertuples()}
 
     tk2qid = cand.merge(taxa[["species_key", "wikidata", "iucn_status", "vernacular_el"]], on="species_key", how="left").set_index("taxon_key")
     pc = post[post["unit_kind"] == "cluster"]
@@ -105,7 +108,8 @@ def run() -> dict:
                               "iucn": tk2qid.loc[r.taxon_key, "iucn_status"] if r.taxon_key in tk2qid.index else None,
                               "vernacular_el": list(tk2qid.loc[r.taxon_key, "vernacular_el"]) if r.taxon_key in tk2qid.index and isinstance(tk2qid.loc[r.taxon_key, "vernacular_el"], list | np.ndarray) else [],
                               "sources": list(e["candidate_sources"].iloc[0]) if len(e) else [],
-                              "contrib": {k[2:]: float(e[k].iloc[0]) for k in wcols} if len(e) else {}})
+                              "contrib": {k[2:]: float(e[k].iloc[0]) for k in wcols} if len(e) else {},
+                              "morph": mmap.get((c.cluster_id, r.taxon_key), [])})
         g = gx[gx["dmm_chapter_id"] == c.chapter_id]
         galen = [{"heading": r.heading, "text": r.text[:900], "cts": r.cts, "copy": r.copy_containment,
                   "spans": gal_c[gal_c["chapter_id"] == r.entry_id]["evidence_span_grc"].tolist()} for r in g.drop_duplicates("entry_id").itertuples()]
@@ -117,7 +121,8 @@ def run() -> dict:
             "jc": sorted({x["jc_name_grc"] for x in c.jc_crosswalk}),
             "passages": [{"id": p.passage_id, "cts": p.cts_urn, "text": p.text_grc,
                           "spans": ch_claims[ch_claims["passage_id"] == p.passage_id]["evidence_span_grc"].tolist()} for p in ch_pass.itertuples()],
-            "claims": ch_claims[["condition_text_grc", "condition_en", "plant_part", "route", "use_group", "status"]].to_dict("records"),
+            "claims": ch_claims[["condition_text_grc", "condition_en", "plant_part", "route", "use_group", "status"]].assign(
+                llm=ch_claims["extractor_version"].astype(str).str.contains("llm") if "extractor_version" in ch_claims else False).to_dict("records"),
             "candidates": cand_rows,
             "model": pp["method"].iloc[0] if len(pp) else None,
             "persistence": pers[pers["cluster_id"] == c.cluster_id][["use_group", "present_dmm", "present_galen", "present_jc", "expected_modern", "pattern"]].to_dict("records"),

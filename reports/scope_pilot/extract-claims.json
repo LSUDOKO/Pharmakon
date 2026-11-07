@@ -1,0 +1,41 @@
+{
+  "stage": "extract-claims",
+  "generated_at": "2026-11-07T10:09:56+00:00",
+  "passages": 1158,
+  "llm_calls": 0,
+  "extractor": "rule_extract_v1",
+  "claims_total": 3071,
+  "claims_kept": 3071,
+  "archived_span_mismatch": 0,
+  "exact_span_verified_rate_kept": 1.0,
+  "status_counts": {
+    "ok": 2561,
+    "ambiguous": 510
+  },
+  "icpc2_counts": {
+    "S": 1127,
+    "D": 491,
+    "X": 261,
+    "U": 239,
+    "R": 184,
+    "F": 153,
+    "N": 117,
+    "B": 103,
+    "L": 90,
+    "W": 90,
+    "H": 77,
+    "A": 60,
+    "K": 40,
+    "T": 39
+  },
+  "pilot_skin_claims": 1159,
+  "pilot_skin_chapters": 378,
+  "substance_type_counts": {
+    "plant": 2639,
+    "animal": 320,
+    "compound_preparation": 110,
+    "unknown": 2
+  },
+  "plant_part_known_rate": 0.6376,
+  "route_known_rate": 0.6441
+}

@@ -42,10 +42,24 @@ SETS = {
 }
 
 
-def _history_static() -> pd.DataFrame:
-    """Per-pair history that is dated ≤ every cutoff (1st and 13th c.): claims, JC attestation, routes."""
+def rule_claims() -> pd.DataFrame:
+    """Plant claims from the deterministic extractor with their pre-LLM status: LLM extraction never feeds the backtest."""
     claims = pd.read_parquet(PROCESSED / "claims_dmm.parquet")
-    claims = claims[(claims["status"] == "ok") & (claims["substance_type"] == "plant")]
+    if "rule_status" in claims:
+        claims = claims[claims["extractor_version"] == "rule_extract_v1"].assign(status=lambda d: d["rule_status"])
+    return claims[(claims["status"] == "ok") & (claims["substance_type"] == "plant")]
+
+
+def _history_static(frozen: bool = True) -> pd.DataFrame:
+    """Per-pair history that is dated ≤ every cutoff (1st and 13th c.): claims, JC attestation, routes.
+
+    ``frozen=True`` (backtest) uses only deterministic, pre-LLM claims; lead scoring may use all verified claims.
+    """
+    if frozen:
+        claims = rule_claims()
+    else:
+        claims = pd.read_parquet(PROCESSED / "claims_dmm.parquet")
+        claims = claims[(claims["status"] == "ok") & (claims["substance_type"] == "plant")]
     clusters = pd.read_parquet(PROCESSED / "name_clusters.parquet")
     claims = claims.assign(cluster_id=claims["chapter_id"].map(dict(zip(clusters["chapter_id"], clusters["cluster_id"], strict=True))))
     ex = claims.explode("mesh_ids").dropna(subset=["mesh_ids"])
@@ -164,6 +178,8 @@ def run() -> dict:
     cfg = pilot()
     seed, t_end = cfg["seed"], cfg["t_end"]
     labels = pd.read_parquet(PROCESSED / "evidence_labels.parquet")
+    if "from_rule_claims" in labels:  # LLM-derived pairs never enter the backtest (CLAUDE.md rule 6)
+        labels = labels[labels["from_rule_claims"]].reset_index(drop=True)
     hist = _history_static()
     results, datasets, hits = {}, [], []
     rng = np.random.default_rng(seed)
@@ -222,7 +238,7 @@ def final_model_scores() -> pd.DataFrame:
     cfg = pilot()
     T, t_end = max(cfg["cutoffs"]), cfg["t_end"]
     labels = pd.read_parquet(PROCESSED / "evidence_labels.parquet")
-    hist = _history_static()
+    hist = _history_static(frozen=False)
     tr_mask = (labels[f"cum_{T}"] == 0).to_numpy()
     ftr = features_at(labels, hist, T)[tr_mask]
     ytr = (labels.loc[tr_mask, f"cum_{t_end}"].to_numpy() > 0).astype(int)

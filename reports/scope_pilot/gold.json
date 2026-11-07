@@ -1,0 +1,20 @@
+{
+  "stage": "gold",
+  "generated_at": "2026-11-07T10:09:52+00:00",
+  "gold_names": 61,
+  "jc_lemmas": 50,
+  "candidates": 141,
+  "expert_confidence_counts": {
+    "MODERATE": 26,
+    "STRONG": 25,
+    "WEAK": 8,
+    "NOT_FOUND": 2
+  },
+  "expert_unidentified_names": 10,
+  "gold_names_linked_to_dmm_chapter": 61,
+  "reports": 525,
+  "uses_rows": {
+    "modern": 919,
+    "jc": 168
+  }
+}

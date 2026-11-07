@@ -30,7 +30,7 @@ Around 60 AD, the Greek physician **Dioscorides** wrote *De materia medica*, abo
 
 1. **Nobody is sure which plant each ancient name means.** Pharmakon gives a probability for every candidate species, with an explicit "unidentified" option. It agrees with expert botanical historians **{{TOP1}}** of the time; the standard Greek dictionary manages **{{LSJ}}**.
 2. **Nobody has measured, at scale, which uses survived.** Pharmakon follows every use through Galen (2nd c.), John the Physician (13th c.) and modern Greek villages. **{{PERSIST}}** of uses recur today, against **{{NULL}}** expected by chance (p = {{PVAL}}).
-3. **Herb–disease predictions are rarely tested honestly.** Pharmakon runs a strict time-travel test and reports a null result: in this pilot, history did not predict which pairs science studied next beyond research popularity.
+3. **Herb–disease predictions are rarely tested honestly.** Pharmakon runs a strict time-travel test across all body systems and reports a null result: history did not predict which pairs science studied next beyond research popularity.
 
 The output is **{{LEADS}} untested plant–condition leads**, each weighted by how sure we are of the plant, with toxicity and conservation flags. Ignoring that uncertainty would change {{CHANGED}} of the top 20.
 
@@ -40,14 +40,15 @@ Use it three ways: the **[website](https://pharmakon.adoranto737.workers.dev)**,
 
 | part | status |
 |---|---|
-| Pipeline: 12 CLI stages, Parquet with provenance on every row | done |
+| Pipeline: 13 CLI stages, Parquet with provenance on every row | done |
 | Identification model, persistence test, temporal backtest, leads | done, results below |
 | Website with explorer, charts and leads gallery | live on Cloudflare |
 | MCP server (6 read-only tools) and JSON API | live on Cloudflare |
 | Streamlit research dashboard, 24 tests | done |
 | Calibration (ECE {{ECE}} vs target ≤ 0.10) | **missed**, cause identified below |
 | Human audits of extraction, conditions, merges, labels | **pending**: blinded sheets generated in `data/gold/audits/` |
-| LLM extraction and plant-morphology evidence | **not run**: needs `ANTHROPIC_API_KEY` |
+| LLM claim extraction, LLM lexicon extension, plant-morphology feature, LLM-judge baseline | done (Claude session + Groq), every span re-verified; kept out of the backtest |
+| All body systems (beyond the skin/wound pilot) | done: PubMed labels and chemistry re-run for every use group |
 | Pitch video, slides, Devpost page | team tasks |
 
 <img src="docs/media/chart-pipeline.svg" alt="Pipeline counts" width="100%">
@@ -102,9 +103,21 @@ Stand in 2000, 2005, 2010 or 2015, forget everything published after, rank the p
 
 {{TABLE_BACKTEST}}
 
+The same test on the skin/wound pilot and on all body systems (more positives per cutoff):
+
+{{TABLE_SCOPES}}
+
 **Finding: a null.** Historical features alone score close to random, and adding them to research popularity never moves AUPRC beyond its confidence interval. The history coefficients are mostly negative, which points to selection: a pair is eligible only while unstudied, so well-attested remedies that science studied early drop out of the pool. Labels are a PubMed co-mention proxy awaiting a human audit.
 
-### 4. Leads for the lab
+### 4. What the LLM layer added
+
+Two LLMs were used, and neither is ever the final authority. A Claude session (claude-opus-5-5) read all Greek passages twice (once for therapeutic claims, once for the plant's described form), turned most modern Wikipedia descriptions into the same trait vocabulary, and played the LLM-judge baseline without access to the expert answers. Groq's `openai/gpt-oss-120b` (temperature 0, cached API calls) extracted traits for the first 121 species until its daily token budget ran out. Every LLM output carries a verbatim span that the pipeline re-checks against the source; claims reach MeSH only through the verified lexicon; and **nothing LLM-derived enters the temporal backtest**, which keeps the deterministic claims and the frozen non-LLM identification.
+
+{{TABLE_LLM}}
+
+The morphology feature (f1) compares what Dioscorides says a plant looks like with what a modern description says, trait by trait (habit, height, leaf form, flower colour, fruit, root, smell, taste, habitat …). Its effect on identification is in the first table above (rows marked f1).
+
+### 5. Leads for the lab
 
 Plant–condition pairs used historically, with **no matching PubMed pharmacology paper yet**, ranked by forecast score × P(species). The top 20:
 
@@ -113,7 +126,7 @@ Plant–condition pairs used historically, with **no matching PubMed pharmacolog
 
 {{GALLERY_LEADS}}
 
-<sub>Photos of the top leads with a Wikimedia Commons image (Wikidata P18; each file under its own licence, click for the file page). ⚠ = known toxic constituent.</sub>
+<sub>One photo per species, best-ranked lead first: Wikimedia Commons image (Wikidata P18; each file under its own licence, click for the file page). ⚠ = known toxic constituent.</sub>
 
 {{TABLE_LEADS}}
 
@@ -258,9 +271,8 @@ What would make the results stronger, in order of value per effort:
 
 | next step | what it fixes | needs |
 |---|---|---|
-| Fill the four blinded audit sheets | turns proxy precision into audited numbers | expert reviewer time |
-| LLM claim extraction + plant-morphology evidence | recall beyond the lexicon; morphology is the gap the oracle ablation exposes (expert traits give top-1 0.84, ECE 0.09: an upper bound) | `ANTHROPIC_API_KEY` |
-| Expand from the skin/wound pilot to all body systems | more positives per cutoff, so the backtest can detect a real effect | several hours of PubMed queries, then a full rerun |
+| Fill the four blinded audit sheets (now also covering LLM claims and the LLM lexicon extension) | turns proxy precision into audited numbers | expert reviewer time |
+| Richer modern descriptions (Flora of Greece, POWO with permission) | f1 compares only ~3 traits per candidate today | data access |
 | Historical Open Targets snapshots | removes the last time-leak in the chemistry features | archived releases |
 | Paul of Aegina (7th c.), Oribasius, Aetius | completes the Byzantine chain | no open TEI exists yet; OCR of the CMG editions |
 | Arabic and Latin transmission (Ibn al-Bayṭār, Latin Dioscorides) | follows the remedies out of the Greek world | new corpora and lexica |
@@ -271,8 +283,8 @@ What would make the results stronger, in order of value per effort:
 
 - **Expert gold, not ground truth.** The gold standard is the judgement of Lardos et al.; intervals are wide with 61 names.
 - **Proxy labels.** "Supported" means a PubMed co-mention with a pharmacology filter, not a validated finding. Its precision is not yet audited.
-- **No LLM.** Extraction is rule-based (exact spans, limited recall) and the morphology stream is absent, which is the main calibration gap.
-- **Pilot scope.** Leads and the backtest cover the skin/wound domain; the Mount Pelion study covers skin ailments only, which favours skin uses in the persistence test.
+- **LLM outputs.** Claims and Greek trait records come from a Claude session and are committed rather than regenerated; species traits come from Groq. All spans are verified, but no human has audited them yet, and the LLM-proposed lexicon stems await the condition-mapping audit.
+- **Scope.** Results cover all body systems; the original skin/wound pilot is kept for comparison. The Mount Pelion study covers skin ailments only, which favours skin uses in the persistence test.
 - **Text chain.** Paul of Aegina is missing; John the Physician is reached only through the 50 plants Lardos et al. analysed; 137 of 476 Galen entries are unmapped.
 - **Chemistry.** LOTUS via Wikidata, capped at 15 compounds per taxon and 120 taxa; human single-protein targets only; Open Targets associations are current, so a sensitivity model without them is reported.
 - **Conservation status** comes from Wikidata P141, not the IUCN API.

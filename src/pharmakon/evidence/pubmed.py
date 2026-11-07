@@ -16,6 +16,7 @@ from pharmakon.common import (
     GOLD,
     PROCESSED,
     env,
+    frozen_posterior,
     get_logger,
     now_iso,
     pilot,
@@ -69,10 +70,13 @@ def cumulative(term: str, years: list[int]) -> dict[int, int]:
 def build_pairs(max_pairs: int) -> pd.DataFrame:
     claims = pd.read_parquet(PROCESSED / "claims_dmm.parquet")
     claims = claims[(claims["status"] == "ok") & (claims["substance_type"] == "plant")]
+    # Pairs that the deterministic, pre-LLM claims support: the only rows the temporal backtest may use.
+    frozen = claims["extractor_version"].eq("rule_extract_v1") & claims.get("rule_status", claims["status"]).eq("ok")
     clusters = pd.read_parquet(PROCESSED / "name_clusters.parquet")
-    claims = claims.assign(cluster_id=claims["chapter_id"].map(dict(zip(clusters["chapter_id"], clusters["cluster_id"], strict=True))))
-    cm = claims.explode("mesh_ids").dropna(subset=["mesh_ids"])[["cluster_id", "mesh_ids", "use_group"]].drop_duplicates()
-    post = pd.read_parquet(PROCESSED / "id_posterior.parquet")
+    claims = claims.assign(cluster_id=claims["chapter_id"].map(dict(zip(clusters["chapter_id"], clusters["cluster_id"], strict=True))),
+                           frozen=frozen)
+    cm = (claims.explode("mesh_ids").dropna(subset=["mesh_ids"]).groupby(["cluster_id", "mesh_ids", "use_group"], as_index=False)["frozen"].max())
+    post = pd.read_parquet(frozen_posterior())
     post = post[(post["unit_kind"] == "cluster") & (post["taxon_key"] != "__unidentified__") & (post["p"] >= pilot()["id_min_p_for_backtest"])]
     cand = pd.read_parquet(PROCESSED / "id_candidates.parquet")[["taxon_key", "taxon_rank"]].drop_duplicates("taxon_key")
     post = post.merge(cand, on="taxon_key")
@@ -81,7 +85,8 @@ def build_pairs(max_pairs: int) -> pd.DataFrame:
     pairs = pairs.rename(columns={"mesh_ids": "mesh_id"})
     agg = pairs.groupby(["taxon_key", "mesh_id"]).agg(
         accepted_name=("accepted_name", "first"), p_species=("p", "max"), clusters=("cluster_id", lambda s: sorted(set(s))),
-        use_group=("use_group", "first"), skin=("use_group", lambda s: bool((s == "DE").any()))).reset_index()
+        use_group=("use_group", "first"), skin=("use_group", lambda s: bool((s == "DE").any())),
+        from_rule_claims=("frozen", "max")).reset_index()
     agg = agg.sort_values(["skin", "p_species"], ascending=[False, False]).head(max_pairs).reset_index(drop=True)
     return agg
 
@@ -111,6 +116,7 @@ def run() -> dict:
                 prev = y + 1
         rows.append({"taxon_key": r.taxon_key, "accepted_name": r.accepted_name, "mesh_id": r.mesh_id, "mesh_label": label,
                      "p_species": r.p_species, "clusters": r.clusters, "use_group": r.use_group, "query_string": q,
+                     "from_rule_claims": bool(r.from_rule_claims),
                      "n_total_to_t_end": cum[t_end], **{f"cum_{y}": cum[y] for y in years}, "first_support_year": fy})
     lab = pd.DataFrame(rows)
     # Popularity confounders: papers on the species (any topic) and on the disease, up to each cutoff.
@@ -143,6 +149,7 @@ def run() -> dict:
     summary = {
         "pairs": int(len(lab)),
         "pairs_skin": int((lab["use_group"] == "DE").sum()),
+        "pairs_from_rule_claims_backtest_eligible": int(lab["from_rule_claims"].sum()),
         "taxa": int(lab["taxon_key"].nunique()),
         "mesh_terms": int(lab["mesh_id"].nunique()),
         "pairs_with_any_support_to_t_end": int((lab["n_total_to_t_end"] > 0).sum()),

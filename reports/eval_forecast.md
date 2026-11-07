@@ -5,10 +5,10 @@ All features dated ≤ the row's cutoff. Label = PubMed co-mention proxy (precis
 
 | T | n test | positives | random | popularity | history | chemistry | history+pop | full | full (GBM) | shuffled hist+pop | ΔAUPRC(hist+pop − pop) 95% CI |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 2000 | 392 | 46 | 0.1069 | 0.1662 | 0.1451 | 0.142 | 0.1581 | 0.1614 | 0.1623 | 0.1207 | [-0.0713, 0.0445] |
-| 2005 | 385 | 39 | 0.1148 | 0.3796 | 0.1242 | 0.1008 | 0.3384 | 0.3642 | 0.1901 | 0.2663 | [-0.1422, 0.0733] |
-| 2010 | 373 | 27 | 0.1318 | 0.5577 | 0.0855 | 0.0732 | 0.5516 | 0.3091 | 0.3578 | 0.4417 | [-0.0626, 0.0582] |
-| 2015 | 366 | 20 | 0.1092 | 0.5005 | 0.0619 | 0.0503 | 0.4617 | 0.4018 | 0.4791 | 0.3786 | [-0.1261, 0.0488] |
+| 2000 | 1404 | 122 | 0.0829 | 0.3812 | 0.1258 | 0.221 | 0.3603 | 0.348 | 0.3334 | 0.2936 | [-0.0783, 0.0301] |
+| 2005 | 1384 | 102 | 0.0767 | 0.3407 | 0.0792 | 0.1838 | 0.2699 | 0.2184 | 0.1884 | 0.2887 | [-0.1362, -0.0169] |
+| 2010 | 1361 | 79 | 0.0612 | 0.3085 | 0.0659 | 0.2373 | 0.2932 | 0.3013 | 0.3144 | 0.2667 | [-0.0762, 0.0555] |
+| 2015 | 1332 | 50 | 0.0376 | 0.2746 | 0.0598 | 0.1717 | 0.2814 | 0.2763 | 0.2035 | 0.258 | [-0.0548, 0.0601] |
 
 Precision@k and AUROC per model: `reports/stages/forecast.json`.
 
@@ -34,52 +34,52 @@ Full-model logistic coefficients per cutoff:
 ```json
 {
  "2000": {
-  "h_p_species": 0.3544,
-  "h_n_dmm_claims": -0.2751,
-  "h_present_jc": -0.0796,
-  "h_modern_attested": -0.1764,
-  "h_topical_share": 0.4864,
-  "h_n_texts": -0.1522,
-  "c_n_compounds": 0.6966,
-  "c_n_compounds_active_on_assoc_targets": 0.0,
-  "pop_species": -0.4772,
-  "pop_disease": 0.495
+  "h_p_species": 0.3222,
+  "h_n_dmm_claims": -0.0935,
+  "h_present_jc": -0.2166,
+  "h_modern_attested": -0.393,
+  "h_topical_share": 0.0628,
+  "h_n_texts": -0.3724,
+  "c_n_compounds": 0.552,
+  "c_n_compounds_active_on_assoc_targets": 0.1505,
+  "pop_species": 0.2667,
+  "pop_disease": 1.2847
  },
  "2005": {
-  "h_p_species": 0.1978,
-  "h_n_dmm_claims": -0.5998,
-  "h_present_jc": -0.1934,
-  "h_modern_attested": -0.2643,
-  "h_topical_share": 0.3005,
-  "h_n_texts": -0.2634,
-  "c_n_compounds": -0.4838,
-  "c_n_compounds_active_on_assoc_targets": -0.0839,
-  "pop_species": 1.0155,
-  "pop_disease": 0.305
+  "h_p_species": 0.0756,
+  "h_n_dmm_claims": 0.0042,
+  "h_present_jc": 0.1091,
+  "h_modern_attested": 0.2375,
+  "h_topical_share": 0.1999,
+  "h_n_texts": 0.2134,
+  "c_n_compounds": 0.0911,
+  "c_n_compounds_active_on_assoc_targets": -0.2539,
+  "pop_species": 0.9629,
+  "pop_disease": 0.9166
  },
  "2010": {
-  "h_p_species": -0.1489,
-  "h_n_dmm_claims": -0.2938,
-  "h_present_jc": -0.3344,
-  "h_modern_attested": 0.1051,
-  "h_topical_share": 0.102,
-  "h_n_texts": -0.0865,
-  "c_n_compounds": 0.3066,
-  "c_n_compounds_active_on_assoc_targets": 0.2044,
-  "pop_species": 1.0095,
-  "pop_disease": 1.1155
+  "h_p_species": 0.3579,
+  "h_n_dmm_claims": -0.3146,
+  "h_present_jc": -0.2917,
+  "h_modern_attested": 0.2673,
+  "h_topical_share": 0.1478,
+  "h_n_texts": 0.0227,
+  "c_n_compounds": 1.4893,
+  "c_n_compounds_active_on_assoc_targets": 0.1302,
+  "pop_species": 0.6444,
+  "pop_disease": 0.9743
  },
  "2015": {
-  "h_p_species": -0.1271,
-  "h_n_dmm_claims": -0.2196,
-  "h_present_jc": -0.228,
-  "h_modern_attested": -0.3447,
-  "h_topical_share": 0.0376,
-  "h_n_texts": -0.3378,
-  "c_n_compounds": 0.3546,
-  "c_n_compounds_active_on_assoc_targets": -0.4626,
-  "pop_species": 1.1293,
-  "pop_disease": 1.5757
+  "h_p_species": 0.1944,
+  "h_n_dmm_claims": -0.0154,
+  "h_present_jc": 0.139,
+  "h_modern_attested": -0.0703,
+  "h_topical_share": -0.1245,
+  "h_n_texts": 0.0274,
+  "c_n_compounds": 0.5918,
+  "c_n_compounds_active_on_assoc_targets": 0.1689,
+  "pop_species": 0.6504,
+  "pop_disease": 1.1372
  }
 }
 ```

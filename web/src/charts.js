@@ -96,13 +96,16 @@ export function idChart(el, idn, note) {
   const rows = [
     ["Pharmakon", "model_calibrated", "main"],
     ["…without ethnobotanical counts", "ablation_without_f4_lit_ethno", "main"],
+    ["+ plant-description match (LLM traits)", "model_plus_f1_morphology", "main"],
     ["Transfer model (all names)", "transfer_model_calibrated", "main"],
+    ["Transfer + description match", "transfer_plus_f1_morphology", "main"],
+    ["LLM judge (comparison only)", "baseline_llm_judge", "base"],
     ["Genus frequency", "baseline_genus_prior", "base"],
     ["Uniform guess", "baseline_uniform", "base"],
     ["LSJ dictionary", "baseline_lsj", "base"],
     ["Oracle: expert-coded traits", "ablation_plus_ORACLE_expert_traits", "oracle"],
   ].filter(([, k]) => r[k] && r[k].top1);
-  const W = 560, rowH = 40, L = 230, H = rows.length * rowH + 40;
+  const W = 560, rowH = 36, L = 250, H = rows.length * rowH + 40;
   const x = d3.scaleLinear([0, 1], [L, W - 20]);
   const s = d3.select(el).append("svg").attr("viewBox", `0 0 ${W} ${H}`);
   s.append("g").attr("class", "axis").attr("transform", `translate(0,${H - 24})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format(".0%")).tickSizeOuter(0));
@@ -115,7 +118,10 @@ export function idChart(el, idn, note) {
   g.append("text").attr("x", (d) => x(r[d[1]].top1.ci95[1]) + 8).attr("y", 5).text((d) => `${Math.round(r[d[1]].top1.mean * 100)}%`);
   if (!reduce) { dots.attr("r", 0); inView(el, () => { animate(dots.nodes(), { r: [0, 7] }, { type: "spring", stiffness: 220, damping: 12, delay: stagger(0.09) }); }, { amount: 0.4 }); }
   const m = r.model_calibrated, l = r.baseline_lsj;
-  note.textContent = `Brier score ${m.brier.mean} vs ${l.brier.mean} for the dictionary (lower is better). Calibration error ${m.ece} misses our own ≤ 0.10 target; the oracle row shows that the missing morphology evidence is the gap. Expert judgement is not ground truth.`;
+  const f = r.model_plus_f1_morphology;
+  note.textContent = `Brier score ${m.brier.mean.toFixed(2)} vs ${l.brier.mean.toFixed(2)} for the dictionary (lower is better). Calibration error ${m.ece.toFixed(2)}` +
+    (f ? `, ${f.ece.toFixed(2)} once Dioscorides' plant descriptions are compared with modern ones — still above our ≤ 0.10 target.` : ` misses our ≤ 0.10 target.`) +
+    ` The LLM judge may have memorised published identifications. Expert judgement is not ground truth.`;
 }
 
 /* backtest ------------------------------------------------------------------------------- */
@@ -144,7 +150,7 @@ export function forecastChart(fc, hits) {
     g.append("text").attr("x", W - 4).attr("y", 5).attr("text-anchor", "end").text((d) => (res.test[d[1]].auprc ?? 0).toFixed(2));
     const dci = res.bootstrap_ci.delta_auprc_histpop_minus_pop || [];
     const pos = res.test.full.positives, n = res.test.full.n;
-    verdict.innerHTML = `<b>${cut}:</b> of ${n} untested pairs, ${pos} gained support by ${fc.t_end}. Adding 2,000 years of history to research popularity changed the score (AUPRC) by between ${dci[0]?.toFixed(2)} and ${dci[1]?.toFixed(2)} (95% interval). That interval includes zero: in this pilot, <b>history did not predict future studies beyond popularity</b>. We report it as a finding, not a failure.`;
+    verdict.innerHTML = `<b>${cut}:</b> of ${n} untested pairs, ${pos} gained support by ${fc.t_end}. Adding 2,000 years of history to research popularity changed the score (AUPRC) by between ${dci[0]?.toFixed(2)} and ${dci[1]?.toFixed(2)} (95% interval). ${dci[1] < 0 ? "That interval is below zero: here <b>history made the ranking worse than popularity alone</b>." : dci[0] > 0 ? "That interval is above zero: here <b>history added signal beyond popularity</b>." : "That interval includes zero: <b>history did not predict future studies beyond popularity</b>."} We report it as a finding, not a failure.`;
     const h = hits.filter((x) => String(x.cutoff) === cut && x.label === 1).slice(0, 3);
     if (h.length) verdict.innerHTML += `<br/><span class="fine">Ranked high at ${cut} and later studied: ${h.map((x) => `<i>${esc(x.accepted_name)}</i> for ${esc(x.mesh_label.toLowerCase())} (${x.first_support_year})`).join("; ")}.</span>`;
   };

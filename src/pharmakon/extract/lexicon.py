@@ -56,8 +56,13 @@ def _entries(rows: list[dict[str, Any]], value_key: str) -> list[Entry]:
 @lru_cache(maxsize=1)
 def lexicon() -> Lexicon:
     y = load_yaml("conditions_lexicon.yaml")
+    extra: list[dict[str, Any]] = []
+    try:  # LLM-proposed extension (from out-of-lexicon LLM claims); MeSH still verified by lookup.
+        extra = [{**r, "llm_proposed": True} for r in load_yaml("conditions_lexicon_llm.yaml").get("conditions", [])]
+    except FileNotFoundError:
+        pass
     return Lexicon(
-        conditions=_entries(y["conditions"], "en"),
+        conditions=_entries(y["conditions"] + extra, "en"),
         parts=_entries(y["plant_parts"], "part"),
         preparations=_entries(y["preparations"], "en"),
         routes=_entries(y["routes"], "route"),

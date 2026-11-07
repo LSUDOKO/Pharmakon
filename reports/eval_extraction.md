@@ -4,13 +4,13 @@ Extractor: `rule_extract_v1` (deterministic; the LLM path `llm_extract_v1` is im
 
 | metric | Dioscorides | Galen 6–8 |
 |---|---|---|
-| claims kept | 3071 | 920 |
+| claims kept | 3696 | 1033 |
 | exact span verification among kept | 1.0 | 1.0 |
 | archived span mismatches | 0 | 0 |
-| status counts | {'ok': 2561, 'ambiguous': 510} | ok=706 |
-| pilot skin/wound claims | 1159 in 378 chapters | DE=424 |
-| plant part known | 0.6376 | |
-| route known | 0.6441 | |
+| status counts | {'ok': 3550, 'ambiguous': 146} | ok=799 |
+| pilot skin/wound claims | 1417 in 413 chapters | DE=448 |
+| plant part known | 0.6347 | |
+| route known | 0.6475 | |
 
 `ambiguous` = a condition word in a clause without any therapeutic cue (e.g. a side effect: κεφαλαλγὲς ὄν). Ambiguous claims are kept for inspection but excluded from persistence, labels and leads.
 

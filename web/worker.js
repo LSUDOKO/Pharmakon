@@ -52,10 +52,12 @@ async function getName(env, { id } = {}) {
     passages: d.passages.map((p) => ({ cts_urn: p.cts, greek: p.text, evidence_spans: [...new Set(p.spans)] })),
     uses: d.claims.filter((c) => c.status === "ok").map((c) => ({
       greek: c.condition_text_grc, gloss: c.condition_en, use_group: c.use_group, plant_part: c.plant_part, route: c.route,
+      found_by: c.llm ? "llm (span verified)" : "rule lexicon",
     })),
     identification: d.candidates.map((c) => ({
       species: c.taxon === "__unidentified__" ? "(unidentified)" : c.name, taxon: c.taxon, family: c.family || null,
       p: c.p, ci90: [c.lo, c.hi], iucn: c.iucn || null, photo: c.image?.page || null,
+      description_match: c.morph || [],
     })),
     through_time: d.persistence.map((r) => ({
       use_group: r.use_group, dioscorides: r.present_dmm, galen: r.present_galen, john_the_physician: r.present_jc,

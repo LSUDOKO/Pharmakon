@@ -6,7 +6,15 @@ import json
 
 import pandas as pd
 
-from pharmakon.common import PROCESSED, get_logger, now_iso, pilot, write_stage_report, write_table
+from pharmakon.common import (
+    PROCESSED,
+    frozen_posterior,
+    get_logger,
+    now_iso,
+    pilot,
+    write_stage_report,
+    write_table,
+)
 from pharmakon.link import chemistry as C
 
 TIER_SCORE = {"T1": 1.0, "T2": 0.75, "T3": 0.5, "T4": 0.25}
@@ -18,7 +26,7 @@ def ot_tier(score: float) -> str:
 
 def select_taxa(max_taxa: int) -> pd.DataFrame:
     """Species with P(s|n) ≥ 0.2 for at least one pilot name, highest probability first."""
-    post = pd.read_parquet(PROCESSED / "id_posterior.parquet")
+    post = pd.read_parquet(frozen_posterior())
     taxa = pd.read_parquet(PROCESSED / "taxa.parquet")
     cand = pd.read_parquet(PROCESSED / "id_candidates.parquet")[["taxon_key", "species_key", "taxon_rank"]].drop_duplicates("taxon_key")
     p = post[(post["taxon_key"] != "__unidentified__") & (post["p"] >= pilot()["id_min_p_for_backtest"])]
@@ -100,7 +108,7 @@ def build_paths(tc: pd.DataFrame, ct: pd.DataFrame, td: pd.DataFrame) -> pd.Data
     path_strength = weakest-link tier score (DeepRoot-style); weighting by P(species) happens downstream.
     """
     claims = pd.read_parquet(PROCESSED / "claims_dmm.parquet")
-    post = pd.read_parquet(PROCESSED / "id_posterior.parquet")
+    post = pd.read_parquet(frozen_posterior())
     clusters = pd.read_parquet(PROCESSED / "name_clusters.parquet")
     ch2cl = dict(zip(clusters["chapter_id"], clusters["cluster_id"], strict=True))
     claims["cluster_id"] = claims["chapter_id"].map(ch2cl)

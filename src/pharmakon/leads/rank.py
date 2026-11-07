@@ -44,7 +44,11 @@ def run() -> dict:
     toxg = tox.set_index("genus")
     now = now.merge(ps, on=["taxon_key", "mesh_id"], how="left")
     now["path_strength"] = now["path_strength"].fillna(0.0)
-    now["p_species"] = now["h_p_species"]
+    # Leads may use the production posterior (with LLM morphology when enabled); the backtest used the frozen one.
+    pmap = post.groupby(["unit_id", "taxon_key"])["p"].max().to_dict()
+    now["p_species_frozen"] = now["h_p_species"]
+    now["p_species"] = [max((pmap.get((c, t), 0.0) for c in cl), default=0.0) or ps
+                        for t, cl, ps in zip(now["taxon_key"], now["clusters"], now["h_p_species"], strict=True)]
     now["lead_score"] = now["model_score"]
     now["score_weighted"] = now["model_score"] * now["p_species"]
     now["score_top1_only"] = now["model_score"] * now["is_top1_identity"].astype(float)
@@ -57,7 +61,7 @@ def run() -> dict:
     leads["rank_weighted"] = np.arange(1, len(leads) + 1)
     leads["rank_top1_only"] = leads["score_top1_only"].rank(ascending=False, method="min").astype(int)
     keep = ["taxon_key", "accepted_name", "family", "genus", "mesh_id", "mesh_label", "clusters", "p_species", "lead_score", "score_weighted",
-            "score_top1_only", "rank_weighted", "rank_top1_only", "is_top1_identity", "path_strength", "n_paths", "conservation_status",
+            "score_top1_only", "rank_weighted", "rank_top1_only", "is_top1_identity", "p_species_frozen", "path_strength", "n_paths", "conservation_status",
             "toxicity_flag", "toxicity_citation", "h_present_jc", "h_modern_attested", "h_n_dmm_claims", "query_string"]
     out = leads[keep].copy()
     out["source_id"], out["retrieved_at"], out["method"] = "pharmakon_leads", now_iso(), "logistic_full@T=2015 × P(species)"

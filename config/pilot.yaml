@@ -10,3 +10,6 @@ lotus_max_taxa: 120
 chembl_max_compounds_per_taxon: 15
 seed: 13
 bootstrap_n: 1000
+
+# Production identification uses the f1 morphology feature (LLM traits, spans verified); the backtest always uses id_posterior_nollm.
+identify_use_morphology: true

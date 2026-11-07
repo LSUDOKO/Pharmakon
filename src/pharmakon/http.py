@@ -28,6 +28,7 @@ _RATE = {
     "www.ebi.ac.uk": 0.2,
     "id.nlm.nih.gov": 0.2,
     "api.platform.opentargets.org": 0.2,
+    "en.wikipedia.org": 0.5,
 }
 _last: dict[str, float] = {}
 _lock = threading.Lock()

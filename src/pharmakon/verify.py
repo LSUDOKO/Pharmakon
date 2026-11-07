@@ -10,7 +10,7 @@ from collections.abc import Callable
 from typing import Any
 
 from pharmakon import http
-from pharmakon.common import RAW, ROOT, now_iso
+from pharmakon.common import RAW, ROOT, env, now_iso
 
 
 def _dmm() -> str:
@@ -82,6 +82,26 @@ def _modern() -> str:
     return "; ".join(out)
 
 
+def _wikipedia() -> str:
+    from pharmakon.identify.morphology import wiki_description
+
+    text, title = wiki_description("Artemisia absinthium")
+    return f"MediaWiki API ok → '{title}' description section, {len(text or '')} chars; licence CC BY-SA 4.0 (text stored with provenance in data/llm/morph_species.jsonl)"
+
+
+def _groq() -> str:
+    from pharmakon import llm
+
+    if llm.provider() != "groq":
+        return "GROQ_API_KEY not set: LLM steps fall back to cached outputs or deterministic methods"
+    import requests
+
+    r = requests.get("https://api.groq.com/openai/v1/models", headers={"Authorization": f"Bearer {env('GROQ_API_KEY')}"}, timeout=30)
+    r.raise_for_status()
+    ids = sorted(m["id"] for m in r.json()["data"])
+    return f"Groq OpenAI-compatible API ok; model {llm.model_name()} {'available' if llm.model_name() in ids else 'NOT listed'}; temperature 0, JSON schema, cached by request hash"
+
+
 CHECKS: list[tuple[str, str, Callable[[], str]]] = [
     ("dmm_wellmann", "First1KGreek Dioscorides TEI + licence", _dmm),
     ("jc_lardos", "Lardos et al. figshare data + licence", _lardos),
@@ -96,17 +116,19 @@ CHECKS: list[tuple[str, str, Callable[[], str]]] = [
     ("opentargets", "Open Targets GraphQL", _ot),
     ("pubchem", "PubChem PUG-REST (toxicity citations)", _pubchem),
     ("modern_studies", "Pelion 2023 + North Aegean 2018 tables", _modern),
+    ("wikipedia_en", "English Wikipedia species descriptions (f1 morphology)", _wikipedia),
+    ("llm_groq", "Groq API (LLM judge, species trait extraction)", _groq),
 ]
 
 NOT_USED = [
-    ("galen_simpl", "No clean digital Greek of De simpl. med. books 6–8 confirmed; fallback R1 taken (DMM → JC → modern)."),
     ("paul_aegina", "Book 7 not found digitised as TEI; fallback R2 taken (Lardos JC is the Byzantine node)."),
     ("dmm_staub", "Supplementary data not openly downloadable; optional comparison skipped."),
     ("coconut", "Bulk dump not downloaded (2 GB disk budget); LOTUS on Wikidata used for taxon→compound (CC0)."),
     ("flora_greece", "No bulk export used; GBIF country=GR presence used as proxy (R12)."),
     ("iucn", "No IUCN token; Wikidata P141 used as lightweight conservation status."),
     ("icpc2", "Only chapter letters are used as coarse labels; the detailed classification is not redistributed."),
-    ("llm_claude", "No ANTHROPIC_API_KEY in this environment: deterministic rule_extract_v1 used; LLM path implemented but not run."),
+    ("powo", "Kew POWO API returns HTTP 403 to automated clients (checked 2026-11-07); not circumvented. Wikipedia description sections used for f1 (spec/12 fallback)."),
+    ("llm_claude_api", "No ANTHROPIC_API_KEY: Greek-side LLM work (claim extraction, Dioscorides traits) was done in an interactive Claude session; outputs are committed as JSONL under data/llm/ with prompt version and model, and every span is re-verified by the pipeline."),
 ]
 
 

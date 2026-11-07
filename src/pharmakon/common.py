@@ -37,8 +37,19 @@ def load_yaml(name: str) -> dict[str, Any]:
         return yaml.safe_load(fh) or {}
 
 
+def frozen_posterior() -> Path:
+    """Non-LLM identification posterior: the backtest's inputs may not depend on LLM output (CLAUDE.md rule 6)."""
+    p = PROCESSED / "id_posterior_nollm.parquet"
+    return p if p.exists() else PROCESSED / "id_posterior.parquet"
+
+
 def pilot() -> dict[str, Any]:
-    return load_yaml("pilot.yaml")
+    """Pilot config, optionally overridden by config/scope_<PHARMAKON_SCOPE>.yaml (e.g. PHARMAKON_SCOPE=all)."""
+    cfg = load_yaml("pilot.yaml")
+    scope = env("PHARMAKON_SCOPE")
+    if scope:
+        cfg = {**cfg, **load_yaml(f"scope_{scope}.yaml"), "scope": scope}
+    return cfg
 
 
 def env(name: str, default: str | None = None) -> str | None:

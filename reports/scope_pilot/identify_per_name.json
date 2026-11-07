@@ -1,0 +1,7346 @@
+{
+ "model_calibrated": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.356,
+   "brier": 1.6388,
+   "conf": 0.9052,
+   "p_correct_set": 0.0948,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.2159,
+   "brier": 1.5876,
+   "conf": 0.8909,
+   "p_correct_set": 0.1091,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1562,
+   "brier": 0.3246,
+   "conf": 0.2023,
+   "p_correct_set": 0.3147,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3209,
+   "brier": 0.1255,
+   "conf": 0.7255,
+   "p_correct_set": 0.7255,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.982,
+   "brier": 0.5221,
+   "conf": 0.3746,
+   "p_correct_set": 0.3746,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.5904,
+   "brier": 1.1833,
+   "conf": 0.5234,
+   "p_correct_set": 0.075,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.164,
+   "brier": 0.651,
+   "conf": 0.319,
+   "p_correct_set": 0.3122,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7367,
+   "brier": 0.3694,
+   "conf": 0.4787,
+   "p_correct_set": 0.4787,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 3.2154,
+   "brier": 1.186,
+   "conf": 0.366,
+   "p_correct_set": 0.0401,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6221,
+   "brier": 0.344,
+   "conf": 0.5368,
+   "p_correct_set": 0.5368,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.7757,
+   "brier": 0.5824,
+   "conf": 0.5396,
+   "p_correct_set": 0.4604,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2074,
+   "brier": 0.6771,
+   "conf": 0.3336,
+   "p_correct_set": 0.299,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7827,
+   "brier": 0.9726,
+   "conf": 0.4445,
+   "p_correct_set": 0.1682,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7731,
+   "brier": 0.2686,
+   "conf": 0.347,
+   "p_correct_set": 0.4616,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3281,
+   "brier": 0.1565,
+   "conf": 0.7203,
+   "p_correct_set": 0.7203,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1174,
+   "brier": 0.0451,
+   "conf": 0.5601,
+   "p_correct_set": 0.8892,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.9149,
+   "brier": 1.1644,
+   "conf": 0.6466,
+   "p_correct_set": 0.1473,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4892,
+   "brier": 0.2262,
+   "conf": 0.6131,
+   "p_correct_set": 0.6131,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5093,
+   "brier": 0.7487,
+   "conf": 0.2694,
+   "p_correct_set": 0.2211,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.0337,
+   "brier": 0.9291,
+   "conf": 0.2694,
+   "p_correct_set": 0.1308,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.224,
+   "brier": 0.0806,
+   "conf": 0.7993,
+   "p_correct_set": 0.7993,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.4486,
+   "brier": 0.3875,
+   "conf": 0.1834,
+   "p_correct_set": 0.2349,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.4641,
+   "brier": 1.2615,
+   "conf": 0.5118,
+   "p_correct_set": 0.0851,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3572,
+   "brier": 0.1805,
+   "conf": 0.6996,
+   "p_correct_set": 0.6996,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7214,
+   "brier": 0.2184,
+   "conf": 0.3752,
+   "p_correct_set": 0.4861,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5083,
+   "brier": 0.1601,
+   "conf": 0.3126,
+   "p_correct_set": 0.6015,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1584,
+   "brier": 0.0429,
+   "conf": 0.8535,
+   "p_correct_set": 0.8535,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1955,
+   "brier": 0.0631,
+   "conf": 0.8224,
+   "p_correct_set": 0.8224,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2831,
+   "brier": 0.0913,
+   "conf": 0.7535,
+   "p_correct_set": 0.7535,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3201,
+   "brier": 0.1501,
+   "conf": 0.7261,
+   "p_correct_set": 0.7261,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0635,
+   "brier": 0.5133,
+   "conf": 0.3453,
+   "p_correct_set": 0.3453,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2236,
+   "brier": 0.0803,
+   "conf": 0.7996,
+   "p_correct_set": 0.7996,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5525,
+   "brier": 0.3604,
+   "conf": 0.5755,
+   "p_correct_set": 0.5755,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.377,
+   "brier": 0.1489,
+   "conf": 0.6859,
+   "p_correct_set": 0.6859,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.513,
+   "brier": 1.5142,
+   "conf": 0.8151,
+   "p_correct_set": 0.081,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2045,
+   "brier": 0.0462,
+   "conf": 0.8151,
+   "p_correct_set": 0.8151,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9595,
+   "brier": 0.616,
+   "conf": 0.4586,
+   "p_correct_set": 0.3831,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9637,
+   "brier": 0.6564,
+   "conf": 0.5135,
+   "p_correct_set": 0.3815,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2767,
+   "brier": 0.0758,
+   "conf": 0.3813,
+   "p_correct_set": 0.7583,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1703,
+   "brier": 0.6035,
+   "conf": 0.3103,
+   "p_correct_set": 0.3103,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1603,
+   "brier": 0.0439,
+   "conf": 0.8519,
+   "p_correct_set": 0.8519,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0911,
+   "brier": 0.2968,
+   "conf": 0.2,
+   "p_correct_set": 0.3358,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1801,
+   "brier": 0.0543,
+   "conf": 0.8352,
+   "p_correct_set": 0.8352,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4466,
+   "brier": 0.2595,
+   "conf": 0.6398,
+   "p_correct_set": 0.6398,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.2031,
+   "brier": 0.6441,
+   "conf": 0.3003,
+   "p_correct_set": 0.3003,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1333,
+   "brier": 0.6372,
+   "conf": 0.3746,
+   "p_correct_set": 0.322,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.9105,
+   "brier": 1.0716,
+   "conf": 0.5591,
+   "p_correct_set": 0.148,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9293,
+   "brier": 0.5511,
+   "conf": 0.3948,
+   "p_correct_set": 0.3948,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.548,
+   "brier": 0.356,
+   "conf": 0.5781,
+   "p_correct_set": 0.5781,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4788,
+   "brier": 0.2278,
+   "conf": 0.6195,
+   "p_correct_set": 0.6195,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3914,
+   "brier": 0.1651,
+   "conf": 0.6761,
+   "p_correct_set": 0.6761,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.1287,
+   "brier": 0.9514,
+   "conf": 0.2632,
+   "p_correct_set": 0.119,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1219,
+   "brier": 0.6142,
+   "conf": 0.3257,
+   "p_correct_set": 0.3257,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3233,
+   "brier": 0.1199,
+   "conf": 0.7238,
+   "p_correct_set": 0.7238,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5082,
+   "brier": 0.8023,
+   "conf": 0.3509,
+   "p_correct_set": 0.2213,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6069,
+   "brier": 0.8389,
+   "conf": 0.347,
+   "p_correct_set": 0.2005,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8157,
+   "brier": 0.433,
+   "conf": 0.4423,
+   "p_correct_set": 0.4423,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6298,
+   "brier": 0.3296,
+   "conf": 0.5327,
+   "p_correct_set": 0.5327,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3776,
+   "brier": 0.8475,
+   "conf": 0.5075,
+   "p_correct_set": 0.2522,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4567,
+   "brier": 0.2029,
+   "conf": 0.6334,
+   "p_correct_set": 0.6334,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3359,
+   "brier": 0.1235,
+   "conf": 0.7147,
+   "p_correct_set": 0.7147,
+   "uid": "DMM10481"
+  }
+ ],
+ "model_uncalibrated": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.6157,
+   "brier": 1.7182,
+   "conf": 0.9269,
+   "p_correct_set": 0.0731,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.4855,
+   "brier": 1.6807,
+   "conf": 0.9167,
+   "p_correct_set": 0.0833,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1145,
+   "brier": 0.3203,
+   "conf": 0.2195,
+   "p_correct_set": 0.3281,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2499,
+   "brier": 0.0851,
+   "conf": 0.7789,
+   "p_correct_set": 0.7789,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9212,
+   "brier": 0.4838,
+   "conf": 0.398,
+   "p_correct_set": 0.398,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.785,
+   "brier": 1.2636,
+   "conf": 0.5818,
+   "p_correct_set": 0.0617,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1358,
+   "brier": 0.6403,
+   "conf": 0.3294,
+   "p_correct_set": 0.3212,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6498,
+   "brier": 0.3124,
+   "conf": 0.5221,
+   "p_correct_set": 0.5221,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 3.5031,
+   "brier": 1.2205,
+   "conf": 0.3898,
+   "p_correct_set": 0.0301,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5654,
+   "brier": 0.3096,
+   "conf": 0.5681,
+   "p_correct_set": 0.5681,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.7902,
+   "brier": 0.5968,
+   "conf": 0.5463,
+   "p_correct_set": 0.4537,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1879,
+   "brier": 0.6723,
+   "conf": 0.3465,
+   "p_correct_set": 0.3048,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8677,
+   "brier": 1.0204,
+   "conf": 0.4778,
+   "p_correct_set": 0.1545,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7256,
+   "brier": 0.2683,
+   "conf": 0.3808,
+   "p_correct_set": 0.484,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2833,
+   "brier": 0.1217,
+   "conf": 0.7533,
+   "p_correct_set": 0.7533,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0922,
+   "brier": 0.0499,
+   "conf": 0.5942,
+   "p_correct_set": 0.9119,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.0824,
+   "brier": 1.2912,
+   "conf": 0.7163,
+   "p_correct_set": 0.1246,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4094,
+   "brier": 0.1741,
+   "conf": 0.664,
+   "p_correct_set": 0.664,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4755,
+   "brier": 0.7418,
+   "conf": 0.2882,
+   "p_correct_set": 0.2287,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.0892,
+   "brier": 0.9516,
+   "conf": 0.2882,
+   "p_correct_set": 0.1238,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1625,
+   "brier": 0.045,
+   "conf": 0.85,
+   "p_correct_set": 0.85,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.4491,
+   "brier": 0.3914,
+   "conf": 0.197,
+   "p_correct_set": 0.2348,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.6909,
+   "brier": 1.3115,
+   "conf": 0.5294,
+   "p_correct_set": 0.0678,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3113,
+   "brier": 0.1431,
+   "conf": 0.7325,
+   "p_correct_set": 0.7325,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6275,
+   "brier": 0.2055,
+   "conf": 0.4311,
+   "p_correct_set": 0.5339,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4804,
+   "brier": 0.1473,
+   "conf": 0.3236,
+   "p_correct_set": 0.6185,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1151,
+   "brier": 0.0236,
+   "conf": 0.8913,
+   "p_correct_set": 0.8913,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1488,
+   "brier": 0.0382,
+   "conf": 0.8618,
+   "p_correct_set": 0.8618,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2076,
+   "brier": 0.0528,
+   "conf": 0.8125,
+   "p_correct_set": 0.8125,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2719,
+   "brier": 0.1134,
+   "conf": 0.7619,
+   "p_correct_set": 0.7619,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9469,
+   "brier": 0.4515,
+   "conf": 0.388,
+   "p_correct_set": 0.388,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1768,
+   "brier": 0.0525,
+   "conf": 0.8379,
+   "p_correct_set": 0.8379,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5307,
+   "brier": 0.3392,
+   "conf": 0.5882,
+   "p_correct_set": 0.5882,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3009,
+   "brier": 0.1022,
+   "conf": 0.7401,
+   "p_correct_set": 0.7401,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.8394,
+   "brier": 1.6493,
+   "conf": 0.872,
+   "p_correct_set": 0.0585,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1369,
+   "brier": 0.0222,
+   "conf": 0.872,
+   "p_correct_set": 0.872,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9516,
+   "brier": 0.6229,
+   "conf": 0.4766,
+   "p_correct_set": 0.3861,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9677,
+   "brier": 0.6806,
+   "conf": 0.5384,
+   "p_correct_set": 0.38,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2449,
+   "brier": 0.0636,
+   "conf": 0.394,
+   "p_correct_set": 0.7828,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1031,
+   "brier": 0.5722,
+   "conf": 0.3318,
+   "p_correct_set": 0.3318,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.12,
+   "brier": 0.0256,
+   "conf": 0.8869,
+   "p_correct_set": 0.8869,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0383,
+   "brier": 0.2838,
+   "conf": 0.2165,
+   "p_correct_set": 0.3541,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.138,
+   "brier": 0.0332,
+   "conf": 0.8711,
+   "p_correct_set": 0.8711,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.412,
+   "brier": 0.228,
+   "conf": 0.6623,
+   "p_correct_set": 0.6623,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1514,
+   "brier": 0.6288,
+   "conf": 0.3162,
+   "p_correct_set": 0.3162,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0917,
+   "brier": 0.6317,
+   "conf": 0.4013,
+   "p_correct_set": 0.3357,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.0302,
+   "brier": 1.1674,
+   "conf": 0.6231,
+   "p_correct_set": 0.1313,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9034,
+   "brier": 0.533,
+   "conf": 0.4052,
+   "p_correct_set": 0.4052,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5227,
+   "brier": 0.3314,
+   "conf": 0.5929,
+   "p_correct_set": 0.5929,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4035,
+   "brier": 0.1765,
+   "conf": 0.668,
+   "p_correct_set": 0.668,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3144,
+   "brier": 0.1165,
+   "conf": 0.7302,
+   "p_correct_set": 0.7302,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.1958,
+   "brier": 0.9737,
+   "conf": 0.2796,
+   "p_correct_set": 0.1113,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0821,
+   "brier": 0.5928,
+   "conf": 0.3389,
+   "p_correct_set": 0.3389,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2525,
+   "brier": 0.0795,
+   "conf": 0.7769,
+   "p_correct_set": 0.7769,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5149,
+   "brier": 0.82,
+   "conf": 0.3798,
+   "p_correct_set": 0.2198,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6288,
+   "brier": 0.8614,
+   "conf": 0.3759,
+   "p_correct_set": 0.1962,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7395,
+   "brier": 0.3855,
+   "conf": 0.4774,
+   "p_correct_set": 0.4774,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5666,
+   "brier": 0.283,
+   "conf": 0.5675,
+   "p_correct_set": 0.5675,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4117,
+   "brier": 0.8966,
+   "conf": 0.5489,
+   "p_correct_set": 0.2437,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3822,
+   "brier": 0.1527,
+   "conf": 0.6823,
+   "p_correct_set": 0.6823,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2617,
+   "brier": 0.0808,
+   "conf": 0.7697,
+   "p_correct_set": 0.7697,
+   "uid": "DMM10481"
+  }
+ ],
+ "baseline_lsj": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.1224,
+   "brier": 1.5,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.1667,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.5,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 13.1224,
+   "brier": 1.5,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.5,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.1224,
+   "brier": 1.5,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.1224,
+   "brier": 1.5,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.1224,
+   "brier": 1.5,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM10481"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 13.1224,
+   "brier": 1.5,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 13.8155,
+   "brier": 2.0,
+   "conf": 1.0,
+   "p_correct_set": 0.0,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0,
+   "brier": 0.0,
+   "conf": 1.0,
+   "p_correct_set": 1.0,
+   "uid": "DMM10511"
+  }
+ ],
+ "baseline_genus_prior": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.2809,
+   "brier": 0.7037,
+   "conf": 0.2778,
+   "p_correct_set": 0.2778,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8755,
+   "brier": 0.5417,
+   "conf": 0.4167,
+   "p_correct_set": 0.4167,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.8971,
+   "brier": 1.445,
+   "conf": 0.85,
+   "p_correct_set": 0.15,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.2809,
+   "brier": 0.7037,
+   "conf": 0.2778,
+   "p_correct_set": 0.2778,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4351,
+   "brier": 0.3889,
+   "conf": 0.1667,
+   "p_correct_set": 0.2381,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.7952,
+   "brier": 0.8345,
+   "conf": 0.1695,
+   "p_correct_set": 0.1661,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7952,
+   "brier": 0.8345,
+   "conf": 0.1695,
+   "p_correct_set": 0.1661,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.9741,
+   "brier": 0.8657,
+   "conf": 0.1667,
+   "p_correct_set": 0.1389,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.8971,
+   "brier": 1.445,
+   "conf": 0.85,
+   "p_correct_set": 0.15,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8971,
+   "brier": 0.8847,
+   "conf": 0.2429,
+   "p_correct_set": 0.15,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0417,
+   "conf": 0.4167,
+   "p_correct_set": 0.8333,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1892,
+   "brier": 0.0595,
+   "conf": 0.8276,
+   "p_correct_set": 0.8276,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8824,
+   "brier": 0.5446,
+   "conf": 0.4138,
+   "p_correct_set": 0.4138,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8824,
+   "brier": 0.5446,
+   "conf": 0.4138,
+   "p_correct_set": 0.4138,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.5686,
+   "brier": 0.4062,
+   "conf": 0.1667,
+   "p_correct_set": 0.2083,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8755,
+   "brier": 0.5417,
+   "conf": 0.4167,
+   "p_correct_set": 0.4167,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2809,
+   "brier": 0.7037,
+   "conf": 0.2778,
+   "p_correct_set": 0.2778,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.8803,
+   "brier": 0.8977,
+   "conf": 0.2119,
+   "p_correct_set": 0.1525,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2641,
+   "brier": 0.6977,
+   "conf": 0.2825,
+   "p_correct_set": 0.2825,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1655,
+   "brier": 0.0465,
+   "conf": 0.8475,
+   "p_correct_set": 0.8475,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.8803,
+   "brier": 1.4364,
+   "conf": 0.8475,
+   "p_correct_set": 0.1525,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.2809,
+   "brier": 0.7037,
+   "conf": 0.2778,
+   "p_correct_set": 0.2778,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8971,
+   "brier": 1.0027,
+   "conf": 0.3643,
+   "p_correct_set": 0.15,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.8971,
+   "brier": 1.445,
+   "conf": 0.85,
+   "p_correct_set": 0.15,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.8803,
+   "brier": 0.9576,
+   "conf": 0.2825,
+   "p_correct_set": 0.1525,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2641,
+   "brier": 0.6977,
+   "conf": 0.2825,
+   "p_correct_set": 0.2825,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.5878,
+   "brier": 0.2037,
+   "conf": 0.2778,
+   "p_correct_set": 0.5556,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7918,
+   "brier": 0.4306,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.2843,
+   "brier": 0.705,
+   "conf": 0.2768,
+   "p_correct_set": 0.2768,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.2843,
+   "brier": 0.705,
+   "conf": 0.2768,
+   "p_correct_set": 0.2768,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.8803,
+   "brier": 0.8977,
+   "conf": 0.2119,
+   "p_correct_set": 0.1525,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.2641,
+   "brier": 0.6977,
+   "conf": 0.2825,
+   "p_correct_set": 0.2825,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8755,
+   "brier": 0.5417,
+   "conf": 0.4167,
+   "p_correct_set": 0.4167,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8755,
+   "brier": 0.5417,
+   "conf": 0.4167,
+   "p_correct_set": 0.4167,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1823,
+   "brier": 0.0556,
+   "conf": 0.8333,
+   "p_correct_set": 0.8333,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8755,
+   "brier": 0.5417,
+   "conf": 0.4167,
+   "p_correct_set": 0.4167,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.2809,
+   "brier": 0.7037,
+   "conf": 0.2778,
+   "p_correct_set": 0.2778,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0986,
+   "brier": 0.3333,
+   "conf": 0.1667,
+   "p_correct_set": 0.3333,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8971,
+   "brier": 1.0837,
+   "conf": 0.425,
+   "p_correct_set": 0.15,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.5878,
+   "brier": 0.2037,
+   "conf": 0.2778,
+   "p_correct_set": 0.5556,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8789,
+   "brier": 0.5431,
+   "conf": 0.4153,
+   "p_correct_set": 0.4153,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1857,
+   "brier": 0.0575,
+   "conf": 0.8305,
+   "p_correct_set": 0.8305,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5878,
+   "brier": 0.3025,
+   "conf": 0.5556,
+   "p_correct_set": 0.5556,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8755,
+   "brier": 0.4549,
+   "conf": 0.4167,
+   "p_correct_set": 0.4167,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.5755,
+   "brier": 0.7872,
+   "conf": 0.2069,
+   "p_correct_set": 0.2069,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5755,
+   "brier": 0.7872,
+   "conf": 0.2069,
+   "p_correct_set": 0.2069,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.2879,
+   "brier": 0.7063,
+   "conf": 0.2759,
+   "p_correct_set": 0.2759,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8755,
+   "brier": 0.5417,
+   "conf": 0.4167,
+   "p_correct_set": 0.4167,
+   "uid": "DMM10481"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7918,
+   "brier": 0.4722,
+   "conf": 0.25,
+   "p_correct_set": 0.1667,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.5686,
+   "brier": 0.7847,
+   "conf": 0.2083,
+   "p_correct_set": 0.2083,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.5686,
+   "brier": 0.7847,
+   "conf": 0.2083,
+   "p_correct_set": 0.2083,
+   "uid": "DMM10511"
+  }
+ ],
+ "baseline_uniform": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3863,
+   "brier": 0.375,
+   "conf": 0.125,
+   "p_correct_set": 0.25,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.9459,
+   "brier": 0.8571,
+   "conf": 0.1429,
+   "p_correct_set": 0.1429,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.1667,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4055,
+   "brier": 0.1667,
+   "conf": 0.3333,
+   "p_correct_set": 0.6667,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.5041,
+   "brier": 0.3889,
+   "conf": 0.1111,
+   "p_correct_set": 0.2222,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.6094,
+   "brier": 0.8,
+   "conf": 0.2,
+   "p_correct_set": 0.2,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.6931,
+   "brier": 0.25,
+   "conf": 0.25,
+   "p_correct_set": 0.5,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7047,
+   "brier": 0.4091,
+   "conf": 0.0909,
+   "p_correct_set": 0.1818,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.6094,
+   "brier": 0.8,
+   "conf": 0.2,
+   "p_correct_set": 0.2,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.7918,
+   "brier": 0.8333,
+   "conf": 0.1667,
+   "p_correct_set": 0.1667,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0986,
+   "brier": 0.3333,
+   "conf": 0.1667,
+   "p_correct_set": 0.3333,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.6931,
+   "brier": 0.25,
+   "conf": 0.25,
+   "p_correct_set": 0.5,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6931,
+   "brier": 0.5,
+   "conf": 0.5,
+   "p_correct_set": 0.5,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6094,
+   "brier": 0.8,
+   "conf": 0.2,
+   "p_correct_set": 0.2,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.6094,
+   "brier": 0.8,
+   "conf": 0.2,
+   "p_correct_set": 0.2,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3863,
+   "brier": 0.75,
+   "conf": 0.25,
+   "p_correct_set": 0.25,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0986,
+   "brier": 0.6667,
+   "conf": 0.3333,
+   "p_correct_set": 0.3333,
+   "uid": "DMM10481"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5041,
+   "brier": 0.3889,
+   "conf": 0.1111,
+   "p_correct_set": 0.2222,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6094,
+   "brier": 0.8,
+   "conf": 0.2,
+   "p_correct_set": 0.2,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.6094,
+   "brier": 0.8,
+   "conf": 0.2,
+   "p_correct_set": 0.2,
+   "uid": "DMM10511"
+  }
+ ],
+ "ablation_without_f2": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.149,
+   "brier": 1.5608,
+   "conf": 0.8834,
+   "p_correct_set": 0.1166,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.8159,
+   "brier": 1.4022,
+   "conf": 0.8373,
+   "p_correct_set": 0.1627,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3316,
+   "brier": 0.3489,
+   "conf": 0.1674,
+   "p_correct_set": 0.2641,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5967,
+   "brier": 0.28,
+   "conf": 0.5506,
+   "p_correct_set": 0.5506,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1489,
+   "brier": 0.6225,
+   "conf": 0.317,
+   "p_correct_set": 0.317,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.1674,
+   "brier": 1.0748,
+   "conf": 0.4915,
+   "p_correct_set": 0.1145,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2387,
+   "brier": 0.6972,
+   "conf": 0.3434,
+   "p_correct_set": 0.2897,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7285,
+   "brier": 0.3636,
+   "conf": 0.4826,
+   "p_correct_set": 0.4826,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 3.0443,
+   "brier": 1.16,
+   "conf": 0.3355,
+   "p_correct_set": 0.0476,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8738,
+   "brier": 0.4755,
+   "conf": 0.4173,
+   "p_correct_set": 0.4173,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6796,
+   "brier": 0.4864,
+   "conf": 0.5068,
+   "p_correct_set": 0.5068,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.034,
+   "brier": 0.5651,
+   "conf": 0.3556,
+   "p_correct_set": 0.3556,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6464,
+   "brier": 0.9119,
+   "conf": 0.4039,
+   "p_correct_set": 0.1927,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.758,
+   "brier": 0.2807,
+   "conf": 0.3786,
+   "p_correct_set": 0.4686,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3339,
+   "brier": 0.1612,
+   "conf": 0.7161,
+   "p_correct_set": 0.7161,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.102,
+   "brier": 0.0693,
+   "conf": 0.6176,
+   "p_correct_set": 0.903,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.7861,
+   "brier": 0.9965,
+   "conf": 0.5199,
+   "p_correct_set": 0.1676,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6849,
+   "brier": 0.3312,
+   "conf": 0.5042,
+   "p_correct_set": 0.5042,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7374,
+   "brier": 0.838,
+   "conf": 0.2748,
+   "p_correct_set": 0.176,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.995,
+   "brier": 0.9179,
+   "conf": 0.2748,
+   "p_correct_set": 0.136,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.264,
+   "brier": 0.1077,
+   "conf": 0.768,
+   "p_correct_set": 0.768,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.5499,
+   "brier": 0.4069,
+   "conf": 0.1735,
+   "p_correct_set": 0.2123,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.4667,
+   "brier": 1.2586,
+   "conf": 0.4921,
+   "p_correct_set": 0.0849,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3361,
+   "brier": 0.163,
+   "conf": 0.7146,
+   "p_correct_set": 0.7146,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8495,
+   "brier": 0.2448,
+   "conf": 0.3269,
+   "p_correct_set": 0.4276,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5183,
+   "brier": 0.1715,
+   "conf": 0.3031,
+   "p_correct_set": 0.5955,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.179,
+   "brier": 0.0537,
+   "conf": 0.8361,
+   "p_correct_set": 0.8361,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0314,
+   "brier": 0.8282,
+   "conf": 0.6435,
+   "p_correct_set": 0.3565,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2888,
+   "brier": 0.0953,
+   "conf": 0.7492,
+   "p_correct_set": 0.7492,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4381,
+   "brier": 0.2517,
+   "conf": 0.6453,
+   "p_correct_set": 0.6453,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0818,
+   "brier": 0.5214,
+   "conf": 0.339,
+   "p_correct_set": 0.339,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1611,
+   "brier": 0.9436,
+   "conf": 0.6869,
+   "p_correct_set": 0.3131,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6796,
+   "brier": 0.4864,
+   "conf": 0.5068,
+   "p_correct_set": 0.5068,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3999,
+   "brier": 0.1684,
+   "conf": 0.6704,
+   "p_correct_set": 0.6704,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.4302,
+   "brier": 1.4699,
+   "conf": 0.7945,
+   "p_correct_set": 0.088,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.23,
+   "brier": 0.057,
+   "conf": 0.7945,
+   "p_correct_set": 0.7945,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6776,
+   "brier": 0.3788,
+   "conf": 0.5078,
+   "p_correct_set": 0.5078,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9685,
+   "brier": 0.6178,
+   "conf": 0.4682,
+   "p_correct_set": 0.3796,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4698,
+   "brier": 0.1425,
+   "conf": 0.3438,
+   "p_correct_set": 0.6251,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3785,
+   "brier": 0.6778,
+   "conf": 0.2519,
+   "p_correct_set": 0.2519,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2503,
+   "brier": 0.0981,
+   "conf": 0.7785,
+   "p_correct_set": 0.7785,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1437,
+   "brier": 0.3048,
+   "conf": 0.1745,
+   "p_correct_set": 0.3186,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2769,
+   "brier": 0.117,
+   "conf": 0.7581,
+   "p_correct_set": 0.7581,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6558,
+   "brier": 0.4626,
+   "conf": 0.519,
+   "p_correct_set": 0.519,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0931,
+   "brier": 0.5759,
+   "conf": 0.3352,
+   "p_correct_set": 0.3352,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3963,
+   "brier": 0.7386,
+   "conf": 0.2983,
+   "p_correct_set": 0.2475,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8703,
+   "brier": 1.039,
+   "conf": 0.5291,
+   "p_correct_set": 0.1541,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0962,
+   "brier": 0.6651,
+   "conf": 0.3341,
+   "p_correct_set": 0.3341,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.674,
+   "brier": 0.4808,
+   "conf": 0.5097,
+   "p_correct_set": 0.5097,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5027,
+   "brier": 0.2454,
+   "conf": 0.6049,
+   "p_correct_set": 0.6049,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4056,
+   "brier": 0.1748,
+   "conf": 0.6666,
+   "p_correct_set": 0.6666,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.0112,
+   "brier": 0.9189,
+   "conf": 0.2431,
+   "p_correct_set": 0.1338,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1542,
+   "brier": 0.6428,
+   "conf": 0.3153,
+   "p_correct_set": 0.3153,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3147,
+   "brier": 0.1109,
+   "conf": 0.73,
+   "p_correct_set": 0.73,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4724,
+   "brier": 0.7864,
+   "conf": 0.3492,
+   "p_correct_set": 0.2294,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.8375,
+   "brier": 0.9235,
+   "conf": 0.3464,
+   "p_correct_set": 0.1592,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8538,
+   "brier": 0.4615,
+   "conf": 0.4258,
+   "p_correct_set": 0.4258,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6491,
+   "brier": 0.3445,
+   "conf": 0.5225,
+   "p_correct_set": 0.5225,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4976,
+   "brier": 0.8792,
+   "conf": 0.4823,
+   "p_correct_set": 0.2237,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4547,
+   "brier": 0.2021,
+   "conf": 0.6347,
+   "p_correct_set": 0.6347,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3026,
+   "brier": 0.1066,
+   "conf": 0.7389,
+   "p_correct_set": 0.7389,
+   "uid": "DMM10481"
+  }
+ ],
+ "ablation_without_f3": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.4339,
+   "brier": 1.6646,
+   "conf": 0.9123,
+   "p_correct_set": 0.0877,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.2183,
+   "brier": 1.5885,
+   "conf": 0.8912,
+   "p_correct_set": 0.1088,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1502,
+   "brier": 0.3267,
+   "conf": 0.2141,
+   "p_correct_set": 0.3166,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3121,
+   "brier": 0.1229,
+   "conf": 0.7319,
+   "p_correct_set": 0.7319,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9038,
+   "brier": 0.4734,
+   "conf": 0.405,
+   "p_correct_set": 0.405,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.6263,
+   "brier": 1.1998,
+   "conf": 0.5364,
+   "p_correct_set": 0.0723,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1632,
+   "brier": 0.6493,
+   "conf": 0.3187,
+   "p_correct_set": 0.3125,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7133,
+   "brier": 0.3527,
+   "conf": 0.49,
+   "p_correct_set": 0.49,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 3.3197,
+   "brier": 1.1984,
+   "conf": 0.3718,
+   "p_correct_set": 0.0362,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5948,
+   "brier": 0.3264,
+   "conf": 0.5517,
+   "p_correct_set": 0.5517,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.7927,
+   "brier": 0.5992,
+   "conf": 0.5474,
+   "p_correct_set": 0.4526,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2114,
+   "brier": 0.6799,
+   "conf": 0.3379,
+   "p_correct_set": 0.2978,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8025,
+   "brier": 0.9749,
+   "conf": 0.4356,
+   "p_correct_set": 0.1649,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7762,
+   "brier": 0.2601,
+   "conf": 0.3322,
+   "p_correct_set": 0.4601,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3211,
+   "brier": 0.1509,
+   "conf": 0.7254,
+   "p_correct_set": 0.7254,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1173,
+   "brier": 0.0493,
+   "conf": 0.569,
+   "p_correct_set": 0.8894,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.961,
+   "brier": 1.1861,
+   "conf": 0.6546,
+   "p_correct_set": 0.1407,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4599,
+   "brier": 0.2067,
+   "conf": 0.6313,
+   "p_correct_set": 0.6313,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5098,
+   "brier": 0.7532,
+   "conf": 0.2816,
+   "p_correct_set": 0.2209,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.0585,
+   "brier": 0.9398,
+   "conf": 0.2816,
+   "p_correct_set": 0.1276,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1919,
+   "brier": 0.061,
+   "conf": 0.8254,
+   "p_correct_set": 0.8254,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.4449,
+   "brier": 0.3883,
+   "conf": 0.1891,
+   "p_correct_set": 0.2358,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.3845,
+   "brier": 1.2432,
+   "conf": 0.5125,
+   "p_correct_set": 0.0921,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2096,
+   "brier": 0.0715,
+   "conf": 0.8109,
+   "p_correct_set": 0.8109,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6735,
+   "brier": 0.211,
+   "conf": 0.4024,
+   "p_correct_set": 0.5099,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4707,
+   "brier": 0.1419,
+   "conf": 0.3257,
+   "p_correct_set": 0.6245,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1517,
+   "brier": 0.0396,
+   "conf": 0.8592,
+   "p_correct_set": 0.8592,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.163,
+   "brier": 0.0452,
+   "conf": 0.8496,
+   "p_correct_set": 0.8496,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.23,
+   "brier": 0.0633,
+   "conf": 0.7946,
+   "p_correct_set": 0.7946,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2725,
+   "brier": 0.1138,
+   "conf": 0.7615,
+   "p_correct_set": 0.7615,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0245,
+   "brier": 0.4922,
+   "conf": 0.359,
+   "p_correct_set": 0.359,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2317,
+   "brier": 0.0855,
+   "conf": 0.7932,
+   "p_correct_set": 0.7932,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5597,
+   "brier": 0.3674,
+   "conf": 0.5714,
+   "p_correct_set": 0.5714,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3111,
+   "brier": 0.1079,
+   "conf": 0.7326,
+   "p_correct_set": 0.7326,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.5422,
+   "brier": 1.5501,
+   "conf": 0.8352,
+   "p_correct_set": 0.0787,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1801,
+   "brier": 0.037,
+   "conf": 0.8352,
+   "p_correct_set": 0.8352,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9427,
+   "brier": 0.6126,
+   "conf": 0.4691,
+   "p_correct_set": 0.3896,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9671,
+   "brier": 0.6632,
+   "conf": 0.5193,
+   "p_correct_set": 0.3802,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2836,
+   "brier": 0.0796,
+   "conf": 0.3801,
+   "p_correct_set": 0.7531,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1224,
+   "brier": 0.5787,
+   "conf": 0.3255,
+   "p_correct_set": 0.3255,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1525,
+   "brier": 0.04,
+   "conf": 0.8586,
+   "p_correct_set": 0.8586,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0791,
+   "brier": 0.2932,
+   "conf": 0.2043,
+   "p_correct_set": 0.3399,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1616,
+   "brier": 0.0445,
+   "conf": 0.8508,
+   "p_correct_set": 0.8508,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4492,
+   "brier": 0.2619,
+   "conf": 0.6381,
+   "p_correct_set": 0.6381,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1702,
+   "brier": 0.6315,
+   "conf": 0.3103,
+   "p_correct_set": 0.3103,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.114,
+   "brier": 0.6332,
+   "conf": 0.3857,
+   "p_correct_set": 0.3282,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.8211,
+   "brier": 1.0404,
+   "conf": 0.555,
+   "p_correct_set": 0.1619,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8278,
+   "brier": 0.4776,
+   "conf": 0.437,
+   "p_correct_set": 0.437,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5449,
+   "brier": 0.3529,
+   "conf": 0.5799,
+   "p_correct_set": 0.5799,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4592,
+   "brier": 0.2134,
+   "conf": 0.6318,
+   "p_correct_set": 0.6318,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.369,
+   "brier": 0.1499,
+   "conf": 0.6914,
+   "p_correct_set": 0.6914,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.1212,
+   "brier": 0.9495,
+   "conf": 0.2636,
+   "p_correct_set": 0.1199,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0406,
+   "brier": 0.5642,
+   "conf": 0.3532,
+   "p_correct_set": 0.3532,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3008,
+   "brier": 0.1069,
+   "conf": 0.7402,
+   "p_correct_set": 0.7402,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.358,
+   "brier": 0.7211,
+   "conf": 0.3035,
+   "p_correct_set": 0.2572,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.5268,
+   "brier": 0.7956,
+   "conf": 0.299,
+   "p_correct_set": 0.2172,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9443,
+   "brier": 0.5253,
+   "conf": 0.3889,
+   "p_correct_set": 0.3889,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6336,
+   "brier": 0.3333,
+   "conf": 0.5307,
+   "p_correct_set": 0.5307,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3647,
+   "brier": 0.8667,
+   "conf": 0.5372,
+   "p_correct_set": 0.2555,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4138,
+   "brier": 0.1734,
+   "conf": 0.6611,
+   "p_correct_set": 0.6611,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3308,
+   "brier": 0.1201,
+   "conf": 0.7183,
+   "p_correct_set": 0.7183,
+   "uid": "DMM10481"
+  }
+ ],
+ "ablation_without_f4": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2396,
+   "brier": 1.0096,
+   "conf": 0.7105,
+   "p_correct_set": 0.2895,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5946,
+   "brier": 1.2705,
+   "conf": 0.797,
+   "p_correct_set": 0.203,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3021,
+   "brier": 0.3561,
+   "conf": 0.1672,
+   "p_correct_set": 0.272,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.471,
+   "brier": 0.2087,
+   "conf": 0.6244,
+   "p_correct_set": 0.6244,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1516,
+   "brier": 0.6262,
+   "conf": 0.3161,
+   "p_correct_set": 0.3161,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.1667,
+   "logloss": 2.5734,
+   "brier": 1.0321,
+   "conf": 0.2387,
+   "p_correct_set": 0.0763,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0899,
+   "brier": 0.6152,
+   "conf": 0.3362,
+   "p_correct_set": 0.3362,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1516,
+   "brier": 0.6545,
+   "conf": 0.3456,
+   "p_correct_set": 0.3161,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.8989,
+   "brier": 1.121,
+   "conf": 0.2667,
+   "p_correct_set": 0.0551,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6769,
+   "brier": 0.3804,
+   "conf": 0.5082,
+   "p_correct_set": 0.5082,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5934,
+   "brier": 0.4006,
+   "conf": 0.5525,
+   "p_correct_set": 0.5525,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.4198,
+   "brier": 0.8154,
+   "conf": 0.3822,
+   "p_correct_set": 0.2418,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.0828,
+   "brier": 1.0326,
+   "conf": 0.3532,
+   "p_correct_set": 0.1246,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.0609,
+   "brier": 0.3419,
+   "conf": 0.2537,
+   "p_correct_set": 0.3461,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5691,
+   "brier": 0.3766,
+   "conf": 0.5661,
+   "p_correct_set": 0.5661,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1391,
+   "brier": 0.0253,
+   "conf": 0.4405,
+   "p_correct_set": 0.8702,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.1159,
+   "brier": 1.078,
+   "conf": 0.4523,
+   "p_correct_set": 0.1205,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7402,
+   "brier": 0.4367,
+   "conf": 0.477,
+   "p_correct_set": 0.477,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.546,
+   "brier": 0.751,
+   "conf": 0.2131,
+   "p_correct_set": 0.2131,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.669,
+   "brier": 0.8003,
+   "conf": 0.2131,
+   "p_correct_set": 0.1884,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4808,
+   "brier": 0.2914,
+   "conf": 0.6183,
+   "p_correct_set": 0.6183,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1937,
+   "brier": 0.3173,
+   "conf": 0.1531,
+   "p_correct_set": 0.3031,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.4583,
+   "brier": 1.2545,
+   "conf": 0.4695,
+   "p_correct_set": 0.0856,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5598,
+   "brier": 0.3676,
+   "conf": 0.5713,
+   "p_correct_set": 0.5713,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.069,
+   "brier": 0.3031,
+   "conf": 0.1841,
+   "p_correct_set": 0.3434,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8975,
+   "brier": 0.3973,
+   "conf": 0.4473,
+   "p_correct_set": 0.4076,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3236,
+   "brier": 0.1529,
+   "conf": 0.7235,
+   "p_correct_set": 0.7235,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1664,
+   "brier": 0.047,
+   "conf": 0.8467,
+   "p_correct_set": 0.8467,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0542,
+   "brier": 0.695,
+   "conf": 0.4964,
+   "p_correct_set": 0.3485,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4112,
+   "brier": 0.2274,
+   "conf": 0.6628,
+   "p_correct_set": 0.6628,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.653,
+   "brier": 0.7874,
+   "conf": 0.2156,
+   "p_correct_set": 0.1915,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1187,
+   "brier": 0.0251,
+   "conf": 0.888,
+   "p_correct_set": 0.888,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3529,
+   "brier": 0.1769,
+   "conf": 0.7026,
+   "p_correct_set": 0.7026,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0256,
+   "brier": 0.6698,
+   "conf": 0.483,
+   "p_correct_set": 0.3586,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.3458,
+   "brier": 1.102,
+   "conf": 0.3886,
+   "p_correct_set": 0.0958,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9452,
+   "brier": 0.5164,
+   "conf": 0.3886,
+   "p_correct_set": 0.3886,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2091,
+   "brier": 0.8002,
+   "conf": 0.5269,
+   "p_correct_set": 0.2985,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8884,
+   "brier": 0.5533,
+   "conf": 0.4327,
+   "p_correct_set": 0.4113,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1744,
+   "brier": 0.0354,
+   "conf": 0.4571,
+   "p_correct_set": 0.84,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3265,
+   "brier": 0.6853,
+   "conf": 0.273,
+   "p_correct_set": 0.2654,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2535,
+   "brier": 0.1003,
+   "conf": 0.7761,
+   "p_correct_set": 0.7761,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1626,
+   "brier": 0.3247,
+   "conf": 0.1809,
+   "p_correct_set": 0.3127,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3303,
+   "brier": 0.1583,
+   "conf": 0.7187,
+   "p_correct_set": 0.7187,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3111,
+   "brier": 0.1429,
+   "conf": 0.7327,
+   "p_correct_set": 0.7327,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5996,
+   "brier": 0.7762,
+   "conf": 0.2218,
+   "p_correct_set": 0.202,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2949,
+   "brier": 0.7017,
+   "conf": 0.2964,
+   "p_correct_set": 0.2739,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.8477,
+   "brier": 0.9182,
+   "conf": 0.3565,
+   "p_correct_set": 0.1576,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8947,
+   "brier": 0.5545,
+   "conf": 0.4183,
+   "p_correct_set": 0.4087,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3988,
+   "brier": 0.2163,
+   "conf": 0.6711,
+   "p_correct_set": 0.6711,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8061,
+   "brier": 0.5014,
+   "conf": 0.4466,
+   "p_correct_set": 0.4466,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.787,
+   "brier": 0.4859,
+   "conf": 0.4552,
+   "p_correct_set": 0.4552,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6377,
+   "brier": 0.7963,
+   "conf": 0.2405,
+   "p_correct_set": 0.1944,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.5822,
+   "brier": 0.8617,
+   "conf": 0.3804,
+   "p_correct_set": 0.2055,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7675,
+   "brier": 0.4579,
+   "conf": 0.4642,
+   "p_correct_set": 0.4642,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8427,
+   "brier": 0.9511,
+   "conf": 0.4213,
+   "p_correct_set": 0.1584,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.6418,
+   "brier": 0.8735,
+   "conf": 0.4126,
+   "p_correct_set": 0.1936,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6538,
+   "brier": 0.3098,
+   "conf": 0.5201,
+   "p_correct_set": 0.5201,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5993,
+   "brier": 0.3065,
+   "conf": 0.5492,
+   "p_correct_set": 0.5492,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1371,
+   "brier": 0.6316,
+   "conf": 0.3208,
+   "p_correct_set": 0.3208,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8513,
+   "brier": 0.5284,
+   "conf": 0.4268,
+   "p_correct_set": 0.4268,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7425,
+   "brier": 0.4363,
+   "conf": 0.4759,
+   "p_correct_set": 0.4759,
+   "uid": "DMM10481"
+  }
+ ],
+ "ablation_without_f6": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.5224,
+   "brier": 1.6918,
+   "conf": 0.9197,
+   "p_correct_set": 0.0803,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.3852,
+   "brier": 1.6487,
+   "conf": 0.9079,
+   "p_correct_set": 0.0921,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0996,
+   "brier": 0.3119,
+   "conf": 0.2127,
+   "p_correct_set": 0.333,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3394,
+   "brier": 0.145,
+   "conf": 0.7122,
+   "p_correct_set": 0.7122,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9595,
+   "brier": 0.5087,
+   "conf": 0.3831,
+   "p_correct_set": 0.3831,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.7414,
+   "brier": 1.2281,
+   "conf": 0.5499,
+   "p_correct_set": 0.0645,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1908,
+   "brier": 0.6612,
+   "conf": 0.3109,
+   "p_correct_set": 0.304,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.735,
+   "brier": 0.3661,
+   "conf": 0.4795,
+   "p_correct_set": 0.4795,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.8943,
+   "brier": 1.1497,
+   "conf": 0.3574,
+   "p_correct_set": 0.0553,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6444,
+   "brier": 0.3529,
+   "conf": 0.525,
+   "p_correct_set": 0.525,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6331,
+   "brier": 0.44,
+   "conf": 0.531,
+   "p_correct_set": 0.531,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1882,
+   "brier": 0.6574,
+   "conf": 0.3092,
+   "p_correct_set": 0.3048,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.8044,
+   "brier": 1.0028,
+   "conf": 0.4861,
+   "p_correct_set": 0.1646,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7547,
+   "brier": 0.2575,
+   "conf": 0.3483,
+   "p_correct_set": 0.4701,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2451,
+   "brier": 0.0945,
+   "conf": 0.7826,
+   "p_correct_set": 0.7826,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1355,
+   "brier": 0.0546,
+   "conf": 0.5601,
+   "p_correct_set": 0.8733,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.0275,
+   "brier": 1.2276,
+   "conf": 0.6756,
+   "p_correct_set": 0.1317,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4675,
+   "brier": 0.2104,
+   "conf": 0.6266,
+   "p_correct_set": 0.6266,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3949,
+   "brier": 0.6973,
+   "conf": 0.2586,
+   "p_correct_set": 0.2479,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.1132,
+   "brier": 0.9513,
+   "conf": 0.2586,
+   "p_correct_set": 0.1209,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1847,
+   "brier": 0.0569,
+   "conf": 0.8314,
+   "p_correct_set": 0.8314,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.4757,
+   "brier": 0.3937,
+   "conf": 0.1807,
+   "p_correct_set": 0.2286,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.1001,
+   "brier": 1.1583,
+   "conf": 0.4782,
+   "p_correct_set": 0.1224,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3467,
+   "brier": 0.1717,
+   "conf": 0.707,
+   "p_correct_set": 0.707,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.721,
+   "brier": 0.2212,
+   "conf": 0.3793,
+   "p_correct_set": 0.4863,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4821,
+   "brier": 0.1511,
+   "conf": 0.345,
+   "p_correct_set": 0.6175,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1147,
+   "brier": 0.0235,
+   "conf": 0.8916,
+   "p_correct_set": 0.8916,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2069,
+   "brier": 0.0698,
+   "conf": 0.8131,
+   "p_correct_set": 0.8131,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2879,
+   "brier": 0.095,
+   "conf": 0.7498,
+   "p_correct_set": 0.7498,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2463,
+   "brier": 0.0953,
+   "conf": 0.7817,
+   "p_correct_set": 0.7817,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0391,
+   "brier": 0.4983,
+   "conf": 0.3538,
+   "p_correct_set": 0.3538,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2422,
+   "brier": 0.0925,
+   "conf": 0.7849,
+   "p_correct_set": 0.7849,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4512,
+   "brier": 0.2637,
+   "conf": 0.6369,
+   "p_correct_set": 0.6369,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3509,
+   "brier": 0.1324,
+   "conf": 0.7041,
+   "p_correct_set": 0.7041,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 2.5323,
+   "brier": 1.5399,
+   "conf": 0.8297,
+   "p_correct_set": 0.0795,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1867,
+   "brier": 0.0394,
+   "conf": 0.8297,
+   "p_correct_set": 0.8297,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0053,
+   "brier": 0.6421,
+   "conf": 0.4566,
+   "p_correct_set": 0.3659,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9764,
+   "brier": 0.6673,
+   "conf": 0.5182,
+   "p_correct_set": 0.3767,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2866,
+   "brier": 0.082,
+   "conf": 0.3848,
+   "p_correct_set": 0.7508,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1766,
+   "brier": 0.6078,
+   "conf": 0.3083,
+   "p_correct_set": 0.3083,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1161,
+   "brier": 0.024,
+   "conf": 0.8904,
+   "p_correct_set": 0.8904,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1209,
+   "brier": 0.3054,
+   "conf": 0.194,
+   "p_correct_set": 0.326,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1306,
+   "brier": 0.03,
+   "conf": 0.8776,
+   "p_correct_set": 0.8776,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3505,
+   "brier": 0.1748,
+   "conf": 0.7043,
+   "p_correct_set": 0.7043,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.2111,
+   "brier": 0.6473,
+   "conf": 0.2979,
+   "p_correct_set": 0.2979,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1527,
+   "brier": 0.6487,
+   "conf": 0.369,
+   "p_correct_set": 0.3158,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.9468,
+   "brier": 1.1098,
+   "conf": 0.5899,
+   "p_correct_set": 0.1427,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9341,
+   "brier": 0.5542,
+   "conf": 0.393,
+   "p_correct_set": 0.393,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4553,
+   "brier": 0.2675,
+   "conf": 0.6343,
+   "p_correct_set": 0.6343,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4816,
+   "brier": 0.2244,
+   "conf": 0.6178,
+   "p_correct_set": 0.6178,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3854,
+   "brier": 0.1571,
+   "conf": 0.6802,
+   "p_correct_set": 0.6802,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.1807,
+   "brier": 0.9603,
+   "conf": 0.2547,
+   "p_correct_set": 0.113,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0892,
+   "brier": 0.5946,
+   "conf": 0.3365,
+   "p_correct_set": 0.3365,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2887,
+   "brier": 0.0991,
+   "conf": 0.7492,
+   "p_correct_set": 0.7492,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.5478,
+   "brier": 0.8089,
+   "conf": 0.3317,
+   "p_correct_set": 0.2127,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4908,
+   "brier": 0.7837,
+   "conf": 0.3283,
+   "p_correct_set": 0.2252,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8586,
+   "brier": 0.4579,
+   "conf": 0.4237,
+   "p_correct_set": 0.4237,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6136,
+   "brier": 0.3172,
+   "conf": 0.5414,
+   "p_correct_set": 0.5414,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3962,
+   "brier": 0.8471,
+   "conf": 0.4923,
+   "p_correct_set": 0.2475,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4834,
+   "brier": 0.2249,
+   "conf": 0.6167,
+   "p_correct_set": 0.6167,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3125,
+   "brier": 0.1095,
+   "conf": 0.7316,
+   "p_correct_set": 0.7316,
+   "uid": "DMM10481"
+  }
+ ],
+ "ablation_without_f4_lit_ethno": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2125,
+   "brier": 0.9872,
+   "conf": 0.7026,
+   "p_correct_set": 0.2974,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.9642,
+   "brier": 1.4783,
+   "conf": 0.8597,
+   "p_correct_set": 0.1403,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3494,
+   "brier": 0.3788,
+   "conf": 0.2296,
+   "p_correct_set": 0.2594,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5511,
+   "brier": 0.2915,
+   "conf": 0.5763,
+   "p_correct_set": 0.5763,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8337,
+   "brier": 0.4287,
+   "conf": 0.4344,
+   "p_correct_set": 0.4344,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.3653,
+   "brier": 1.0446,
+   "conf": 0.341,
+   "p_correct_set": 0.0939,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9668,
+   "brier": 0.5521,
+   "conf": 0.3803,
+   "p_correct_set": 0.3803,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7582,
+   "brier": 0.3865,
+   "conf": 0.4685,
+   "p_correct_set": 0.4685,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 3.2502,
+   "brier": 1.214,
+   "conf": 0.4445,
+   "p_correct_set": 0.0388,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8724,
+   "brier": 0.54,
+   "conf": 0.4325,
+   "p_correct_set": 0.4179,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6889,
+   "brier": 0.4957,
+   "conf": 0.5021,
+   "p_correct_set": 0.5021,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.7492,
+   "brier": 0.9925,
+   "conf": 0.5028,
+   "p_correct_set": 0.1739,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.0235,
+   "brier": 1.0692,
+   "conf": 0.4881,
+   "p_correct_set": 0.1322,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7393,
+   "brier": 0.2737,
+   "conf": 0.3662,
+   "p_correct_set": 0.4774,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3911,
+   "brier": 0.2095,
+   "conf": 0.6763,
+   "p_correct_set": 0.6763,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1111,
+   "brier": 0.0303,
+   "conf": 0.5303,
+   "p_correct_set": 0.8949,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.8136,
+   "brier": 1.0684,
+   "conf": 0.5806,
+   "p_correct_set": 0.1631,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6763,
+   "brier": 0.3832,
+   "conf": 0.5085,
+   "p_correct_set": 0.5085,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0549,
+   "brier": 0.5168,
+   "conf": 0.3482,
+   "p_correct_set": 0.3482,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.2794,
+   "brier": 1.0086,
+   "conf": 0.3482,
+   "p_correct_set": 0.1023,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2526,
+   "brier": 0.0997,
+   "conf": 0.7767,
+   "p_correct_set": 0.7767,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.5538,
+   "brier": 0.4168,
+   "conf": 0.1722,
+   "p_correct_set": 0.2114,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.7968,
+   "brier": 1.3766,
+   "conf": 0.6339,
+   "p_correct_set": 0.061,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5258,
+   "brier": 0.3345,
+   "conf": 0.5911,
+   "p_correct_set": 0.5911,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9461,
+   "brier": 0.2831,
+   "conf": 0.2954,
+   "p_correct_set": 0.3882,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4768,
+   "brier": 0.1442,
+   "conf": 0.3161,
+   "p_correct_set": 0.6208,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2286,
+   "brier": 0.0835,
+   "conf": 0.7956,
+   "p_correct_set": 0.7956,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2043,
+   "brier": 0.0683,
+   "conf": 0.8153,
+   "p_correct_set": 0.8153,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3802,
+   "brier": 0.151,
+   "conf": 0.6837,
+   "p_correct_set": 0.6837,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.409,
+   "brier": 0.2253,
+   "conf": 0.6643,
+   "p_correct_set": 0.6643,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.3041,
+   "brier": 0.6468,
+   "conf": 0.2714,
+   "p_correct_set": 0.2714,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1033,
+   "brier": 0.0193,
+   "conf": 0.9018,
+   "p_correct_set": 0.9018,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4109,
+   "brier": 0.2271,
+   "conf": 0.6631,
+   "p_correct_set": 0.6631,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.584,
+   "brier": 0.2936,
+   "conf": 0.5577,
+   "p_correct_set": 0.5577,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.2799,
+   "brier": 1.3246,
+   "conf": 0.7072,
+   "p_correct_set": 0.1023,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3464,
+   "brier": 0.1148,
+   "conf": 0.7072,
+   "p_correct_set": 0.7072,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0706,
+   "brier": 0.6822,
+   "conf": 0.4597,
+   "p_correct_set": 0.3428,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9807,
+   "brier": 0.6772,
+   "conf": 0.527,
+   "p_correct_set": 0.3751,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2335,
+   "brier": 0.0735,
+   "conf": 0.4903,
+   "p_correct_set": 0.7918,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0615,
+   "brier": 0.5558,
+   "conf": 0.346,
+   "p_correct_set": 0.346,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.182,
+   "brier": 0.0554,
+   "conf": 0.8336,
+   "p_correct_set": 0.8336,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.269,
+   "brier": 0.3577,
+   "conf": 0.196,
+   "p_correct_set": 0.2811,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2163,
+   "brier": 0.0756,
+   "conf": 0.8055,
+   "p_correct_set": 0.8055,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3088,
+   "brier": 0.1411,
+   "conf": 0.7344,
+   "p_correct_set": 0.7344,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4489,
+   "brier": 0.7664,
+   "conf": 0.3452,
+   "p_correct_set": 0.2348,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0689,
+   "brier": 0.6176,
+   "conf": 0.4031,
+   "p_correct_set": 0.3434,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5942,
+   "brier": 0.8846,
+   "conf": 0.4549,
+   "p_correct_set": 0.2031,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7834,
+   "brier": 0.454,
+   "conf": 0.4569,
+   "p_correct_set": 0.4569,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4205,
+   "brier": 0.2356,
+   "conf": 0.6567,
+   "p_correct_set": 0.6567,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5705,
+   "brier": 0.3147,
+   "conf": 0.5653,
+   "p_correct_set": 0.5653,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5565,
+   "brier": 0.3033,
+   "conf": 0.5732,
+   "p_correct_set": 0.5732,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 2.155,
+   "brier": 0.9674,
+   "conf": 0.282,
+   "p_correct_set": 0.1159,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0629,
+   "brier": 0.5758,
+   "conf": 0.3454,
+   "p_correct_set": 0.3454,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6575,
+   "brier": 0.3816,
+   "conf": 0.5181,
+   "p_correct_set": 0.5181,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5424,
+   "brier": 0.8599,
+   "conf": 0.4302,
+   "p_correct_set": 0.2139,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6412,
+   "brier": 0.8923,
+   "conf": 0.4261,
+   "p_correct_set": 0.1937,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6182,
+   "brier": 0.3049,
+   "conf": 0.5389,
+   "p_correct_set": 0.5389,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6929,
+   "brier": 0.3816,
+   "conf": 0.5001,
+   "p_correct_set": 0.5001,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.6537,
+   "brier": 1.0532,
+   "conf": 0.6166,
+   "p_correct_set": 0.1913,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4884,
+   "brier": 0.224,
+   "conf": 0.6136,
+   "p_correct_set": 0.6136,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.507,
+   "brier": 0.2374,
+   "conf": 0.6023,
+   "p_correct_set": 0.6023,
+   "uid": "DMM10481"
+  }
+ ],
+ "transfer_model_calibrated": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0697,
+   "brier": 0.863,
+   "conf": 0.6569,
+   "p_correct_set": 0.3431,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.9261,
+   "brier": 1.4596,
+   "conf": 0.8543,
+   "p_correct_set": 0.1457,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2789,
+   "brier": 0.3485,
+   "conf": 0.1642,
+   "p_correct_set": 0.2784,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.603,
+   "brier": 0.3086,
+   "conf": 0.5472,
+   "p_correct_set": 0.5472,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0974,
+   "brier": 0.5997,
+   "conf": 0.3337,
+   "p_correct_set": 0.3337,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.1667,
+   "logloss": 2.4792,
+   "brier": 1.0306,
+   "conf": 0.2998,
+   "p_correct_set": 0.0838,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0666,
+   "brier": 0.6076,
+   "conf": 0.3442,
+   "p_correct_set": 0.3442,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1294,
+   "brier": 0.6491,
+   "conf": 0.3548,
+   "p_correct_set": 0.3232,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 3.09,
+   "brier": 1.1577,
+   "conf": 0.3103,
+   "p_correct_set": 0.0455,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0052,
+   "brier": 0.6567,
+   "conf": 0.4906,
+   "p_correct_set": 0.366,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.7587,
+   "brier": 0.5655,
+   "conf": 0.5317,
+   "p_correct_set": 0.4683,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2448,
+   "brier": 0.7174,
+   "conf": 0.3549,
+   "p_correct_set": 0.288,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.1559,
+   "brier": 1.0559,
+   "conf": 0.3895,
+   "p_correct_set": 0.1158,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9036,
+   "brier": 0.2856,
+   "conf": 0.259,
+   "p_correct_set": 0.4051,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.459,
+   "brier": 0.271,
+   "conf": 0.6319,
+   "p_correct_set": 0.6319,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1397,
+   "brier": 0.0502,
+   "conf": 0.546,
+   "p_correct_set": 0.8696,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.9037,
+   "brier": 1.0115,
+   "conf": 0.4407,
+   "p_correct_set": 0.149,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7815,
+   "brier": 0.4521,
+   "conf": 0.4577,
+   "p_correct_set": 0.4577,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.5062,
+   "brier": 0.7387,
+   "conf": 0.2217,
+   "p_correct_set": 0.2217,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6624,
+   "brier": 0.8028,
+   "conf": 0.2217,
+   "p_correct_set": 0.1897,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3493,
+   "brier": 0.1739,
+   "conf": 0.7052,
+   "p_correct_set": 0.7052,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1408,
+   "brier": 0.3073,
+   "conf": 0.1615,
+   "p_correct_set": 0.3196,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 2.7297,
+   "brier": 1.311,
+   "conf": 0.4807,
+   "p_correct_set": 0.0652,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6153,
+   "brier": 0.4224,
+   "conf": 0.5405,
+   "p_correct_set": 0.5405,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0504,
+   "brier": 0.2999,
+   "conf": 0.1884,
+   "p_correct_set": 0.3498,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.6712,
+   "brier": 0.2601,
+   "conf": 0.3447,
+   "p_correct_set": 0.5111,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2496,
+   "brier": 0.0976,
+   "conf": 0.7791,
+   "p_correct_set": 0.7791,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2043,
+   "brier": 0.0683,
+   "conf": 0.8152,
+   "p_correct_set": 0.8152,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.8046,
+   "brier": 0.4852,
+   "conf": 0.4473,
+   "p_correct_set": 0.4473,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4961,
+   "brier": 0.306,
+   "conf": 0.6089,
+   "p_correct_set": 0.6089,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.5273,
+   "brier": 0.7454,
+   "conf": 0.2456,
+   "p_correct_set": 0.2171,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0816,
+   "brier": 0.0123,
+   "conf": 0.9217,
+   "p_correct_set": 0.9217,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4399,
+   "brier": 0.2533,
+   "conf": 0.6441,
+   "p_correct_set": 0.6441,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0764,
+   "brier": 0.6865,
+   "conf": 0.4614,
+   "p_correct_set": 0.3408,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 2.333,
+   "brier": 1.1475,
+   "conf": 0.4999,
+   "p_correct_set": 0.097,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6933,
+   "brier": 0.3416,
+   "conf": 0.4999,
+   "p_correct_set": 0.4999,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.7134,
+   "brier": 1.1382,
+   "conf": 0.6651,
+   "p_correct_set": 0.1803,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0182,
+   "brier": 0.6795,
+   "conf": 0.5064,
+   "p_correct_set": 0.3612,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1712,
+   "brier": 0.0755,
+   "conf": 0.571,
+   "p_correct_set": 0.8427,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1658,
+   "brier": 0.6196,
+   "conf": 0.3211,
+   "p_correct_set": 0.3117,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1916,
+   "brier": 0.0608,
+   "conf": 0.8256,
+   "p_correct_set": 0.8256,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.1719,
+   "brier": 0.3303,
+   "conf": 0.1805,
+   "p_correct_set": 0.3098,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2533,
+   "brier": 0.1001,
+   "conf": 0.7763,
+   "p_correct_set": 0.7763,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2395,
+   "brier": 0.0907,
+   "conf": 0.7871,
+   "p_correct_set": 0.7871,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.9222,
+   "brier": 0.9129,
+   "conf": 0.3019,
+   "p_correct_set": 0.1463,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.1419,
+   "brier": 0.6176,
+   "conf": 0.3192,
+   "p_correct_set": 0.3192,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.2,
+   "logloss": 1.898,
+   "brier": 0.9285,
+   "conf": 0.3484,
+   "p_correct_set": 0.1499,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.9436,
+   "brier": 0.5756,
+   "conf": 0.3951,
+   "p_correct_set": 0.3892,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4792,
+   "brier": 0.2899,
+   "conf": 0.6193,
+   "p_correct_set": 0.6193,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6156,
+   "brier": 0.3359,
+   "conf": 0.5403,
+   "p_correct_set": 0.5403,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.5992,
+   "brier": 0.323,
+   "conf": 0.5493,
+   "p_correct_set": 0.5493,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.4456,
+   "brier": 0.7121,
+   "conf": 0.2356,
+   "p_correct_set": 0.2356,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.373,
+   "brier": 0.7483,
+   "conf": 0.2899,
+   "p_correct_set": 0.2533,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7293,
+   "brier": 0.4409,
+   "conf": 0.4822,
+   "p_correct_set": 0.4822,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.982,
+   "brier": 0.9771,
+   "conf": 0.3564,
+   "p_correct_set": 0.1378,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2726,
+   "brier": 0.6862,
+   "conf": 0.3492,
+   "p_correct_set": 0.2801,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7076,
+   "brier": 0.3437,
+   "conf": 0.4928,
+   "p_correct_set": 0.4928,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6584,
+   "brier": 0.349,
+   "conf": 0.5177,
+   "p_correct_set": 0.5177,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9683,
+   "brier": 0.5334,
+   "conf": 0.3797,
+   "p_correct_set": 0.3797,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.9044,
+   "brier": 0.5511,
+   "conf": 0.4048,
+   "p_correct_set": 0.4048,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7954,
+   "brier": 0.4656,
+   "conf": 0.4514,
+   "p_correct_set": 0.4514,
+   "uid": "DMM10481"
+  }
+ ],
+ "ablation_plus_ORACLE_expert_traits": [
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4339,
+   "brier": 1.1602,
+   "conf": 0.7616,
+   "p_correct_set": 0.2384,
+   "uid": "DMM03091"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.257,
+   "brier": 1.0239,
+   "conf": 0.7155,
+   "p_correct_set": 0.2845,
+   "uid": "DMM02041"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3258,
+   "brier": 0.0978,
+   "conf": 0.4028,
+   "p_correct_set": 0.7219,
+   "uid": "DMM08291"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2724,
+   "brier": 0.1121,
+   "conf": 0.7616,
+   "p_correct_set": 0.7616,
+   "uid": "DMM02051"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0121,
+   "brier": 0.0002,
+   "conf": 0.988,
+   "p_correct_set": 0.988,
+   "uid": "DMM09401"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 1.0452,
+   "brier": 0.5735,
+   "conf": 0.3516,
+   "p_correct_set": 0.3516,
+   "uid": "DMM03101"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.0198,
+   "brier": 0.6056,
+   "conf": 0.4135,
+   "p_correct_set": 0.3607,
+   "uid": "DMM08301"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0127,
+   "brier": 0.0002,
+   "conf": 0.9874,
+   "p_correct_set": 0.9874,
+   "uid": "DMM08302"
+  },
+  {
+   "top1": 0.0,
+   "top3": 0.0,
+   "rr": 0.25,
+   "logloss": 1.9603,
+   "brier": 0.9882,
+   "conf": 0.3684,
+   "p_correct_set": 0.1408,
+   "uid": "DMM05181"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.048,
+   "brier": 0.0033,
+   "conf": 0.9531,
+   "p_correct_set": 0.9531,
+   "uid": "DMM05182"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0474,
+   "brier": 0.0043,
+   "conf": 0.9537,
+   "p_correct_set": 0.9537,
+   "uid": "DMM04141"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.2632,
+   "brier": 0.7601,
+   "conf": 0.4165,
+   "p_correct_set": 0.2828,
+   "uid": "DMM01011"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7075,
+   "brier": 0.4443,
+   "conf": 0.4929,
+   "p_correct_set": 0.4929,
+   "uid": "DMM06211"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1195,
+   "brier": 0.1157,
+   "conf": 0.671,
+   "p_correct_set": 0.8874,
+   "uid": "DMM09411"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0948,
+   "brier": 0.0163,
+   "conf": 0.9096,
+   "p_correct_set": 0.9096,
+   "uid": "DMM08321"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0002,
+   "brier": 0.4815,
+   "conf": 0.9906,
+   "p_correct_set": 0.9998,
+   "uid": "DMM03121"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2062,
+   "brier": 0.0488,
+   "conf": 0.8137,
+   "p_correct_set": 0.8137,
+   "uid": "DMM08311"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1005,
+   "brier": 0.0159,
+   "conf": 0.9044,
+   "p_correct_set": 0.9044,
+   "uid": "DMM08312"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2077,
+   "brier": 0.0488,
+   "conf": 0.8124,
+   "p_correct_set": 0.8124,
+   "uid": "DMM02071"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.7418,
+   "brier": 0.3624,
+   "conf": 0.4763,
+   "p_correct_set": 0.4763,
+   "uid": "DMM02072"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.008,
+   "brier": 0.0001,
+   "conf": 0.992,
+   "p_correct_set": 0.992,
+   "uid": "DMM06221"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2584,
+   "brier": 0.0433,
+   "conf": 0.3863,
+   "p_correct_set": 0.7722,
+   "uid": "DMM04151"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.3333,
+   "logloss": 1.6986,
+   "brier": 1.0032,
+   "conf": 0.4387,
+   "p_correct_set": 0.1829,
+   "uid": "DMM09421"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0136,
+   "brier": 0.0004,
+   "conf": 0.9865,
+   "p_correct_set": 0.9865,
+   "uid": "DMM01021"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2154,
+   "brier": 0.3746,
+   "conf": 0.8062,
+   "p_correct_set": 0.8062,
+   "uid": "DMM02061"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0897,
+   "brier": 0.0111,
+   "conf": 0.4743,
+   "p_correct_set": 0.9142,
+   "uid": "DMM09431"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.019,
+   "brier": 0.0007,
+   "conf": 0.9812,
+   "p_correct_set": 0.9812,
+   "uid": "DMM05191"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.013,
+   "brier": 0.0003,
+   "conf": 0.9871,
+   "p_correct_set": 0.9871,
+   "uid": "DMM05192"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.288,
+   "brier": 0.1209,
+   "conf": 0.7497,
+   "p_correct_set": 0.7497,
+   "uid": "DMM09441"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0034,
+   "brier": 0.0,
+   "conf": 0.9967,
+   "p_correct_set": 0.9967,
+   "uid": "DMM09442"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.4883,
+   "brier": 0.9893,
+   "conf": 0.6019,
+   "p_correct_set": 0.2258,
+   "uid": "DMM02081"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2071,
+   "brier": 0.07,
+   "conf": 0.8129,
+   "p_correct_set": 0.8129,
+   "uid": "DMM07261"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0422,
+   "brier": 0.0034,
+   "conf": 0.9587,
+   "p_correct_set": 0.9587,
+   "uid": "DMM08341"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0094,
+   "brier": 0.0002,
+   "conf": 0.9906,
+   "p_correct_set": 0.9906,
+   "uid": "DMM09451"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 1.3312,
+   "brier": 1.0449,
+   "conf": 0.7093,
+   "p_correct_set": 0.2642,
+   "uid": "DMM07271"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0448,
+   "brier": 0.0035,
+   "conf": 0.9562,
+   "p_correct_set": 0.9562,
+   "uid": "DMM07272"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0604,
+   "brier": 0.0052,
+   "conf": 0.9413,
+   "p_correct_set": 0.9413,
+   "uid": "DMM01031"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.7899,
+   "brier": 0.5952,
+   "conf": 0.545,
+   "p_correct_set": 0.4539,
+   "uid": "DMM05201"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.085,
+   "brier": 0.1455,
+   "conf": 0.7197,
+   "p_correct_set": 0.9185,
+   "uid": "DMM07281"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.3924,
+   "brier": 0.1847,
+   "conf": 0.6754,
+   "p_correct_set": 0.6754,
+   "uid": "DMM08371"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0681,
+   "brier": 0.0087,
+   "conf": 0.9341,
+   "p_correct_set": 0.9341,
+   "uid": "DMM06231"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6767,
+   "brier": 0.4097,
+   "conf": 0.4609,
+   "p_correct_set": 0.5083,
+   "uid": "DMM10491"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2582,
+   "brier": 0.1036,
+   "conf": 0.7725,
+   "p_correct_set": 0.7725,
+   "uid": "DMM06241"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1325,
+   "brier": 0.0308,
+   "conf": 0.8759,
+   "p_correct_set": 0.8759,
+   "uid": "DMM08381"
+  },
+  {
+   "top1": 0.0,
+   "top3": 1.0,
+   "rr": 0.5,
+   "logloss": 0.8071,
+   "brier": 0.5231,
+   "conf": 0.4607,
+   "p_correct_set": 0.4462,
+   "uid": "DMM06251"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1476,
+   "brier": 0.0338,
+   "conf": 0.8627,
+   "p_correct_set": 0.8627,
+   "uid": "DMM10501"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2376,
+   "brier": 0.0781,
+   "conf": 0.7885,
+   "p_correct_set": 0.7885,
+   "uid": "DMM10511"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.058,
+   "brier": 0.006,
+   "conf": 0.9436,
+   "p_correct_set": 0.9436,
+   "uid": "DMM08391"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.146,
+   "brier": 0.0369,
+   "conf": 0.8642,
+   "p_correct_set": 0.8642,
+   "uid": "DMM03131"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0721,
+   "brier": 0.009,
+   "conf": 0.9304,
+   "p_correct_set": 0.9304,
+   "uid": "DMM03132"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0197,
+   "brier": 0.0007,
+   "conf": 0.9805,
+   "p_correct_set": 0.9805,
+   "uid": "DMM03133"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.4734,
+   "brier": 0.2143,
+   "conf": 0.6228,
+   "p_correct_set": 0.6228,
+   "uid": "DMM08351"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.6394,
+   "brier": 0.3934,
+   "conf": 0.5276,
+   "p_correct_set": 0.5276,
+   "uid": "DMM10461"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1392,
+   "brier": 0.0334,
+   "conf": 0.87,
+   "p_correct_set": 0.87,
+   "uid": "DMM04161"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.2337,
+   "brier": 0.0703,
+   "conf": 0.7916,
+   "p_correct_set": 0.7916,
+   "uid": "DMM10471"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0833,
+   "brier": 0.0105,
+   "conf": 0.92,
+   "p_correct_set": 0.92,
+   "uid": "DMM10472"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1312,
+   "brier": 0.0281,
+   "conf": 0.877,
+   "p_correct_set": 0.877,
+   "uid": "DMM10473"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0951,
+   "brier": 0.0156,
+   "conf": 0.9093,
+   "p_correct_set": 0.9093,
+   "uid": "DMM08331"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.1674,
+   "brier": 0.0433,
+   "conf": 0.8458,
+   "p_correct_set": 0.8458,
+   "uid": "DMM04171"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0099,
+   "brier": 0.0002,
+   "conf": 0.9902,
+   "p_correct_set": 0.9902,
+   "uid": "DMM08361"
+  },
+  {
+   "top1": 1.0,
+   "top3": 1.0,
+   "rr": 1.0,
+   "logloss": 0.0717,
+   "brier": 0.0093,
+   "conf": 0.9308,
+   "p_correct_set": 0.9308,
+   "uid": "DMM10481"
+  }
+ ]
+}

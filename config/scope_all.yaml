@@ -1,0 +1,4 @@
+# All body systems (PHARMAKON_SCOPE=all). Overrides config/pilot.yaml; the skin/wound pilot stays the default.
+pilot_domain: all
+pubmed_max_pairs: 2000
+lotus_max_taxa: 300

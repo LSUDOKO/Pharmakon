@@ -1,0 +1,52 @@
+# LLM-proposed extension of conditions_lexicon.yaml (lexicon_ext_llm_v1).
+#
+# Source: the most frequent condition words in LLM-extracted claims (data/llm/claims_session*.jsonl)
+# that matched no stem in the base lexicon (interim/claims_llm_out_of_lexicon.parquet). Stems and
+# glosses were proposed in a Claude session (claude-opus-5-5) after reading the attested forms and
+# the LLM's own glosses; MeSH labels are only kept if the NLM MeSH lookup confirms an exact label
+# (generate-then-verify, same as the base lexicon). `mesh: []` = no defensible modern equivalent.
+#
+# Matches on these entries are tagged extractor_version "rule_extract_v1+lex_llm" and are EXCLUDED
+# from the temporal backtest (forecast.run.rule_claims). Pending the human condition-mapping audit.
+# Deliberately NOT added (too ambiguous as single-word stems): κοιλι- (binds OR loosens the bowels),
+# φακ- (lentil spots vs lentils), φλεγμ- (phlegm vs inflamed), καθαιρ- (purges), ρευματ- (fluxes), αρτηρι- (windpipe), νευρ- (sinews).
+conditions:
+  # ---- bites and stings -------------------------------------------------------------------------
+  - {stem: σκορπιοπληκτ, en: scorpion stings, icpc2: S, mesh: [Scorpion Stings], pilot: true}
+  - {stem: σκορπι, en: scorpion stings, icpc2: S, mesh: [Scorpion Stings], pilot: true, exact: [σκορπιου, σκορπιων, σκορπιοισ]}
+  - {stem: φαλαγγ, en: bites of venomous spiders (phalangia), icpc2: S, mesh: [Spider Bites], pilot: true}
+  - {stem: κυνοδηκτ, en: dog bites, icpc2: S, mesh: [Bites and Stings], pilot: true}
+  - {stem: λυσσοδηκτ, en: bites of rabid dogs, icpc2: S, mesh: [Rabies], pilot: true}
+  - {stem: ερπετοδηκτ, en: bites of reptiles (snakes), icpc2: S, mesh: [Snake Bites], pilot: true}
+  - {stem: εχεοδηκτ, en: viper bites, icpc2: S, mesh: [Snake Bites], pilot: true}
+  - {stem: εχιοδηκτ, en: viper bites, icpc2: S, mesh: [Snake Bites], pilot: true}
+  - {stem: σκολοπ, en: splinters / embedded thorns (draws out), icpc2: S, mesh: [Foreign Bodies], pilot: true, exact: [σκολοπασ, σκολοπων]}
+  # ---- skin -----------------------------------------------------------------------------------------
+  - {stem: αχωρ, en: achores (scalp eruptions), icpc2: S, mesh: [Scalp Dermatoses], pilot: true}
+  - {stem: πιτυρ, en: pityra (bran-like scaling, scurf), icpc2: S, mesh: [Dandruff], pilot: true, exact: [πιτυρα, πιτυρων, πιτυροισ]}
+  - {stem: κονδυλωμ, en: condylomata (knob-like swellings), icpc2: S, mesh: [], pilot: true}
+  - {stem: κατακαυμ, en: burns, icpc2: S, mesh: [Burns], pilot: true}
+  - {stem: πελιωμ, en: livid spots / bruises, icpc2: S, mesh: [Contusions], pilot: true}
+  - {stem: συριγγ, en: fistulas, icpc2: S, mesh: [Fistula], pilot: true}
+  - {stem: φυγεθλ, en: phygethla (glandular swellings), icpc2: S, mesh: [], pilot: true}
+  - {stem: παρωτιδ, en: parotid swellings, icpc2: S, mesh: [Parotid Diseases], pilot: true}
+  # ---- injuries, muscles, joints ----------------------------------------------------------------
+  - {stem: στρεμμ, en: sprains, icpc2: L, mesh: [Sprains and Strains]}
+  - {stem: ρηγμασ, en: ruptures / sprains, icpc2: L, mesh: [Sprains and Strains]}
+  - {stem: αλγημ, en: pains, icpc2: A, mesh: [Pain]}
+  - {stem: σκληρι, en: hardenings (indurations), icpc2: A, mesh: []}
+  - {stem: σπωμεν, en: those with spasms / convulsions, icpc2: N, mesh: [Spasm]}
+  # ---- blood, respiratory -----------------------------------------------------------------------
+  - {stem: αιμορραγ, en: haemorrhages, icpc2: A, mesh: [Hemorrhage]}
+  - {stem: αναγωγ, en: bringing up (of blood, from the chest), icpc2: R, mesh: [Hemoptysis], exact: [αναγωγασ, αναγωγην, αναγωγαισ]}
+  - {stem: καταρρ, en: catarrhs, icpc2: R, mesh: [Rhinitis]}
+  - {stem: εμπνευματωσ, en: inflations (wind), icpc2: D, mesh: [Flatulence]}
+  - {stem: εντεροκηλ, en: enterocele (intestinal hernia), icpc2: D, mesh: [Hernia]}
+  - {stem: ευκοιλι, en: loosens the bowels (laxative), icpc2: D, mesh: [Constipation]}
+  # ---- neurological, fevers, eyes, women --------------------------------------------------------
+  - {stem: επιλημπτ, en: epilepsy, icpc2: N, mesh: [Epilepsy]}
+  - {stem: τεταρται, en: quartan fever, icpc2: A, mesh: [Fever]}
+  - {stem: επισκοτ, en: things darkening the pupils (dimness of sight), icpc2: F, mesh: [Vision Disorders]}
+  - {stem: γυναικει, en: female flux, icpc2: X, mesh: [Leukorrhea], exact: [γυναικειον, γυναικεια, γυναικειοισ]}
+  - {stem: διουρητ, en: diuretic, icpc2: U, mesh: []}
+  - {stem: λιθ, en: stones (breaks / expels), icpc2: U, mesh: [Urinary Calculi], exact: [λιθουσ]}

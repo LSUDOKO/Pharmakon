@@ -207,8 +207,11 @@ def chart_backtest(fc: dict) -> str:
         body += [t(px + pw / 2, y0 + 52 * 5 + 2, f"{pos} of {n} pairs gained support", 12, DIM, "middle"),
                  t(px + pw / 2, y0 + 52 * 5 + 36, f"Δ history: [{d[0]:+.2f}, {d[1]:+.2f}]", 13, HI if d[0] > 0 else PAPER, "middle", True)]
     null = all(fc["results"][c]["bootstrap_ci"]["delta_auprc_histpop_minus_pop"][0] <= 0 <= fc["results"][c]["bootstrap_ci"]["delta_auprc_histpop_minus_pop"][1] for c in cut)
-    verdict = ("every interval includes zero: history adds no signal beyond research popularity in this pilot. Reported as a finding."
-               if null else "at least one interval excludes zero: see the table for which cutoff.")
+    neg = [c for c in cut if fc["results"][c]["bootstrap_ci"]["delta_auprc_histpop_minus_pop"][1] < 0]
+    pos = [c for c in cut if fc["results"][c]["bootstrap_ci"]["delta_auprc_histpop_minus_pop"][0] > 0]
+    verdict = ("every interval includes zero: history adds no signal beyond research popularity. Reported as a finding." if null else
+               f"history never helps: intervals include zero except {', '.join(neg)} where it hurts. Reported as a finding." if neg and not pos else
+               f"history helps at {', '.join(pos)}; see the table.")
     body += [t(x0, h - 40, "AUPRC with 95% bootstrap CI (axis 0–0.8). Red dashes = base rate. Δ history = AUPRC(history + popularity) − AUPRC(popularity);", 12, DIM),
              t(x0, h - 20, verdict, 12, DIM)]
     return svg(w, h, "The time machine: did history predict later science?",
@@ -252,6 +255,10 @@ def table_identification(ident: dict) -> str:
             ("…without scholarly agreement (f4)", "ablation_without_f4"), ("…without genus consensus (f6)", "ablation_without_f6"),
             ("LSJ dictionary baseline", "baseline_lsj"), ("Genus-frequency prior", "baseline_genus_prior"),
             ("Uniform guess", "baseline_uniform"), ("*Oracle: + expert-coded traits (ablation only)*", "ablation_plus_ORACLE_expert_traits")]
+    extra = [("**Pharmakon + f1 morphology (LLM traits)**", "model_plus_f1_morphology"),
+             ("Transfer model + f1 morphology", "transfer_plus_f1_morphology"),
+             ("LLM judge (Claude session, Greek text + candidate list; comparison only, may have memorised)", "baseline_llm_judge")]
+    rows = rows[:3] + [x for x in extra[:2] if "top1" in r.get(x[1], {})] + rows[3:-1] + [x for x in extra[2:] if "top1" in r.get(x[1], {})] + rows[-1:]
     out = ["| model | top-1 [95% CI] | top-3 | mean reciprocal rank | Brier ↓ | ECE ↓ |", "|---|---|---|---|---|---|"]
     for lab, k in rows:
         m = r[k]
@@ -304,7 +311,13 @@ def table_leads(leads: list[dict], n: int = 20) -> str:
 
 def gallery_leads(leads: list[dict], n: int = 12, per_row: int = 4) -> str:
     """HTML photo grid of the top leads that have a Wikimedia photo (markdown table cells collapse images)."""
-    pics = [ld for ld in leads if ld.get("image")][:n]
+    seen: set[str] = set()
+    pics = []
+    for ld in leads:  # one photo per species: the best-ranked lead for it
+        if ld.get("image") and ld["species"] not in seen:
+            seen.add(ld["species"])
+            pics.append(ld)
+    pics = pics[:n]
     rows = []
     for i in range(0, len(pics), per_row):
         cells = []
@@ -380,6 +393,44 @@ def example_card(name_id: str = "dmm-3-23") -> str:
     ])
 
 
+def table_llm(S: dict) -> str:
+    m = S["extract-claims"].get("llm_merge", {})
+    mo = S["identify"].get("morphology", {})
+    if not m or "llm_claims" not in m:
+        return "_LLM layer not run._"
+    rows = [
+        ("Passages read by the LLM (Claude session)", f"{m['llm_session_passages']:,}"),
+        ("Claims the LLM extracted", f"{m['llm_claims']:,}"),
+        ("…with verbatim Greek spans that passed the substring check", f"{m['llm_span_verified_rate']:.0%}"),
+        ("Rule-extracted uses the LLM also found", f"{m['rule_ok_recovered_by_llm']:.1%}"),
+        ("'Ambiguous' rule claims the LLM confirmed as uses", f"{m['rule_ambiguous_confirmed_by_llm']} of {m['rule_ambiguous_in_covered']}"),
+        ("LLM claims outside the lexicon (kept apart, proposals for the lexicon)", f"{m['llm_claims_out_of_lexicon']:,}"),
+        ("Usable (`ok`) claims before → after", f"{S['extract-claims'].get('ok_before_llm', '—')} → {S['extract-claims']['status_counts'].get('ok', 0):,}"),
+    ]
+    if mo.get("species"):
+        rows += [
+            ("Dioscorides chapters with an LLM trait record (spans verified)", f"{mo['greek_chapters_with_traits']}"),
+            ("Candidate species with a Wikipedia description / with traits", f"{mo['species_with_description']} / {mo['species_with_traits']} of {mo['species']}"),
+            ("Candidate rows with ≥1 comparable trait (mean traits compared)", f"{mo['candidate_rows_with_comparison']} of {mo['candidate_rows']} ({mo['mean_traits_compared']})"),
+        ]
+    out = ["| LLM step | result |", "|---|---|"]
+    return "\n".join(out + [f"| {a} | {b} |" for a, b in rows])
+
+
+def table_scopes() -> str:
+    pilot = json.loads((ROOT / "reports" / "scope_pilot" / "forecast.json").read_text())
+    allsc = stage("forecast")
+    out = ["| scope | cutoff | test pairs | gained support | AUPRC popularity | AUPRC history + popularity | Δ history [95% CI] |",
+           "|---|---|---|---|---|---|---|"]
+    for name, fc in (("skin/wound pilot", pilot), ("all body systems", allsc)):
+        for c in map(str, fc["cutoffs"]):
+            r = fc["results"][c]
+            d = r["bootstrap_ci"]["delta_auprc_histpop_minus_pop"]
+            out.append(f"| {name} | {c} | {r['test']['random']['n']} | {r['test']['random']['positives']} | {r['test']['popularity']['auprc']:.2f} | "
+                       f"{r['test']['history+popularity']['auprc']:.2f} | {d[0]:+.2f} to {d[1]:+.2f} |")
+    return "\n".join(out)
+
+
 def table_sources() -> str:
     rows = [
         ("Dioscorides, *De materia medica* (Wellmann), TEI", "First1KGreek / Open Greek and Latin", "CC BY-SA 4.0"),
@@ -395,6 +446,7 @@ def table_sources() -> str:
         ("Target → disease association", "Open Targets Platform", "CC0"),
         ("Disease vocabulary", "NLM MeSH", "public domain"),
         ("Evidence labels (co-mention)", "PubMed E-utilities", "NLM terms"),
+        ("Species descriptions for the morphology feature", "English Wikipedia (MediaWiki API)", "CC BY-SA 4.0"),
         ("Toxicity citations (GHS)", "PubChem", "public domain"),
     ]
     out = ["| data | source | licence |", "|---|---|---|"]
@@ -437,6 +489,8 @@ def build() -> dict:
         "TABLE_CONDITIONS": table_conditions(leads),
         "TABLE_SOURCES": table_sources(),
         "TABLE_MCP": table_mcp(),
+        "TABLE_LLM": table_llm(S),
+        "TABLE_SCOPES": table_scopes(),
         "EXAMPLE": example_card(),
     }
     pt = S["persistence"]["permutation_test"]

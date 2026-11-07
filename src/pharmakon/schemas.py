@@ -56,6 +56,45 @@ class TraitRecord(BaseModel):
     habitat: str | None = None
 
 
+class Trait(BaseModel):
+    """One morphological trait: controlled values plus the verbatim words that state it."""
+
+    values: list[str] = Field(default_factory=list)
+    span: str = ""
+
+
+class MorphRecord(BaseModel):
+    """Trait record for f1 (spec/06). Values come from ``identify.morphology.VOCAB``; null = not stated."""
+
+    habit: Trait | None = None
+    life_span: Trait | None = None
+    height: Trait | None = None
+    stem: Trait | None = None
+    leaf_form: Trait | None = None
+    leaf_surface: Trait | None = None
+    flower_colour: Trait | None = None
+    inflorescence: Trait | None = None
+    fruit: Trait | None = None
+    root: Trait | None = None
+    spines: Trait | None = None
+    smell: Trait | None = None
+    taste: Trait | None = None
+    habitat: Trait | None = None
+
+
+class CandidateProbability(BaseModel):
+    candidate: str
+    p: float
+
+
+class JudgeOutput(BaseModel):
+    """LLM-judge baseline (spec/06 Option C): probabilities over the given candidates plus 'none'."""
+
+    probabilities: list[CandidateProbability] = Field(default_factory=list)
+    p_none_of_these: float = 0.0
+    rationale: str = ""
+
+
 class Claim(BaseModel):
     """Row of ``claims.parquet``."""
 

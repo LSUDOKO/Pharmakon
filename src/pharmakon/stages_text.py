@@ -65,11 +65,22 @@ def ingest_texts() -> dict:
 def extract_claims(use_llm: bool = False) -> dict:
     log = get_logger("extract-claims")
     if use_llm and not llm.available():
-        raise SystemExit("--llm requested but ANTHROPIC_API_KEY is not set")
+        raise SystemExit("--llm requested but no LLM key (GROQ_API_KEY / ANTHROPIC_API_KEY) is set")
     passages = pd.read_parquet(PROCESSED / "passages.parquet")
     gold_ch = set(pd.read_parquet(GOLD / "lardos_gold.parquet")["dmm_chapter_id"].dropna()) if (GOLD / "lardos_gold.parquet").exists() else set()
     scope = prefilter_pilot(passages, pilot()["dmm_books_plants"], gold_ch)
     claims, stats = extract(scope, use_llm=use_llm)
+    # Claude-session LLM claims (data/llm/claims_session*.jsonl), merged under the verify-first policy.
+    from pharmakon.extract.claims import _claim_id, substance_type_for
+    from pharmakon.extract.merge_llm import merge
+
+    claims, llm_archived, llm_ool, llm_stats = merge(claims, scope, _claim_id, substance_type_for)
+    stats["llm_merge"] = llm_stats
+    stats["ok_before_llm"] = int(((claims["extractor_version"] == "rule_extract_v1") & (claims["rule_status"] == "ok")).sum())
+    if len(llm_archived):
+        write_table(llm_archived.assign(source_id="dmm_wellmann", retrieved_at=now_iso()), INTERIM / "claims_llm_archived.parquet")
+    if len(llm_ool):
+        write_table(llm_ool.assign(source_id="dmm_wellmann", retrieved_at=now_iso()), INTERIM / "claims_llm_out_of_lexicon.parquet")
     kept = claims[claims.status != "span_mismatch"]
     archived = claims[claims.status == "span_mismatch"]
     write_table(kept, PROCESSED / "claims_dmm.parquet")

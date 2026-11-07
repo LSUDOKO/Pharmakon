@@ -1,0 +1,12 @@
+{
+  "stage": "leads",
+  "generated_at": "2026-11-07T12:10:13+00:00",
+  "candidate_pairs_scored": 400,
+  "unsupported_today": 346,
+  "kendall_tau_weighted_vs_top1": 0.5808,
+  "top20_changed_when_using_top1_identity": 6,
+  "top20_resting_on_p_species_below_0.5": 7,
+  "top20_with_toxicity_flag": 5,
+  "top20_with_closed_evidence_path": 0,
+  "toxic_genera_verified_in_pubchem": 23
+}

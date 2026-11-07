@@ -1,0 +1,19 @@
+{
+  "stage": "link-chemistry",
+  "generated_at": "2026-11-07T11:40:44+00:00",
+  "taxa_selected": 120,
+  "taxa_with_compounds": 108,
+  "share_taxa_with_compound": 0.9,
+  "taxon_compound_pairs": 7867,
+  "distinct_compounds": 5420,
+  "compound_pairs_with_reference_year": 0.9973,
+  "compounds_in_chembl": 1839,
+  "compounds_queried_for_activity": 756,
+  "share_queried_compounds_with_human_target": 0.2937,
+  "compound_target_rows": 2579,
+  "human_targets": 376,
+  "target_disease_rows": 15166,
+  "opentargets_gaps": 0,
+  "paths_closing_loop": 1244,
+  "taxon_disease_pairs_with_path": 117
+}

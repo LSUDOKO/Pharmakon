@@ -144,6 +144,51 @@ def baseline_genus(feats: pd.DataFrame, units: list[Unit], groups: dict[str, str
     return preds
 
 
+def baseline_llm_judge(feats: pd.DataFrame, units_df: pd.DataFrame, units: list[Unit]) -> tuple[dict[str, np.ndarray], dict]:
+    """spec/06 Option C: the LLM sees the Greek chapter and the candidate list, returns probabilities.
+
+    Comparison only: it cannot be validated independently and may have memorised published identifications.
+    """
+    from pharmakon import llm
+    from pharmakon.schemas import JudgeOutput
+
+    ch = pd.read_parquet(PROCESSED / "dmm_chapters.parquet").set_index("chapter_id")
+    cl = units_df.set_index("unit_id")["cluster_id"].to_dict()
+    preds, meta, fails = {}, {}, []
+    session = PROCESSED.parent / "llm" / "judge_session.jsonl"
+    if session.exists():  # Claude-session judge (committed; prompt judge_v1)
+        got_all = {(d := json.loads(x))["unit_id"]: d for x in session.read_text(encoding="utf-8").splitlines() if x.strip()}
+        for u in units:
+            names = feats.loc[feats["unit_id"] == u.uid, "accepted_name"].tolist()
+            d = got_all.get(u.uid)
+            if d is None:
+                fails.append(u.uid)
+                continue
+            got = {c["candidate"].strip(): max(0.0, float(c["p"])) for c in d.get("probabilities", [])}
+            p = np.array([got.get(n, 0.0) for n in names] + [max(0.0, float(d.get("p_none_of_these", 0)))], dtype=float) + 1e-6
+            preds[u.uid] = p / p.sum()
+        method = next(iter(got_all.values()), {}).get("method", "judge_v1:claude-session")
+        return preds, {"provider": "claude-session", "model": method, "prompt_version": "judge_v1", "failed_units": fails}
+    for u in units:
+        names = feats.loc[feats["unit_id"] == u.uid, "accepted_name"].tolist()
+        cid = str(cl.get(u.uid, "")).removeprefix("cl:")
+        if cid not in ch.index:
+            fails.append(u.uid)
+            continue
+        text = str(ch.loc[cid, "text_grc"])[:2500]  # Greek is token-dense; keep request + reply under Groq's 8k tokens/min
+        user = (f"Dioscorides, De materia medica {cid.removeprefix('dmm:')}:\n\n{text}\n\nCandidates:\n"
+                + "\n".join(f"- {n}" for n in names))
+        try:
+            res, meta = llm.structured("judge_v1", user, JudgeOutput, max_tokens=2000, effort="medium")
+        except Exception:  # noqa: BLE001 — counted below, never silently dropped
+            fails.append(u.uid)
+            continue
+        got = {c.candidate.strip(): max(0.0, c.p) for c in res.probabilities}
+        p = np.array([got.get(n, 0.0) for n in names] + [max(0.0, res.p_none_of_these)], dtype=float) + 1e-6
+        preds[u.uid] = p / p.sum()
+    return preds, {"provider": meta.get("provider"), "model": meta.get("model"), "prompt_version": "judge_v1", "failed_units": fails}
+
+
 def fit_final(units_: list[Unit], groups: dict[str, str], seed: int, n_boot: int = 200) -> tuple[CLogit, list[CLogit]]:
     """Fit on all gold names; temperature from LONO utilities; bootstrap refits give 90% intervals."""
     final = CLogit().fit(units_)
@@ -180,6 +225,14 @@ def run() -> dict:
     oracle = pd.read_parquet(GOLD / "lardos_oracle.parquet")
     okey = {(r.gold_id, r.candidate_key): float(r.oracle_bot_score) for r in oracle.itertuples()}
     feats["oracle_bot"] = [max((okey.get((u, k), 0.0) for k in ks), default=0.0) for u, ks in zip(feats["unit_id"], feats["candidate_keys"], strict=True)]
+    # f1 morphology (LLM-extracted traits, spans verified). Only used when Greek traits exist.
+    from pharmakon.identify import morphology as M
+
+    morph_stats: dict = {"status": "not_run", "reason": f"{M.GREEK_OUT} missing"}
+    if M.GREEK_OUT.exists():
+        f1, morph_stats = M.build_f1(feats, units)
+        feats["f1_morph"] = f1.to_numpy()
+    use_f1 = "f1_morph" in feats and bool(cfg.get("identify_use_morphology", False))
     gold = pd.read_parquet(GOLD / "lardos_gold.parquet")
     ys, dropped = _targets(feats, gold)
     groups = units.set_index("unit_id")["group"].to_dict()
@@ -192,7 +245,19 @@ def run() -> dict:
     results["baseline_lsj"] = summarise(baseline_lsj(feats, gold_units), gold_units, seed, n_boot)
     results["baseline_genus_prior"] = summarise(baseline_genus(feats, gold_units, groups), gold_units, seed, n_boot)
     results["baseline_uniform"] = summarise(baseline_uniform(gold_units), gold_units, seed, n_boot)
-    results["baseline_llm_judge"] = {"status": "not_run", "reason": "ANTHROPIC_API_KEY not set (spec/06 Option C is comparison-only)"}
+    from pharmakon import llm
+
+    if llm.available() or (PROCESSED.parent / "llm" / "judge_session.jsonl").exists():
+        jp, jmeta = baseline_llm_judge(feats, units, gold_units)
+        ju = [u for u in gold_units if u.uid in jp]
+        results["baseline_llm_judge"] = summarise(jp, ju, seed, n_boot) | {"meta": jmeta}
+    else:
+        results["baseline_llm_judge"] = {"status": "not_run", "reason": "no LLM key (spec/06 Option C is comparison-only)"}
+    if "f1_morph" in feats:
+        u_f1 = _units(feats, ys, MAIN + ["f1_morph"])
+        results["model_plus_f1_morphology"] = summarise(lono(u_f1, groups), u_f1, seed, n_boot)
+        u_tf1 = _units(feats, ys, TRANSFER + ["f1_morph"])
+        results["transfer_plus_f1_morphology"] = summarise(lono(u_tf1, groups), u_tf1, seed, n_boot)
     for g in ("f2", "f3", "f4", "f6"):
         cols = [c for c in MAIN if c not in F.GROUPS[g]]
         u2 = _units(feats, ys, cols)
@@ -212,44 +277,57 @@ def run() -> dict:
     pn["expert_confidence"] = pn["uid"].map(conf)
     strat = pn.groupby("expert_confidence")["top1"].agg(["mean", "count"]).round(3).reset_index().to_dict("records")
 
-    final, boots = fit_final(_units(feats, ys, MAIN), groups, seed)
-    final_tr, boots_tr = fit_final(u_tr, groups, seed)
     kinds = units.set_index("unit_id")["unit_kind"].to_dict()
 
-    post_rows, expl_rows = [], []
-    ts = now_iso()
-    for uid, grp in feats.groupby("unit_id", sort=False):
-        gold_unit = kinds.get(uid) == "gold"
-        cols, mdl, bts = (MAIN, final, boots) if gold_unit else (TRANSFER, final_tr, boots_tr)
-        X = grp[cols].to_numpy(float)
-        p = mdl.predict(X)
-        bs = np.array([b.predict(X) for b in bts])
-        lo, hi = np.percentile(bs, 5, axis=0), np.percentile(bs, 95, axis=0)
-        contrib = mdl.contributions(X)
-        version = MODEL_VERSION if gold_unit else TRANSFER_VERSION
-        low_cov = len(grp) < 2
-        for j, r in enumerate(grp.itertuples()):
-            post_rows.append({"unit_id": uid, "taxon_key": r.taxon_key, "accepted_name": r.accepted_name, "family": r.family, "genus": r.genus,
-                              "p": float(p[j]), "p_lo": float(min(lo[j], p[j])), "p_hi": float(max(hi[j], p[j])),
+    def posterior(main_cols: list[str], transfer_cols: list[str], tag: str) -> tuple[pd.DataFrame, list[dict], CLogit, CLogit]:
+        final, boots = fit_final(_units(feats, ys, main_cols), groups, seed)
+        final_tr, boots_tr = fit_final(_units(feats, ys, transfer_cols), groups, seed)
+        mv, tv = MODEL_VERSION + tag, TRANSFER_VERSION + tag
+        post_rows, expl_rows = [], []
+        for uid, grp in feats.groupby("unit_id", sort=False):
+            gold_unit = kinds.get(uid) == "gold"
+            cols, mdl, bts = (main_cols, final, boots) if gold_unit else (transfer_cols, final_tr, boots_tr)
+            X = grp[cols].to_numpy(float)
+            p = mdl.predict(X)
+            bs = np.array([b.predict(X) for b in bts])
+            lo, hi = np.percentile(bs, 5, axis=0), np.percentile(bs, 95, axis=0)
+            contrib = mdl.contributions(X)
+            version = mv if gold_unit else tv
+            low_cov = len(grp) < 2
+            for j, r in enumerate(grp.itertuples()):
+                post_rows.append({"unit_id": uid, "taxon_key": r.taxon_key, "accepted_name": r.accepted_name, "family": r.family, "genus": r.genus,
+                                  "p": float(p[j]), "p_lo": float(min(lo[j], p[j])), "p_hi": float(max(hi[j], p[j])),
+                                  "low_candidate_coverage": low_cov, "model_version": version})
+                expl_rows.append({"unit_id": uid, "taxon_key": r.taxon_key, "model_version": version,
+                                  **{f"w_{c}": (float(contrib[j, cols.index(c)]) if c in cols else 0.0) for c in ALLF},
+                                  **{c: float(getattr(r, c)) for c in ALLF if hasattr(r, c)}, "candidate_sources": list(r.candidate_sources),
+                                  "input_names": list(r.input_names), "lit_ref_years": list(r.lit_ref_years)})
+            post_rows.append({"unit_id": uid, "taxon_key": NONE, "accepted_name": None, "family": None, "genus": None,
+                              "p": float(p[-1]), "p_lo": float(min(lo[-1], p[-1])), "p_hi": float(max(hi[-1], p[-1])),
                               "low_candidate_coverage": low_cov, "model_version": version})
-            expl_rows.append({"unit_id": uid, "taxon_key": r.taxon_key, "model_version": version,
-                              **{f"w_{c}": (float(contrib[j, cols.index(c)]) if c in cols else 0.0) for c in MAIN},
-                              **{c: float(getattr(r, c)) for c in MAIN}, "candidate_sources": list(r.candidate_sources),
-                              "input_names": list(r.input_names), "lit_ref_years": list(r.lit_ref_years)})
-        post_rows.append({"unit_id": uid, "taxon_key": NONE, "accepted_name": None, "family": None, "genus": None,
-                          "p": float(p[-1]), "p_lo": float(min(lo[-1], p[-1])), "p_hi": float(max(hi[-1], p[-1])),
-                          "low_candidate_coverage": low_cov, "model_version": version})
-    # Units with no verified candidate at all: everything on ∅.
-    have = set(feats["unit_id"])
-    for u in units.to_dict("records"):
-        if u["unit_id"] not in have:
-            post_rows.append({"unit_id": u["unit_id"], "taxon_key": NONE, "accepted_name": None, "family": None, "genus": None,
-                              "p": 1.0, "p_lo": 1.0, "p_hi": 1.0, "low_candidate_coverage": True, "model_version": "no_verified_candidates"})
-    post = pd.DataFrame(post_rows)
-    post = post.merge(units[["unit_id", "unit_kind", "cluster_id"]], on="unit_id", how="left")
-    post["calibrated"] = post["model_version"] != "no_verified_candidates"
-    post["source_id"], post["retrieved_at"] = "pharmakon_identify", ts
-    post["method"] = post["model_version"].map({MODEL_VERSION: f"{MODEL_VERSION}:T={final.T:.3f}", TRANSFER_VERSION: f"{TRANSFER_VERSION}:T={final_tr.T:.3f}"}).fillna("no_verified_candidates")
+        have = set(feats["unit_id"])
+        for u in units.to_dict("records"):
+            if u["unit_id"] not in have:
+                post_rows.append({"unit_id": u["unit_id"], "taxon_key": NONE, "accepted_name": None, "family": None, "genus": None,
+                                  "p": 1.0, "p_lo": 1.0, "p_hi": 1.0, "low_candidate_coverage": True, "model_version": "no_verified_candidates"})
+        post = pd.DataFrame(post_rows)
+        post = post.merge(units[["unit_id", "unit_kind", "cluster_id"]], on="unit_id", how="left")
+        post["calibrated"] = post["model_version"] != "no_verified_candidates"
+        post["source_id"], post["retrieved_at"] = "pharmakon_identify", ts
+        post["method"] = post["model_version"].map({mv: f"{mv}:T={final.T:.3f}", tv: f"{tv}:T={final_tr.T:.3f}"}).fillna("no_verified_candidates")
+        return post, expl_rows, final, final_tr
+
+    ts = now_iso()
+    ALLF = MAIN + (["f1_morph"] if "f1_morph" in feats else [])
+    # Frozen non-LLM posterior: the only one the temporal backtest may use (CLAUDE.md rule 6).
+    post_nollm, expl_nollm, final0, final0_tr = posterior(MAIN, TRANSFER, "")
+    write_table(post_nollm, PROCESSED / "id_posterior_nollm.parquet")
+    if use_f1:
+        post, expl_rows, final, final_tr = posterior(MAIN + ["f1_morph"], TRANSFER + ["f1_morph"], "+f1")
+        main_used, tr_used = MAIN + ["f1_morph"], TRANSFER + ["f1_morph"]
+    else:
+        post, expl_rows, final, final_tr = post_nollm, expl_nollm, final0, final0_tr
+        main_used, tr_used = MAIN, TRANSFER
     write_table(post, PROCESSED / "id_posterior.parquet")
     expl = pd.DataFrame(expl_rows)
     expl["source_id"], expl["retrieved_at"], expl["method"] = "pharmakon_identify", ts, MODEL_VERSION
@@ -260,12 +338,16 @@ def run() -> dict:
     cl = post[post["unit_kind"] == "cluster"]
     top = cl.sort_values("p", ascending=False).groupby("unit_id").head(1)
     summary = {
-        "model_version": MODEL_VERSION,
-        "features": {c: F.FEATURES[c] for c in MAIN},
-        "weights": {c: round(float(w), 4) for c, w in zip(MAIN, final.w, strict=True)},
+        "model_version": MODEL_VERSION + ("+f1" if use_f1 else ""),
+        "features": {c: (F.FEATURES[c] if c in F.FEATURES else "morphological agreement: Dioscorides' description vs the species' Wikipedia description (LLM-extracted traits, spans verified)") for c in main_used},
+        "weights": {c: round(float(w), 4) for c, w in zip(main_used, final.w, strict=True)},
         "none_utility_b": round(final.b, 4),
         "temperature": round(final.T, 4),
-        "transfer_model": {"features": TRANSFER, "weights": {c: round(float(w), 4) for c, w in zip(TRANSFER, final_tr.w, strict=True)},
+        "uses_morphology": use_f1,
+        "morphology": morph_stats,
+        "frozen_non_llm_model": {"weights": {c: round(float(w), 4) for c, w in zip(MAIN, final0.w, strict=True)}, "temperature": round(final0.T, 4),
+                                 "note": "id_posterior_nollm.parquet; the only posterior the temporal backtest uses"},
+        "transfer_model": {"features": tr_used, "weights": {c: round(float(w), 4) for c, w in zip(tr_used, final_tr.w, strict=True)},
                            "none_utility_b": round(final_tr.b, 4), "temperature": round(final_tr.T, 4)},
         "gold_names_evaluated": len(gold_units),
         "gold_names_dropped": dropped,

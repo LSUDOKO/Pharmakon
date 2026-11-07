@@ -1,83 +1,82 @@
 {
   "stage": "persistence",
-  "generated_at": "2026-11-07T11:41:21+00:00",
-  "clusters_with_identified_taxa": 268,
-  "rows": 1295,
+  "generated_at": "2026-11-07T17:51:30+00:00",
+  "clusters_with_identified_taxa": 300,
+  "rows": 1533,
   "pattern_counts": {
-    "novel": 396,
-    "lost": 375,
-    "modified": 211,
-    "persisted": 203,
-    "persisted_to_galen_only": 101,
+    "lost": 499,
+    "novel": 387,
+    "modified": 261,
+    "persisted": 247,
+    "persisted_to_galen_only": 130,
     "persisted_to_byzantine_only": 9
   },
   "pattern_counts_dermatology": {
-    "persisted": 67,
-    "lost": 65,
-    "persisted_to_galen_only": 43,
-    "novel": 23,
-    "modified": 11,
-    "persisted_to_byzantine_only": 1
+    "lost": 77,
+    "persisted": 74,
+    "persisted_to_galen_only": 51,
+    "novel": 20,
+    "modified": 13
   },
   "by_use_group": {
     "BS": {
-      "lost": 16,
-      "modified": 9,
+      "lost": 18,
+      "modified": 10,
       "persisted": 4,
       "persisted_to_byzantine_only": 0,
-      "persisted_to_galen_only": 5
+      "persisted_to_galen_only": 6
     },
     "CV": {
-      "lost": 16,
-      "modified": 5,
-      "persisted": 4,
+      "lost": 19,
+      "modified": 7,
+      "persisted": 6,
       "persisted_to_byzantine_only": 0,
       "persisted_to_galen_only": 0
     },
     "DE": {
-      "lost": 65,
-      "modified": 11,
-      "persisted": 67,
-      "persisted_to_byzantine_only": 1,
-      "persisted_to_galen_only": 43
+      "lost": 77,
+      "modified": 13,
+      "persisted": 74,
+      "persisted_to_byzantine_only": 0,
+      "persisted_to_galen_only": 51
     },
     "FV": {
-      "lost": 6,
-      "modified": 4,
-      "persisted": 1,
+      "lost": 36,
+      "modified": 19,
+      "persisted": 7,
       "persisted_to_byzantine_only": 0,
-      "persisted_to_galen_only": 0
+      "persisted_to_galen_only": 3
     },
     "GI": {
-      "lost": 45,
-      "modified": 14,
-      "persisted": 25,
+      "lost": 60,
+      "modified": 19,
+      "persisted": 34,
       "persisted_to_byzantine_only": 1,
-      "persisted_to_galen_only": 5
+      "persisted_to_galen_only": 9
     },
     "GY": {
-      "lost": 41,
-      "modified": 39,
-      "persisted": 14,
+      "lost": 52,
+      "modified": 42,
+      "persisted": 16,
       "persisted_to_byzantine_only": 0,
-      "persisted_to_galen_only": 9
+      "persisted_to_galen_only": 12
     },
     "IF": {
       "lost": 4,
-      "modified": 3,
+      "modified": 4,
       "persisted": 0,
       "persisted_to_byzantine_only": 0,
       "persisted_to_galen_only": 0
     },
     "LG": {
-      "lost": 16,
-      "modified": 10,
-      "persisted": 11,
+      "lost": 18,
+      "modified": 11,
+      "persisted": 12,
       "persisted_to_byzantine_only": 0,
-      "persisted_to_galen_only": 3
+      "persisted_to_galen_only": 4
     },
     "MA": {
-      "lost": 16,
+      "lost": 19,
       "modified": 10,
       "persisted": 5,
       "persisted_to_byzantine_only": 1,
@@ -91,76 +90,76 @@
       "persisted_to_galen_only": 0
     },
     "MS": {
-      "lost": 30,
-      "modified": 17,
-      "persisted": 13,
+      "lost": 41,
+      "modified": 20,
+      "persisted": 15,
       "persisted_to_byzantine_only": 0,
-      "persisted_to_galen_only": 6
+      "persisted_to_galen_only": 7
     },
     "NC": {
-      "lost": 10,
-      "modified": 5,
-      "persisted": 5,
+      "lost": 15,
+      "modified": 7,
+      "persisted": 6,
       "persisted_to_byzantine_only": 0,
-      "persisted_to_galen_only": 1
+      "persisted_to_galen_only": 2
     },
     "OC": {
-      "lost": 10,
-      "modified": 14,
-      "persisted": 4,
+      "lost": 13,
+      "modified": 16,
+      "persisted": 6,
       "persisted_to_byzantine_only": 2,
       "persisted_to_galen_only": 5
     },
     "OP": {
-      "lost": 19,
-      "modified": 22,
-      "persisted": 4,
-      "persisted_to_byzantine_only": 0,
+      "lost": 25,
+      "modified": 25,
+      "persisted": 5,
+      "persisted_to_byzantine_only": 1,
       "persisted_to_galen_only": 3
     },
     "OT": {
-      "lost": 6,
-      "modified": 11,
+      "lost": 8,
+      "modified": 13,
       "persisted": 4,
       "persisted_to_byzantine_only": 0,
       "persisted_to_galen_only": 2
     },
     "RE": {
-      "lost": 25,
-      "modified": 8,
-      "persisted": 17,
+      "lost": 33,
+      "modified": 10,
+      "persisted": 22,
       "persisted_to_byzantine_only": 2,
-      "persisted_to_galen_only": 3
+      "persisted_to_galen_only": 7
     },
     "RL": {
-      "lost": 5,
+      "lost": 6,
       "modified": 4,
       "persisted": 1,
       "persisted_to_byzantine_only": 0,
       "persisted_to_galen_only": 1
     },
     "UR": {
-      "lost": 32,
-      "modified": 18,
-      "persisted": 21,
+      "lost": 40,
+      "modified": 20,
+      "persisted": 25,
       "persisted_to_byzantine_only": 2,
-      "persisted_to_galen_only": 9
+      "persisted_to_galen_only": 11
     },
     "XY": {
-      "lost": 12,
-      "modified": 6,
-      "persisted": 3,
+      "lost": 14,
+      "modified": 10,
+      "persisted": 5,
       "persisted_to_byzantine_only": 0,
-      "persisted_to_galen_only": 0
+      "persisted_to_galen_only": 1
     }
   },
-  "jc_linked_clusters": 45,
-  "galen_linked_clusters": 138,
-  "galen_agreement_rate": 0.3858,
-  "mean_persistence_score_with_galen": 0.232,
-  "mean_persistence_score_without_galen": 0.1764,
+  "jc_linked_clusters": 46,
+  "galen_linked_clusters": 146,
+  "galen_agreement_rate": 0.371,
+  "mean_persistence_score_with_galen": 0.223,
+  "mean_persistence_score_without_galen": 0.1676,
   "galen_copy_threshold_4gram_containment": 0.15,
-  "jc_agreement_rate": 0.3618,
+  "jc_agreement_rate": 0.3388,
   "modern_records": 1226,
   "modern_sources": {
     "lardos": 919,
@@ -168,64 +167,64 @@
     "eth_pelion": 66
   },
   "permutation_test": {
-    "observed_persisted_share": 0.4903,
-    "null_mean": 0.405,
-    "null_95pct": 0.4324,
+    "observed_persisted_share": 0.4862,
+    "null_mean": 0.4078,
+    "null_95pct": 0.4331,
     "p_value": 0.001,
     "n_permutations": 1000,
-    "n_rows": 414,
+    "n_rows": 508,
     "denominator": "DMM (name, use group) rows whose plant is attested in the modern record (E>=0.5)"
   },
   "worked_examples": [
     {
       "cluster_id": "cl:dmm:2.126",
       "use_group": "DE",
-      "persistence_score": 0.9811,
-      "expected_modern": 0.9433,
+      "persistence_score": 0.9802,
+      "expected_modern": 0.9405,
       "present_galen": true,
       "present_jc": true,
       "example_passage_id": "dmm:2.126.2",
       "example_span_grc": "δύναμιν δὲ ἔχει τὰ φύλλα στυπτικήν ξηραντικήν ὅθεν καταπλασσόμενα πρὸς πάντα τὰ κακοήθη καὶ ἐλεφαντιῶντας καὶ ῥευματικὰ καὶ ἀκάθαρτα ἕλκη ἁρμόζει."
     },
     {
-      "cluster_id": "cl:dmm:3.4",
-      "use_group": "DE",
-      "persistence_score": 0.9773,
-      "expected_modern": 0.9546,
-      "present_galen": true,
-      "present_jc": null,
-      "example_passage_id": "dmm:3.4.5",
-      "example_span_grc": "ἀνάγει δὲ σκόλοπας, ἀκίδας ⟨καὶ⟩ λεπίδας ὀστῶν καταπλασσομένη ἀφίστησι καὶ σηπεδόνας περιχαράσσει καὶ τὰ ῥυπαρὰ περικαθαίρει ἕλκη καὶ τὰ κοῖλα πληροῖ σὺν ἴριδι καὶ μέλιτι·"
-    },
-    {
       "cluster_id": "cl:dmm:2.166",
       "use_group": "DE",
-      "persistence_score": 0.9773,
-      "expected_modern": 0.932,
+      "persistence_score": 0.977,
+      "expected_modern": 0.931,
       "present_galen": true,
       "present_jc": true,
       "example_passage_id": "dmm:2.166.1",
       "example_span_grc": "δύναμιν δὲ ἔχει ὁ καρπὸς χυλισθεὶς καὶ ἐγχυματισθεὶς μετ᾿ ἐλαίου εἰς τὸ οὖς ὠταλγίαν παύειν, εἰς δὲ τὰς ῥῖνας ἐντιθέμενος ἐν ἐρίῳ πώλυπας δαπανᾶν, καταχριόμενος δὲ στέλλειν καὶ καρκινώματα."
     },
     {
+      "cluster_id": "cl:dmm:3.4",
+      "use_group": "DE",
+      "persistence_score": 0.9741,
+      "expected_modern": 0.9483,
+      "present_galen": true,
+      "present_jc": null,
+      "example_passage_id": "dmm:3.4.5",
+      "example_span_grc": "ἀνάγει δὲ σκόλοπας, ἀκίδας ⟨καὶ⟩ λεπίδας ὀστῶν καταπλασσομένη ἀφίστησι καὶ σηπεδόνας περιχαράσσει καὶ τὰ ῥυπαρὰ περικαθαίρει ἕλκη καὶ τὰ κοῖλα πληροῖ σὺν ἴριδι καὶ μέλιτι·"
+    },
+    {
       "cluster_id": "cl:dmm:2.169",
       "use_group": "DE",
-      "persistence_score": 0.9751,
-      "expected_modern": 0.9252,
+      "persistence_score": 0.9736,
+      "expected_modern": 0.9209,
       "present_galen": true,
       "present_jc": true,
       "example_passage_id": "dmm:2.169.1",
       "example_span_grc": "κινοῦσι δὲ καὶ οὔρησιν καὶ ἔμμηνα ποθεῖσαι, ἰῶνται καὶ πλευρᾶς ἀλγήματα καὶ βῆχας καὶ σπάσματα καὶ δήγματα δραχμῆς μιᾶς τὸ πλῆθος τῆς ῥίζης ἐν οἴνῳ πινομένης."
     },
     {
-      "cluster_id": "cl:dmm:2.176",
+      "cluster_id": "cl:dmm:4.68",
       "use_group": "DE",
-      "persistence_score": 0.9569,
-      "expected_modern": 0.9138,
-      "present_galen": true,
-      "present_jc": null,
-      "example_passage_id": "dmm:2.176.2",
-      "example_span_grc": "καὶ μασηθεῖσα δὲ ἡ ῥίζα ἄγει φλέγμα, ἑψηθεῖσα δὲ ἐν γλυκεῖ καὶ καταπλασσομένη ὀφθαλμῶν φλεγμονὰς ἰᾶται καὶ τὰς ἐν ὀφθαλμοῖς οὐλὰς ἀποσμᾷ·"
+      "persistence_score": 0.9626,
+      "expected_modern": 0.9252,
+      "present_galen": null,
+      "present_jc": true,
+      "example_passage_id": "dmm:4.68.4",
+      "example_span_grc": "πρός τε ὀφθαλμῶν φλεγμονὰς καὶ ποδῶν καὶ τὰς ἄλλας φλεγμονάς·"
     }
   ],
   "copy_detection": "Galen entries down-weighted to 0.5 when word-4-gram containment in the matched Dioscorides chapter > 0.15; Paul of Aegina not ingested"

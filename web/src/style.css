@@ -484,3 +484,8 @@ dialog.paths code { display: block; white-space: pre-wrap; font: 400 0.78rem/1.5
 .use-card a:not(.btn) { color: var(--verdigris-hi); }
 .use-card .btn { align-self: flex-start; margin-top: auto; }
 @media (max-width: 900px) { .use-grid { grid-template-columns: 1fr; } }
+
+.cand .morph { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.cand .morph span { font: 400 0.68rem/1.3 var(--f-dim); padding: 3px 7px; border-radius: 999px; border: 1px solid rgba(184,230,204,.18); color: var(--paper-dim); }
+.cand .morph span.pos { color: var(--lichen); border-color: rgba(61,187,130,.45); }
+.cand .morph span.neg { color: #ffb3b5; border-color: rgba(255,90,95,.35); }

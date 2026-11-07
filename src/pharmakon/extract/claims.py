@@ -107,6 +107,7 @@ def rule_extract(passage: dict) -> list[dict]:
                 "evidence_span_grc": cl,
                 "uncertain_fields": sorted(set(uncertain)),
                 "therapeutic_cue": cue or bool(AGENT.search(e.stem)),
+                "lex_llm": bool(e.get("llm_proposed")),
             })
     return out
 
@@ -136,7 +137,10 @@ def extract(passages: pd.DataFrame, use_llm: bool = False) -> tuple[pd.DataFrame
         else:
             raw, version = rule_extract(p), RULE_VERSION
         stype = substance_type_for(p["work"], int(p["book"]), str(p["chapter"]))
+        base_version = version
         for c in raw:
+            # Matches on LLM-proposed lexicon entries are tagged so the backtest can exclude them.
+            version = f"{base_version}+lex_llm" if c.get("lex_llm") else base_version
             exact, loose = verify(c["evidence_span_grc"], p["text_grc"])
             cue = c.get("therapeutic_cue", True)
             status = ("ok" if cue else "ambiguous") if exact else "span_mismatch"
