@@ -111,10 +111,18 @@ def chembl_targets(tids: list[str], workers: int = 4) -> pd.DataFrame:
         return pd.DataFrame(list(ex.map(_target, tids)))
 
 
+OT_ERRORS: list[dict] = []
+
+
 def _ot_query(q: str, variables: dict) -> dict:
-    r = http.post(OT, json={"query": q, "variables": variables}, timeout=90)
-    r.raise_for_status()
-    return r.json().get("data") or {}
+    """One GraphQL call; network failures are recorded as gaps (OT_ERRORS) instead of aborting."""
+    try:
+        r = http.post(OT, json={"query": q, "variables": variables}, timeout=120)
+        r.raise_for_status()
+        return r.json().get("data") or {}
+    except Exception as exc:  # noqa: BLE001
+        OT_ERRORS.append({"variables": variables, "error": str(exc)[:160]})
+        return {}
 
 
 def ot_ensembl(uniprot: str) -> str | None:
@@ -125,7 +133,7 @@ def ot_ensembl(uniprot: str) -> str | None:
 
 def ot_associations(ensembl: str, min_score: float = 0.2) -> list[dict]:
     q = """query($id:String!){ target(ensemblId:$id){ id approvedSymbol
-      associatedDiseases(page:{index:0,size:500}){ rows { score disease { id name dbXRefs } } } } }"""
+      associatedDiseases(page:{index:0,size:200}){ rows { score disease { id name dbXRefs } } } } }"""
     d = _ot_query(q, {"id": ensembl})
     t = d.get("target") or {}
     out = []

@@ -1,0 +1,201 @@
+{
+  "stage": "persistence",
+  "generated_at": "2026-11-07T11:30:54+00:00",
+  "clusters_with_identified_taxa": 268,
+  "rows": 1295,
+  "pattern_counts": {
+    "lost": 476,
+    "novel": 396,
+    "modified": 211,
+    "persisted": 203,
+    "persisted_to_byzantine_only": 9
+  },
+  "pattern_counts_dermatology": {
+    "lost": 108,
+    "persisted": 67,
+    "novel": 23,
+    "modified": 11,
+    "persisted_to_byzantine_only": 1
+  },
+  "by_use_group": {
+    "BS": {
+      "lost": 21,
+      "modified": 9,
+      "persisted": 4,
+      "persisted_to_byzantine_only": 0
+    },
+    "CV": {
+      "lost": 16,
+      "modified": 5,
+      "persisted": 4,
+      "persisted_to_byzantine_only": 0
+    },
+    "DE": {
+      "lost": 108,
+      "modified": 11,
+      "persisted": 67,
+      "persisted_to_byzantine_only": 1
+    },
+    "FV": {
+      "lost": 6,
+      "modified": 4,
+      "persisted": 1,
+      "persisted_to_byzantine_only": 0
+    },
+    "GI": {
+      "lost": 50,
+      "modified": 14,
+      "persisted": 25,
+      "persisted_to_byzantine_only": 1
+    },
+    "GY": {
+      "lost": 50,
+      "modified": 39,
+      "persisted": 14,
+      "persisted_to_byzantine_only": 0
+    },
+    "IF": {
+      "lost": 4,
+      "modified": 3,
+      "persisted": 0,
+      "persisted_to_byzantine_only": 0
+    },
+    "LG": {
+      "lost": 19,
+      "modified": 10,
+      "persisted": 11,
+      "persisted_to_byzantine_only": 0
+    },
+    "MA": {
+      "lost": 22,
+      "modified": 10,
+      "persisted": 5,
+      "persisted_to_byzantine_only": 1
+    },
+    "MN": {
+      "lost": 1,
+      "modified": 1,
+      "persisted": 0,
+      "persisted_to_byzantine_only": 0
+    },
+    "MS": {
+      "lost": 36,
+      "modified": 17,
+      "persisted": 13,
+      "persisted_to_byzantine_only": 0
+    },
+    "NC": {
+      "lost": 11,
+      "modified": 5,
+      "persisted": 5,
+      "persisted_to_byzantine_only": 0
+    },
+    "OC": {
+      "lost": 15,
+      "modified": 14,
+      "persisted": 4,
+      "persisted_to_byzantine_only": 2
+    },
+    "OP": {
+      "lost": 22,
+      "modified": 22,
+      "persisted": 4,
+      "persisted_to_byzantine_only": 0
+    },
+    "OT": {
+      "lost": 8,
+      "modified": 11,
+      "persisted": 4,
+      "persisted_to_byzantine_only": 0
+    },
+    "RE": {
+      "lost": 28,
+      "modified": 8,
+      "persisted": 17,
+      "persisted_to_byzantine_only": 2
+    },
+    "RL": {
+      "lost": 6,
+      "modified": 4,
+      "persisted": 1,
+      "persisted_to_byzantine_only": 0
+    },
+    "UR": {
+      "lost": 41,
+      "modified": 18,
+      "persisted": 21,
+      "persisted_to_byzantine_only": 2
+    },
+    "XY": {
+      "lost": 12,
+      "modified": 6,
+      "persisted": 3,
+      "persisted_to_byzantine_only": 0
+    }
+  },
+  "jc_linked_clusters": 45,
+  "jc_agreement_rate": 0.3618,
+  "modern_records": 1226,
+  "modern_sources": {
+    "lardos": 919,
+    "eth_naegean": 241,
+    "eth_pelion": 66
+  },
+  "permutation_test": {
+    "observed_persisted_share": 0.4903,
+    "null_mean": 0.405,
+    "null_95pct": 0.4324,
+    "p_value": 0.001,
+    "n_permutations": 1000,
+    "n_rows": 414,
+    "denominator": "DMM (name, use group) rows whose plant is attested in the modern record (E>=0.5)"
+  },
+  "worked_examples": [
+    {
+      "cluster_id": "cl:dmm:2.126",
+      "use_group": "DE",
+      "persistence_score": 0.9716,
+      "expected_modern": 0.9433,
+      "present_jc": true,
+      "example_passage_id": "dmm:2.126.2",
+      "example_span_grc": "δύναμιν δὲ ἔχει τὰ φύλλα στυπτικήν ξηραντικήν ὅθεν καταπλασσόμενα πρὸς πάντα τὰ κακοήθη καὶ ἐλεφαντιῶντας καὶ ῥευματικὰ καὶ ἀκάθαρτα ἕλκη ἁρμόζει."
+    },
+    {
+      "cluster_id": "cl:dmm:2.166",
+      "use_group": "DE",
+      "persistence_score": 0.966,
+      "expected_modern": 0.932,
+      "present_jc": true,
+      "example_passage_id": "dmm:2.166.1",
+      "example_span_grc": "δύναμιν δὲ ἔχει ὁ καρπὸς χυλισθεὶς καὶ ἐγχυματισθεὶς μετ᾿ ἐλαίου εἰς τὸ οὖς ὠταλγίαν παύειν, εἰς δὲ τὰς ῥῖνας ἐντιθέμενος ἐν ἐρίῳ πώλυπας δαπανᾶν, καταχριόμενος δὲ στέλλειν καὶ καρκινώματα."
+    },
+    {
+      "cluster_id": "cl:dmm:2.169",
+      "use_group": "DE",
+      "persistence_score": 0.9626,
+      "expected_modern": 0.9252,
+      "present_jc": true,
+      "example_passage_id": "dmm:2.169.1",
+      "example_span_grc": "κινοῦσι δὲ καὶ οὔρησιν καὶ ἔμμηνα ποθεῖσαι, ἰῶνται καὶ πλευρᾶς ἀλγήματα καὶ βῆχας καὶ σπάσματα καὶ δήγματα δραχμῆς μιᾶς τὸ πλῆθος τῆς ῥίζης ἐν οἴνῳ πινομένης."
+    },
+    {
+      "cluster_id": "cl:dmm:3.4",
+      "use_group": "DE",
+      "persistence_score": 0.9546,
+      "expected_modern": 0.9546,
+      "present_jc": null,
+      "example_passage_id": "dmm:3.4.5",
+      "example_span_grc": "ἀνάγει δὲ σκόλοπας, ἀκίδας ⟨καὶ⟩ λεπίδας ὀστῶν καταπλασσομένη ἀφίστησι καὶ σηπεδόνας περιχαράσσει καὶ τὰ ῥυπαρὰ περικαθαίρει ἕλκη καὶ τὰ κοῖλα πληροῖ σὺν ἴριδι καὶ μέλιτι·"
+    },
+    {
+      "cluster_id": "cl:dmm:4.69",
+      "use_group": "DE",
+      "persistence_score": 0.9457,
+      "expected_modern": 0.8914,
+      "present_jc": true,
+      "example_passage_id": "dmm:4.69.2",
+      "example_span_grc": "δύναμιν δὲ ἔχει ψυκτικήν ὠφελεῖ δὲ καταπλασσόμενον ἀρθρίτιδας, παρωτίδας, φύματα, οἰδήματα, στρέμματα, κεφαλ αλγίας μετὰ ῥοδίνου καὶ ὄξους καὶ ὕδατος, ἐντεροκήλας τε τὰς ἐπὶ παίδων καὶ ἐξομφάλους ὑγιάζει καταπλασσόμενον δεῖ δὲ ὀξυβάφου πλῆθος λεάναντας βρέχειν ἐν ὕδατος δυσὶ κοτύλαις καὶ ὅταν παγῇ τὸ ὕδωρ ἐπιπλάττειν·"
+    }
+  ],
+  "copy_detection": "not applicable: Galen and Paul of Aegina are not ingested in this pilot (docs/decisions.md)"
+}

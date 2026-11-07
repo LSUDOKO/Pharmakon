@@ -51,3 +51,24 @@ stem_overrides:
   δευτερ: MA
   ατοκ: GY
   αιμορροιδ: CV
+# English keyword stems for modern ethnobotanical tables (Pelion 2023, North Aegean 2018).
+# Matched case-insensitively at word start against the published "ailments treated" text.
+english_keywords:
+  DE: [wound, skin, burn, eczema, dermat, acne, wart, hair, alopec, abscess, boil, furunc, bruis, contusion, sting, bite, haemost, hemost, cut, sore, itch, psoria, rash, herpes, cicatri, scar, ulcer, inflam, blister, chilblain, callus, corn, freckle, sunburn, dandruff, mycos, fungal, emollient, cataplasm]
+  GI: [stomach, gastr, digest, diarrh, dysenter, constipat, laxative, colic, intestin, aeroph, anthelmint, worm, vomit, nausea, carminat, flatulen, abdominal]
+  RE: [cough, cold, bronch, asthma, respirat, lung, expector, flu, influenza, pneumon]
+  RL: [throat, tonsil, sinus, nose, pharyng, laryng]
+  UR: [diuretic, kidney, urinar, bladder, renal, nephr, cystit, prostat]
+  GY: [menstru, gynaec, gynec, uter, vagin, dysmenor, menopaus]
+  MA: [lactat, galactag, childbirth, pregnan, labour, labor]
+  CV: [blood pressure, hypertens, heart, cardi, haemorrhoid, hemorrhoid, circulat, varicose, cholesterol, oedema, edema]
+  LG: [liver, hepat, gall, jaundice, bile, bilious]
+  FV: [fever, febri, antipyret]
+  NC: [headache, migraine, nerv, analges, neuralg]
+  MC: [insomnia, anxiety, sedativ, calm, depress, stress, hypnotic]
+  MS: [rheumat, arthrit, joint, muscle, muscular, gout, sciatica, sprain, fracture, backache, lumbago]
+  OP: [eye, conjunctiv, ophthalm]
+  OT: [ear, otitis]
+  OC: [tooth, teeth, toothache, gum, mouth, aphth, oral, gingiv, odont]
+  MN: [diabet, appetite, obesity, anorexia, hypoglyc]
+  BS: [anaemi, anemi, spleen]
