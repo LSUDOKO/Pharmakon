@@ -31,3 +31,13 @@ genera:
   Galanthus: [galantamine hydrobromide, galantamine]
   Xanthium: [atractyloside, carboxyatractyloside]
   Teucrium: [teucrin A]
+  # Added 2026-11-08 after an LLM review of the eye-disease leads (claude.ai via the Pharmakon MCP) listed
+  # well-known hazards the flag missed; each marker compound is still verified live in PubChem (GHS).
+  Ruta: [bergapten, psoralen]
+  Hedera: [alpha-hederin, hederagenin]
+  Artemisia: [thujone, alpha-thujone]
+  Chelidonium: [chelidonine, sanguinarine]
+  Glaucium: [glaucine]
+  Solanum: [solanine, alpha-solanine]
+  Anemone: [protoanemonin]
+  Cyclamen: [cyclamin]

@@ -2,8 +2,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/media/logo-dark.png">
-    <img src="docs/media/logo-light.png" alt="Pharmakon" width="420">
+    <source media="(prefers-color-scheme: dark)" srcset="https://pharmakon.adoranto737.workers.dev/readme/logo-dark.png?v=40da0a68d9">
+    <img src="https://pharmakon.adoranto737.workers.dev/readme/logo-light.png?v=797f72ae78" alt="Pharmakon" width="420">
   </picture>
 </p>
 
@@ -11,18 +11,41 @@
 An uncertainty-aware map from Dioscorides' 1st-century Greek to modern species, chemistry and untested research leads.</p>
 
 <p align="center">
-  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-open-17744f?style=flat-square"></a>
+  <a href="https://youtu.be/d-kbvFd2K04"><img alt="Watch the film" src="https://img.shields.io/badge/film-watch%20on%20YouTube-ff0000?style=flat-square&logo=youtube&logoColor=white"></a>
+  <a href="https://drive.google.com/file/d/1cX2WHtz4g6Yu8RxI-wfN-3ifHq9VsYnv/view?usp=sharing"><img alt="Pitch deck" src="https://img.shields.io/badge/pitch%20deck-open-17744f?style=flat-square&logo=googledrive&logoColor=white"></a>
+  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-open-17744f?style=flat-square&logo=cloudflare&logoColor=white"></a>
   <a href="https://pharmakon.adoranto737.workers.dev/mcp"><img alt="MCP server" src="https://img.shields.io/badge/MCP-6%20tools-3dbb82?style=flat-square"></a>
-  <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-b8e6cc?style=flat-square">
-  <img alt="Tests" src="https://img.shields.io/badge/tests-24%20passing-17744f?style=flat-square">
-  <img alt="Licence MIT" src="https://img.shields.io/badge/code-MIT-eceee7?style=flat-square">
+  <br>
+  <a href="https://github.com/LSUDOKO/Pharmakon/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/LSUDOKO/Pharmakon/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/LSUDOKO/Pharmakon/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/LSUDOKO/Pharmakon?style=flat-square&color=17744f"></a>
+  <a href="https://github.com/LSUDOKO/Pharmakon/pkgs/container/pharmakon"><img alt="Container" src="https://img.shields.io/badge/ghcr.io-pharmakon-3dbb82?style=flat-square&logo=docker&logoColor=white"></a>
+  <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-b8e6cc?style=flat-square&logo=python&logoColor=white">
+  <a href="LICENSE"><img alt="Licence MIT" src="https://img.shields.io/badge/code-MIT-eceee7?style=flat-square"></a>
   <img alt="EthnoHack 2026" src="https://img.shields.io/badge/EthnoHack%202026-Track%201-000000?style=flat-square">
 </p>
 
-<img src="docs/media/banner.jpg" alt="Pharmakon website: torn verdigris sheets printed with the Vienna Dioscorides around the Pharmakon wordmark" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/film-title.gif?v=283e601b83" alt="Pharmakon title: a Vienna Dioscorides folio tears apart around the Pharmakon wordmark" width="100%">
 
 > [!IMPORTANT]
 > **Research hypotheses only, not medical advice.** Pharmakon generates research hypotheses from historical texts and open databases. Nothing here is medical advice, a recommendation to use any plant, or evidence of safety or efficacy.
+
+## Watch the film
+
+<table>
+<tr>
+<td width="58%"><a href="https://youtu.be/d-kbvFd2K04"><img src="https://pharmakon.adoranto737.workers.dev/readme/film-thumbnail.jpg?v=b9f1688226" alt="Pharmakon film on YouTube: 1,781 untested leads from a 2,000-year-old Greek drug book" width="100%"></a></td>
+<td width="42%">
+
+**[▶ Watch the film on YouTube](https://youtu.be/d-kbvFd2K04)** (9 min)<br>
+The problem, the data, the method, a live demo of the site and of the MCP server inside Claude, and every result, including the one that did not work.
+
+**[Pitch deck](https://drive.google.com/file/d/1cX2WHtz4g6Yu8RxI-wfN-3ifHq9VsYnv/view?usp=sharing)** (Google Drive)<br>
+**[Slides, PDF](docs/slides/Pharmakon_EthnoHack2026_slides.pdf)** (10 slides, built from the pipeline outputs)<br>
+**[Live site](https://pharmakon.adoranto737.workers.dev)** · **[MCP endpoint](https://pharmakon.adoranto737.workers.dev/mcp)** · **[Latest release](https://github.com/LSUDOKO/Pharmakon/releases/latest)**
+
+</td>
+</tr>
+</table>
 
 ## In one minute
 
@@ -44,21 +67,21 @@ Use it three ways: the **[website](https://pharmakon.adoranto737.workers.dev)**,
 | Identification model, persistence test, temporal backtest, leads | done, results below |
 | Website with explorer, charts and leads gallery | live on Cloudflare |
 | MCP server (6 read-only tools) and JSON API | live on Cloudflare |
-| Streamlit research dashboard, 24 tests | done |
+| Streamlit research dashboard, 27 tests, CI on every push | done |
 | Calibration (ECE 0.21 vs target ≤ 0.10) | **missed**, cause identified below |
 | Human audits of extraction, conditions, merges, labels | **pending**: blinded sheets generated in `data/gold/audits/` |
 | LLM claim extraction, LLM lexicon extension, plant-morphology feature, LLM-judge baseline | done (Claude session + Groq), every span re-verified; kept out of the backtest |
 | All body systems (beyond the skin/wound pilot) | done: PubMed labels and chemistry re-run for every use group |
 | Slide deck (10 slides, PDF) | done: `docs/slides/Pharmakon_EthnoHack2026_slides.pdf`, built from the pipeline outputs by `docs/slides/build_slides.py` |
-| Pitch video, Devpost page, team names | team tasks |
+| Pitch film (9 min) and pitch deck | done: [YouTube](https://youtu.be/d-kbvFd2K04) · [deck](https://drive.google.com/file/d/1cX2WHtz4g6Yu8RxI-wfN-3ifHq9VsYnv/view?usp=sharing) |
 
-<img src="docs/media/chart-pipeline.svg" alt="Pipeline counts" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/chart-pipeline.svg?v=4cee2236e3" alt="Pipeline counts" width="100%">
 
 ## A worked example
 
 What the pipeline produces for one name, wormwood:
 
-<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia%20absinthium%20P1210748.jpg?width=640" width="220" align="right" alt="Artemisia absinthium">
+<a href="https://commons.wikimedia.org/wiki/File:Artemisia%20absinthium%20P1210748.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/artemisia-absinthium-p1210748-jpg.jpg?v=c1c0783190" width="220" align="right" alt="Artemisia absinthium" title="Photo: David Monniaux, CC BY-SA 3.0"></a>
 
 **ἀψίνθιον** (apsinthion), *De materia medica* 3.23 · `urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1:3.23.1`
 
@@ -91,7 +114,13 @@ The uses through time:
 
 The highlighted evidence spans, photos and the Galen passage for this name are shown in the explorer:
 
-<img src="docs/media/shot-explorer.jpg" alt="Ancient name explorer showing ἀψίνθιον with highlighted Greek, candidate species with photos and probability bars, and a four-era survival table" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/demo-explorer.gif?v=b6872d1d1c" alt="Explorer: searching apsinthion, the Greek passage with every use highlighted, and the species probabilities with intervals" width="100%">
+
+<details><summary>Still image</summary>
+
+<img src="https://pharmakon.adoranto737.workers.dev/readme/shot-explorer.jpg?v=c98a53bda4" alt="Ancient name explorer showing ἀψίνθιον with highlighted Greek, candidate species with photos and probability bars, and a four-era survival table" width="100%">
+
+</details>
 
 ## Results
 
@@ -99,7 +128,7 @@ The highlighted evidence spans, photos and the Galen passage for this name are s
 
 Each of the 61 names identified by Lardos et al. (2024) is held out in turn; the model ranks GBIF-verified candidates using geography, name continuity, scholarly agreement and genus consensus, with no pharmacology at all.
 
-<img src="docs/media/chart-identification.svg" alt="Top-1 agreement with experts: Pharmakon vs baselines, with 95% intervals" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/chart-identification.svg?v=a4230c8451" alt="Top-1 agreement with experts: Pharmakon vs baselines, with 95% intervals" width="100%">
 
 | model | top-1 [95% CI] | top-3 | mean reciprocal rank | Brier ↓ | ECE ↓ |
 |---|---|---|---|---|---|
@@ -136,11 +165,11 @@ What the model learned (conditional-logit weights; the "unidentified" option has
 | `f6_genus_consensus` | share of the unit's candidates in the same genus | +0.18 | +0.15 |
 | `f1_morph` | morphological agreement: Dioscorides' description vs the species' Wikipedia description (LLM-extracted traits, spans verified) | +0.18 | +0.25 |
 
-<img src="docs/media/chart-reliability.svg" alt="Reliability diagram: confidence vs accuracy, ECE above target" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/chart-reliability.svg?v=382b088593" alt="Reliability diagram: confidence vs accuracy, ECE above target" width="100%">
 
 ### 2. Did the uses survive?
 
-<img src="docs/media/chart-persistence.svg" alt="Observed survival 49% vs 40.5% under shuffling; survival by body system" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/chart-persistence.svg?v=2a66aa9f59" alt="Observed survival 49% vs 40.5% under shuffling; survival by body system" width="100%">
 
 - Galen re-attests **37%** of Dioscorides' uses for the names that could be linked to his text, John the Physician **34%**.
 - Galen is not copying: mean word 4-gram containment against Dioscorides is close to zero.
@@ -169,13 +198,13 @@ Survival by body system (Dioscorides uses whose plant could be identified):
 | Infections | 0 | 0 | 0 | 4 | 4 |
 | Metabolic | 0 | 0 | 0 | 1 | 1 |
 
-<img src="docs/media/shot-time.jpg" alt="Alluvial chart of uses flowing from Dioscorides through Galen and John the Physician to modern Greece" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/shot-time.jpg?v=68d0199852" alt="Alluvial chart of uses flowing from Dioscorides through Galen and John the Physician to modern Greece" width="100%">
 
 ### 3. The time machine
 
 Stand in 2000, 2005, 2010 or 2015, forget everything published after, rank the plant–condition pairs nobody had studied yet, then check PubMed up to 2025. Features are gated by date: compound reference years, ChEMBL document years and modern-study publication years must all precede the cutoff, and no LLM output is used.
 
-<img src="docs/media/chart-backtest.svg" alt="AUPRC by cutoff for random, popularity, history and combined models" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/chart-backtest.svg?v=f59f058b37" alt="AUPRC by cutoff for random, popularity, history and combined models" width="100%">
 
 | cutoff | test pairs | gained support by 2025 | Random | Popularity | History | History + popularity | Everything | Δ history [95% CI] |
 |---|---|---|---|---|---|---|---|---|
@@ -225,10 +254,12 @@ Plant–condition pairs used historically, with **no matching PubMed pharmacolog
 > [!WARNING]
 > Hypotheses to test, never advice to use. Rows marked ⚠ contain a compound with a PubChem GHS hazard record.
 
+<img src="https://pharmakon.adoranto737.workers.dev/readme/demo-leads.gif?v=d0c339067b" alt="Leads gallery: filtering to plants at least 50% certain, hiding toxic plants, choosing a condition and opening a lead" width="100%">
+
 <table>
-<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Illustration%20Vicia%20faba1.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Vicia%20faba1.jpg?width=400" width="100%" alt="Vicia faba"></a><br><sub><b>#1</b> <i>Vicia faba</i><br>Eye Diseases · P = 0.66</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Fennel%20%28Foeniculum%20vulgare%29%20-%20Parc%20Natural%20de%20s%27Albufera%2C%20Spain%202022-04-18%20%2802%29.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fennel%20%28Foeniculum%20vulgare%29%20-%20Parc%20Natural%20de%20s%27Albufera%2C%20Spain%202022-04-18%20%2802%29.jpg?width=400" width="100%" alt="Foeniculum vulgare"></a><br><sub><b>#3</b> <i>Foeniculum vulgare</i><br>Kidney Diseases · P = 0.58</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Artemisia%20absinthium%20P1210748.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia%20absinthium%20P1210748.jpg?width=400" width="100%" alt="Artemisia absinthium"></a><br><sub><b>#4</b> <i>Artemisia absinthium</i><br>Eye Diseases · P = 0.75</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Cypr%C3%A8s.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cypr%C3%A8s.jpg?width=400" width="100%" alt="Cupressus sempervirens"></a><br><sub><b>#5</b> <i>Cupressus sempervirens</i><br>Wounds and Injuries · P = 0.66</sub></td></tr>
-<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Ruta%20graveolens%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-259.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ruta%20graveolens%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-259.jpg?width=400" width="100%" alt="Ruta graveolens"></a><br><sub><b>#7</b> <i>Ruta graveolens</i><br>Eye Diseases · P = 0.52</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Punica%20granatum%20004.JPG"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Punica%20granatum%20004.JPG?width=400" width="100%" alt="Punica granatum"></a><br><sub><b>#8</b> <i>Punica granatum</i><br>Hernia · P = 0.73</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Illustration%20Myrtus%20communis0.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Illustration%20Myrtus%20communis0.jpg?width=400" width="100%" alt="Myrtus communis"></a><br><sub><b>#9</b> <i>Myrtus communis</i><br>Eye Diseases · P = 0.46</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Isatis%20tinctoria02.JPG"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Isatis%20tinctoria02.JPG?width=400" width="100%" alt="Isatis tinctoria"></a><br><sub><b>#10</b> <i>Isatis tinctoria</i><br>Wounds and Injuries · P = 0.65</sub></td></tr>
-<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:20121002Hedera%20helix1.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/20121002Hedera%20helix1.jpg?width=400" width="100%" alt="Hedera helix"></a><br><sub><b>#11</b> <i>Hedera helix</i><br>Pain · P = 0.65</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:%28MHNT%29%20Raphanus%20raphanistrum%20-%20flowers.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/%28MHNT%29%20Raphanus%20raphanistrum%20-%20flowers.jpg?width=400" width="100%" alt="Raphanus raphanistrum"></a><br><sub><b>#12</b> <i>Raphanus raphanistrum</i><br>Wounds and Injuries · P = 0.59</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Frouzet%20fg02.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Frouzet%20fg02.jpg?width=400" width="100%" alt="Quercus ilex"></a><br><sub><b>#13</b> <i>Quercus ilex</i><br>Inflammation · P = 0.67</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Vitex%20agnus-castus%20%2815390963576%29.jpg"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vitex%20agnus-castus%20%2815390963576%29.jpg?width=400" width="100%" alt="Vitex agnus-castus"></a><br><sub><b>#14</b> <i>Vitex agnus-castus</i><br>Inflammation · P = 0.64</sub></td></tr>
+<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Illustration%20Vicia%20faba1.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/illustration-vicia-faba1-jpg.jpg?v=f68886e3f3" width="100%" alt="Vicia faba"></a><br><sub><b>#1</b> <i>Vicia faba</i><br>Eye Diseases · P = 0.66<br>Photo: Wikimedia Commons contributor, Public domain</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Fennel%20%28Foeniculum%20vulgare%29%20-%20Parc%20Natural%20de%20s%27Albufera%2C%20Spain%202022-04-18%20%2802%29.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/fennel-foeniculum-vulgare-parc-natural-de-s-albufera-spain-2022-04-18-.jpg?v=4b1b332445" width="100%" alt="Foeniculum vulgare"></a><br><sub><b>#3</b> <i>Foeniculum vulgare</i><br>Kidney Diseases · P = 0.58<br>Photo: Ryan Hodnett, CC BY-SA 4.0</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Artemisia%20absinthium%20P1210748.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/artemisia-absinthium-p1210748-jpg.jpg?v=c1c0783190" width="100%" alt="Artemisia absinthium"></a><br><sub><b>#4</b> <i>Artemisia absinthium</i> ⚠<br>Eye Diseases · P = 0.75<br>Photo: David Monniaux, CC BY-SA 3.0</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Cypr%C3%A8s.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/cypr-s-jpg.jpg?v=d8505b0a84" width="100%" alt="Cupressus sempervirens"></a><br><sub><b>#5</b> <i>Cupressus sempervirens</i><br>Wounds and Injuries · P = 0.66<br>Photo: Taoujouti Abdelmouhaïmen, CC BY-SA 4.0</sub></td></tr>
+<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Ruta%20graveolens%20-%20K%C3%B6hler%E2%80%93s%20Medizinal-Pflanzen-259.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/ruta-graveolens-k-hler-s-medizinal-pflanzen-259-jpg.jpg?v=36649ddd46" width="100%" alt="Ruta graveolens"></a><br><sub><b>#7</b> <i>Ruta graveolens</i> ⚠<br>Eye Diseases · P = 0.52<br>Photo: Franz Eugen Köhler, Köhler&#x27;s Medizinal-Pflanzen, Public domain</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Punica%20granatum%20004.JPG"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/punica-granatum-004-jpg.jpg?v=1e77f7b6f6" width="100%" alt="Punica granatum"></a><br><sub><b>#8</b> <i>Punica granatum</i><br>Hernia · P = 0.73<br>Photo: H. Zell, CC BY-SA 3.0</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Illustration%20Myrtus%20communis0.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/illustration-myrtus-communis0-jpg.jpg?v=ecf8b60ab3" width="100%" alt="Myrtus communis"></a><br><sub><b>#9</b> <i>Myrtus communis</i><br>Eye Diseases · P = 0.46<br>Photo: Wikimedia Commons contributor, Public domain</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Isatis%20tinctoria02.JPG"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/isatis-tinctoria02-jpg.jpg?v=b4ea0b0a6a" width="100%" alt="Isatis tinctoria"></a><br><sub><b>#10</b> <i>Isatis tinctoria</i><br>Wounds and Injuries · P = 0.65<br>Photo: Wikimedia Commons contributor, CC BY-SA 3.0</sub></td></tr>
+<tr><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:20121002Hedera%20helix1.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/20121002hedera-helix1-jpg.jpg?v=3633012fe9" width="100%" alt="Hedera helix"></a><br><sub><b>#11</b> <i>Hedera helix</i> ⚠<br>Pain · P = 0.65<br>Photo: AnRo0002, CC0</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:%28MHNT%29%20Raphanus%20raphanistrum%20-%20flowers.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/mhnt-raphanus-raphanistrum-flowers-jpg.jpg?v=486f1f55f3" width="100%" alt="Raphanus raphanistrum"></a><br><sub><b>#12</b> <i>Raphanus raphanistrum</i><br>Wounds and Injuries · P = 0.59<br>Photo: Didier Descouens, CC BY-SA 4.0</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Frouzet%20fg02.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/frouzet-fg02-jpg.jpg?v=e580a32dae" width="100%" alt="Quercus ilex"></a><br><sub><b>#13</b> <i>Quercus ilex</i><br>Inflammation · P = 0.67<br>Photo: Fritz Geller-Grimm, CC BY-SA 3.0</sub></td><td width="25%" align="center"><a href="https://commons.wikimedia.org/wiki/File:Vitex%20agnus-castus%20%2815390963576%29.jpg"><img src="https://pharmakon.adoranto737.workers.dev/readme/leads/vitex-agnus-castus-15390963576-jpg.jpg?v=6e04dab6ea" width="100%" alt="Vitex agnus-castus"></a><br><sub><b>#14</b> <i>Vitex agnus-castus</i><br>Inflammation · P = 0.64<br>Photo: peganum from Henfield, England, CC BY-SA 2.0</sub></td></tr>
 </table>
 
 <sub>One photo per species, best-ranked lead first: Wikimedia Commons image (Wikidata P18; each file under its own licence, click for the file page). ⚠ = known toxic constituent.</sub>
@@ -238,52 +269,54 @@ Plant–condition pairs used historically, with **no matching PubMed pharmacolog
 | 1 | *Vicia faba* | Eye Diseases | 0.66 | 0.387 |  |  |  | 1 |
 | 2 | *Vicia faba* | Hemorrhage | 0.66 | 0.361 |  |  |  | 2 |
 | 3 | *Foeniculum vulgare* | Kidney Diseases | 0.58 | 0.290 |  |  | yes | 4 |
-| 4 | *Artemisia absinthium* | Eye Diseases | 0.75 | 0.276 |  |  |  | 11 |
+| 4 | *Artemisia absinthium* | Eye Diseases | 0.75 | 0.276 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/261491)) |  |  | 11 |
 | 5 | *Cupressus sempervirens* | Wounds and Injuries | 0.66 | 0.244 |  | least concern | yes | 12 |
-| 6 | *Artemisia absinthium* | Pain | 0.75 | 0.242 |  |  |  | 18 |
-| 7 | *Ruta graveolens* | Eye Diseases | 0.52 | 0.228 |  |  |  | 7 |
+| 6 | *Artemisia absinthium* | Pain | 0.75 | 0.242 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/261491)) |  |  | 18 |
+| 7 | *Ruta graveolens* | Eye Diseases | 0.52 | 0.228 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/2355)) |  |  | 7 |
 | 8 | *Punica granatum* | Hernia | 0.73 | 0.226 |  | least concern |  | 21 |
 | 9 | *Myrtus communis* | Eye Diseases | 0.46 | 0.224 |  | least concern |  | 5 |
 | 10 | *Isatis tinctoria* | Wounds and Injuries | 0.65 | 0.218 |  |  |  | 16 |
-| 11 | *Hedera helix* | Pain | 0.65 | 0.217 |  |  |  | 17 |
+| 11 | *Hedera helix* | Pain | 0.65 | 0.217 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/73296)) |  |  | 17 |
 | 12 | *Raphanus raphanistrum* | Wounds and Injuries | 0.59 | 0.211 |  |  |  | 13 |
 | 13 | *Quercus ilex* | Inflammation | 0.67 | 0.209 |  | least concern | yes | 20 |
 | 14 | *Vitex agnus-castus* | Inflammation | 0.64 | 0.203 |  | Data Deficient |  | 19 |
 | 15 | *Senecio vulgaris* | Wounds and Injuries | 0.69 | 0.192 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/5281743)) |  |  | 30 |
 | 16 | *Vicia faba* | Diarrhea | 0.66 | 0.188 |  |  |  | 28 |
 | 17 | *Lupinus albus* | Stomach Diseases | 0.54 | 0.183 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/72325)) | least concern |  | 15 |
-| 18 | *Ruta graveolens* | Hemorrhage | 0.52 | 0.179 |  |  |  | 14 |
+| 18 | *Ruta graveolens* | Hemorrhage | 0.52 | 0.179 | ⚠ known toxic constituent ([PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/2355)) |  |  | 14 |
 | 19 | *Lolium perenne* | Liver Diseases | 0.31 | 0.178 |  |  |  | 1127 |
 | 20 | *Cupressus sempervirens* | Inflammation | 0.66 | 0.173 |  | least concern | yes | 34 |
 
 - **2** of the top 20 rest on a plant identification below 0.5.
-- **2** of the top 20 carry a known-toxicity flag.
+- **7** of the top 20 carry a known-toxicity flag.
 - Ranking by the single most likely plant instead of the full probability changes 5 of the top 20 (Kendall τ = 0.50).
 
 Leads by condition:
 
 | condition | leads | best lead | its P(species) | flagged toxic |
 |---|---|---|---|---|
-| Menstruation Disturbances | 93 | *Daucus carota* (#81) | 0.54 | 10 |
-| Skin Ulcer | 80 | *Daucus carota* (#42) | 0.54 | 7 |
-| Bites and Stings | 66 | *Vicia faba* (#50) | 0.66 | 5 |
-| Edema | 60 | *Daucus carota* (#47) | 0.54 | 5 |
-| Uterine Diseases | 55 | *Hedera helix* (#33) | 0.65 | 9 |
-| Dysuria | 55 | *Vitis vinifera* (#614) | 0.43 | 1 |
-| Inflammation | 42 | *Quercus ilex* (#13) | 0.67 | 4 |
-| Jaundice | 42 | *Cicer arietinum* (#167) | 0.69 | 2 |
-| Eye Diseases | 41 | *Vicia faba* (#1) | 0.66 | 6 |
-| Colic | 41 | *Daucus carota* (#312) | 0.45 | 0 |
-| Cough | 40 | *Vicia faba* (#64) | 0.66 | 4 |
-| Splenic Diseases | 40 | *Lupinus albus* (#186) | 0.54 | 7 |
+| Menstruation Disturbances | 93 | *Daucus carota* (#81) | 0.54 | 18 |
+| Skin Ulcer | 80 | *Daucus carota* (#42) | 0.54 | 12 |
+| Bites and Stings | 66 | *Vicia faba* (#50) | 0.66 | 7 |
+| Edema | 60 | *Daucus carota* (#47) | 0.54 | 6 |
+| Uterine Diseases | 55 | *Hedera helix* (#33) | 0.65 | 12 |
+| Dysuria | 55 | *Vitis vinifera* (#614) | 0.43 | 3 |
+| Inflammation | 42 | *Quercus ilex* (#13) | 0.67 | 9 |
+| Jaundice | 42 | *Cicer arietinum* (#167) | 0.69 | 3 |
+| Eye Diseases | 41 | *Vicia faba* (#1) | 0.66 | 14 |
+| Colic | 41 | *Daucus carota* (#312) | 0.45 | 1 |
+| Cough | 40 | *Vicia faba* (#64) | 0.66 | 6 |
+| Splenic Diseases | 40 | *Lupinus albus* (#186) | 0.54 | 10 |
 
-<img src="docs/media/shot-leads.jpg" alt="Leads gallery with plant photos, certainty meters, toxicity badges and filters" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/shot-leads.jpg?v=f9478c70e2" alt="Leads gallery with plant photos, certainty meters, toxicity badges and filters" width="100%">
 
 ## Use it
 
 ### From an AI assistant (MCP)
 
 The MCP server runs on the same Cloudflare Worker as the site. It is read-only, needs no key, and every reply carries the research-only notice and toxicity flags.
+
+<img src="https://pharmakon.adoranto737.workers.dev/readme/demo-mcp.gif?v=9cbc8e0f1e" alt="Claude on the web calling Pharmakon's MCP tools and answering with probabilities, toxicity flags and evidence" width="100%">
 
 **Claude Code**
 
@@ -345,18 +378,18 @@ for n in r["results"]:
     print(n["lemma"], n["top_species"], n["p_top"])
 ```
 
-<img src="docs/media/shot-use.jpg" alt="Use it section of the website with MCP, API and pipeline cards" width="100%">
+<img src="https://pharmakon.adoranto737.workers.dev/readme/shot-use.jpg?v=746fbc8881" alt="Use it section of the website with MCP, API and pipeline cards" width="100%">
 
 ### On the website
 
 <table>
 <tr>
-<td width="50%"><img src="docs/media/shot-word.jpg" alt="One word, three plants: how a single Greek name splits across candidate species"><br><b>The problem in one word.</b> One Greek name, several candidate plants, each with a probability.</td>
-<td width="50%"><img src="docs/media/shot-how.jpg" alt="Pipeline steps"><br><b>How it works.</b> Read, extract, identify, trace, test, rank.</td>
+<td width="50%"><img src="https://pharmakon.adoranto737.workers.dev/readme/shot-word.jpg?v=a82aaa4931" alt="One word, three plants: how a single Greek name splits across candidate species"><br><b>The problem in one word.</b> One Greek name, several candidate plants, each with a probability.</td>
+<td width="50%"><img src="https://pharmakon.adoranto737.workers.dev/readme/shot-how.jpg?v=216cc8e18f" alt="Pipeline steps"><br><b>How it works.</b> Read, extract, identify, trace, test, rank.</td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/media/shot-results.jpg" alt="Results: identification against experts and the time machine"><br><b>What the evidence says.</b> Both tests, reported the same way whether they worked or not.</td>
-<td width="50%"><img src="docs/media/shot-data.jpg" alt="Open data sources and limitations"><br><b>Open data.</b> Every source checked live, licences recorded, limits stated.</td>
+<td width="50%"><img src="https://pharmakon.adoranto737.workers.dev/readme/shot-results.jpg?v=91810a7f20" alt="Results: identification against experts and the time machine"><br><b>What the evidence says.</b> Both tests, reported the same way whether they worked or not.</td>
+<td width="50%"><img src="https://pharmakon.adoranto737.workers.dev/readme/shot-data.jpg?v=49a6c534f5" alt="Open data sources and limitations"><br><b>Open data.</b> Every source checked live, licences recorded, limits stated.</td>
 </tr>
 </table>
 
@@ -365,11 +398,18 @@ for n in r["results"]:
 ```bash
 git clone https://github.com/LSUDOKO/Pharmakon && cd Pharmakon
 make setup      # uv venv + install (Python 3.12)
-make test       # 24 tests: parser, extraction, model, metrics, provenance guard, app pages
+make test       # 27 tests: parser, extraction, model, metrics, provenance guard, app pages
 make app        # Streamlit research dashboard on the committed tables (no network)
 make data verify   # download raw sources, check every API live
 make reproduce     # the full pipeline from scratch
 make readme        # regenerate this README's charts and tables
+```
+
+Or pull the container (CLI and committed tables, no network needed for the dashboard):
+
+```bash
+docker run --rm ghcr.io/lsudoko/pharmakon:latest --help
+docker run --rm -p 8501:8501 --entrypoint streamlit ghcr.io/lsudoko/pharmakon:latest run src/pharmakon/app/Home.py --server.address=0.0.0.0
 ```
 
 From a fresh clone, PubMed takes about an hour without an NCBI key. Optional keys go in `.env`: `ANTHROPIC_API_KEY` (LLM extraction), `NCBI_API_KEY`, `IUCN_TOKEN`.
@@ -377,6 +417,8 @@ From a fresh clone, PubMed takes about an hour without an NCBI key. Optional key
 Rebuild and deploy the site, API and MCP server (from `web/`): `npm install && npm run data && npm run deploy`.
 
 ## Method
+
+<img src="https://pharmakon.adoranto737.workers.dev/readme/hood-graph.gif?v=0be8cf62d9" alt="A lead as a path through the knowledge graph: Greek words, ancient name, species, compound, human target, disease" width="100%">
 
 ```mermaid
 flowchart LR
@@ -473,7 +515,9 @@ What would make the results stronger, in order of value per effort:
 
 ## Cite and acknowledge
 
-Pharmakon (2026). *An uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology.* https://github.com/LSUDOKO/Pharmakon
+Pharmakon (2026). *An uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology.* https://github.com/LSUDOKO/Pharmakon. Citation metadata: [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository" button).
+
+Built by **Arpit** (B.Tech Computer Science, NIT Hamirpur).
 
 Built for EthnoHack 2026, Track 1 (Traditional knowledge). Thanks to Open Greek and Latin (First1KGreek), the Perseus Digital Library, Lardos et al. (2024), Tsioutsiou et al. (2023), Axiotis et al. (2018), GBIF, Wikidata and LOTUS, NLM, EMBL-EBI ChEMBL, Open Targets and PubChem. Manuscript images: Vienna Dioscorides (Codex Vindobonensis med. gr. 1), public domain.
 

@@ -1,0 +1,156 @@
+{
+  "stage": "extract-claims",
+  "generated_at": "2026-11-07T17:45:02+00:00",
+  "passages": 1158,
+  "llm_calls": 0,
+  "extractor": "rule_extract_v1",
+  "llm_merge": {
+    "llm_session_passages": 1158,
+    "llm_claims": 5075,
+    "llm_span_verified_rate": 1.0,
+    "llm_claims_archived_span_mismatch": 0,
+    "rule_claims_in_covered_passages": 3689,
+    "rule_ok_recovered_by_llm": 0.9493,
+    "rule_ambiguous_confirmed_by_llm": 468,
+    "rule_ambiguous_in_covered": 614,
+    "llm_new_claims_in_lexicon": 7,
+    "llm_claims_out_of_lexicon": 1616,
+    "top_out_of_lexicon_conditions": [
+      [
+        "ουρα",
+        29
+      ],
+      [
+        "κοιλιαν",
+        20
+      ],
+      [
+        "φακουσ",
+        15
+      ],
+      [
+        "ουρα κινει",
+        8
+      ],
+      [
+        "κοιλιαν ιστησι",
+        8
+      ],
+      [
+        "ευστομαχον",
+        8
+      ],
+      [
+        "ερπετα",
+        8
+      ],
+      [
+        "γαλα",
+        7
+      ],
+      [
+        "βηξι",
+        7
+      ],
+      [
+        "ιδρωτασ",
+        7
+      ],
+      [
+        "τα εκ θωρακοσ",
+        7
+      ],
+      [
+        "αιγιλωπια",
+        6
+      ],
+      [
+        "κηρια",
+        6
+      ],
+      [
+        "αφροδισια",
+        6
+      ],
+      [
+        "καθαιρει",
+        6
+      ],
+      [
+        "λυγμουσ",
+        6
+      ],
+      [
+        "αντιδοτοισ",
+        6
+      ],
+      [
+        "βοηθουνται δε παντεσ",
+        6
+      ],
+      [
+        "ηλουσ",
+        5
+      ],
+      [
+        "βηξιν",
+        5
+      ],
+      [
+        "ουρησιν",
+        5
+      ],
+      [
+        "εσχαρασ",
+        5
+      ],
+      [
+        "γαλα κατασπα",
+        5
+      ],
+      [
+        "αχλυσ",
+        5
+      ],
+      [
+        "ευστομαχοσ",
+        5
+      ]
+    ]
+  },
+  "ok_before_llm": 2561,
+  "claims_total": 3696,
+  "claims_kept": 3696,
+  "archived_span_mismatch": 0,
+  "exact_span_verified_rate_kept": 1.0,
+  "status_counts": {
+    "ok": 3550,
+    "ambiguous": 146
+  },
+  "icpc2_counts": {
+    "S": 1385,
+    "D": 549,
+    "X": 293,
+    "U": 273,
+    "R": 228,
+    "A": 184,
+    "F": 172,
+    "N": 145,
+    "L": 118,
+    "B": 103,
+    "W": 90,
+    "H": 77,
+    "K": 40,
+    "T": 39
+  },
+  "pilot_skin_claims": 1417,
+  "pilot_skin_chapters": 413,
+  "substance_type_counts": {
+    "plant": 3140,
+    "animal": 406,
+    "compound_preparation": 148,
+    "unknown": 2
+  },
+  "plant_part_known_rate": 0.6347,
+  "route_known_rate": 0.6475
+}

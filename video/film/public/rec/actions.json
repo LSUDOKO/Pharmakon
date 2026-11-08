@@ -1,0 +1,1264 @@
+{
+ "viewport": {
+  "w": 1920,
+  "h": 1080
+ },
+ "fps": 30,
+ "clips": {
+  "explorer": {
+   "file": "rec/explorer.mp4",
+   "duration": 41.202,
+   "frames": 397,
+   "recordedAt": "2026-11-07T22:12:13.739Z",
+   "url": "https://pharmakon.adoranto737.workers.dev/#name=dmm-3-23",
+   "scrollSlowMotionCapture": 2.5,
+   "actions": [
+    {
+     "t": 0.001,
+     "type": "cursor",
+     "x": 1240,
+     "y": 760
+    },
+    {
+     "t": 0.001,
+     "type": "mark",
+     "name": "start"
+    },
+    {
+     "t": 1.504,
+     "type": "scroll",
+     "from": 2877,
+     "to": 3437,
+     "dur": 3
+    },
+    {
+     "t": 4.508,
+     "type": "mark",
+     "name": "explorer_in"
+    },
+    {
+     "t": 4.813,
+     "type": "move",
+     "x": 524,
+     "y": 395,
+     "dur": 0.8
+    },
+    {
+     "t": 6.201,
+     "type": "click",
+     "x": 524,
+     "y": 395,
+     "label": "search"
+    },
+    {
+     "t": 6.288,
+     "type": "mark",
+     "name": "type"
+    },
+    {
+     "t": 6.451,
+     "type": "type",
+     "text": "apsinthion",
+     "dur": 1.15
+    },
+    {
+     "t": 8.011,
+     "type": "move",
+     "x": 516,
+     "y": 501,
+     "dur": 0.65
+    },
+    {
+     "t": 9.082,
+     "type": "mark",
+     "name": "open"
+    },
+    {
+     "t": 9.082,
+     "type": "click",
+     "x": 516,
+     "y": 501,
+     "label": "ἀψίνθιον"
+    },
+    {
+     "t": 10.001,
+     "type": "mark",
+     "name": "passage"
+    },
+    {
+     "t": 10.013,
+     "type": "focus",
+     "x": 792,
+     "y": 574,
+     "w": 358,
+     "h": 535,
+     "label": "passage"
+    },
+    {
+     "t": 10.602,
+     "type": "move",
+     "x": 834,
+     "y": 704,
+     "dur": 0.8
+    },
+    {
+     "t": 11.666,
+     "type": "move",
+     "x": 1056,
+     "y": 751,
+     "dur": 2
+    },
+    {
+     "t": 17.201,
+     "type": "mark",
+     "name": "probs"
+    },
+    {
+     "t": 17.21,
+     "type": "focus",
+     "x": 1156,
+     "y": 568,
+     "w": 346,
+     "h": 198,
+     "label": "probabilities"
+    },
+    {
+     "t": 17.602,
+     "type": "move",
+     "x": 1329,
+     "y": 620,
+     "dur": 0.7
+    },
+    {
+     "t": 21.301,
+     "type": "move",
+     "x": 1397,
+     "y": 622,
+     "dur": 0.6
+    },
+    {
+     "t": 23.401,
+     "type": "mark",
+     "name": "unidentified"
+    },
+    {
+     "t": 23.401,
+     "type": "move",
+     "x": 1260,
+     "y": 678,
+     "dur": 0.6
+    },
+    {
+     "t": 26.402,
+     "type": "mark",
+     "name": "cands"
+    },
+    {
+     "t": 26.406,
+     "type": "scroll",
+     "from": 3437,
+     "to": 4053,
+     "dur": 1.3
+    },
+    {
+     "t": 27.72,
+     "type": "focus",
+     "x": 1164,
+     "y": 190,
+     "w": 330,
+     "h": 280,
+     "label": "candidate"
+    },
+    {
+     "t": 27.728,
+     "type": "focus",
+     "x": 1276,
+     "y": 258,
+     "w": 204,
+     "h": 97,
+     "label": "contrib"
+    },
+    {
+     "t": 30.313,
+     "type": "move",
+     "x": 1372,
+     "y": 277,
+     "dur": 0.6
+    },
+    {
+     "t": 32.011,
+     "type": "move",
+     "x": 1372,
+     "y": 335,
+     "dur": 0.6
+    },
+    {
+     "t": 33.901,
+     "type": "mark",
+     "name": "morph"
+    },
+    {
+     "t": 33.91,
+     "type": "focus",
+     "x": 1274,
+     "y": 343,
+     "w": 208,
+     "h": 97,
+     "label": "description match"
+    },
+    {
+     "t": 33.917,
+     "type": "move",
+     "x": 1376,
+     "y": 364,
+     "dur": 0.6
+    },
+    {
+     "t": 35.001,
+     "type": "mark",
+     "name": "eras"
+    },
+    {
+     "t": 35.004,
+     "type": "scroll",
+     "from": 4053,
+     "to": 4623,
+     "dur": 0.95
+    },
+    {
+     "t": 35.967,
+     "type": "focus",
+     "x": 796,
+     "y": 102,
+     "w": 696,
+     "h": 637,
+     "label": "eras-table"
+    },
+    {
+     "t": 35.978,
+     "type": "focus",
+     "x": 796,
+     "y": 259,
+     "w": 696,
+     "h": 57,
+     "label": "skin row"
+    },
+    {
+     "t": 35.978,
+     "type": "move",
+     "x": 1416,
+     "y": 287,
+     "dur": 0.6
+    },
+    {
+     "t": 36.901,
+     "type": "mark",
+     "name": "galen"
+    },
+    {
+     "t": 36.904,
+     "type": "scroll",
+     "from": 4623,
+     "to": 5227,
+     "dur": 0.85
+    },
+    {
+     "t": 37.766,
+     "type": "focus",
+     "x": 796,
+     "y": 142,
+     "w": 696,
+     "h": 536,
+     "label": "galen"
+    },
+    {
+     "t": 37.766,
+     "type": "move",
+     "x": 1060,
+     "y": 640,
+     "dur": 0.6
+    },
+    {
+     "t": 38.601,
+     "type": "mark",
+     "name": "modern"
+    },
+    {
+     "t": 38.604,
+     "type": "scroll",
+     "from": 5227,
+     "to": 5398,
+     "dur": 0.75
+    },
+    {
+     "t": 39.366,
+     "type": "focus",
+     "x": 790,
+     "y": 546,
+     "w": 708,
+     "h": 52,
+     "label": "villages"
+    },
+    {
+     "t": 39.373,
+     "type": "move",
+     "x": 1054,
+     "y": 572,
+     "dur": 0.6
+    },
+    {
+     "t": 41.202,
+     "type": "mark",
+     "name": "end"
+    }
+   ]
+  },
+  "time": {
+   "file": "rec/time.mp4",
+   "duration": 9.602,
+   "frames": 131,
+   "recordedAt": "2026-11-07T22:17:45.859Z",
+   "url": "https://pharmakon.adoranto737.workers.dev/#name=dmm-3-23",
+   "scrollSlowMotionCapture": 2.5,
+   "actions": [
+    {
+     "t": 0,
+     "type": "cursor",
+     "x": 1150,
+     "y": 520
+    },
+    {
+     "t": 0.001,
+     "type": "mark",
+     "name": "start"
+    },
+    {
+     "t": 0.002,
+     "type": "scroll",
+     "from": 6222,
+     "to": 6372,
+     "dur": 0.8
+    },
+    {
+     "t": 0.863,
+     "type": "move",
+     "x": 562,
+     "y": 292,
+     "dur": 0.55
+    },
+    {
+     "t": 1.416,
+     "type": "click",
+     "x": 562,
+     "y": 292,
+     "label": "Skin & wounds"
+    },
+    {
+     "t": 1.51,
+     "type": "mark",
+     "name": "skin"
+    },
+    {
+     "t": 1.525,
+     "type": "focus",
+     "x": 396,
+     "y": 244,
+     "w": 733,
+     "h": 500,
+     "label": "alluvial"
+    },
+    {
+     "t": 1.598,
+     "type": "info",
+     "columns": {
+      "dio": {
+       "x": 486.7464294433594,
+       "y": 326.1690368652344,
+       "width": 63.937530517578125,
+       "height": 15
+      },
+      "gal": {
+       "x": 657.8648071289062,
+       "y": 326.1690368652344,
+       "width": 33.07769775390625,
+       "height": 15
+      },
+      "john": {
+       "x": 779.4441528320312,
+       "y": 326.1690368652344,
+       "width": 101.09130859375,
+       "height": 15
+      },
+      "mod": {
+       "x": 942.8671264648438,
+       "y": 326.1690368652344,
+       "width": 85.63897705078125,
+       "height": 15
+      }
+     }
+    },
+    {
+     "t": 1.598,
+     "type": "move",
+     "x": 519,
+     "y": 386,
+     "dur": 0.45
+    },
+    {
+     "t": 2.095,
+     "type": "move",
+     "x": 674,
+     "y": 386,
+     "dur": 0.45
+    },
+    {
+     "t": 2.801,
+     "type": "move",
+     "x": 830,
+     "y": 386,
+     "dur": 0.45
+    },
+    {
+     "t": 4.102,
+     "type": "move",
+     "x": 986,
+     "y": 386,
+     "dur": 0.45
+    },
+    {
+     "t": 5.309,
+     "type": "move",
+     "x": 463,
+     "y": 292,
+     "dur": 0.5
+    },
+    {
+     "t": 5.902,
+     "type": "click",
+     "x": 463,
+     "y": 292,
+     "label": "All uses"
+    },
+    {
+     "t": 5.99,
+     "type": "mark",
+     "name": "all"
+    },
+    {
+     "t": 6.601,
+     "type": "mark",
+     "name": "null"
+    },
+    {
+     "t": 6.611,
+     "type": "focus",
+     "x": 1153,
+     "y": 240,
+     "w": 375,
+     "h": 508,
+     "label": "permutation"
+    },
+    {
+     "t": 6.62,
+     "type": "focus",
+     "x": 1179,
+     "y": 427,
+     "w": 323,
+     "h": 66,
+     "label": "observed"
+    },
+    {
+     "t": 6.62,
+     "type": "move",
+     "x": 1356,
+     "y": 461,
+     "dur": 0.6
+    },
+    {
+     "t": 9.602,
+     "type": "mark",
+     "name": "end"
+    }
+   ]
+  },
+  "results": {
+   "file": "rec/results.mp4",
+   "duration": 13.2,
+   "frames": 185,
+   "recordedAt": "2026-11-07T22:22:51.165Z",
+   "url": "https://pharmakon.adoranto737.workers.dev/#name=dmm-3-23",
+   "scrollSlowMotionCapture": 2.5,
+   "actions": [
+    {
+     "t": 0,
+     "type": "cursor",
+     "x": 1100,
+     "y": 640
+    },
+    {
+     "t": 0,
+     "type": "mark",
+     "name": "start"
+    },
+    {
+     "t": 0.001,
+     "type": "scroll",
+     "from": 6965,
+     "to": 7565,
+     "dur": 1.5
+    },
+    {
+     "t": 2.051,
+     "type": "move",
+     "x": 1036,
+     "y": 225,
+     "dur": 0.6
+    },
+    {
+     "t": 2.65,
+     "type": "click",
+     "x": 1036,
+     "y": 225,
+     "label": "2000"
+    },
+    {
+     "t": 2.74,
+     "type": "mark",
+     "name": "cut2000"
+    },
+    {
+     "t": 2.748,
+     "type": "focus",
+     "x": 1000,
+     "y": 480,
+     "w": 498,
+     "h": 289,
+     "label": "verdict"
+    },
+    {
+     "t": 4.611,
+     "type": "move",
+     "x": 1103,
+     "y": 225,
+     "dur": 0.6
+    },
+    {
+     "t": 5.21,
+     "type": "click",
+     "x": 1103,
+     "y": 225,
+     "label": "2005"
+    },
+    {
+     "t": 5.299,
+     "type": "mark",
+     "name": "cut2005"
+    },
+    {
+     "t": 5.311,
+     "type": "focus",
+     "x": 1000,
+     "y": 480,
+     "w": 498,
+     "h": 289,
+     "label": "verdict"
+    },
+    {
+     "t": 8.01,
+     "type": "move",
+     "x": 1169,
+     "y": 225,
+     "dur": 0.6
+    },
+    {
+     "t": 8.609,
+     "type": "click",
+     "x": 1169,
+     "y": 225,
+     "label": "2010"
+    },
+    {
+     "t": 8.698,
+     "type": "mark",
+     "name": "cut2010"
+    },
+    {
+     "t": 8.71,
+     "type": "focus",
+     "x": 1000,
+     "y": 480,
+     "w": 498,
+     "h": 289,
+     "label": "verdict"
+    },
+    {
+     "t": 10.61,
+     "type": "move",
+     "x": 1232,
+     "y": 225,
+     "dur": 0.6
+    },
+    {
+     "t": 11.21,
+     "type": "click",
+     "x": 1232,
+     "y": 225,
+     "label": "2015"
+    },
+    {
+     "t": 11.299,
+     "type": "mark",
+     "name": "cut2015"
+    },
+    {
+     "t": 11.311,
+     "type": "focus",
+     "x": 1000,
+     "y": 480,
+     "w": 498,
+     "h": 289,
+     "label": "verdict"
+    },
+    {
+     "t": 13.2,
+     "type": "mark",
+     "name": "end"
+    }
+   ]
+  },
+  "pubmed": {
+   "file": "rec/pubmed.mp4",
+   "duration": 4.001,
+   "frames": 1,
+   "recordedAt": "2026-11-07T22:46:32.155Z",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vicia%20faba%22%5Btiab%5D)%20AND%20(%22Eye%20Diseases%22%5BMeSH%20Terms%5D%20OR%20%22Eye%20Disorders%22%5Btiab%5D)%20AND%20(%22Plant%20Extracts%22%5BMeSH%20Terms%5D%20OR%20%22Phytochemicals%22%5BMeSH%20Terms%5D%20OR%20pharmacology%5BSubheading%5D%20OR%20%22drug%20effects%22%5BSubheading%5D)",
+   "scrollSlowMotionCapture": 2.5,
+   "actions": [
+    {
+     "t": 0,
+     "type": "cursor",
+     "x": 1100,
+     "y": 600
+    },
+    {
+     "t": 0,
+     "type": "mark",
+     "name": "start"
+    },
+    {
+     "t": 0.003,
+     "type": "info",
+     "pubmed": {
+      "no_results": true,
+      "results_amount": "No results were found.",
+      "query_box": "(\"Vicia faba\"[tiab]) AND (\"Eye Diseases\"[MeSH Terms] OR \"Eye Disorders\"[tiab]) AND (\"Plant Extracts\"[MeSH Terms] OR \"Phytochemicals\"[MeSH Terms] OR pharmacology[Subheading] OR \"drug effects\"[Subheading])",
+      "excerpt": "Skip to main page content\nNIH Websites Are Changing\nGet the Latest Updates and FAQs on the transition\nPer Executive Order 14434, federal agencies are now using \"Super Intelligence\" (SI) in place of \"Artificial Intelligence\" (AI). You may see both terms across NIH content during this transition.\n \n\nAn official website of the United States government\n\n Here's how you know \nLog in\nAccess keys\nNCBI Homepage\nMyNCBI Homepage\nMain Content\nMain Navigation\nSearch Page\nSearch:\n0 results are available, use"
+     }
+    },
+    {
+     "t": 0.047,
+     "type": "focus",
+     "x": 712,
+     "y": 464,
+     "w": 180,
+     "h": 56,
+     "label": "no results"
+    },
+    {
+     "t": 0.047,
+     "type": "move",
+     "x": 802,
+     "y": 528,
+     "dur": 0.9
+    },
+    {
+     "t": 4.001,
+     "type": "mark",
+     "name": "end"
+    }
+   ]
+  },
+  "leads": {
+   "file": "rec/leads.mp4",
+   "duration": 45.802,
+   "frames": 203,
+   "recordedAt": "2026-11-07T22:46:41.432Z",
+   "url": "https://pharmakon.adoranto737.workers.dev/#name=dmm-3-23",
+   "scrollSlowMotionCapture": 2.5,
+   "actions": [
+    {
+     "t": 0,
+     "type": "cursor",
+     "x": 1150,
+     "y": 640
+    },
+    {
+     "t": 0,
+     "type": "mark",
+     "name": "start"
+    },
+    {
+     "t": 0.203,
+     "type": "scroll",
+     "from": 8237,
+     "to": 8777,
+     "dur": 1
+    },
+    {
+     "t": 1.3,
+     "type": "mark",
+     "name": "slider"
+    },
+    {
+     "t": 1.357,
+     "type": "focus",
+     "x": 384,
+     "y": 120,
+     "w": 1152,
+     "h": 62,
+     "label": "tools"
+    },
+    {
+     "t": 1.357,
+     "type": "move",
+     "x": 851,
+     "y": 151,
+     "dur": 0.6
+    },
+    {
+     "t": 2,
+     "type": "press",
+     "x": 851,
+     "y": 151,
+     "label": "drag"
+    },
+    {
+     "t": 2.015,
+     "type": "move",
+     "x": 889,
+     "y": 151,
+     "dur": 0.9
+    },
+    {
+     "t": 3.738,
+     "type": "release",
+     "x": 889,
+     "y": 151
+    },
+    {
+     "t": 3.748,
+     "type": "info",
+     "pmin": "0.5"
+    },
+    {
+     "t": 3.764,
+     "type": "focus",
+     "x": 644,
+     "y": 130,
+     "w": 315,
+     "h": 44,
+     "label": "certainty"
+    },
+    {
+     "t": 3.764,
+     "type": "mark",
+     "name": "toxtag"
+    },
+    {
+     "t": 3.773,
+     "type": "scroll",
+     "from": 8777,
+     "to": 9107,
+     "dur": 0.45
+    },
+    {
+     "t": 4.251,
+     "type": "focus",
+     "x": 404,
+     "y": 662,
+     "w": 131,
+     "h": 45,
+     "label": "tox tag"
+    },
+    {
+     "t": 4.265,
+     "type": "focus",
+     "x": 388,
+     "y": 292,
+     "w": 380,
+     "h": 462,
+     "label": "tox card"
+    },
+    {
+     "t": 4.27,
+     "type": "info",
+     "toxicLead": "Lead 4: Artemisia absinthium for Eye Diseases"
+    },
+    {
+     "t": 4.27,
+     "type": "move",
+     "x": 470,
+     "y": 687,
+     "dur": 0.4
+    },
+    {
+     "t": 4.671,
+     "type": "scroll",
+     "from": 9107,
+     "to": 8777,
+     "dur": 0.45
+    },
+    {
+     "t": 5.123,
+     "type": "mark",
+     "name": "hide"
+    },
+    {
+     "t": 5.146,
+     "type": "focus",
+     "x": 961,
+     "y": 130,
+     "w": 248,
+     "h": 44,
+     "label": "toxicity toggle"
+    },
+    {
+     "t": 5.161,
+     "type": "move",
+     "x": 981,
+     "y": 151,
+     "dur": 0.45
+    },
+    {
+     "t": 5.612,
+     "type": "click",
+     "x": 981,
+     "y": 151,
+     "label": "Hide plants with known toxicity"
+    },
+    {
+     "t": 5.801,
+     "type": "mark",
+     "name": "cond"
+    },
+    {
+     "t": 5.811,
+     "type": "move",
+     "x": 493,
+     "y": 151,
+     "dur": 0.55
+    },
+    {
+     "t": 6.529,
+     "type": "click",
+     "x": 493,
+     "y": 151,
+     "label": "condition"
+    },
+    {
+     "t": 6.712,
+     "type": "select",
+     "label": "Eye Diseases",
+     "x": 493,
+     "y": 151
+    },
+    {
+     "t": 6.713,
+     "type": "mark",
+     "name": "cards"
+    },
+    {
+     "t": 7.618,
+     "type": "info",
+     "lead": "Lead 1: Vicia faba for Eye Diseases",
+     "cardIndex": 0
+    },
+    {
+     "t": 7.628,
+     "type": "focus",
+     "x": 388,
+     "y": 188,
+     "w": 380,
+     "h": 462,
+     "label": "card"
+    },
+    {
+     "t": 7.636,
+     "type": "focus",
+     "x": 396,
+     "y": 196,
+     "w": 1128,
+     "h": 1343,
+     "label": "grid"
+    },
+    {
+     "t": 7.636,
+     "type": "move",
+     "x": 1250,
+     "y": 700,
+     "dur": 0.9
+    },
+    {
+     "t": 11.902,
+     "type": "mark",
+     "name": "meters"
+    },
+    {
+     "t": 11.911,
+     "type": "focus",
+     "x": 404,
+     "y": 500,
+     "w": 348,
+     "h": 67,
+     "label": "meters"
+    },
+    {
+     "t": 11.911,
+     "type": "move",
+     "x": 594,
+     "y": 521,
+     "dur": 0.6
+    },
+    {
+     "t": 13.601,
+     "type": "mark",
+     "name": "pathtag"
+    },
+    {
+     "t": 13.612,
+     "type": "focus",
+     "x": 404,
+     "y": 559,
+     "w": 173,
+     "h": 45,
+     "label": "path tag"
+    },
+    {
+     "t": 13.612,
+     "type": "move",
+     "x": 490,
+     "y": 584,
+     "dur": 0.6
+    },
+    {
+     "t": 22.201,
+     "type": "mark",
+     "name": "open"
+    },
+    {
+     "t": 22.209,
+     "type": "move",
+     "x": 578,
+     "y": 339,
+     "dur": 0.6
+    },
+    {
+     "t": 23.001,
+     "type": "click",
+     "x": 578,
+     "y": 339,
+     "label": "open lead"
+    },
+    {
+     "t": 23.702,
+     "type": "mark",
+     "name": "dialog"
+    },
+    {
+     "t": 23.717,
+     "type": "focus",
+     "x": 580,
+     "y": 174,
+     "w": 760,
+     "h": 732,
+     "label": "dialog"
+    },
+    {
+     "t": 23.724,
+     "type": "focus",
+     "x": 598,
+     "y": 226,
+     "w": 724,
+     "h": 74,
+     "label": "no paper"
+    },
+    {
+     "t": 23.724,
+     "type": "move",
+     "x": 1000,
+     "y": 640,
+     "dur": 0.7
+    },
+    {
+     "t": 25.901,
+     "type": "mark",
+     "name": "query"
+    },
+    {
+     "t": 25.909,
+     "type": "focus",
+     "x": 598,
+     "y": 694,
+     "w": 724,
+     "h": 100,
+     "label": "query"
+    },
+    {
+     "t": 25.915,
+     "type": "move",
+     "x": 854,
+     "y": 744,
+     "dur": 0.5
+    },
+    {
+     "t": 26.84,
+     "type": "info",
+     "pubmedLink": {
+      "x": 608,
+      "y": 803.46875,
+      "width": 193.734375,
+      "height": 21
+     }
+    },
+    {
+     "t": 26.84,
+     "type": "move",
+     "x": 705,
+     "y": 814,
+     "dur": 0.5
+    },
+    {
+     "t": 27.525,
+     "type": "mark",
+     "name": "pubmed_click"
+    },
+    {
+     "t": 27.526,
+     "type": "click",
+     "x": 705,
+     "y": 814,
+     "label": "Run this query on PubMed"
+    },
+    {
+     "t": 28.361,
+     "type": "info",
+     "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vicia%20faba%22%5Btiab%5D)%20AND%20(%22Eye%20Diseases%22%5BMeSH%20Terms%5D%20OR%20%22Eye%20Disorders%22%5Btiab%5D)%20AND%20(%22Plant%20Extracts%22%5BMeSH%20Terms%5D%20OR%20%22Phytochemicals%22%5BMeSH%20Terms%5D%20OR%20pharmacology%5BSubheading%5D%20OR%20%22drug%20effects%22%5BSubheading%5D)"
+    },
+    {
+     "t": 28.361,
+     "type": "mark",
+     "name": "away"
+    },
+    {
+     "t": 38.001,
+     "type": "mark",
+     "name": "back"
+    },
+    {
+     "t": 38.009,
+     "type": "focus",
+     "x": 600,
+     "y": 336,
+     "w": 720,
+     "h": 49,
+     "label": "path"
+    },
+    {
+     "t": 38.016,
+     "type": "move",
+     "x": 960,
+     "y": 361,
+     "dur": 0.6
+    },
+    {
+     "t": 41.401,
+     "type": "mark",
+     "name": "close"
+    },
+    {
+     "t": 41.41,
+     "type": "move",
+     "x": 1291,
+     "y": 207,
+     "dur": 0.6
+    },
+    {
+     "t": 42.102,
+     "type": "click",
+     "x": 1291,
+     "y": 207,
+     "label": "Close"
+    },
+    {
+     "t": 42.801,
+     "type": "mark",
+     "name": "csv"
+    },
+    {
+     "t": 42.81,
+     "type": "move",
+     "x": 1284,
+     "y": 151,
+     "dur": 0.8
+    },
+    {
+     "t": 43.802,
+     "type": "click",
+     "x": 1284,
+     "y": 151,
+     "label": "Download CSV"
+    },
+    {
+     "t": 43.911,
+     "type": "focus",
+     "x": 1211,
+     "y": 125,
+     "w": 147,
+     "h": 53,
+     "label": "csv"
+    },
+    {
+     "t": 43.912,
+     "type": "info",
+     "download": "pharmakon_leads.csv"
+    },
+    {
+     "t": 45.802,
+     "type": "mark",
+     "name": "end"
+    }
+   ]
+  },
+  "use": {
+   "file": "rec/use.mp4",
+   "duration": 3.601,
+   "frames": 30,
+   "recordedAt": "2026-11-07T22:21:42.929Z",
+   "url": "https://pharmakon.adoranto737.workers.dev/#name=dmm-3-23",
+   "scrollSlowMotionCapture": 2.5,
+   "actions": [
+    {
+     "t": 0,
+     "type": "cursor",
+     "x": 1150,
+     "y": 700
+    },
+    {
+     "t": 0,
+     "type": "mark",
+     "name": "start"
+    },
+    {
+     "t": 0.001,
+     "type": "scroll",
+     "from": 11022,
+     "to": 11162,
+     "dur": 0.9
+    },
+    {
+     "t": 0.97,
+     "type": "focus",
+     "x": 412,
+     "y": 384,
+     "w": 331,
+     "h": 155,
+     "label": "mcp command"
+    },
+    {
+     "t": 0.978,
+     "type": "move",
+     "x": 515,
+     "y": 455,
+     "dur": 0.7
+    },
+    {
+     "t": 1.811,
+     "type": "move",
+     "x": 655,
+     "y": 475,
+     "dur": 0.7
+    },
+    {
+     "t": 3.601,
+     "type": "mark",
+     "name": "end"
+    }
+   ]
+  },
+  "github": {
+   "file": "rec/github.mp4",
+   "duration": 9.501,
+   "frames": 459,
+   "recordedAt": "2026-11-07T22:22:31.096Z",
+   "url": "https://github.com/LSUDOKO/Pharmakon",
+   "scrollSlowMotionCapture": 2.5,
+   "actions": [
+    {
+     "t": 0,
+     "type": "cursor",
+     "x": 1250,
+     "y": 700
+    },
+    {
+     "t": 0,
+     "type": "mark",
+     "name": "start"
+    },
+    {
+     "t": 0.056,
+     "type": "focus",
+     "x": 385,
+     "y": 90,
+     "w": 838,
+     "h": 25773,
+     "label": "readme"
+    },
+    {
+     "t": 0.062,
+     "type": "info",
+     "readmeTop": 1075,
+     "resultsY": 6462.453125
+    },
+    {
+     "t": 2.4,
+     "type": "mark",
+     "name": "scroll"
+    },
+    {
+     "t": 2.402,
+     "type": "scroll",
+     "from": 985,
+     "to": 6352,
+     "dur": 4
+    },
+    {
+     "t": 6.406,
+     "type": "mark",
+     "name": "tables"
+    },
+    {
+     "t": 6.417,
+     "type": "focus",
+     "x": 377,
+     "y": -3905,
+     "w": 854,
+     "h": 754,
+     "label": "results table"
+    },
+    {
+     "t": 6.417,
+     "type": "move",
+     "x": 900,
+     "y": 520,
+     "dur": 0.9
+    },
+    {
+     "t": 9.501,
+     "type": "mark",
+     "name": "end"
+    }
+   ]
+  }
+ },
+ "note": "times in clip seconds (natural speed); x/y/w/h in CSS px of the 1920x1080 viewport"
+}

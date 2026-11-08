@@ -113,6 +113,7 @@ p { margin: 0 0 1em; max-width: 64ch; }
     linear-gradient(180deg, rgba(61, 187, 130, 0.55), rgba(23, 116, 79, 0.35) 60%, rgba(11, 61, 42, 0.5));
 }
 .cta-row::before { /* soft verdigris light behind the glass so it has something to refract */
+  pointer-events: none;
   content: ""; position: absolute; inset: -40px -80px; z-index: -1;
   background: radial-gradient(50% 60% at 50% 50%, rgba(23,116,79,.35), transparent 70%); filter: blur(10px);
 }

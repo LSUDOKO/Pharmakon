@@ -2,8 +2,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/media/logo-dark.png">
-    <img src="docs/media/logo-light.png" alt="Pharmakon" width="420">
+    <source media="(prefers-color-scheme: dark)" srcset="readme/logo-dark.png">
+    <img src="readme/logo-light.png" alt="Pharmakon" width="420">
   </picture>
 </p>
 
@@ -11,18 +11,41 @@
 An uncertainty-aware map from Dioscorides' 1st-century Greek to modern species, chemistry and untested research leads.</p>
 
 <p align="center">
-  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-open-17744f?style=flat-square"></a>
+  <a href="https://youtu.be/d-kbvFd2K04"><img alt="Watch the film" src="https://img.shields.io/badge/film-watch%20on%20YouTube-ff0000?style=flat-square&logo=youtube&logoColor=white"></a>
+  <a href="https://drive.google.com/file/d/1cX2WHtz4g6Yu8RxI-wfN-3ifHq9VsYnv/view?usp=sharing"><img alt="Pitch deck" src="https://img.shields.io/badge/pitch%20deck-open-17744f?style=flat-square&logo=googledrive&logoColor=white"></a>
+  <a href="https://pharmakon.adoranto737.workers.dev"><img alt="Live site" src="https://img.shields.io/badge/live%20site-open-17744f?style=flat-square&logo=cloudflare&logoColor=white"></a>
   <a href="https://pharmakon.adoranto737.workers.dev/mcp"><img alt="MCP server" src="https://img.shields.io/badge/MCP-6%20tools-3dbb82?style=flat-square"></a>
-  <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-b8e6cc?style=flat-square">
-  <img alt="Tests" src="https://img.shields.io/badge/tests-24%20passing-17744f?style=flat-square">
-  <img alt="Licence MIT" src="https://img.shields.io/badge/code-MIT-eceee7?style=flat-square">
+  <br>
+  <a href="https://github.com/LSUDOKO/Pharmakon/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/LSUDOKO/Pharmakon/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/LSUDOKO/Pharmakon/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/LSUDOKO/Pharmakon?style=flat-square&color=17744f"></a>
+  <a href="https://github.com/LSUDOKO/Pharmakon/pkgs/container/pharmakon"><img alt="Container" src="https://img.shields.io/badge/ghcr.io-pharmakon-3dbb82?style=flat-square&logo=docker&logoColor=white"></a>
+  <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-b8e6cc?style=flat-square&logo=python&logoColor=white">
+  <a href="LICENSE"><img alt="Licence MIT" src="https://img.shields.io/badge/code-MIT-eceee7?style=flat-square"></a>
   <img alt="EthnoHack 2026" src="https://img.shields.io/badge/EthnoHack%202026-Track%201-000000?style=flat-square">
 </p>
 
-<img src="docs/media/banner.jpg" alt="Pharmakon website: torn verdigris sheets printed with the Vienna Dioscorides around the Pharmakon wordmark" width="100%">
+<img src="readme/film-title.gif" alt="Pharmakon title: a Vienna Dioscorides folio tears apart around the Pharmakon wordmark" width="100%">
 
 > [!IMPORTANT]
 > **Research hypotheses only, not medical advice.** Pharmakon generates research hypotheses from historical texts and open databases. Nothing here is medical advice, a recommendation to use any plant, or evidence of safety or efficacy.
+
+## Watch the film
+
+<table>
+<tr>
+<td width="58%"><a href="https://youtu.be/d-kbvFd2K04"><img src="readme/film-thumbnail.jpg" alt="Pharmakon film on YouTube: 1,781 untested leads from a 2,000-year-old Greek drug book" width="100%"></a></td>
+<td width="42%">
+
+**[▶ Watch the film on YouTube](https://youtu.be/d-kbvFd2K04)** (9 min)<br>
+The problem, the data, the method, a live demo of the site and of the MCP server inside Claude, and every result, including the one that did not work.
+
+**[Pitch deck](https://drive.google.com/file/d/1cX2WHtz4g6Yu8RxI-wfN-3ifHq9VsYnv/view?usp=sharing)** (Google Drive)<br>
+**[Slides, PDF](docs/slides/Pharmakon_EthnoHack2026_slides.pdf)** (10 slides, built from the pipeline outputs)<br>
+**[Live site](https://pharmakon.adoranto737.workers.dev)** · **[MCP endpoint](https://pharmakon.adoranto737.workers.dev/mcp)** · **[Latest release](https://github.com/LSUDOKO/Pharmakon/releases/latest)**
+
+</td>
+</tr>
+</table>
 
 ## In one minute
 
@@ -44,15 +67,15 @@ Use it three ways: the **[website](https://pharmakon.adoranto737.workers.dev)**,
 | Identification model, persistence test, temporal backtest, leads | done, results below |
 | Website with explorer, charts and leads gallery | live on Cloudflare |
 | MCP server (6 read-only tools) and JSON API | live on Cloudflare |
-| Streamlit research dashboard, 24 tests | done |
+| Streamlit research dashboard, 27 tests, CI on every push | done |
 | Calibration (ECE {{ECE}} vs target ≤ 0.10) | **missed**, cause identified below |
 | Human audits of extraction, conditions, merges, labels | **pending**: blinded sheets generated in `data/gold/audits/` |
 | LLM claim extraction, LLM lexicon extension, plant-morphology feature, LLM-judge baseline | done (Claude session + Groq), every span re-verified; kept out of the backtest |
 | All body systems (beyond the skin/wound pilot) | done: PubMed labels and chemistry re-run for every use group |
 | Slide deck (10 slides, PDF) | done: `docs/slides/Pharmakon_EthnoHack2026_slides.pdf`, built from the pipeline outputs by `docs/slides/build_slides.py` |
-| Pitch video, Devpost page, team names | team tasks |
+| Pitch film (9 min) and pitch deck | done: [YouTube](https://youtu.be/d-kbvFd2K04) · [deck](https://drive.google.com/file/d/1cX2WHtz4g6Yu8RxI-wfN-3ifHq9VsYnv/view?usp=sharing) |
 
-<img src="docs/media/chart-pipeline.svg" alt="Pipeline counts" width="100%">
+<img src="readme/chart-pipeline.svg" alt="Pipeline counts" width="100%">
 
 ## A worked example
 
@@ -62,7 +85,13 @@ What the pipeline produces for one name, wormwood:
 
 The highlighted evidence spans, photos and the Galen passage for this name are shown in the explorer:
 
-<img src="docs/media/shot-explorer.jpg" alt="Ancient name explorer showing ἀψίνθιον with highlighted Greek, candidate species with photos and probability bars, and a four-era survival table" width="100%">
+<img src="readme/demo-explorer.gif" alt="Explorer: searching apsinthion, the Greek passage with every use highlighted, and the species probabilities with intervals" width="100%">
+
+<details><summary>Still image</summary>
+
+<img src="readme/shot-explorer.jpg" alt="Ancient name explorer showing ἀψίνθιον with highlighted Greek, candidate species with photos and probability bars, and a four-era survival table" width="100%">
+
+</details>
 
 ## Results
 
@@ -70,7 +99,7 @@ The highlighted evidence spans, photos and the Galen passage for this name are s
 
 Each of the 61 names identified by Lardos et al. (2024) is held out in turn; the model ranks GBIF-verified candidates using geography, name continuity, scholarly agreement and genus consensus, with no pharmacology at all.
 
-<img src="docs/media/chart-identification.svg" alt="Top-1 agreement with experts: Pharmakon vs baselines, with 95% intervals" width="100%">
+<img src="readme/chart-identification.svg" alt="Top-1 agreement with experts: Pharmakon vs baselines, with 95% intervals" width="100%">
 
 {{TABLE_IDENTIFICATION}}
 
@@ -81,11 +110,11 @@ What the model learned (conditional-logit weights; the "unidentified" option has
 
 {{TABLE_WEIGHTS}}
 
-<img src="docs/media/chart-reliability.svg" alt="Reliability diagram: confidence vs accuracy, ECE above target" width="100%">
+<img src="readme/chart-reliability.svg" alt="Reliability diagram: confidence vs accuracy, ECE above target" width="100%">
 
 ### 2. Did the uses survive?
 
-<img src="docs/media/chart-persistence.svg" alt="Observed survival 49% vs 40.5% under shuffling; survival by body system" width="100%">
+<img src="readme/chart-persistence.svg" alt="Observed survival 49% vs 40.5% under shuffling; survival by body system" width="100%">
 
 - Galen re-attests **{{GALEN}}** of Dioscorides' uses for the names that could be linked to his text, John the Physician **{{JC}}**.
 - Galen is not copying: mean word 4-gram containment against Dioscorides is close to zero.
@@ -94,13 +123,13 @@ Survival by body system (Dioscorides uses whose plant could be identified):
 
 {{TABLE_PERSISTENCE}}
 
-<img src="docs/media/shot-time.jpg" alt="Alluvial chart of uses flowing from Dioscorides through Galen and John the Physician to modern Greece" width="100%">
+<img src="readme/shot-time.jpg" alt="Alluvial chart of uses flowing from Dioscorides through Galen and John the Physician to modern Greece" width="100%">
 
 ### 3. The time machine
 
 Stand in 2000, 2005, 2010 or 2015, forget everything published after, rank the plant–condition pairs nobody had studied yet, then check PubMed up to 2025. Features are gated by date: compound reference years, ChEMBL document years and modern-study publication years must all precede the cutoff, and no LLM output is used.
 
-<img src="docs/media/chart-backtest.svg" alt="AUPRC by cutoff for random, popularity, history and combined models" width="100%">
+<img src="readme/chart-backtest.svg" alt="AUPRC by cutoff for random, popularity, history and combined models" width="100%">
 
 {{TABLE_BACKTEST}}
 
@@ -125,6 +154,8 @@ Plant–condition pairs used historically, with **no matching PubMed pharmacolog
 > [!WARNING]
 > Hypotheses to test, never advice to use. Rows marked ⚠ contain a compound with a PubChem GHS hazard record.
 
+<img src="readme/demo-leads.gif" alt="Leads gallery: filtering to plants at least 50% certain, hiding toxic plants, choosing a condition and opening a lead" width="100%">
+
 {{GALLERY_LEADS}}
 
 <sub>One photo per species, best-ranked lead first: Wikimedia Commons image (Wikidata P18; each file under its own licence, click for the file page). ⚠ = known toxic constituent.</sub>
@@ -139,13 +170,15 @@ Leads by condition:
 
 {{TABLE_CONDITIONS}}
 
-<img src="docs/media/shot-leads.jpg" alt="Leads gallery with plant photos, certainty meters, toxicity badges and filters" width="100%">
+<img src="readme/shot-leads.jpg" alt="Leads gallery with plant photos, certainty meters, toxicity badges and filters" width="100%">
 
 ## Use it
 
 ### From an AI assistant (MCP)
 
 The MCP server runs on the same Cloudflare Worker as the site. It is read-only, needs no key, and every reply carries the research-only notice and toxicity flags.
+
+<img src="readme/demo-mcp.gif" alt="Claude on the web calling Pharmakon's MCP tools and answering with probabilities, toxicity flags and evidence" width="100%">
 
 **Claude Code**
 
@@ -200,18 +233,18 @@ for n in r["results"]:
     print(n["lemma"], n["top_species"], n["p_top"])
 ```
 
-<img src="docs/media/shot-use.jpg" alt="Use it section of the website with MCP, API and pipeline cards" width="100%">
+<img src="readme/shot-use.jpg" alt="Use it section of the website with MCP, API and pipeline cards" width="100%">
 
 ### On the website
 
 <table>
 <tr>
-<td width="50%"><img src="docs/media/shot-word.jpg" alt="One word, three plants: how a single Greek name splits across candidate species"><br><b>The problem in one word.</b> One Greek name, several candidate plants, each with a probability.</td>
-<td width="50%"><img src="docs/media/shot-how.jpg" alt="Pipeline steps"><br><b>How it works.</b> Read, extract, identify, trace, test, rank.</td>
+<td width="50%"><img src="readme/shot-word.jpg" alt="One word, three plants: how a single Greek name splits across candidate species"><br><b>The problem in one word.</b> One Greek name, several candidate plants, each with a probability.</td>
+<td width="50%"><img src="readme/shot-how.jpg" alt="Pipeline steps"><br><b>How it works.</b> Read, extract, identify, trace, test, rank.</td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/media/shot-results.jpg" alt="Results: identification against experts and the time machine"><br><b>What the evidence says.</b> Both tests, reported the same way whether they worked or not.</td>
-<td width="50%"><img src="docs/media/shot-data.jpg" alt="Open data sources and limitations"><br><b>Open data.</b> Every source checked live, licences recorded, limits stated.</td>
+<td width="50%"><img src="readme/shot-results.jpg" alt="Results: identification against experts and the time machine"><br><b>What the evidence says.</b> Both tests, reported the same way whether they worked or not.</td>
+<td width="50%"><img src="readme/shot-data.jpg" alt="Open data sources and limitations"><br><b>Open data.</b> Every source checked live, licences recorded, limits stated.</td>
 </tr>
 </table>
 
@@ -220,11 +253,18 @@ for n in r["results"]:
 ```bash
 git clone https://github.com/LSUDOKO/Pharmakon && cd Pharmakon
 make setup      # uv venv + install (Python 3.12)
-make test       # 24 tests: parser, extraction, model, metrics, provenance guard, app pages
+make test       # 27 tests: parser, extraction, model, metrics, provenance guard, app pages
 make app        # Streamlit research dashboard on the committed tables (no network)
 make data verify   # download raw sources, check every API live
 make reproduce     # the full pipeline from scratch
 make readme        # regenerate this README's charts and tables
+```
+
+Or pull the container (CLI and committed tables, no network needed for the dashboard):
+
+```bash
+docker run --rm ghcr.io/lsudoko/pharmakon:latest --help
+docker run --rm -p 8501:8501 --entrypoint streamlit ghcr.io/lsudoko/pharmakon:latest run src/pharmakon/app/Home.py --server.address=0.0.0.0
 ```
 
 From a fresh clone, PubMed takes about an hour without an NCBI key. Optional keys go in `.env`: `ANTHROPIC_API_KEY` (LLM extraction), `NCBI_API_KEY`, `IUCN_TOKEN`.
@@ -232,6 +272,8 @@ From a fresh clone, PubMed takes about an hour without an NCBI key. Optional key
 Rebuild and deploy the site, API and MCP server (from `web/`): `npm install && npm run data && npm run deploy`.
 
 ## Method
+
+<img src="readme/hood-graph.gif" alt="A lead as a path through the knowledge graph: Greek words, ancient name, species, compound, human target, disease" width="100%">
 
 ```mermaid
 flowchart LR
@@ -299,7 +341,9 @@ What would make the results stronger, in order of value per effort:
 
 ## Cite and acknowledge
 
-Pharmakon (2026). *An uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology.* https://github.com/LSUDOKO/Pharmakon
+Pharmakon (2026). *An uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology.* https://github.com/LSUDOKO/Pharmakon. Citation metadata: [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository" button).
+
+Built by **Arpit** (B.Tech Computer Science, NIT Hamirpur).
 
 Built for EthnoHack 2026, Track 1 (Traditional knowledge). Thanks to Open Greek and Latin (First1KGreek), the Perseus Digital Library, Lardos et al. (2024), Tsioutsiou et al. (2023), Axiotis et al. (2018), GBIF, Wikidata and LOTUS, NLM, EMBL-EBI ChEMBL, Open Targets and PubChem. Manuscript images: Vienna Dioscorides (Codex Vindobonensis med. gr. 1), public domain.
 

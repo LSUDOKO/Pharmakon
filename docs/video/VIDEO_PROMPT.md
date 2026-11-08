@@ -350,8 +350,8 @@ From `reports/stages/*.json` and `web/public/data/` (current values in brackets 
   Keep under 10:00.
 
 # TOOLCHAIN (local; install anything missing)
-- Load the `video-stack` skill first (routes to Remotion / HyperFrames). Composition in **Remotion** (React) or
-  **HyperFrames** — code-driven, every shot re-renderable.
+- Load the `video-stack` skill first. Composition in **Remotion** (React, `video/film/`) — code-driven, every shot
+  re-renderable; `@remotion/google-fonts` for Outfit, GFS Didot and JetBrains Mono; `@remotion/media` for video/audio.
 - Recording: Playwright (scripted, action/coordinate log) + OBS or CDP screencast; FFmpeg for conforming.
 - Cursor/zoom layer built in the composition from `actions.json`.
 - Charts and the knowledge graph generated in code from `reports/stages/*.json`, `web/public/data/*.json` and

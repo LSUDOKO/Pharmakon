@@ -1,0 +1,11 @@
+[
+ {"file": "01.jpg", "caption": "Add custom connector: Pharmakon · https://pharmakon.adoranto737.workers.dev/mcp"},
+ {"file": "02.jpg", "caption": "Connected: six read-only Pharmakon tools"},
+ {"file": "03.jpg", "caption": "Eleni's question, in plain English"},
+ {"file": "04.jpg", "caption": "Claude calls Pharmakon: list_conditions"},
+ {"file": "05.jpg", "caption": "Live tool calls: list_leads · get_results · get_ancient_name"},
+ {"file": "06.jpg", "caption": "The real JSON from the Pharmakon MCP server, disclaimer first"},
+ {"file": "07.jpg", "caption": "Claude reads the Greek and states the caveats"},
+ {"file": "08.jpg", "caption": "Each plant with P(species) and its 90% interval"},
+ {"file": "09.jpg", "caption": "A shortlist for the lab, with PubChem toxicity sources"}
+]

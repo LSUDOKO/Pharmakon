@@ -1,0 +1,64 @@
+{
+    "disclaimer": "Research hypotheses only, not medical advice. Nothing here recommends using any plant or shows safety or efficacy.",
+    "total": 27,
+    "leads": [
+        {
+            "rank": 1,
+            "rank_if_top1_identity_only": 1,
+            "species": "Vicia faba",
+            "family": "Fabaceae",
+            "condition": "Eye Diseases",
+            "p_species": 0.6615,
+            "lead_score": 0.3868,
+            "known_toxicity": false,
+            "toxicity_source": null,
+            "iucn": null,
+            "byzantine_use": false,
+            "modern_greek_use": false,
+            "has_evidence_path": true,
+            "ancient_names": [
+                "dmm-2-105",
+                "dmm-2-107"
+            ],
+            "pubmed_query": "(\"Vicia faba\"[tiab]) AND (\"Eye Diseases\"[MeSH Terms] OR \"Eye Disorders\"[tiab]) AND (\"Plant Extracts\"[MeSH Terms] OR \"Phytochemicals\"[MeSH Terms] OR pharmacology[Subheading] OR \"drug effects\"[Subheading])"
+        },
+        {
+            "rank": 9,
+            "rank_if_top1_identity_only": 5,
+            "species": "Myrtus communis",
+            "family": "Myrtaceae",
+            "condition": "Eye Diseases",
+            "p_species": 0.4555,
+            "lead_score": 0.2237,
+            "known_toxicity": false,
+            "toxicity_source": null,
+            "iucn": "least concern",
+            "byzantine_use": false,
+            "modern_greek_use": false,
+            "has_evidence_path": true,
+            "ancient_names": [
+                "dmm-1-112"
+            ],
+            "pubmed_query": "(\"Myrtus communis\"[tiab]) AND (\"Eye Diseases\"[MeSH Terms] OR \"Eye Disorders\"[tiab]) AND (\"Plant Extracts\"[MeSH Terms] OR \"Phytochemicals\"[MeSH Terms] OR pharmacology[Subheading] OR \"drug effects\"[Subheading])"
+        },
+        {
+            "rank": 22,
+            "rank_if_top1_identity_only": 3,
+            "species": "Phoenix dactylifera",
+            "family": "Arecaceae",
+            "condition": "Eye Diseases",
+            "p_species": 0.3231,
+            "lead_score": 0.1696,
+            "known_toxicity": false,
+            "toxicity_source": null,
+            "iucn": null,
+            "byzantine_use": false,
+            "modern_greek_use": false,
+            "has_evidence_path": true,
+            "ancient_names": [
+                "dmm-1-109"
+            ],
+            "pubmed_query": "(\"Phoenix dactylifera\"[tiab]) AND (\"Eye Diseases\"[MeSH Terms] OR \"Eye Disorders\"[tiab]) AND (\"Plant Extracts\"[MeSH Terms] OR \"Phytochemicals\"[MeSH Terms] OR pharmacology[Subheading] OR \"drug effects\"[Subheading])"
+        }
+    ]
+}

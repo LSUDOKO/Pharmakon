@@ -6,16 +6,31 @@ web/public/data/ — nothing is typed by hand. Run: python -m pharmakon readme
 
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import re
+import shutil
 from pathlib import Path
+from urllib.parse import quote, unquote
+
+import requests
 
 ROOT = Path(__file__).resolve().parents[2]
 STAGES = ROOT / "reports" / "stages"
 WEBDATA = ROOT / "web" / "public" / "data"
 MEDIA = ROOT / "docs" / "media"
 TEMPLATE = ROOT / "docs" / "README.template.md"
+# Every README image is served from the Cloudflare Worker's static assets (web/public/readme → /readme/*),
+# with ?v=<content hash> so GitHub's image proxy refetches a file whenever it changes.
+CDN = "https://pharmakon.adoranto737.workers.dev/readme"
+HOSTED = ROOT / "web" / "public" / "readme"
+EXTRA = {  # hosted name ← source file outside docs/media
+    "film-thumbnail.jpg": ROOT / "docs" / "video" / "pharmakon_thumbnail.jpg",
+    "devpost-3x2.jpg": ROOT / "docs" / "video" / "pharmakon_devpost_3x2.jpg",
+    "logo-square.png": ROOT / "docs" / "video" / "pharmakon_logo_square.png",
+}
+UA = {"User-Agent": "PharmakonReadme/1.0 (https://github.com/LSUDOKO/Pharmakon; research project README)"}
 
 INK, CARD, RULE = "#000000", "#0b120e", "#22302a"
 VERD, HI, LICHEN, PAPER, DIM, WARN = "#17744f", "#3dbb82", "#b8e6cc", "#eceee7", "#8b938f", "#ff5a5f"
@@ -325,13 +340,64 @@ def gallery_leads(leads: list[dict], n: int = 12, per_row: int = 4) -> str:
     for i in range(0, len(pics), per_row):
         cells = []
         for ld in pics[i:i + per_row]:
-            src = re.sub(r"width=\d+", "width=400", ld["image"]["thumb"])
+            m = mirror_photo(ld["image"])
             flag = " ⚠" if ld.get("toxic") else ""
             cells.append(f'<td width="{100 // per_row}%" align="center"><a href="{esc(ld["image"]["page"])}">'
-                         f'<img src="{esc(src)}" width="100%" alt="{esc(ld["species"])}"></a><br>'
-                         f'<sub><b>#{ld["rank"]}</b> <i>{esc(ld["species"])}</i>{flag}<br>{esc(ld["condition"])} · P = {ld["p"]:.2f}</sub></td>')
+                         f'<img src="readme/{m["file"]}" width="100%" alt="{esc(ld["species"])}"></a><br>'
+                         f'<sub><b>#{ld["rank"]}</b> <i>{esc(ld["species"])}</i>{flag}<br>{esc(ld["condition"])} · P = {ld["p"]:.2f}'
+                         f'<br>Photo: {esc(m["author"])}, {esc(m["licence"])}</sub></td>')
         rows.append("<tr>" + "".join(cells) + "</tr>")
     return "<table>\n" + "\n".join(rows) + "\n</table>"
+
+
+def _plain(v: str) -> str:
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", v or ""))).strip()
+
+
+def mirror_photo(image: dict) -> dict:
+    """Copy a Wikimedia Commons photo to the CDN folder once and record its author and licence (needed when rehosting)."""
+    title = unquote(image["page"].split("/File:", 1)[1])
+    slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")[:70]
+    credits_f = HOSTED / "leads" / "credits.json"
+    credits = json.loads(credits_f.read_text()) if credits_f.exists() else {}
+    if slug in credits and (HOSTED / credits[slug]["file"]).exists():
+        return credits[slug]
+    (HOSTED / "leads").mkdir(parents=True, exist_ok=True)
+    thumb = re.sub(r"width=\d+", "width=400", image["thumb"])
+    r = requests.get(thumb, headers=UA, timeout=60)
+    r.raise_for_status()
+    ext = {"image/png": "png", "image/webp": "webp", "image/gif": "gif"}.get(r.headers.get("content-type", "").split(";")[0], "jpg")
+    (HOSTED / "leads" / f"{slug}.{ext}").write_bytes(r.content)
+    meta = requests.get("https://commons.wikimedia.org/w/api.php", headers=UA, timeout=60, params={
+        "action": "query", "titles": f"File:{title}", "prop": "imageinfo", "iiprop": "extmetadata", "format": "json"}).json()
+    em = next(iter(meta["query"]["pages"].values()))["imageinfo"][0]["extmetadata"]
+    credits[slug] = {"file": f"leads/{slug}.{ext}", "page": image["page"], "author": next((_plain(em.get(k, {}).get("value", "")) for k in ("Artist", "Attribution", "Credit")
+                                                                   if _plain(em.get(k, {}).get("value", ""))), "Wikimedia Commons contributor"),
+                     "licence": _plain(em.get("LicenseShortName", {}).get("value", "")) or "see Commons page"}
+    credits_f.write_text(json.dumps(credits, indent=1, ensure_ascii=False))
+    return credits[slug]
+
+
+def host_media() -> None:
+    """Copy docs/media (charts, screenshots, logos) and the film artwork into the CDN folder."""
+    HOSTED.mkdir(parents=True, exist_ok=True)
+    for f in MEDIA.iterdir():
+        if f.is_file():
+            shutil.copy2(f, HOSTED / f.name)
+    for name, src in EXTRA.items():
+        if src.exists():
+            shutil.copy2(src, HOSTED / name)
+
+
+def hosted_urls(md: str) -> str:
+    """readme/<file> → absolute CDN URL with a content-hash version; fail on any missing file."""
+    def url(m: re.Match) -> str:
+        f = HOSTED / m.group(2)
+        if not f.exists():
+            raise SystemExit(f"README references readme/{m.group(2)}, which is not in {HOSTED}")
+        v = hashlib.sha1(f.read_bytes()).hexdigest()[:10]
+        return f'{m.group(1)}="{CDN}/{quote(m.group(2))}?v={v}"'
+    return re.sub(r'(src|srcset|href)="readme/([^"?#]+)"', url, md)
 
 
 def table_conditions(leads: list[dict]) -> str:
@@ -379,7 +445,11 @@ def example_card(name_id: str = "dmm-3-23") -> str:
         if r["present_dmm"] or r["expected_modern"] >= 0.5:
             pers.append(f"| {UG.get(r['use_group'], r['use_group'])} | {mark(r['present_dmm'])} | {mark(r['present_galen'])} | {mark(r['present_jc'])} | {r['expected_modern']:.2f} |")
     top = next((c for c in cands if c["taxon"] != "__unidentified__"), None)
-    img = f'<img src="{esc(top["image"]["thumb"])}" width="220" align="right" alt="{esc(top["name"])}">\n' if top and top.get("image") else ""
+    img = ""
+    if top and top.get("image"):
+        m = mirror_photo(top["image"])
+        img = (f'<a href="{esc(top["image"]["page"])}"><img src="readme/{m["file"]}" width="220" align="right" '
+               f'alt="{esc(top["name"])}" title="Photo: {esc(m["author"])}, {esc(m["licence"])}"></a>\n')
     return "\n".join([
         img,
         f"**{d['lemma']}** ({d['translit']}), *De materia medica* {d['chapter'].replace('dmm:', '')} · `{p['cts']}`",
@@ -507,12 +577,14 @@ def build() -> dict:
         "NAMES": str(sum(1 for n in json.loads((WEBDATA / 'names.json').read_text()) if not n["chapter"].endswith(".preface"))),
         "GALEN": f"{S['persistence']['galen_agreement_rate']:.0%}", "JC": f"{S['persistence']['jc_agreement_rate']:.0%}",
     }
+    host_media()
     out = TEMPLATE.read_text()
     for k, v in {**blocks, **scal}.items():
         out = out.replace("{{" + k + "}}", v)
     left = re.findall(r"\{\{[A-Z0-9_]+\}\}", out)
     if left:
         raise SystemExit(f"unfilled placeholders: {left}")
+    out = hosted_urls(out)
     (ROOT / "README.md").write_text(out)
     return {"charts": list(charts), "readme_chars": len(out)}
 

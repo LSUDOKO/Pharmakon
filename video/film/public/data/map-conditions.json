@@ -1,0 +1,31 @@
+{
+  "stage": "map-conditions",
+  "generated_at": "2026-11-07T17:45:04+00:00",
+  "lexicon_conditions": 158,
+  "with_verified_mesh": 134,
+  "no_modern_equivalent": 24,
+  "mesh_labels_failed_verification": [],
+  "claims_with_verified_mesh_rate": 0.8804,
+  "distinct_mesh_ids": 90,
+  "use_group_counts": {
+    "DE": 1385,
+    "GI": 348,
+    "GY": 304,
+    "UR": 273,
+    "MS": 208,
+    "RE": 179,
+    "OP": 172,
+    "FV": 147,
+    "OC": 109,
+    "NC": 94,
+    "LG": 80,
+    "MA": 79,
+    "OT": 77,
+    "BS": 71,
+    "XY": 69,
+    "CV": 50,
+    "RL": 35,
+    "IF": 14,
+    "MN": 2
+  }
+}

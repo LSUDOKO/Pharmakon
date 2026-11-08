@@ -1,0 +1,70 @@
+{
+  "voice": {"provider": "sarvam", "model": "bulbul:v3", "speaker": "anand", "language": "en-IN", "pace": 1.0},
+  "note": "Every number traces to reports/stages/*.json, web/public/data/*.json or a cited external source (see sources). 'tts' overrides the spoken text where pronunciation needs help; 'text' is the caption text.",
+  "sources": {
+    "nobel": "nobelprize.org — The Nobel Prize in Physiology or Medicine 2015 (Tu Youyou, artemisinin); Ge Hong, 4th-century handbook",
+    "texts": "reports/stages/ingest-texts.json (1,500 passages), ingest-galen.json (476 entries), gold.json (61 names), persistence.json modern_records (1,226)",
+    "asphodel": "web/public/data/names/dmm-2-169.json; data/processed/id_candidates.parquet f4_lsj (LSJ → A. ramosus); data/gold (expert → A. aestivus)",
+    "extraction": "reports/stages/extract-claims.json llm_merge: 5,075 claims, 100% span-verified",
+    "chem": "reports/stages/link-chemistry.json: 10,252 compounds",
+    "wormwood": "web/public/data/names/dmm-3-23.json: A. absinthium p 0.75 [0.62–0.88], unidentified 0.23",
+    "kg": "reports/stages/build-kg.json: 2,585 nodes, 9,146 edges",
+    "results": "reports/stages/identify.json (0.62 vs 0.31; ECE 0.21 → 0.14), persistence.json (48.6% vs 40.8%), forecast.json (2005 ΔAUPRC CI −0.14…−0.02), leads.json (1,781; 16/20; 2/20)"
+  },
+  "lines": [
+    {"id": "s01_a", "section": "cold", "text": "In 2015, a Nobel Prize recognised the discovery of artemisinin, a drug against malaria."},
+    {"id": "s01_b", "section": "cold", "text": "Its discoverer found the clue in a Chinese medical handbook about sixteen hundred years old."},
+    {"id": "s01_c", "section": "cold", "text": "Europe has a handbook like that too. And it is even older."},
+
+    {"id": "s02_a", "section": "title", "text": "Pharmakon. Two thousand years of Greek plant medicine, measured."},
+
+    {"id": "s03_a", "section": "problem", "text": "Meet Eleni, a pharmacognosy PhD student in Athens. Her lab can afford to screen ten plant extracts this year."},
+    {"id": "s03_b", "section": "problem", "text": "Her supervisor hands her Dioscorides: De materia medica, written in the first century, and copied by hand for fifteen hundred years. Somewhere in its six hundred plants, he says, is a lead."},
+    {"id": "s03_c", "section": "problem", "text": "The first problem is the names. Take asphodel. The standard Greek dictionary says one species. The experts who studied this text say another. A third is just as plausible."},
+    {"id": "s03_d", "section": "problem", "text": "Pick the wrong plant, and every experiment after that is wasted."},
+    {"id": "s03_e", "section": "problem", "text": "The second problem: which of these remedies survived? Did Galen agree? Did Byzantine doctors? Do Greek villages still use them? Until now, that was traced by hand, one plant at a time."},
+    {"id": "s03_f", "section": "problem", "text": "And the third: does ancient use actually predict what modern science goes on to study? Almost nobody has tested that honestly."},
+
+    {"id": "s04_a", "section": "motivation", "text": "This matters. Plants have given medicine some of its most important drugs, and the Greek tradition is one of the best documented anywhere. Yet most of it has never become a hypothesis anyone can test."},
+
+    {"id": "s05_a", "section": "turn", "text": "So we built Pharmakon. It reads the Greek, works out which plant each name means, with an honest probability, follows every use through two thousand years, tests the idea against later science, and hands Eleni a ranked shortlist."},
+
+    {"id": "s06_a", "section": "data", "text": "It starts from one unbroken chain of texts. Dioscorides in the first century: fifteen hundred passages. Galen in the second: four hundred and seventy six drug entries. John the Physician in the thirteenth, where experts identified sixty one plant names. And more than twelve hundred records from Greek villages today."},
+    {"id": "s06_b", "section": "data", "text": "Around it, eight open databases: where each plant grows, ten thousand plant compounds, human proteins, diseases, research papers and toxicity. Every source checked live. Every licence recorded."},
+
+    {"id": "s07_a", "section": "method", "text": "First, Pharmakon reads. A Greek lexicon and a language model both mark every medical use, and every claim must quote the exact Greek words that state it. If the quote is not in the source, character for character, it is thrown out. All five thousand claims from the language model passed."},
+    {"id": "s07_b", "section": "method", "text": "Second, it identifies. For each ancient name it weighs the evidence. Does the plant grow in Greece? Does its modern Greek name echo the ancient one? Do scholars agree? And does Dioscorides' own description, the leaves, the flowers, the roots, match a modern one? The answer is a probability, with an honest option for unidentified."},
+    {"id": "s07_c", "section": "method", "text": "Third, it traces every use through Galen, John the Physician and modern villages, and compares the result with shuffled data, so coincidence cannot pass for tradition."},
+    {"id": "s07_d", "section": "method", "text": "Fourth, the time machine. Stand in the year two thousand, or five, or ten, or fifteen. Use only what was known then. Rank the plant and disease pairs nobody had studied. Then check what science studied next. No language model output is allowed anywhere in this test."},
+
+    {"id": "s08_a", "section": "demo", "text": "Here is Eleni using it."},
+    {"id": "s08_b", "section": "demo", "text": "She searches for apsinthion. Wormwood. Pharmakon shows Dioscorides' passage, with every use highlighted in his own words."},
+    {"id": "s08_c", "section": "demo", "text": "Which plant is it? Artemisia absinthium, at seventy five percent, with the uncertainty drawn as a range, and twenty three percent that it is something else."},
+    {"id": "s08_d", "section": "demo", "text": "She can see why. It grows in Greece, the Latin name echoes the Greek, and the description matches."},
+    {"id": "s08_e", "section": "demo", "text": "Then the long view: every use, from Dioscorides, to Galen, to John the Physician, to Greek villages today."},
+    {"id": "s08_f", "section": "demo", "text": "Now the leads. She asks for plants we are at least fifty percent sure of, hides every plant with known toxicity, and picks a condition."},
+    {"id": "s08_g", "section": "demo", "text": "Each card shows how sure we are of the plant, and whether a full chain exists, from a plant compound, to a human protein, to the disease."},
+    {"id": "s08_h", "section": "demo", "text": "She opens one. There is no pharmacology paper on it yet. Here is the exact search, and it comes back empty. But the chemistry already points at a target."},
+    {"id": "s08_i", "section": "demo", "text": "She downloads the shortlist."},
+    {"id": "s08_j", "section": "demo", "text": "And she does not even need our website. Pharmakon is also an MCP server. In Claude, she simply asks: which plants did Dioscorides use for eye diseases that nobody has tested yet?"},
+    {"id": "s08_k", "section": "demo", "text": "Claude calls Pharmakon's tools, and answers with the probabilities, the toxicity flags and the evidence, straight from our data."},
+    {"id": "s08_l", "section": "demo", "text": "Developers get the same data through an open API, and anyone can rebuild every number with one command."},
+
+    {"id": "s09_a", "section": "hood", "text": "Underneath is a knowledge graph: two thousand five hundred nodes, and more than nine thousand links."},
+    {"id": "s09_b", "section": "hood", "text": "A lead is a path through it: from the Greek words, to the ancient name, to the species, to a compound, to a human target, to the disease. Every step carries its source. So every lead traces back to the exact words Dioscorides wrote."},
+
+    {"id": "s10_a", "section": "results", "text": "So, does it work?"},
+    {"id": "s10_b", "section": "results", "text": "On the sixty one names that experts have identified, Pharmakon agrees with them sixty two percent of the time. The standard dictionary manages thirty one."},
+    {"id": "s10_c", "section": "results", "text": "Its probabilities are getting more honest. Comparing descriptions cut the calibration error from point two one to point one four. Our target is point one. We are not there yet."},
+    {"id": "s10_d", "section": "results", "text": "The uses really did survive. Forty nine percent recur in Greek villages today, against forty one percent by chance."},
+    {"id": "s10_e", "section": "results", "text": "And the time machine? Research popularity predicts what science studies next. Adding two thousand years of history does not help. In two thousand and five, it even made things worse. We report that exactly as we would report a success."},
+    {"id": "s10_f", "section": "results", "text": "For Eleni, that means one thousand seven hundred and eighty one untested leads. Sixteen of the top twenty have a full chemical path. Seven carry a toxicity warning, shown, never hidden."},
+
+    {"id": "s11_a", "section": "impact", "text": "For labs, a shortlist with reasons. For historians, Dioscorides read with evidence. For conservation, every species with its status."},
+    {"id": "s11_b", "section": "impact", "text": "We are clear about the limits. Expert judgement is not ground truth. A search hit is only a proxy for evidence. Our audits still need human experts. And everything here is a research hypothesis, never medical advice."},
+    {"id": "s11_c", "section": "impact", "text": "Next: expert audits, richer plant descriptions, more Byzantine authors, and a lab partner to test the top leads."},
+
+    {"id": "s12_a", "section": "outro", "text": "Eleni started with six hundred names. She ends with a shortlist she can defend, word by word."},
+    {"id": "s12_b", "section": "outro", "text": "Pharmakon."}
+  ]
+}

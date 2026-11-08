@@ -1,0 +1,723 @@
+1
+00:00:01,333 --> 00:00:04,510
+In 2015, a Nobel Prize recognised the discovery of
+
+2
+00:00:04,510 --> 00:00:07,333
+artemisinin, a drug against malaria.
+
+3
+00:00:08,467 --> 00:00:10,800
+Its discoverer found the clue in a Chinese medical
+
+4
+00:00:10,800 --> 00:00:13,267
+handbook about sixteen hundred years old.
+
+5
+00:00:14,367 --> 00:00:16,123
+Europe has a handbook like that too.
+
+6
+00:00:16,123 --> 00:00:17,800
+And it is even older.
+
+7
+00:00:33,263 --> 00:00:35,483
+Hi, I'm Arpit.
+
+8
+00:00:35,563 --> 00:00:38,423
+Currently I'm pursuing B.Tech in Computer Science from National
+
+9
+00:00:38,423 --> 00:00:40,603
+Institute of Technology, Hamirpur,
+
+10
+00:00:40,603 --> 00:00:45,343
+in India. Before I show you what we built,
+
+11
+00:00:45,403 --> 00:00:47,643
+let me introduce someone it's for.
+
+12
+00:00:50,100 --> 00:00:53,119
+Meet Eleni, a pharmacognosy PhD student in Athens.
+
+13
+00:00:53,119 --> 00:00:56,035
+Her lab can afford to screen ten plant extracts
+
+14
+00:00:56,035 --> 00:00:57,300
+this year.
+
+15
+00:00:59,600 --> 00:01:01,950
+Her supervisor hands her Dioscorides:
+
+16
+00:01:01,950 --> 00:01:05,065
+De materia medica, written in the first century,
+
+17
+00:01:05,065 --> 00:01:08,017
+and copied by hand for fifteen hundred years.
+
+18
+00:01:08,017 --> 00:01:10,367
+Somewhere in its six hundred plants,
+
+19
+00:01:10,367 --> 00:01:12,333
+he says, is a lead.
+
+20
+00:01:14,667 --> 00:01:16,475
+The first problem is the names.
+
+21
+00:01:16,475 --> 00:01:19,902
+Take asphodel. The standard Greek dictionary says one species.
+
+22
+00:01:19,902 --> 00:01:22,520
+The experts who studied this text say another.
+
+23
+00:01:22,520 --> 00:01:24,833
+A third is just as plausible.
+
+24
+00:01:27,167 --> 00:01:29,875
+Pick the wrong plant, and every experiment after that
+
+25
+00:01:29,875 --> 00:01:31,033
+is wasted.
+
+26
+00:01:33,367 --> 00:01:34,427
+The second problem:
+
+27
+00:01:34,427 --> 00:01:36,224
+which of these remedies survived?
+
+28
+00:01:36,224 --> 00:01:37,145
+Did Galen agree?
+
+29
+00:01:37,145 --> 00:01:38,344
+Did Byzantine doctors?
+
+30
+00:01:38,344 --> 00:01:40,187
+Do Greek villages still use them?
+
+31
+00:01:40,187 --> 00:01:42,169
+Until now, that was traced by hand,
+
+32
+00:01:42,169 --> 00:01:43,967
+one plant at a time.
+
+33
+00:01:46,267 --> 00:01:47,142
+And the third:
+
+34
+00:01:47,142 --> 00:01:50,450
+does ancient use actually predict what modern science goes
+
+35
+00:01:50,450 --> 00:01:51,229
+on to study?
+
+36
+00:01:51,229 --> 00:01:54,067
+Almost nobody has tested that honestly.
+
+37
+00:01:57,167 --> 00:01:59,207
+Why does this matter?
+
+38
+00:01:59,207 --> 00:02:02,607
+Plants have given medicine some of the most important
+
+39
+00:02:02,607 --> 00:02:05,347
+drugs, and the Greek tradition is one of the
+
+40
+00:02:05,347 --> 00:02:07,267
+best documented anywhere.
+
+41
+00:02:07,647 --> 00:02:11,507
+Yet almost none of it ever became a hypothesis anyone
+
+42
+00:02:11,507 --> 00:02:13,547
+can actually test.
+
+43
+00:02:18,600 --> 00:02:19,900
+So we built Pharmakon.
+
+44
+00:02:19,900 --> 00:02:22,595
+It reads the Greek, works out which plant each
+
+45
+00:02:22,595 --> 00:02:24,809
+name means, with an honest probability,
+
+46
+00:02:24,809 --> 00:02:27,360
+follows every use through two thousand years,
+
+47
+00:02:27,360 --> 00:02:29,478
+tests the idea against later science,
+
+48
+00:02:29,478 --> 00:02:32,100
+and hands Eleni a ranked shortlist.
+
+49
+00:02:36,433 --> 00:02:38,972
+It starts from one unbroken chain of texts.
+
+50
+00:02:38,972 --> 00:02:40,876
+Dioscorides in the first century:
+
+51
+00:02:40,876 --> 00:02:42,292
+fifteen hundred passages.
+
+52
+00:02:42,292 --> 00:02:43,513
+Galen in the second:
+
+53
+00:02:43,513 --> 00:02:45,954
+four hundred and seventy six drug entries.
+
+54
+00:02:45,954 --> 00:02:48,102
+John the Physician in the thirteenth,
+
+55
+00:02:48,102 --> 00:02:50,787
+where experts identified sixty one plant names.
+
+56
+00:02:50,787 --> 00:02:54,009
+And more than twelve hundred records from Greek villages
+
+57
+00:02:54,009 --> 00:02:55,000
+today.
+
+58
+00:02:57,200 --> 00:02:59,200
+Around it, eight open databases:
+
+59
+00:02:59,200 --> 00:03:02,464
+where each plant grows, ten thousand plant compounds,
+
+60
+00:03:02,464 --> 00:03:05,780
+human proteins, diseases, research papers and toxicity.
+
+61
+00:03:05,780 --> 00:03:07,412
+Every source checked live.
+
+62
+00:03:07,412 --> 00:03:09,433
+Every licence recorded.
+
+63
+00:03:13,167 --> 00:03:14,477
+First, Pharmakon reads.
+
+64
+00:03:14,477 --> 00:03:17,195
+A Greek lexicon and a language model both mark
+
+65
+00:03:17,195 --> 00:03:20,058
+every medical use, and every claim must quote the
+
+66
+00:03:20,058 --> 00:03:21,950
+exact Greek words that state it.
+
+67
+00:03:21,950 --> 00:03:24,037
+If the quote is not in the source,
+
+68
+00:03:24,037 --> 00:03:26,464
+character for character, it is thrown out.
+
+69
+00:03:26,464 --> 00:03:30,267
+All five thousand claims from the language model passed.
+
+70
+00:03:32,167 --> 00:03:33,569
+Second, it identifies.
+
+71
+00:03:33,569 --> 00:03:36,480
+For each ancient name it weighs the evidence.
+
+72
+00:03:36,480 --> 00:03:38,475
+Does the plant grow in Greece?
+
+73
+00:03:38,475 --> 00:03:41,602
+Does its modern Greek name echo the ancient one?
+
+74
+00:03:41,602 --> 00:03:42,789
+Do scholars agree?
+
+75
+00:03:42,789 --> 00:03:45,161
+And does Dioscorides' own description,
+
+76
+00:03:45,161 --> 00:03:47,426
+the leaves, the flowers, the roots,
+
+77
+00:03:47,426 --> 00:03:48,720
+match a modern one?
+
+78
+00:03:48,720 --> 00:03:51,955
+The answer is a probability, with an honest option
+
+79
+00:03:51,955 --> 00:03:53,633
+for unidentified.
+
+80
+00:03:55,567 --> 00:03:57,966
+Third, it traces every use through Galen,
+
+81
+00:03:57,966 --> 00:04:00,219
+John the Physician and modern villages,
+
+82
+00:04:00,219 --> 00:04:02,716
+and compares the result with shuffled data,
+
+83
+00:04:02,716 --> 00:04:05,667
+so coincidence cannot pass for tradition.
+
+84
+00:04:07,567 --> 00:04:08,955
+Fourth, the time machine.
+
+85
+00:04:08,955 --> 00:04:10,714
+Stand in the year two thousand,
+
+86
+00:04:10,714 --> 00:04:12,334
+or five, or ten, or fifteen.
+
+87
+00:04:12,334 --> 00:04:14,000
+Use only what was known then.
+
+88
+00:04:14,000 --> 00:04:16,870
+Rank the plant and disease pairs nobody had studied.
+
+89
+00:04:16,870 --> 00:04:18,906
+Then check what science studied next.
+
+90
+00:04:18,906 --> 00:04:21,776
+No language model output is allowed anywhere in this
+
+91
+00:04:21,776 --> 00:04:22,700
+test.
+
+92
+00:04:25,357 --> 00:04:27,137
+Let me show you.
+
+93
+00:04:29,100 --> 00:04:30,667
+Here is Eleni using it.
+
+94
+00:04:33,967 --> 00:04:35,692
+She searches for apsinthion.
+
+95
+00:04:35,692 --> 00:04:38,463
+Wormwood. Pharmakon shows Dioscorides' passage,
+
+96
+00:04:38,463 --> 00:04:41,833
+with every use highlighted in his own words.
+
+97
+00:04:45,167 --> 00:04:46,243
+Which plant is it?
+
+98
+00:04:46,243 --> 00:04:48,724
+Artemisia absinthium, at seventy five percent,
+
+99
+00:04:48,724 --> 00:04:50,878
+with the uncertainty drawn as a range,
+
+100
+00:04:50,878 --> 00:04:54,333
+and twenty three percent that it is something else.
+
+101
+00:04:57,633 --> 00:04:58,632
+She can see why.
+
+102
+00:04:58,632 --> 00:05:01,249
+It grows in Greece, the Latin name echoes the
+
+103
+00:05:01,249 --> 00:05:03,800
+Greek, and the description matches.
+
+104
+00:05:07,133 --> 00:05:08,381
+Then the long view:
+
+105
+00:05:08,381 --> 00:05:10,721
+every use, from Dioscorides, to Galen,
+
+106
+00:05:10,721 --> 00:05:14,233
+to John the Physician, to Greek villages today.
+
+107
+00:05:17,567 --> 00:05:18,379
+Now the leads.
+
+108
+00:05:18,379 --> 00:05:20,681
+She asks for plants we are at least fifty
+
+109
+00:05:20,681 --> 00:05:23,615
+percent sure of, hides every plant with known toxicity,
+
+110
+00:05:23,615 --> 00:05:25,433
+and picks a condition.
+
+111
+00:05:28,767 --> 00:05:31,007
+Each card shows how sure we are of the
+
+112
+00:05:31,007 --> 00:05:33,200
+plant, and whether a full chain exists,
+
+113
+00:05:33,200 --> 00:05:35,580
+from a plant compound, to a human protein,
+
+114
+00:05:35,580 --> 00:05:37,067
+to the disease.
+
+115
+00:05:40,367 --> 00:05:41,167
+She opens one.
+
+116
+00:05:41,167 --> 00:05:43,389
+There is no pharmacology paper on it yet.
+
+117
+00:05:43,389 --> 00:05:45,744
+Here is the exact search, and it comes back
+
+118
+00:05:45,744 --> 00:05:49,100
+empty. But the chemistry already points at a target.
+
+119
+00:05:52,433 --> 00:05:54,267
+She downloads the shortlist.
+
+120
+00:05:57,567 --> 00:06:00,115
+And she does not even need our website.
+
+121
+00:06:00,115 --> 00:06:02,185
+Pharmakon is also an MCP server.
+
+122
+00:06:02,185 --> 00:06:03,936
+In Claude, she simply asks:
+
+123
+00:06:03,936 --> 00:06:07,333
+which plants did Dioscorides use for eye diseases that
+
+124
+00:06:07,333 --> 00:06:09,367
+nobody has tested yet?
+
+125
+00:06:12,700 --> 00:06:14,322
+Claude calls Pharmakon's tools,
+
+126
+00:06:14,322 --> 00:06:16,168
+and answers with the probabilities,
+
+127
+00:06:16,168 --> 00:06:18,105
+the toxicity flags and the evidence,
+
+128
+00:06:18,105 --> 00:06:19,967
+straight from our data.
+
+129
+00:06:23,267 --> 00:06:26,249
+Developers get the same data through an open API,
+
+130
+00:06:26,249 --> 00:06:30,033
+and anyone can rebuild every number with one command.
+
+131
+00:06:33,267 --> 00:06:34,717
+Underneath is a knowledge graph:
+
+132
+00:06:34,717 --> 00:06:36,168
+two thousand five hundred nodes,
+
+133
+00:06:36,168 --> 00:06:38,333
+and more than nine thousand links.
+
+134
+00:06:39,633 --> 00:06:41,466
+A lead is a path through it:
+
+135
+00:06:41,466 --> 00:06:44,062
+from the Greek words, to the ancient name,
+
+136
+00:06:44,062 --> 00:06:45,945
+to the species, to a compound,
+
+137
+00:06:45,945 --> 00:06:48,083
+to a human target, to the disease.
+
+138
+00:06:48,083 --> 00:06:49,916
+Every step carries its source.
+
+139
+00:06:49,916 --> 00:06:52,664
+So every lead traces back to the exact words
+
+140
+00:06:52,664 --> 00:06:54,333
+Dioscorides wrote.
+
+141
+00:06:58,567 --> 00:07:00,200
+So, does it work?
+
+142
+00:07:01,733 --> 00:07:04,477
+On the sixty one names that experts have identified,
+
+143
+00:07:04,477 --> 00:07:07,177
+Pharmakon agrees with them sixty two percent of the
+
+144
+00:07:07,177 --> 00:07:10,300
+time. The standard dictionary manages thirty one.
+
+145
+00:07:11,800 --> 00:07:14,049
+Its probabilities are getting more honest.
+
+146
+00:07:14,049 --> 00:07:17,170
+Comparing descriptions cut the calibration error from point
+
+147
+00:07:17,170 --> 00:07:18,684
+two one to point one four.
+
+148
+00:07:18,684 --> 00:07:20,061
+Our target is point one.
+
+149
+00:07:20,061 --> 00:07:21,900
+We are not there yet.
+
+150
+00:07:23,433 --> 00:07:25,028
+The uses really did survive.
+
+151
+00:07:25,028 --> 00:07:27,749
+Forty nine percent recur in Greek villages today,
+
+152
+00:07:27,749 --> 00:07:30,367
+against forty one percent by chance.
+
+153
+00:07:32,063 --> 00:07:35,603
+Now, the result we didn't expect.
+
+154
+00:07:35,703 --> 00:07:40,123
+We asked, does 2,000 years of history predict what
+
+155
+00:07:40,123 --> 00:07:42,283
+science studies next?
+
+156
+00:07:42,303 --> 00:07:45,443
+It doesn't. Research popularity does.
+
+157
+00:07:45,443 --> 00:07:50,763
+And in 2005, adding history even made the ranking
+
+158
+00:07:50,763 --> 00:07:54,503
+worse. We report that exactly as we would report
+
+159
+00:07:54,503 --> 00:07:55,503
+a success.
+
+160
+00:07:57,167 --> 00:08:00,319
+For Eleni, that means one thousand seven hundred and
+
+161
+00:08:00,319 --> 00:08:01,895
+eighty one untested leads.
+
+162
+00:08:01,895 --> 00:08:04,743
+Sixteen of the top twenty have a full chemical
+
+163
+00:08:04,743 --> 00:08:06,980
+path. Seven carry a toxicity warning,
+
+164
+00:08:06,980 --> 00:08:08,800
+shown, never hidden.
+
+165
+00:08:11,533 --> 00:08:13,854
+For labs, a shortlist with reasons.
+
+166
+00:08:13,854 --> 00:08:16,839
+For historians, Dioscorides read with evidence.
+
+167
+00:08:16,839 --> 00:08:20,533
+For conservation, every species with its status.
+
+168
+00:08:21,830 --> 00:08:24,450
+We are clear about the limits.
+
+169
+00:08:24,610 --> 00:08:27,350
+Expert judgement is not ground truth.
+
+170
+00:08:27,790 --> 00:08:30,870
+A search hit is only a proxy for evidence,
+
+171
+00:08:30,870 --> 00:08:35,030
+and our audits still need human experts.
+
+172
+00:08:35,830 --> 00:08:38,570
+Everything here is a research hypothesis,
+
+173
+00:08:38,570 --> 00:08:40,330
+never medical advice.
+
+174
+00:08:40,407 --> 00:08:43,627
+Next: expert audits, richer plant descriptions,
+
+175
+00:08:43,627 --> 00:08:47,007
+more Byzantine authors, and a lab partner to test
+
+176
+00:08:47,007 --> 00:08:50,187
+our top leads.
+
+177
+00:08:50,347 --> 00:08:54,487
+If that's you, we'd love to hear from you.
+
+178
+00:08:57,533 --> 00:08:59,608
+Eleni started with six hundred names.
+
+179
+00:08:59,608 --> 00:09:01,965
+She ends with a shortlist she can defend,
+
+180
+00:09:01,965 --> 00:09:03,367
+word by word.
+
+181
+00:09:04,667 --> 00:09:05,967
+Pharmakon.

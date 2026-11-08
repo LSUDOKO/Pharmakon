@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use Pharmakon or its data, please cite it as below."
+title: "Pharmakon: an uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology"
+abstract: >-
+  Pharmakon reads Dioscorides' De materia medica in Greek, gives a probability for the modern species behind each
+  ancient plant name, traces every use through Galen, John the Physician and modern Greek villages, runs a
+  leakage-free temporal backtest, and ranks untested plant–condition research leads with toxicity and conservation
+  flags. Research hypotheses only, not medical advice.
+type: software
+authors:
+  - given-names: Arpit
+    affiliation: "National Institute of Technology Hamirpur"
+version: 1.0.0
+date-released: "2026-11-08"
+license: MIT
+repository-code: "https://github.com/LSUDOKO/Pharmakon"
+url: "https://pharmakon.adoranto737.workers.dev"
+keywords:
+  - ethnobotany
+  - pharmacognosy
+  - history of medicine
+  - Dioscorides
+  - drug discovery
+  - natural products
+  - knowledge graph
+  - model context protocol

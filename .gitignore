@@ -14,3 +14,18 @@ logs/
 .playwright-mcp/
 .wrangler/
 docs/slides/preview/
+video/rec_4k/
+
+# film media: large binaries stay out of git (regenerate with video/make_vo.py, make_presenter.py, rec/record.cjs)
+video/__pycache__/
+video/rec/frames/
+video/rec/*.log
+video/vo/lines/
+video/vo/audition/
+video/film/public/music/
+video/film/public/vo/
+video/film/public/rec/*.mp4
+video/film/public/presenter/*.mp4
+video/film/public/presenter/cut/
+video/film/node_modules/
+video/film/out/

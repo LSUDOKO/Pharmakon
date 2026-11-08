@@ -1,0 +1,79 @@
+{
+ "note": "One real evidence path for the Hood scene (lead rank 1, the lead Eleni opens in the demo). Every value copied from pipeline outputs or the live MCP; nothing typed by hand.",
+ "lead": {
+  "rank": 1,
+  "species": "Vicia faba",
+  "condition": "Eye Diseases",
+  "mesh": "D005128",
+  "p": 0.6615,
+  "toxic": false,
+  "has_paths": true,
+  "source": "web/public/data/leads.json (rank 1) + live get_lead"
+ },
+ "hops": [
+  {
+   "kind": "Passage",
+   "id": "2.105.2",
+   "cts": "urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1:2.105.2",
+   "span_grc": "ὀφθαλμῶν προπτώσεις",
+   "span_full": "σύν μέλιτι δὲ καὶ τηλίνῳ ἀλεύρῳ δοθιῆνας καὶ παρωτίδας καὶ ὑπώπια διαφορεῖ, σὺν ῥόδοις δὲ καὶ λιβάνῳ καὶ τῷ τοῦ ᾠοῦ λευκῷ ὀφθαλμῶν προπτώσεις καὶ σταφυλώματα στέλλει.",
+   "condition_en": "eye prolapse",
+   "source": "web/public/data/names/dmm-2-105.json passages[].spans"
+  },
+  {
+   "kind": "AncientName",
+   "id": "cl:dmm:2.105",
+   "label": "κύαμος",
+   "edge_in": "MENTIONS",
+   "source": "kg edge passage -MENTIONS-> cl:dmm:2.105"
+  },
+  {
+   "kind": "Taxon",
+   "id": "gbif:2974832",
+   "label": "Vicia faba",
+   "edge_in": "IDENTIFIED_AS",
+   "p": 0.6615,
+   "lo": 0.5075,
+   "hi": 0.8118,
+   "source": "web/public/data/names/dmm-2-105.json candidates"
+  },
+  {
+   "kind": "Compound",
+   "id": "ik:FTVWIRXFELQLPI-ZDUSSCGKSA-N",
+   "label": "naringenin",
+   "chembl": "CHEMBL9352",
+   "reference_year": 1979,
+   "edge_in": "CONTAINS",
+   "source": "LOTUS via Wikidata; web/public/data/paths.json compound_ref_year; name = ChEMBL pref_name"
+  },
+  {
+   "kind": "Target",
+   "id": "CHEMBL3729",
+   "label": "CA4",
+   "pref_name": "Carbonic anhydrase 4",
+   "pchembl": 7.1,
+   "doc_year": 2015,
+   "edge_in": "ACTS_ON",
+   "source": "ChEMBL activity (compound_targets.parquet, Ki, CHEMBL3627624)"
+  },
+  {
+   "kind": "Disease",
+   "id": "mesh:D012174",
+   "label": "retinitis pigmentosa",
+   "ot_score": 0.671,
+   "edge_in": "ASSOCIATED_WITH",
+   "source": "Open Targets (target_disease.parquet MONDO_0019200, MeSH xref D012174)"
+  }
+ ],
+ "mcp_request": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/call\",\"params\":{\"name\":\"get_lead\",\"arguments\":{\"rank\":1}}}",
+ "mcp_endpoint": "https://pharmakon.adoranto737.workers.dev/mcp",
+ "mcp_response_retrieved_at": "2026-11-08",
+ "mcp_response_excerpt": [
+  "\"disclaimer\": \"Research hypotheses only, not medical advice. …\",",
+  "\"species\": \"Vicia faba\",",
+  "\"condition\": \"Eye Diseases\",",
+  "\"p_species\": 0.6615,",
+  "\"known_toxicity\": false,",
+  "\"evidence_paths\": [ … { \"compound_chembl\": \"CHEMBL9352\", \"target_chembl\": \"CHEMBL3729\", \"disease\": \"retinitis pigmentosa\", \"pchembl\": 7.1, \"open_targets_score\": 0.671 } … ]"
+ ]
+}

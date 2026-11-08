@@ -1,0 +1,32 @@
+{
+ "curl": {
+  "cmd": "curl -s \"https://pharmakon.adoranto737.workers.dev/api/leads?condition=eye&hide_toxic=true&limit=3\" | python -m json.tool",
+  "out": [
+   "{",
+   "    \"disclaimer\": \"Research hypotheses only, not medical advice. Nothing here recommends using any plant or shows safety or efficacy.\",",
+   "    \"total\": 27,",
+   "    \"leads\": [",
+   "        {",
+   "            \"rank\": 1,",
+   "            \"rank_if_top1_identity_only\": 1,",
+   "            \"species\": \"Vicia faba\",",
+   "            \"family\": \"Fabaceae\",",
+   "            \"condition\": \"Eye Diseases\",",
+   "            \"p_species\": 0.6615,",
+   "            \"lead_score\": 0.3868,",
+   "            \"known_toxicity\": false,",
+   "        …",
+   "    ]",
+   "}"
+  ],
+  "source": "term_curl.txt (shown truncated after the first lead's known_toxicity field)"
+ },
+ "pytest": {
+  "cmd": ".venv/bin/python -m pytest -q | tail -3",
+  "out": [
+   "...........................                                              [100%]",
+   "27 passed in 4.16s"
+  ],
+  "source": "term_pytest.txt"
+ }
+}

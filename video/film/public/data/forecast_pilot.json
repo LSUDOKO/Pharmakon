@@ -1,0 +1,947 @@
+{
+  "stage": "forecast",
+  "generated_at": "2026-11-07T12:09:20+00:00",
+  "cutoffs": [
+    2000,
+    2005,
+    2010,
+    2015
+  ],
+  "t_end": 2025,
+  "feature_sets": {
+    "popularity": [
+      "pop_species",
+      "pop_disease"
+    ],
+    "history": [
+      "h_p_species",
+      "h_n_dmm_claims",
+      "h_present_jc",
+      "h_modern_attested",
+      "h_topical_share",
+      "h_n_texts"
+    ],
+    "chemistry": [
+      "c_n_compounds",
+      "c_n_compounds_active_on_assoc_targets"
+    ],
+    "history+popularity": [
+      "h_p_species",
+      "h_n_dmm_claims",
+      "h_present_jc",
+      "h_modern_attested",
+      "h_topical_share",
+      "h_n_texts",
+      "pop_species",
+      "pop_disease"
+    ],
+    "chemistry+popularity": [
+      "c_n_compounds",
+      "c_n_compounds_active_on_assoc_targets",
+      "pop_species",
+      "pop_disease"
+    ],
+    "full": [
+      "h_p_species",
+      "h_n_dmm_claims",
+      "h_present_jc",
+      "h_modern_attested",
+      "h_topical_share",
+      "h_n_texts",
+      "c_n_compounds",
+      "c_n_compounds_active_on_assoc_targets",
+      "pop_species",
+      "pop_disease"
+    ],
+    "full_without_OT_dependent": [
+      "h_p_species",
+      "h_n_dmm_claims",
+      "h_present_jc",
+      "h_modern_attested",
+      "h_topical_share",
+      "h_n_texts",
+      "c_n_compounds",
+      "pop_species",
+      "pop_disease"
+    ]
+  },
+  "results": {
+    "2000": {
+      "train_rows": 393,
+      "train_positives": 1,
+      "test": {
+        "random": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.4494,
+          "auprc": 0.1069,
+          "auprc_lift": 0.911,
+          "p_at_20": 0.05,
+          "p_at_50": 0.08,
+          "p_at_100": 0.09
+        },
+        "popularity_raw": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.781,
+          "auprc": 0.2461,
+          "auprc_lift": 2.098,
+          "p_at_20": 0.2,
+          "p_at_50": 0.24,
+          "p_at_100": 0.26
+        },
+        "popularity": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.6323,
+          "auprc": 0.1662,
+          "auprc_lift": 1.417,
+          "p_at_20": 0.05,
+          "p_at_50": 0.16,
+          "p_at_100": 0.19
+        },
+        "history": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.5865,
+          "auprc": 0.1451,
+          "auprc_lift": 1.237,
+          "p_at_20": 0.05,
+          "p_at_50": 0.12,
+          "p_at_100": 0.16
+        },
+        "chemistry": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.5209,
+          "auprc": 0.142,
+          "auprc_lift": 1.211,
+          "p_at_20": 0.2,
+          "p_at_50": 0.2,
+          "p_at_100": 0.17
+        },
+        "history+popularity": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.6408,
+          "auprc": 0.1581,
+          "auprc_lift": 1.348,
+          "p_at_20": 0.1,
+          "p_at_50": 0.16,
+          "p_at_100": 0.17
+        },
+        "chemistry+popularity": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.5368,
+          "auprc": 0.1741,
+          "auprc_lift": 1.484,
+          "p_at_20": 0.25,
+          "p_at_50": 0.22,
+          "p_at_100": 0.15
+        },
+        "full": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.591,
+          "auprc": 0.1614,
+          "auprc_lift": 1.376,
+          "p_at_20": 0.3,
+          "p_at_50": 0.18,
+          "p_at_100": 0.13
+        },
+        "full_without_OT_dependent": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.591,
+          "auprc": 0.1614,
+          "auprc_lift": 1.376,
+          "p_at_20": 0.3,
+          "p_at_50": 0.18,
+          "p_at_100": 0.13
+        },
+        "full_gbm": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.5895,
+          "auprc": 0.1623,
+          "auprc_lift": 1.384,
+          "p_at_20": 0.15,
+          "p_at_50": 0.2,
+          "p_at_100": 0.16
+        },
+        "shuffled_history+popularity": {
+          "n": 392,
+          "positives": 46,
+          "base_rate": 0.1173,
+          "auroc": 0.5223,
+          "auprc": 0.1207,
+          "auprc_lift": 1.029,
+          "p_at_20": 0.0,
+          "p_at_50": 0.08,
+          "p_at_100": 0.15
+        }
+      },
+      "test_strict_label": {
+        "popularity": {
+          "n": 392,
+          "positives": 30,
+          "base_rate": 0.0765,
+          "auroc": 0.6576,
+          "auprc": 0.1111,
+          "auprc_lift": 1.452,
+          "p_at_20": 0.0,
+          "p_at_50": 0.1,
+          "p_at_100": 0.13
+        },
+        "history+popularity": {
+          "n": 392,
+          "positives": 30,
+          "base_rate": 0.0765,
+          "auroc": 0.6703,
+          "auprc": 0.1159,
+          "auprc_lift": 1.515,
+          "p_at_20": 0.0,
+          "p_at_50": 0.12,
+          "p_at_100": 0.14
+        },
+        "full": {
+          "n": 392,
+          "positives": 30,
+          "base_rate": 0.0765,
+          "auroc": 0.6197,
+          "auprc": 0.1211,
+          "auprc_lift": 1.583,
+          "p_at_20": 0.25,
+          "p_at_50": 0.14,
+          "p_at_100": 0.1
+        }
+      },
+      "bootstrap_ci": {
+        "popularity": [
+          0.1172,
+          0.2447
+        ],
+        "history+popularity": [
+          0.1131,
+          0.2366
+        ],
+        "full": [
+          0.1169,
+          0.2565
+        ],
+        "history": [
+          0.1071,
+          0.2117
+        ],
+        "delta_auprc_histpop_minus_pop": [
+          -0.0713,
+          0.0445
+        ],
+        "delta_auroc_histpop_minus_pop": [
+          -0.0765,
+          0.1032
+        ],
+        "popularity_auroc": [
+          0.5447,
+          0.7194
+        ],
+        "history+popularity_auroc": [
+          0.5613,
+          0.7301
+        ],
+        "full_auroc": [
+          0.5124,
+          0.6789
+        ],
+        "history_auroc": [
+          0.4937,
+          0.6836
+        ],
+        "p_delta_auprc_le_0": 0.568
+      },
+      "full_logistic_coefficients": {
+        "h_p_species": 0.3544,
+        "h_n_dmm_claims": -0.2751,
+        "h_present_jc": -0.0796,
+        "h_modern_attested": -0.1764,
+        "h_topical_share": 0.4864,
+        "h_n_texts": -0.1522,
+        "c_n_compounds": 0.6966,
+        "c_n_compounds_active_on_assoc_targets": 0.0,
+        "pop_species": -0.4772,
+        "pop_disease": 0.495
+      }
+    },
+    "2005": {
+      "train_rows": 392,
+      "train_positives": 7,
+      "test": {
+        "random": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.5203,
+          "auprc": 0.1148,
+          "auprc_lift": 1.133,
+          "p_at_20": 0.1,
+          "p_at_50": 0.1,
+          "p_at_100": 0.1
+        },
+        "popularity_raw": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.786,
+          "auprc": 0.214,
+          "auprc_lift": 2.113,
+          "p_at_20": 0.15,
+          "p_at_50": 0.24,
+          "p_at_100": 0.24
+        },
+        "popularity": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.8681,
+          "auprc": 0.3796,
+          "auprc_lift": 3.747,
+          "p_at_20": 0.35,
+          "p_at_50": 0.38,
+          "p_at_100": 0.32
+        },
+        "history": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.5751,
+          "auprc": 0.1242,
+          "auprc_lift": 1.226,
+          "p_at_20": 0.0,
+          "p_at_50": 0.08,
+          "p_at_100": 0.15
+        },
+        "chemistry": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.4753,
+          "auprc": 0.1008,
+          "auprc_lift": 0.995,
+          "p_at_20": 0.1,
+          "p_at_50": 0.14,
+          "p_at_100": 0.09
+        },
+        "history+popularity": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.7938,
+          "auprc": 0.3384,
+          "auprc_lift": 3.341,
+          "p_at_20": 0.4,
+          "p_at_50": 0.4,
+          "p_at_100": 0.29
+        },
+        "chemistry+popularity": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.8301,
+          "auprc": 0.3824,
+          "auprc_lift": 3.775,
+          "p_at_20": 0.45,
+          "p_at_50": 0.36,
+          "p_at_100": 0.26
+        },
+        "full": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.7736,
+          "auprc": 0.3642,
+          "auprc_lift": 3.595,
+          "p_at_20": 0.5,
+          "p_at_50": 0.34,
+          "p_at_100": 0.24
+        },
+        "full_without_OT_dependent": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.7779,
+          "auprc": 0.3811,
+          "auprc_lift": 3.762,
+          "p_at_20": 0.5,
+          "p_at_50": 0.34,
+          "p_at_100": 0.24
+        },
+        "full_gbm": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.7316,
+          "auprc": 0.1901,
+          "auprc_lift": 1.877,
+          "p_at_20": 0.15,
+          "p_at_50": 0.18,
+          "p_at_100": 0.23
+        },
+        "shuffled_history+popularity": {
+          "n": 385,
+          "positives": 39,
+          "base_rate": 0.1013,
+          "auroc": 0.8068,
+          "auprc": 0.2663,
+          "auprc_lift": 2.629,
+          "p_at_20": 0.25,
+          "p_at_50": 0.26,
+          "p_at_100": 0.27
+        }
+      },
+      "test_strict_label": {
+        "popularity": {
+          "n": 385,
+          "positives": 24,
+          "base_rate": 0.0623,
+          "auroc": 0.8817,
+          "auprc": 0.2782,
+          "auprc_lift": 4.465,
+          "p_at_20": 0.2,
+          "p_at_50": 0.28,
+          "p_at_100": 0.21
+        },
+        "history+popularity": {
+          "n": 385,
+          "positives": 24,
+          "base_rate": 0.0623,
+          "auroc": 0.8384,
+          "auprc": 0.3092,
+          "auprc_lift": 4.963,
+          "p_at_20": 0.4,
+          "p_at_50": 0.28,
+          "p_at_100": 0.2
+        },
+        "full": {
+          "n": 385,
+          "positives": 24,
+          "base_rate": 0.0623,
+          "auroc": 0.7988,
+          "auprc": 0.3126,
+          "auprc_lift": 5.018,
+          "p_at_20": 0.35,
+          "p_at_50": 0.24,
+          "p_at_100": 0.16
+        }
+      },
+      "bootstrap_ci": {
+        "popularity": [
+          0.288,
+          0.5304
+        ],
+        "history+popularity": [
+          0.225,
+          0.521
+        ],
+        "full": [
+          0.2377,
+          0.5634
+        ],
+        "history": [
+          0.0863,
+          0.1962
+        ],
+        "delta_auprc_histpop_minus_pop": [
+          -0.1422,
+          0.0733
+        ],
+        "delta_auroc_histpop_minus_pop": [
+          -0.1806,
+          0.0163
+        ],
+        "popularity_auroc": [
+          0.8182,
+          0.9192
+        ],
+        "history+popularity_auroc": [
+          0.6741,
+          0.9059
+        ],
+        "full_auroc": [
+          0.6625,
+          0.8849
+        ],
+        "history_auroc": [
+          0.4546,
+          0.7001
+        ],
+        "p_delta_auprc_le_0": 0.784
+      },
+      "full_logistic_coefficients": {
+        "h_p_species": 0.1978,
+        "h_n_dmm_claims": -0.5998,
+        "h_present_jc": -0.1934,
+        "h_modern_attested": -0.2643,
+        "h_topical_share": 0.3005,
+        "h_n_texts": -0.2634,
+        "c_n_compounds": -0.4838,
+        "c_n_compounds_active_on_assoc_targets": -0.0839,
+        "pop_species": 1.0155,
+        "pop_disease": 0.305
+      }
+    },
+    "2010": {
+      "train_rows": 385,
+      "train_positives": 12,
+      "test": {
+        "random": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.5042,
+          "auprc": 0.1318,
+          "auprc_lift": 1.82,
+          "p_at_20": 0.1,
+          "p_at_50": 0.08,
+          "p_at_100": 0.05
+        },
+        "popularity_raw": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.7877,
+          "auprc": 0.167,
+          "auprc_lift": 2.307,
+          "p_at_20": 0.15,
+          "p_at_50": 0.2,
+          "p_at_100": 0.17
+        },
+        "popularity": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.9229,
+          "auprc": 0.5577,
+          "auprc_lift": 7.703,
+          "p_at_20": 0.55,
+          "p_at_50": 0.4,
+          "p_at_100": 0.26
+        },
+        "history": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.5804,
+          "auprc": 0.0855,
+          "auprc_lift": 1.181,
+          "p_at_20": 0.05,
+          "p_at_50": 0.04,
+          "p_at_100": 0.1
+        },
+        "chemistry": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.457,
+          "auprc": 0.0732,
+          "auprc_lift": 1.011,
+          "p_at_20": 0.05,
+          "p_at_50": 0.08,
+          "p_at_100": 0.07
+        },
+        "history+popularity": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.9215,
+          "auprc": 0.5516,
+          "auprc_lift": 7.619,
+          "p_at_20": 0.55,
+          "p_at_50": 0.4,
+          "p_at_100": 0.25
+        },
+        "chemistry+popularity": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.9,
+          "auprc": 0.3414,
+          "auprc_lift": 4.715,
+          "p_at_20": 0.4,
+          "p_at_50": 0.36,
+          "p_at_100": 0.25
+        },
+        "full": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.889,
+          "auprc": 0.3091,
+          "auprc_lift": 4.269,
+          "p_at_20": 0.3,
+          "p_at_50": 0.34,
+          "p_at_100": 0.25
+        },
+        "full_without_OT_dependent": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.9002,
+          "auprc": 0.4371,
+          "auprc_lift": 6.037,
+          "p_at_20": 0.45,
+          "p_at_50": 0.36,
+          "p_at_100": 0.25
+        },
+        "full_gbm": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.851,
+          "auprc": 0.3578,
+          "auprc_lift": 4.942,
+          "p_at_20": 0.4,
+          "p_at_50": 0.36,
+          "p_at_100": 0.23
+        },
+        "shuffled_history+popularity": {
+          "n": 373,
+          "positives": 27,
+          "base_rate": 0.0724,
+          "auroc": 0.8998,
+          "auprc": 0.4417,
+          "auprc_lift": 6.101,
+          "p_at_20": 0.5,
+          "p_at_50": 0.38,
+          "p_at_100": 0.24
+        }
+      },
+      "test_strict_label": {
+        "popularity": {
+          "n": 373,
+          "positives": 14,
+          "base_rate": 0.0375,
+          "auroc": 0.9502,
+          "auprc": 0.3751,
+          "auprc_lift": 10.003,
+          "p_at_20": 0.3,
+          "p_at_50": 0.24,
+          "p_at_100": 0.14
+        },
+        "history+popularity": {
+          "n": 373,
+          "positives": 14,
+          "base_rate": 0.0375,
+          "auroc": 0.9487,
+          "auprc": 0.3749,
+          "auprc_lift": 9.997,
+          "p_at_20": 0.35,
+          "p_at_50": 0.24,
+          "p_at_100": 0.14
+        },
+        "full": {
+          "n": 373,
+          "positives": 14,
+          "base_rate": 0.0375,
+          "auroc": 0.9216,
+          "auprc": 0.2213,
+          "auprc_lift": 5.901,
+          "p_at_20": 0.25,
+          "p_at_50": 0.22,
+          "p_at_100": 0.14
+        }
+      },
+      "bootstrap_ci": {
+        "popularity": [
+          0.3906,
+          0.7211
+        ],
+        "history+popularity": [
+          0.3805,
+          0.7315
+        ],
+        "full": [
+          0.2036,
+          0.4946
+        ],
+        "history": [
+          0.0533,
+          0.1423
+        ],
+        "delta_auprc_histpop_minus_pop": [
+          -0.0626,
+          0.0582
+        ],
+        "delta_auroc_histpop_minus_pop": [
+          -0.0135,
+          0.0111
+        ],
+        "popularity_auroc": [
+          0.8644,
+          0.9658
+        ],
+        "history+popularity_auroc": [
+          0.8645,
+          0.9662
+        ],
+        "full_auroc": [
+          0.8275,
+          0.9431
+        ],
+        "history_auroc": [
+          0.4843,
+          0.6783
+        ],
+        "p_delta_auprc_le_0": 0.562
+      },
+      "full_logistic_coefficients": {
+        "h_p_species": -0.1489,
+        "h_n_dmm_claims": -0.2938,
+        "h_present_jc": -0.3344,
+        "h_modern_attested": 0.1051,
+        "h_topical_share": 0.102,
+        "h_n_texts": -0.0865,
+        "c_n_compounds": 0.3066,
+        "c_n_compounds_active_on_assoc_targets": 0.2044,
+        "pop_species": 1.0095,
+        "pop_disease": 1.1155
+      }
+    },
+    "2015": {
+      "train_rows": 373,
+      "train_positives": 7,
+      "test": {
+        "random": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.4993,
+          "auprc": 0.1092,
+          "auprc_lift": 2.0,
+          "p_at_20": 0.1,
+          "p_at_50": 0.06,
+          "p_at_100": 0.04
+        },
+        "popularity_raw": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.7762,
+          "auprc": 0.1367,
+          "auprc_lift": 2.504,
+          "p_at_20": 0.1,
+          "p_at_50": 0.16,
+          "p_at_100": 0.13
+        },
+        "popularity": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.9126,
+          "auprc": 0.5005,
+          "auprc_lift": 9.167,
+          "p_at_20": 0.4,
+          "p_at_50": 0.3,
+          "p_at_100": 0.19
+        },
+        "history": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.5293,
+          "auprc": 0.0619,
+          "auprc_lift": 1.134,
+          "p_at_20": 0.0,
+          "p_at_50": 0.04,
+          "p_at_100": 0.07
+        },
+        "chemistry": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.4134,
+          "auprc": 0.0503,
+          "auprc_lift": 0.921,
+          "p_at_20": 0.0,
+          "p_at_50": 0.0,
+          "p_at_100": 0.04
+        },
+        "history+popularity": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.8993,
+          "auprc": 0.4617,
+          "auprc_lift": 8.456,
+          "p_at_20": 0.45,
+          "p_at_50": 0.3,
+          "p_at_100": 0.17
+        },
+        "chemistry+popularity": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.9168,
+          "auprc": 0.4693,
+          "auprc_lift": 8.595,
+          "p_at_20": 0.5,
+          "p_at_50": 0.3,
+          "p_at_100": 0.19
+        },
+        "full": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.8935,
+          "auprc": 0.4018,
+          "auprc_lift": 7.359,
+          "p_at_20": 0.45,
+          "p_at_50": 0.28,
+          "p_at_100": 0.17
+        },
+        "full_without_OT_dependent": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.887,
+          "auprc": 0.3857,
+          "auprc_lift": 7.064,
+          "p_at_20": 0.45,
+          "p_at_50": 0.26,
+          "p_at_100": 0.17
+        },
+        "full_gbm": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.8486,
+          "auprc": 0.4791,
+          "auprc_lift": 8.775,
+          "p_at_20": 0.5,
+          "p_at_50": 0.3,
+          "p_at_100": 0.17
+        },
+        "shuffled_history+popularity": {
+          "n": 366,
+          "positives": 20,
+          "base_rate": 0.0546,
+          "auroc": 0.8782,
+          "auprc": 0.3786,
+          "auprc_lift": 6.934,
+          "p_at_20": 0.4,
+          "p_at_50": 0.26,
+          "p_at_100": 0.16
+        }
+      },
+      "test_strict_label": {
+        "popularity": {
+          "n": 366,
+          "positives": 7,
+          "base_rate": 0.0191,
+          "auroc": 0.9437,
+          "auprc": 0.298,
+          "auprc_lift": 15.602,
+          "p_at_20": 0.15,
+          "p_at_50": 0.12,
+          "p_at_100": 0.07
+        },
+        "history+popularity": {
+          "n": 366,
+          "positives": 7,
+          "base_rate": 0.0191,
+          "auroc": 0.957,
+          "auprc": 0.3447,
+          "auprc_lift": 18.047,
+          "p_at_20": 0.25,
+          "p_at_50": 0.12,
+          "p_at_100": 0.07
+        },
+        "full": {
+          "n": 366,
+          "positives": 7,
+          "base_rate": 0.0191,
+          "auroc": 0.9586,
+          "auprc": 0.3416,
+          "auprc_lift": 17.885,
+          "p_at_20": 0.25,
+          "p_at_50": 0.14,
+          "p_at_100": 0.07
+        }
+      },
+      "bootstrap_ci": {
+        "popularity": [
+          0.2844,
+          0.6854
+        ],
+        "history+popularity": [
+          0.2499,
+          0.6778
+        ],
+        "full": [
+          0.2136,
+          0.6224
+        ],
+        "history": [
+          0.0331,
+          0.1182
+        ],
+        "delta_auprc_histpop_minus_pop": [
+          -0.1261,
+          0.0488
+        ],
+        "delta_auroc_histpop_minus_pop": [
+          -0.0444,
+          0.0139
+        ],
+        "popularity_auroc": [
+          0.8256,
+          0.9662
+        ],
+        "history+popularity_auroc": [
+          0.814,
+          0.9653
+        ],
+        "full_auroc": [
+          0.8058,
+          0.9565
+        ],
+        "history_auroc": [
+          0.3797,
+          0.6609
+        ],
+        "p_delta_auprc_le_0": 0.762
+      },
+      "full_logistic_coefficients": {
+        "h_p_species": -0.1271,
+        "h_n_dmm_claims": -0.2196,
+        "h_present_jc": -0.228,
+        "h_modern_attested": -0.3447,
+        "h_topical_share": 0.0376,
+        "h_n_texts": -0.3378,
+        "c_n_compounds": 0.3546,
+        "c_n_compounds_active_on_assoc_targets": -0.4626,
+        "pop_species": 1.1293,
+        "pop_disease": 1.5757
+      }
+    }
+  },
+  "leakage_controls": [
+    "no LLM features",
+    "identification uses no pharmacology",
+    "modern studies gated by publication year ≤ T",
+    "LOTUS reference year and ChEMBL document year ≤ T",
+    "shuffled-history control reported",
+    "Open Targets associations are current (not historical): see full_without_OT_dependent"
+  ],
+  "label_note": "PubMed co-mention proxy; label precision pending human audit"
+}
