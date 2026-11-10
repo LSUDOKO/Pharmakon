@@ -31,3 +31,10 @@ video/film/node_modules/
 video/film/out/
 submission/
 docs/dh2027/preview/
+docs/dh2027/long/prev/
+docs/dh2027/long/figures/*_prev.png
+docs/dh2027/long/*.log
+docs/dh2027/long/*.aux
+docs/dh2027/long/*.bbl
+docs/dh2027/long/*.blg
+docs/dh2027/long/*.out
