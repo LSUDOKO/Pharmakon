@@ -1,0 +1,15 @@
+{
+  "title": "Pharmakon: an uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology",
+  "upload_type": "software",
+  "description": "<p>Pharmakon reads Dioscorides' <i>De materia medica</i> in Greek, gives a probability for the modern species behind each ancient plant name (with an explicit \"unidentified\" option), traces every use through Galen, John the Physician and modern Greek villages, runs a leakage-free temporal backtest, and ranks untested plant–condition research leads with toxicity and conservation flags. Every extracted claim quotes the exact Greek words it comes from.</p><p>Includes the pipeline (13 CLI stages, Parquet tables with provenance), the website, JSON API and MCP server (Cloudflare Workers), the research dashboard, and the processed tables.</p><p><b>Research hypotheses only, not medical advice.</b></p><p>Live site: https://pharmakon.adoranto737.workers.dev · Film: https://youtu.be/d-kbvFd2K04</p>",
+  "creators": [
+    {"name": "Arpit", "affiliation": "National Institute of Technology Hamirpur"}
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": ["ethnobotany", "ethnopharmacology", "pharmacognosy", "history of medicine", "Dioscorides", "Byzantine medicine", "drug discovery", "natural products", "knowledge graph", "uncertainty quantification", "digital humanities", "model context protocol"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/LSUDOKO/Pharmakon", "relation": "isSupplementTo", "scheme": "url"},
+    {"identifier": "https://pharmakon.adoranto737.workers.dev", "relation": "isDocumentedBy", "scheme": "url"}
+  ]
+}

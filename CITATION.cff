@@ -10,8 +10,8 @@ type: software
 authors:
   - given-names: Arpit
     affiliation: "National Institute of Technology Hamirpur"
-version: 1.0.0
-date-released: "2026-11-08"
+version: 1.0.1
+date-released: "2026-11-10"
 license: MIT
 repository-code: "https://github.com/LSUDOKO/Pharmakon"
 url: "https://pharmakon.adoranto737.workers.dev"
