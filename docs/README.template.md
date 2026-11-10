@@ -53,7 +53,7 @@ The problem, the data, the method, a live demo of the site and of the MCP server
 Around 60 AD, the Greek physician **Dioscorides** wrote *De materia medica*, about 600 medicinal plants and what each one treats. Doctors copied it for 1,500 years. Three problems stop anyone turning it into testable science:
 
 1. **Nobody is sure which plant each ancient name means.** Pharmakon gives a probability for every candidate species, with an explicit "unidentified" option. It agrees with expert botanical historians **{{TOP1}}** of the time; the standard Greek dictionary manages **{{LSJ}}**.
-2. **Nobody has measured, at scale, which uses survived.** Pharmakon follows every use through Galen (2nd c.), John the Physician (13th c.) and modern Greek villages. **{{PERSIST}}** of uses recur today, against **{{NULL}}** expected by chance (p = {{PVAL}}).
+2. **Nobody has measured, at scale, which uses survived.** Pharmakon follows every use through Galen (2nd c.), John the Physician (13th c.) and the modern record (Greek and Cypriot ethnobotanical and herbal-medicine sources). **{{PERSIST}}** of uses recur today, against **{{NULL}}** expected by chance (p = {{PVAL}}).
 3. **Herb–disease predictions are rarely tested honestly.** Pharmakon runs a strict time-travel test across all body systems and reports a null result: history did not predict which pairs science studied next beyond research popularity.
 
 The output is **{{LEADS}} untested plant–condition leads**, each weighted by how sure we are of the plant, with toxicity and conservation flags. Ignoring that uncertainty would change {{CHANGED}} of the top 20.
