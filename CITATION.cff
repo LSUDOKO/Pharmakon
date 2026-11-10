@@ -11,6 +11,14 @@ authors:
   - given-names: Arpit
     affiliation: "National Institute of Technology Hamirpur"
 version: 1.0.1
+doi: 10.5281/zenodo.24106413
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24106413
+    description: "All versions (resolves to the latest)"
+  - type: doi
+    value: 10.5281/zenodo.24106414
+    description: "Version 1.0.1"
 date-released: "2026-11-10"
 license: MIT
 repository-code: "https://github.com/LSUDOKO/Pharmakon"

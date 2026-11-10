@@ -17,6 +17,7 @@ An uncertainty-aware map from Dioscorides' 1st-century Greek to modern species, 
   <a href="https://pharmakon.adoranto737.workers.dev/mcp"><img alt="MCP server" src="https://img.shields.io/badge/MCP-6%20tools-3dbb82?style=flat-square"></a>
   <br>
   <a href="https://github.com/LSUDOKO/Pharmakon/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/LSUDOKO/Pharmakon/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://doi.org/10.5281/zenodo.24106413"><img alt="DOI 10.5281/zenodo.24106413" src="https://zenodo.org/badge/DOI/10.5281/zenodo.24106413.svg"></a>
   <a href="https://github.com/LSUDOKO/Pharmakon/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/LSUDOKO/Pharmakon?style=flat-square&color=17744f"></a>
   <a href="https://github.com/LSUDOKO/Pharmakon/pkgs/container/pharmakon"><img alt="Container" src="https://img.shields.io/badge/ghcr.io-pharmakon-3dbb82?style=flat-square&logo=docker&logoColor=white"></a>
   <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-b8e6cc?style=flat-square&logo=python&logoColor=white">
@@ -341,7 +342,9 @@ What would make the results stronger, in order of value per effort:
 
 ## Cite and acknowledge
 
-Pharmakon (2026). *An uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology.* https://github.com/LSUDOKO/Pharmakon. Citation metadata: [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository" button).
+Arpit (2026). *Pharmakon: an uncertainty-aware, 2,000-year map of Greek and Byzantine pharmacology* (software). Zenodo. https://doi.org/10.5281/zenodo.24106413
+
+The DOI above always resolves to the latest version; v1.0.1 specifically is [10.5281/zenodo.24106414](https://doi.org/10.5281/zenodo.24106414). Citation metadata: [`CITATION.cff`](CITATION.cff) (GitHub's "Cite this repository" button).
 
 Built by **Arpit** (B.Tech Computer Science, NIT Hamirpur).
 
