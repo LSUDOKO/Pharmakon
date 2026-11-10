@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Keeping Uncertainty Visible: DH2027 short paper</title>
+<style>
+  @page { size: A4; margin: 20mm 20mm 20mm 20mm; }
+  :root { --ink: #111; --dim: #555; --rule: #bbb; --accent: #17744f; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Noto Serif", Georgia, serif; font-size: 10.5pt; line-height: 1.45; color: var(--ink); background: #fff; }
+  h1 { font-size: 16pt; line-height: 1.25; margin: 0 0 6pt; font-weight: 700; }
+  h2 { font-size: 11.5pt; margin: 14pt 0 4pt; font-weight: 700; }
+  p { margin: 0 0 6pt; text-align: justify; hyphens: auto; }
+  .meta { font-family: "Noto Sans", sans-serif; font-size: 9.5pt; color: var(--dim); margin-bottom: 12pt; }
+  .meta b { color: var(--ink); }
+  .kw { font-family: "Noto Sans", sans-serif; font-size: 9pt; color: var(--dim); margin: 0 0 10pt; }
+  em, i { font-style: italic; }
+  .gr { font-family: "Noto Serif", serif; }
+  figure { margin: 10pt 0; break-inside: avoid; }
+  figcaption { font-size: 9pt; color: var(--dim); margin-top: 4pt; text-align: left; }
+  table { border-collapse: collapse; width: 100%; font-family: "Noto Sans", sans-serif; font-size: 8.6pt; break-inside: avoid; }
+  th, td { border-bottom: 0.6pt solid var(--rule); padding: 2.5pt 4pt; text-align: left; vertical-align: top; }
+  th { border-bottom: 1pt solid var(--ink); font-weight: 600; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  .tcap { font-size: 9pt; color: var(--dim); margin: 10pt 0 3pt; }
+  /* Figure 1: dot-and-interval chart (pure CSS, scale 0–100%) */
+  .chart { font-family: "Noto Sans", sans-serif; font-size: 8.4pt; border: 0.6pt solid var(--rule); padding: 6pt 8pt 4pt; }
+  .row { display: grid; grid-template-columns: 46% 54%; align-items: center; height: 15pt; }
+  .lab { padding-right: 6pt; }
+  .track { position: relative; height: 100%; }
+  .grid { position: absolute; top: 0; bottom: 0; width: 0; border-left: 0.5pt dashed #ddd; }
+  .ci { position: absolute; top: 50%; height: 1.4pt; background: #888; transform: translateY(-50%); }
+  .dot { position: absolute; top: 50%; width: 7pt; height: 7pt; border-radius: 50%; background: #333; transform: translate(-50%, -50%); }
+  .dot.main { background: var(--accent); }
+  .dot.open { background: #fff; border: 1.2pt solid #333; }
+  .val { position: absolute; top: 50%; transform: translateY(-50%); font-size: 7.8pt; color: var(--dim); }
+  .axis { display: grid; grid-template-columns: 46% 54%; font-size: 7.6pt; color: var(--dim); }
+  .axis .ticks { position: relative; height: 10pt; }
+  .axis .ticks span { position: absolute; transform: translateX(-50%); }
+  .refs { break-inside: auto; }
+  .refs p { break-inside: avoid; text-align: left; padding-left: 14pt; text-indent: -14pt; font-size: 9pt; margin-bottom: 3pt; }
+  .box { border: 0.6pt solid var(--rule); padding: 6pt 8pt; font-size: 9pt; margin-top: 8pt; break-inside: avoid; }
+  .box p { text-align: left; }
+  .appendix { break-before: page; }
+  a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<h1>Keeping Uncertainty Visible: A Verified, Probabilistic Reading of Dioscorides’ <i>De materia medica</i>, from Greek Plant Names to Testable Hypotheses</h1>
+<div class="meta"><b>Arpit</b>, National Institute of Technology Hamirpur, India · Short paper · Code and data: <a href="https://doi.org/10.5281/zenodo.24106413">doi:10.5281/zenodo.24106413</a></div>
+<p class="kw"><b>Keywords:</b> Dioscorides; Byzantine medicine; ancient Greek; uncertainty; plant identification; ethnopharmacology; reproducibility; knowledge graphs</p>
+
+<main class="count">
+
+<h2>1. Introduction</h2>
+<p>The 2015 Nobel Prize in Physiology or Medicine recognised the discovery of artemisinin, a lead its discoverer found in a fourth-century Chinese handbook (Tu 2011). Europe has a comparable source: Dioscorides’ <i>De materia medica</i> (first century CE), copied, translated and adapted for some fifteen centuries (Leonti 2011; Staub et al. 2016). Three constraints separate such a text from testable science. The identity of its plants is uncertain. The survival of its uses through later tradition has rarely been measured at scale. And the claim that historical use anticipates pharmacological activity is seldom tested in a way that excludes hindsight (Buenz et al. 2004).</p>
+<p>This paper presents Pharmakon, an open pipeline that treats these constraints not as noise to be cleaned away but as information to be modelled and shown. Every output carries its uncertainty, and every claim leads back to the exact Greek words that state it. It is built for three readers at once: historians, who can read Dioscorides with evidence attached to each use; laboratories, who receive a shortlist with reasons; and conservation, since every species carries its conservation status where one has been assessed.</p>
+
+<h2>2. Background</h2>
+<p>Machine learning for ancient languages has advanced restoration, attribution and annotation (Assael et al. 2022; Sommerschield et al. 2023), and open TEI editions with CTS citation, such as Open Greek and Latin’s First1KGreek corpus, now make Greek technical literature machine-readable. In ethnopharmacology, Staub et al. (2016) quantified 5,314 therapeutic uses of 536 plant taxa in a Renaissance edition of Dioscorides, and Lardos et al. (2024) proposed a systematic, expert-driven method for assessing plant identities in a thirteenth-century Byzantine text, John the Physician’s <i>Therapeutics</i>. Mining historical texts for leads has been advocated for two decades (Buenz et al. 2004), but such work usually commits to a single identification per name and rarely publishes a prospective test of its predictive value. Pharmakon joins these strands: philological verifiability from digital humanities, probabilistic identification informed by expert criteria, and open chemistry and disease resources (Rutz et al. 2022; Zdrazil et al. 2024; Buniello et al. 2025).</p>
+
+<h2>3. Sources and method</h2>
+<p><b>Texts.</b> Wellmann’s edition of Dioscorides (1906–1914) and Galen’s <i>De simplicium medicamentorum temperamentis ac facultatibus</i> (Kühn 1826) are taken from First1KGreek TEI (CC BY-SA 4.0) and segmented into 1,500 Dioscorides passages and 476 Galen drug entries, each with a CTS URN. John the Physician enters through the 61 names identified by Lardos et al. (2024), and the living tradition through 1,226 published ethnobotanical records from Mount Pelion and the North Aegean (Tsioutsiou et al. 2023; Axiotis et al. 2018).</p>
+<p><b>Reading.</b> A rule-based extractor, driven by a Greek condition lexicon, proposes medical-use claims. Each claim must store the substring that states it, and a Unicode-normalised check archives any claim whose quotation is not found in its passage: 3,696 claims passed with no mismatches. Of 158 Greek condition terms, 134 map to verified MeSH headings and 24 are kept as having no modern equivalent. Language models later proposed further claims and lexicon stems under the same verification rule; these are stored separately and excluded from every test reported below.</p>
+<p><b>Identifying.</b> For each ancient name, a conditional-logit model ranks GBIF-verified candidate species using geography, continuity with modern Greek names, agreement among scholarly identifications and genus consensus, with an explicit “unidentified” alternative. The output is a probability distribution with bootstrap intervals, not a label. Because the “unidentified” option has its own learned utility, a name with thin evidence receives a high probability of remaining unidentified instead of a forced answer.</p>
+<p><b>Tracing.</b> Each name–use pair is followed through Galen, John the Physician and the modern records. Galen entries that copy Dioscorides (word 4-gram containment above 0.15) are down-weighted, and observed survival is compared with a permutation null.</p>
+<p><b>Testing.</b> A rolling-origin backtest stands at 2000, 2005, 2010 and 2015, uses only information dated before each cutoff, and asks whether historical features predict which unstudied plant–condition pairs later acquire PubMed pharmacology co-mentions.</p>
+<p>The results form a knowledge graph of 2,585 nodes and 9,146 edges, published through a website, a JSON API and a Model Context Protocol server, so that people and AI assistants query the same evidence.</p>
+
+<h2>4. Results</h2>
+<p><b>Identification.</b> Holding out each expert name in turn, the model’s first choice matches the expert identification for 62% of the 61 names (95% CI 51–75%; Table 1, Figure 1). Baselines matter: candidate lists are short (141 candidates in total, from the same expert study), so a uniform guess already reaches 39% and a genus-frequency prior 38%, while the standard lexicon’s single identification reaches 31%. A transfer model using no counts derived from the expert study reaches 56%, the cleanest estimate. Calibration misses its target (expected calibration error 0.14–0.21 against ≤ 0.10).</p>
+<p><b>Survival.</b> Of 508 name–use rows whose plant is attested in the modern record, 48.6% recur, against 40.8% under 1,000 permutations (p = 0.001). The Mount Pelion study concerns skin ailments, so this sample favours skin uses.</p>
+<p><b>Prediction.</b> Historical features never improved on research popularity; at 2005 they made the ranking worse (Appendix, Table A1). We treat this null as a central finding.</p>
+<p><b>Hypotheses.</b> Weighting each untested pair by the probability of its plant yields 1,781 research hypotheses; ignoring identification uncertainty would change 5 of the top 20. Seven of the top 20 carry a toxicity flag, which is displayed rather than filtered.</p>
+
+<figure>
+  <div class="chart">
+    <!-- scale: left% = value*100 -->
+    <div class="row"><div class="lab"><b>Pharmakon</b> (calibrated model)</div><div class="track"><div class="grid" style="left:25%"></div><div class="grid" style="left:50%"></div><div class="grid" style="left:75%"></div><div class="ci" style="left:51%;width:24%"></div><div class="dot main" style="left:62%"></div><div class="val" style="left:77%">0.62</div></div></div>
+    <div class="row"><div class="lab">Transfer model (no expert-derived counts)</div><div class="track"><div class="grid" style="left:25%"></div><div class="grid" style="left:50%"></div><div class="grid" style="left:75%"></div><div class="ci" style="left:43%;width:26%"></div><div class="dot main" style="left:56%"></div><div class="val" style="left:71%">0.56</div></div></div>
+    <div class="row"><div class="lab">LLM judge (comparison only)</div><div class="track"><div class="grid" style="left:25%"></div><div class="grid" style="left:50%"></div><div class="grid" style="left:75%"></div><div class="ci" style="left:46%;width:25%"></div><div class="dot open" style="left:59%"></div><div class="val" style="left:73%">0.59</div></div></div>
+    <div class="row"><div class="lab">Uniform guess</div><div class="track"><div class="grid" style="left:25%"></div><div class="grid" style="left:50%"></div><div class="grid" style="left:75%"></div><div class="ci" style="left:28%;width:24%"></div><div class="dot" style="left:39%"></div><div class="val" style="left:54%">0.39</div></div></div>
+    <div class="row"><div class="lab">Genus-frequency prior</div><div class="track"><div class="grid" style="left:25%"></div><div class="grid" style="left:50%"></div><div class="grid" style="left:75%"></div><div class="ci" style="left:26%;width:25%"></div><div class="dot" style="left:38%"></div><div class="val" style="left:53%">0.38</div></div></div>
+    <div class="row"><div class="lab">LSJ lexicon identification</div><div class="track"><div class="grid" style="left:25%"></div><div class="grid" style="left:50%"></div><div class="grid" style="left:75%"></div><div class="ci" style="left:20%;width:24%"></div><div class="dot" style="left:31%"></div><div class="val" style="left:46%">0.31</div></div></div>
+    <div class="axis"><div></div><div class="ticks"><span style="left:0%">0</span><span style="left:25%">0.25</span><span style="left:50%">0.50</span><span style="left:75%">0.75</span><span style="left:100%">1.0</span></div></div>
+  </div>
+  <figcaption><b>Figure 1.</b> Top-1 agreement with expert identifications (leave-one-name-out, n = 61, 95% bootstrap intervals). The LLM judge may have memorised the literature and is shown for comparison only.</figcaption>
+</figure>
+
+<h2>5. Discussion</h2>
+<p>Pharmakon reads creativity under constraint as a methodological choice: the fragile parts of the evidence, namely contested names, conditions without modern equivalents and a disappointing prediction test, are displayed rather than resolved. Verbatim spans and CTS URNs keep every computed claim answerable to the text; the “unidentified” option lets the model decline to guess; the null result disciplines claims that ancient use “predicts” modern activity. Limitations remain. Expert judgement is not ground truth, a PubMed co-mention is only a proxy for evidence, extraction and condition mapping await blinded human audits, and the Byzantine chain still lacks Paul of Aegina. All outputs are research hypotheses, not medical advice.</p>
+<p>For digital humanities, the project offers a template for computational reading in which every machine-made claim remains a citable passage, and in which a negative result is a publishable output rather than a failure. Next steps are blinded expert audits of extraction and identification, richer plant descriptions, further Byzantine authors, and a partnership with a pharmacognosy laboratory to test the highest-ranked non-toxic hypotheses. Code, data and a citable archive are open (Arpit 2026).</p>
+
+</main>
+
+<p class="tcap"><b>Table 1.</b> Summary of results (all figures from the pipeline’s stage reports).</p>
+<table>
+  <tr><th>Question</th><th>Measure</th><th class="n">Result</th><th>Comparison</th></tr>
+  <tr><td>Which plant is it?</td><td>Top-1 agreement with experts, n = 61</td><td class="n">0.62 [0.51, 0.75]</td><td>uniform 0.39; genus prior 0.38; LSJ 0.31; transfer model 0.56</td></tr>
+  <tr><td>Are the probabilities honest?</td><td>Expected calibration error</td><td class="n">0.14–0.21</td><td>target ≤ 0.10 (not met)</td></tr>
+  <tr><td>Did the uses survive?</td><td>Share recurring in modern Greek records, n = 508</td><td class="n">0.486</td><td>permutation null 0.408 (95th pct. 0.433), p = 0.001</td></tr>
+  <tr><td>Does history predict later research?</td><td>ΔAUPRC, history + popularity vs popularity</td><td class="n">no gain at any cutoff</td><td>2005: −0.14 to −0.02</td></tr>
+  <tr><td>What can be tested?</td><td>Untested plant–condition pairs</td><td class="n">1,781</td><td>16/20 top leads with a compound → target → disease path; 7/20 toxicity-flagged</td></tr>
+</table>
+
+<div class="box">
+<p><b>Disclosure of generative AI use</b> (not counted in the word limit).
+<i>Research.</i> Two language models, Claude (Anthropic) and gpt-oss-120b (via Groq), were used to propose additional medical-use claims and condition-lexicon stems, to extract plant-description traits, and as a comparison baseline (“LLM judge”). Every proposed claim and trait had to quote its source verbatim and was kept only if the quotation was found by exact string match; all language-model outputs are excluded from the backtest. Claude Code was used extensively to write the software, documentation and website.
+<i>Submission.</i> This abstract was drafted with the assistance of Claude and was reviewed, edited and approved by the author, who takes full responsibility for its content.</p>
+</div>
+
+<h2>References</h2>
+<div class="refs">
+<p>Arpit (2026). <i>Pharmakon: An Uncertainty-Aware, 2,000-Year Map of Greek and Byzantine Pharmacology</i> (software, v1.0.1). Zenodo. https://doi.org/10.5281/zenodo.24106413</p>
+<p>Assael, Y., Sommerschield, T., Shillingford, B., et al. (2022). Restoring and attributing ancient texts using deep neural networks. <i>Nature</i>, 603(7900), 280–283. https://doi.org/10.1038/s41586-022-04448-z</p>
+<p>Axiotis, E., Halabalaki, M., and Skaltsounis, L. A. (2018). An ethnobotanical study of medicinal plants in the Greek islands of North Aegean region. <i>Frontiers in Pharmacology</i>, 9, 409. https://doi.org/10.3389/fphar.2018.00409</p>
+<p>Buenz, E. J., Schnepple, D. J., Bauer, B. A., Elkin, P. L., Riddle, J. M., and Motley, T. J. (2004). Techniques: Bioprospecting historical herbal texts by hunting for new leads in old tomes. <i>Trends in Pharmacological Sciences</i>, 25(9), 494–498. https://doi.org/10.1016/j.tips.2004.07.003</p>
+<p>Buniello, A., Suveges, D., Cruz-Castillo, C., et al. (2025). Open Targets Platform: facilitating therapeutic hypotheses building in drug discovery. <i>Nucleic Acids Research</i>, 53(D1), D1467–D1475. https://doi.org/10.1093/nar/gkae1128</p>
+<p>Kühn, K. G. (ed.) (1826). <i>Claudii Galeni Opera Omnia</i>, vols. 11–12. Leipzig: Knobloch. Digital edition: First1KGreek, tlg0057.tlg075.1st1K-grc1 (CC BY-SA 4.0).</p>
+<p>Lardos, A., Patmore, K., Allkin, R., et al. (2024). A systematic methodology to assess the identity of plants in historical texts: A case study based on the Byzantine pharmacy text John the Physician’s <i>Therapeutics</i>. <i>Journal of Ethnopharmacology</i>, 322, 117622. https://doi.org/10.1016/j.jep.2023.117622</p>
+<p>Leonti, M. (2011). The future is written: Impact of scripts on the cognition, selection, knowledge and transmission of medicinal plant use and its implications for ethnobotany and ethnopharmacology. <i>Journal of Ethnopharmacology</i>, 134(3), 542–555. https://doi.org/10.1016/j.jep.2011.01.017</p>
+<p>Liddell, H. G., Scott, R., and Jones, H. S. (1940). <i>A Greek–English Lexicon</i>, 9th ed. Oxford: Clarendon Press. Digital edition: Perseus Digital Library.</p>
+<p>Rutz, A., Sorokina, M., Galgonek, J., et al. (2022). The LOTUS initiative for open knowledge management in natural products research. <i>eLife</i>, 11, e70780. https://doi.org/10.7554/eLife.70780</p>
+<p>Sommerschield, T., Assael, Y., Pavlopoulos, J., et al. (2023). Machine learning for ancient languages: A survey. <i>Computational Linguistics</i>, 49(3), 703–747. https://doi.org/10.1162/coli_a_00481</p>
+<p>Staub, P. O., Casu, L., and Leonti, M. (2016). Back to the roots: A quantitative survey of herbal drugs in Dioscorides’ <i>De Materia Medica</i> (ex Matthioli, 1568). <i>Phytomedicine</i>, 23(10), 1043–1052. https://doi.org/10.1016/j.phymed.2016.06.016</p>
+<p>Tsioutsiou, E. E., Cheilari, A., and Aligiannis, N. (2023). Ethnopharmacological study of medicinal plants used against skin ailments on Mount Pelion, central Greece. <i>Frontiers in Pharmacology</i>, 14, 1225580. https://doi.org/10.3389/fphar.2023.1225580</p>
+<p>Tu, Y. (2011). The discovery of artemisinin (qinghaosu) and gifts from Chinese medicine. <i>Nature Medicine</i>, 17(10), 1217–1220. https://doi.org/10.1038/nm.2471</p>
+<p>Wellmann, M. (ed.) (1906–1914). <i>Pedanii Dioscuridis Anazarbei De materia medica libri quinque</i>, 3 vols. Berlin: Weidmann. Digital edition: First1KGreek, tlg0656.tlg001.1st1K-grc1 (CC BY-SA 4.0), commit da4b902.</p>
+<p>Zdrazil, B., Felix, E., Hunter, F., et al. (2024). The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. <i>Nucleic Acids Research</i>, 52(D1), D1180–D1192. https://doi.org/10.1093/nar/gkad1004</p>
+</div>
+
+<section class="appendix">
+<h2>Appendix</h2>
+<p class="tcap"><b>Table A1.</b> Rolling-origin backtest across all body systems. AUPRC for each model; positives are untested pairs that gained PubMed pharmacology support by 2025. Features are gated by date; no language-model output is used.</p>
+<table>
+  <tr><th class="n">Cutoff</th><th class="n">Test pairs</th><th class="n">Positives</th><th class="n">Random</th><th class="n">Popularity</th><th class="n">History</th><th class="n">History + popularity</th><th class="n">ΔAUPRC, history [95% CI]</th></tr>
+  <tr><td class="n">2000</td><td class="n">1,404</td><td class="n">122</td><td class="n">0.08</td><td class="n">0.38</td><td class="n">0.13</td><td class="n">0.36</td><td class="n">−0.08 to +0.03</td></tr>
+  <tr><td class="n">2005</td><td class="n">1,384</td><td class="n">102</td><td class="n">0.08</td><td class="n">0.34</td><td class="n">0.08</td><td class="n">0.27</td><td class="n">−0.14 to −0.02</td></tr>
+  <tr><td class="n">2010</td><td class="n">1,361</td><td class="n">79</td><td class="n">0.06</td><td class="n">0.31</td><td class="n">0.07</td><td class="n">0.29</td><td class="n">−0.08 to +0.06</td></tr>
+  <tr><td class="n">2015</td><td class="n">1,332</td><td class="n">50</td><td class="n">0.04</td><td class="n">0.27</td><td class="n">0.06</td><td class="n">0.28</td><td class="n">−0.05 to +0.06</td></tr>
+</table>
+<p class="tcap" style="margin-top:12pt; text-align:left"><b>Availability.</b> Live site: https://pharmakon.adoranto737.workers.dev · Source: https://github.com/LSUDOKO/Pharmakon · Archive: https://doi.org/10.5281/zenodo.24106413</p>
+</section>
+
+</body>
+</html>
